@@ -187,7 +187,7 @@
     ] },
     { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
       L('Ko‘p mamlakatlarda 13 soni «omadsiz» hisoblanadi, shuning uchun ba’zi mehmonxonalarda 13-qavat yo‘q: 12 dan keyin darhol 14 keladi! Albatta, bu shunchaki e’tiqod — matematikada hamma sonlar teng.', 'Во многих странах число 13 считают «несчастливым», поэтому в некоторых отелях нет 13-го этажа: после 12 сразу идёт 14! Конечно, это просто поверье — в математике все числа равны.', 'In many countries 13 is thought to be “unlucky”, so some hotels have no 13th floor: after 12 comes 14 straight away! Of course that is just a superstition — in maths all numbers are equal.'),
-      L('Asalari uyasining katakchalari olti burchakli, va bitta ishchi asalari umri davomida taxminan 12 choy qoshiq asal yig‘adi.', 'Ячейки пчелиных сот шестиугольные, а одна рабочая пчела за всю жизнь собирает примерно 12 чайных ложек мёда.', 'Honeycomb cells are hexagons, and one worker bee gathers about 12 teaspoons of honey in its whole life.'),
+      L('Asalari uyasining katakchalari olti burchakli. Bitta ishchi asalari butun umri davomida choy qoshiqning atigi o‘n ikkidan bir qismicha asal to‘playdi. Bitta qoshiq asal uchun esa 12 ta asalari butun umr ishlashi kerak!', 'Ячейки пчелиных сот шестиугольные. Одна рабочая пчела за всю жизнь собирает всего около двенадцатой части чайной ложки мёда. Чтобы набрать одну ложку, 12 пчёлам нужно трудиться всю жизнь!', 'Honeycomb cells are hexagons. One worker bee makes only about one twelfth of a teaspoon of honey in its whole life. To fill one teaspoon, 12 bees must work for their whole lives!'),
       L('Bir yilda 12 oy, kunda 24 soat, soatda 60 daqiqa. Qadimgi odamlar 12 ni yaxshi ko‘rgan, chunki uni 2, 3, 4 va 6 ga teng bo‘lib bo‘ladi.', 'В году 12 месяцев, в сутках 24 часа, в часе 60 минут. Древние люди любили число 12, потому что его можно поровну разделить на 2, 3, 4 и 6.', 'A year has 12 months, a day has 24 hours, an hour has 60 minutes. Ancient people liked 12 because it splits evenly into 2, 3, 4 and 6.'),
       L('Raketa uchirilishidan oldin «o‘n, to‘qqiz, sakkiz… bir, start!» deb orqaga sanashadi. Bu usul birinchi marta 1929-yilda bir kinofilmda ko‘rsatilgan, keyin haqiqiy kosmodromlarda qo‘llanila boshlangan.', 'Перед стартом ракеты считают назад: «десять, девять, восемь… один, пуск!» Этот приём впервые показали в кинофильме 1929 года, а потом он стал применяться на настоящих космодромах.', 'Before a rocket launch they count down: “ten, nine, eight… one, go!” This idea was first shown in a film in 1929 and was later used at real launch sites.')
     ] },
@@ -502,7 +502,7 @@
       L('<b>Yo‘lda.</b> Mashinada 9 daqiqa yurdingiz, piyoda yana 5 daqiqa. Yo‘lga 14 daqiqa ketdi.', '<b>В дороге.</b> Ты ехал на машине 9 минут и шёл пешком ещё 5. Дорога заняла 14 минут.', '<b>On the way.</b> You rode in the car for 9 minutes and walked for 5 more. The trip took 14 minutes.')
     ] },
     { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
-      L('Yaponiyada bolalar «soroban» degan cho‘tda hisoblashni o‘rganadi. Tajribali bolalar cho‘tni ko‘z oldiga keltirib, kalkulyatordan ham tez qo‘shadi!', 'В Японии дети учатся считать на счётах «соробан». Опытные ребята представляют счёты в уме и складывают быстрее калькулятора!', 'In Japan children learn to count on an abacus called a “soroban”. Skilled children picture the abacus in their heads and add faster than a calculator!'),
+      L('Yaponiyada bolalar «soroban» degan cho‘tda hisoblashni o‘rganadi. Tajribali bolalar cho‘tni ko‘z oldiga keltirib, ichida juda tez qo‘shadi — ba’zan kalkulyatorli odamdan ham tezroq!', 'В Японии дети учатся считать на счётах «соробан». Опытные ребята представляют счёты в уме и складывают очень быстро — иногда быстрее человека с калькулятором!', 'In Japan children learn to count on an abacus called a “soroban”. Skilled children picture the abacus in their heads and add very fast — sometimes faster than a person using a calculator!'),
       L('Sakkizoyoqning 8 ta oyog‘i, o‘rgimchakning ham 8 ta oyog‘i bor. Ikkalasini birga olsak: 8 + 8 = 16 ta oyoq!', 'У осьминога 8 щупалец, у паука тоже 8 ног. Вместе: 8 + 8 = 16!', 'An octopus has 8 arms and a spider has 8 legs. Together: 8 + 8 = 16!'),
       L('Kamalakda 7 ta rang bor. Ikkita kamalak — 7 + 7 = 14 ta rang chizig‘i! Ba’zan osmonda haqiqatan ham qo‘sh kamalak ko‘rinadi.', 'В радуге 7 цветов. Две радуги — 7 + 7 = 14 цветных полос! Иногда на небе и правда видна двойная радуга.', 'A rainbow has 7 colours. Two rainbows make 7 + 7 = 14 coloured stripes! Sometimes you really can see a double rainbow in the sky.'),
       L('Haftada 7 kun bor. Ikki hafta — 7 + 7 = 14 kun.', 'В неделе 7 дней. Две недели — 7 + 7 = 14 дней.', 'A week has 7 days. Two weeks are 7 + 7 = 14 days.')
@@ -1056,6 +1056,421 @@
       L('Raqamlar yig‘indisi emas, xonalar muhim.', 'Важна не сумма цифр, а разряды.', 'It is the places that matter, not the sum of the digits.'),
       L('Sonlarni o‘sish yoki kamayish tartibida terish mumkin.', 'Числа можно расставлять по возрастанию или по убыванию.', 'Numbers can be put in ascending or descending order.'),
       L('Ifoda bo‘lsa — avval hisoblang, keyin taqqoslang.', 'Если есть выражение — сначала вычисли, потом сравнивай.', 'If there is an expression, work it out first, then compare.')
+    ] }
+  ] });
+})(this);
+(function (root) {
+  'use strict';
+  var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '1-2';
+
+  // ---------- t11. Ikki xonali sonlarni qo'shish ----------
+  T.add(P, 't11', { sections: [
+    { kind: 'intro', h: L('Kutubxonadagi kitoblar', 'Книги в библиотеке', 'Books in the library'), p: [
+      L('Maktab kutubxonasiga yangi kitoblar keldi. Kutubxonachi opa ularni ikki javonga terdi: birinchi javonga 34 ta, ikkinchisiga 25 ta. Direktor so‘radi: «Jami nechta yangi kitob keldi?» Kutubxonachi opa bir zumda javob berdi: «59 ta!» Qanday qilib u buncha tez hisobladi?', 'В школьную библиотеку привезли новые книги. Библиотекарь расставила их на две полки: на первую 34, на вторую 25. Директор спросил: «Сколько всего новых книг?» Библиотекарь мгновенно ответила: «59!» Как она так быстро посчитала?', 'New books arrived at the school library. The librarian put them on two shelves: 34 on the first and 25 on the second. The head teacher asked: “How many new books came in total?” The librarian answered at once: “59!” How did she count so fast?'),
+      L('Uning siri oddiy. Kitoblar 10 tadan dastalab bog‘langan edi. Birinchi javonda 3 dasta va 4 ta alohida kitob, ikkinchisida 2 dasta va 5 ta alohida kitob. U avval dastalarni sanadi: 3 + 2 = 5 dasta, ya’ni 50 ta kitob. Keyin alohida kitoblarni: 4 + 5 = 9 ta. Jami: 50 + 9 = 59!', 'Её секрет прост. Книги были связаны пачками по 10. На первой полке 3 пачки и 4 отдельные книги, на второй — 2 пачки и 5 отдельных. Сначала она посчитала пачки: 3 + 2 = 5 пачек, то есть 50 книг. Потом отдельные книги: 4 + 5 = 9. Всего: 50 + 9 = 59!', 'Her secret is simple. The books were tied in bundles of 10. The first shelf had 3 bundles and 4 loose books; the second had 2 bundles and 5 loose books. First she counted the bundles: 3 + 2 = 5 bundles, which is 50 books. Then the loose books: 4 + 5 = 9. Total: 50 + 9 = 59!'),
+      L('Bu mavzuda biz xuddi shunday — o‘nliklarni o‘nliklarga, birliklarni birliklarga qo‘shib — ikki xonali sonlarni qo‘shishni o‘rganamiz. Bu usul bilan siz 100 gacha bo‘lgan katta sonlarni ham oson qo‘sha olasiz.', 'В этой теме мы научимся складывать двузначные числа точно так же — десятки с десятками, единицы с единицами. Этим способом ты легко сложишь даже большие числа до 100.', 'In this topic we will learn to add two-digit numbers in exactly this way — tens with tens and ones with ones. With this method you can easily add even big numbers up to 100.')
+    ] },
+    { kind: 'def', h: L('Qo‘shish va uning qismlari', 'Сложение и его компоненты', 'Addition and its parts'), p: [
+      L('34 + 25 = 59 misolida har bir sonning o‘z nomi bor:', 'В примере 34 + 25 = 59 у каждого числа своё название:', 'In 34 + 25 = 59 each number has its own name:')
+    ], list: [
+      L('<b>34</b> va <b>25</b> — qo‘shiluvchilar (qo‘shiladigan sonlar);', '<b>34</b> и <b>25</b> — слагаемые (числа, которые складываем);', '<b>34</b> and <b>25</b> — the addends (the numbers we add);'),
+      L('<b>59</b> — yig‘indi (qo‘shish natijasi).', '<b>59</b> — сумма (результат сложения).', '<b>59</b> — the sum (the result of adding).')
+    ], after: [
+      L('Ikki xonali sonlarni qo‘shishda biz har bir sonni o‘nlik va birlikka ajratamiz: 34 = 30 + 4, 25 = 20 + 5. Keyin bir xil xonalarni birga qo‘shamiz. Xuddi olmalarni olmalar bilan, nokni nok bilan qo‘shgandek — o‘nliklarni birliklar bilan aralashtirmaymiz!', 'При сложении двузначных чисел мы раскладываем каждое число на десятки и единицы: 34 = 30 + 4, 25 = 20 + 5. Потом складываем одинаковые разряды. Как яблоки с яблоками, а груши с грушами — десятки с единицами не смешиваем!', 'When adding two-digit numbers, we split each number into tens and ones: 34 = 30 + 4, 25 = 20 + 5. Then we add the matching places together. Just like adding apples to apples and pears to pears — we never mix tens with ones!'),
+      L('Bu mavzuda biz faqat birliklar yig‘indisi 10 dan oshmaydigan misollarni ko‘ramiz. Masalan, 4 + 5 = 9 — bu 10 dan kam. Bunday qo‘shishni «o‘nlikdan o‘tmasdan qo‘shish» deyishadi.', 'В этой теме мы разберём только примеры, где сумма единиц не больше 9. Например, 4 + 5 = 9 — меньше 10. Такое сложение называют «сложением без перехода через десяток».', 'In this topic we only look at sums where the ones add up to 9 or less. For example, 4 + 5 = 9 — less than 10. This is called “adding without crossing ten”.')
+    ] },
+    { kind: 'history', h: L('Qo‘shish tarixidan', 'Из истории сложения', 'From the history of addition'), p: [
+      L('Odamlar qo‘shishni yozuvdan ham oldin bilishgan. Cho‘ponlar har bir qo‘y uchun xaltaga bitta tosh solib qo‘yishgan. Ikki podani birlashtirganda, ikki xaltadagi toshlarni bir joyga to‘kishgan — mana sizga qo‘shish!', 'Люди умели складывать ещё до появления письменности. Пастухи клали в мешочек по камешку за каждую овцу. Объединяя два стада, высыпали камешки из двух мешочков в один — вот и сложение!', 'People could add before they could write. Shepherds put one pebble in a bag for each sheep. When two flocks were joined, they poured the pebbles from both bags together — and there you have addition!'),
+      L('Plyus belgisi (+) lotincha «et» so‘zidan kelib chiqqan, u «va» degan ma’noni bildiradi. Yozuvchilar «et» so‘zini tez-tez yozib, uni qisqartira-qisqartira kichik xochchaga aylantirishgan. Taxminan 500 yil oldin bu belgi kitoblarda paydo bo‘lgan.', 'Знак плюс (+) произошёл от латинского слова «et», что значит «и». Писцы так часто писали «et», что сократили его до маленького крестика. Примерно 500 лет назад этот знак появился в книгах.', 'The plus sign (+) comes from the Latin word “et”, meaning “and”. Scribes wrote “et” so often that they shortened it into a little cross. It appeared in printed books about 500 years ago.'),
+      L('<b>Al-Xorazmiy</b> ustun qilib qo‘shish usulini tushuntirgan: o‘nliklar o‘nliklar ostida, birliklar birliklar ostida yoziladi. Bu usul bugun ham butun dunyo maktablarida o‘rgatiladi.', '<b>Аль-Хорезми</b> объяснил способ сложения столбиком: десятки пишутся под десятками, единицы под единицами. Этому способу и сегодня учат в школах всего мира.', '<b>Al-Khwarizmi</b> explained how to add in columns: tens are written under tens and ones under ones. Schools all over the world still teach this method today.')
+    ] },
+    { kind: 'rule', h: L('Ikki xonali sonlarni qo‘shish qoidasi', 'Правило сложения двузначных чисел', 'The rule for adding two-digit numbers'), p: [
+      L('<b>O‘nliklarni o‘nliklarga, birliklarni birliklarga qo‘shamiz. Keyin natijalarni birlashtiramiz.</b>', '<b>Складываем десятки с десятками, единицы с единицами. Потом объединяем результаты.</b>', '<b>Add tens to tens and ones to ones. Then put the results together.</b>'),
+      L('34 + 25 = (30 + 20) + (4 + 5) = 50 + 9 = 59', '34 + 25 = (30 + 20) + (4 + 5) = 50 + 9 = 59', '34 + 25 = (30 + 20) + (4 + 5) = 50 + 9 = 59')
+    ], list: [
+      L('Ikki xonali + ikki xonali: 23 + 45 = (20 + 40) + (3 + 5) = 60 + 8 = 68.', 'Двузначное + двузначное: 23 + 45 = (20 + 40) + (3 + 5) = 60 + 8 = 68.', 'Two-digit + two-digit: 23 + 45 = (20 + 40) + (3 + 5) = 60 + 8 = 68.'),
+      L('Ikki xonali + yaxlit: 50 + 34 = 84 (faqat o‘nliklar qo‘shiladi: 5 + 3 = 8).', 'Двузначное + круглое: 50 + 34 = 84 (складываются только десятки: 5 + 3 = 8).', 'Two-digit + round: 50 + 34 = 84 (only the tens are added: 5 + 3 = 8).'),
+      L('Ikki xonali + bir xonali: 41 + 6 = 47 (faqat birliklar qo‘shiladi: 1 + 6 = 7).', 'Двузначное + однозначное: 41 + 6 = 47 (складываются только единицы: 1 + 6 = 7).', 'Two-digit + one-digit: 41 + 6 = 47 (only the ones are added: 1 + 6 = 7).')
+    ], after: [
+      L('Diqqat bilan qarang: bir xonali sonni qo‘shganda o‘nliklar o‘zgarmaydi, yaxlit sonni qo‘shganda esa birliklar o‘zgarmaydi. Bu juda foydali sir!', 'Посмотри внимательно: когда прибавляем однозначное число, десятки не меняются, а когда круглое — не меняются единицы. Это очень полезный секрет!', 'Look carefully: when you add a one-digit number the tens stay the same, and when you add a round number the ones stay the same. That is a very useful secret!')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: ustun qilib qo‘shamiz', 'Шаг за шагом: складываем столбиком', 'Step by step: adding in columns'), p: [
+      L('Sonlarni bir-birining ostiga yozib qo‘shish ham qulay. 52 + 36 ni shunday yechamiz:', 'Удобно складывать, записывая числа друг под другом. Решим так 52 + 36:', 'It is handy to add by writing the numbers one under the other. Let’s do 52 + 36 this way:')
+    ], list: [
+      L('1-qadam. 52 ni yozing, uning ostiga 36 ni yozing: o‘nliklar o‘nliklar ostida (5 ostida 3), birliklar birliklar ostida (2 ostida 6).', 'Шаг 1. Запиши 52, под ним 36: десятки под десятками (3 под 5), единицы под единицами (6 под 2).', 'Step 1. Write 52 and put 36 under it: tens under tens (3 under 5), ones under ones (6 under 2).'),
+      L('2-qadam. O‘ngdan boshlang — birliklarni qo‘shing: 2 + 6 = 8. Birliklar ostiga 8 yozing.', 'Шаг 2. Начни справа — сложи единицы: 2 + 6 = 8. Запиши 8 под единицами.', 'Step 2. Start on the right — add the ones: 2 + 6 = 8. Write 8 under the ones.'),
+      L('3-qadam. O‘nliklarni qo‘shing: 5 + 3 = 8. O‘nliklar ostiga 8 yozing.', 'Шаг 3. Сложи десятки: 5 + 3 = 8. Запиши 8 под десятками.', 'Step 3. Add the tens: 5 + 3 = 8. Write 8 under the tens.'),
+      L('4-qadam. Javobni o‘qing: <b>88</b>.', 'Шаг 4. Прочитай ответ: <b>88</b>.', 'Step 4. Read the answer: <b>88</b>.')
+    ], after: [
+      L('Nega o‘ngdan boshlaymiz? Katta sinflarda birliklar yig‘indisi 10 dan oshib ketadigan misollar uchraydi. Shunda ortiqcha o‘nlik o‘nliklar xonasiga o‘tadi. Hozirdanoq to‘g‘ri odatni o‘rganib qo‘yish foydali.', 'Почему начинаем справа? В старших классах встретятся примеры, где сумма единиц больше 10. Тогда лишний десяток переходит в разряд десятков. Полезно уже сейчас привыкнуть к правильному порядку.', 'Why start on the right? In later grades you will meet sums where the ones add up to more than 10. Then the extra ten moves into the tens place. It is good to learn the right habit now.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('O‘nliklar — o‘nliklar bilan, birliklar — birliklar bilan!', 'Десятки — с десятками, единицы — с единицами!', 'Tens with tens, ones with ones!')
+    ], ex: [
+      { q: L('Hisoblang: 23 + 45', 'Вычисли: 23 + 45', 'Work out: 23 + 45'), s: L('O‘nliklar: 20 + 40 = 60. Birliklar: 3 + 5 = 8. Javob: 60 + 8 = <b>68</b>.', 'Десятки: 20 + 40 = 60. Единицы: 3 + 5 = 8. Ответ: 60 + 8 = <b>68</b>.', 'Tens: 20 + 40 = 60. Ones: 3 + 5 = 8. Answer: 60 + 8 = <b>68</b>.') },
+      { q: L('Hisoblang: 50 + 34', 'Вычисли: 50 + 34', 'Work out: 50 + 34'), s: L('O‘nliklar: 50 + 30 = 80. Birliklar: 0 + 4 = 4. Javob: <b>84</b>.', 'Десятки: 50 + 30 = 80. Единицы: 0 + 4 = 4. Ответ: <b>84</b>.', 'Tens: 50 + 30 = 80. Ones: 0 + 4 = 4. Answer: <b>84</b>.') },
+      { q: L('Hisoblang: 41 + 6', 'Вычисли: 41 + 6', 'Work out: 41 + 6'), s: L('O‘nliklar o‘zgarmaydi: 40. Birliklar: 1 + 6 = 7. Javob: <b>47</b>.', 'Десятки не меняются: 40. Единицы: 1 + 6 = 7. Ответ: <b>47</b>.', 'The tens stay the same: 40. Ones: 1 + 6 = 7. Answer: <b>47</b>.') },
+      { q: L('Hisoblang: 62 + 37', 'Вычисли: 62 + 37', 'Work out: 62 + 37'), s: L('O‘nliklar: 60 + 30 = 90. Birliklar: 2 + 7 = 9. Javob: <b>99</b>.', 'Десятки: 60 + 30 = 90. Единицы: 2 + 7 = 9. Ответ: <b>99</b>.', 'Tens: 60 + 30 = 90. Ones: 2 + 7 = 9. Answer: <b>99</b>.') },
+      { q: L('Bog‘da 21 tup olma va 16 tup nok daraxti bor. Jami nechta daraxt?', 'В саду 21 яблоня и 16 груш. Сколько всего деревьев?', 'An orchard has 21 apple trees and 16 pear trees. How many trees in all?'), s: L('21 + 16: o‘nliklar 20 + 10 = 30, birliklar 1 + 6 = 7. Javob: <b>37</b> tup daraxt.', '21 + 16: десятки 20 + 10 = 30, единицы 1 + 6 = 7. Ответ: <b>37</b> деревьев.', '21 + 16: tens 20 + 10 = 30, ones 1 + 6 = 7. Answer: <b>37</b> trees.') }
+    ] },
+    { kind: 'table', h: L('Qo‘shish jadvali', 'Таблица сложения', 'Addition table'), p: [
+      L('Har bir misol ikki qismga bo‘lingan: o‘nliklar va birliklar.', 'Каждый пример разбит на две части: десятки и единицы.', 'Each sum is split into two parts: tens and ones.')
+    ], table: { head: [L('Misol', 'Пример', 'Sum'), L('O‘nliklar', 'Десятки', 'Tens'), L('Birliklar', 'Единицы', 'Ones'), L('Javob', 'Ответ', 'Answer')], rows: [
+      ['34 + 25', '30 + 20 = 50', '4 + 5 = 9', '59'],
+      ['12 + 73', '10 + 70 = 80', '2 + 3 = 5', '85'],
+      ['45 + 32', '40 + 30 = 70', '5 + 2 = 7', '77'],
+      ['26 + 3', '20', '6 + 3 = 9', '29'],
+      ['40 + 56', '40 + 50 = 90', '0 + 6 = 6', '96']
+    ] }, after: [
+      L('Har doim ikkita kichik qo‘shishni bajaramiz — bu katta qo‘shishdan ancha oson!', 'Мы всегда делаем два маленьких сложения — это гораздо проще одного большого!', 'We always do two small additions — much easier than one big one!')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Ikki xonali sonlarni qo‘shishda ehtiyot bo‘ling:', 'При сложении двузначных чисел будь внимателен:', 'Be careful when adding two-digit numbers:')
+    ], list: [
+      L('<b>O‘nlikni birlikka qo‘shish.</b> 41 + 6 = 101 yoki 41 + 6 = 47 o‘rniga 4 + 6 = 10 deb hisoblash. 6 — bu birlik, u faqat 1 ga qo‘shiladi: 47.', '<b>Прибавлять единицы к десяткам.</b> Считать 41 + 6 как 4 + 6 = 10 и получить 101. 6 — это единицы, их прибавляем только к 1: 47.', '<b>Adding ones to tens.</b> Treating 41 + 6 as 4 + 6 = 10 and getting 101. 6 is ones, so it only adds to the 1: 47.'),
+      L('<b>Ustunda noto‘g‘ri yozish.</b> 52 + 6 ni yozganda 6 ni 5 ning ostiga qo‘yish. 6 birliklar ostida, ya’ni 2 ning ostida bo‘lishi kerak.', '<b>Неверно записать столбиком.</b> Записывая 52 + 6, поставить 6 под 5. 6 должно стоять под единицами, то есть под 2.', '<b>Lining up wrongly.</b> Writing 52 + 6 with the 6 under the 5. The 6 must go under the ones, under the 2.'),
+      L('<b>Natijalarni yonma-yon yozish.</b> 34 + 25: o‘nliklar 5, birliklar 9 — javob 59. Lekin ba’zilar 50 va 9 ni «509» deb yozadi. Yo‘q: 50 + 9 = 59.', '<b>Записывать результаты рядом.</b> 34 + 25: десятки 5, единицы 9 — ответ 59. Но некоторые пишут 50 и 9 как «509». Нет: 50 + 9 = 59.', '<b>Writing the results side by side.</b> 34 + 25: 5 tens and 9 ones — 59. Some write 50 and 9 as “509”. No: 50 + 9 = 59.'),
+      L('<b>Tekshirmaslik.</b> Javobni taxminan tekshiring: 34 + 25 — bu 30 va 20 dan sal ko‘p, ya’ni 50 dan sal ko‘p. 59 — to‘g‘ri ko‘rinadi.', '<b>Не проверять.</b> Прикинь ответ: 34 + 25 — это чуть больше, чем 30 + 20, то есть чуть больше 50. 59 — похоже на правду.', '<b>Not checking.</b> Estimate: 34 + 25 is a bit more than 30 + 20, so a bit more than 50. 59 looks right.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Do‘konda.</b> Siz 32 ming so‘mlik o‘yinchoq va 15 ming so‘mlik kitob oldingiz. Jami: 30 + 10 = 40, 2 + 5 = 7, ya’ni 47 ming so‘m. Kassaga borishdan oldin hisoblab qo‘yish juda foydali!', '<b>В магазине.</b> Ты купил игрушку за 32 тысячи и книгу за 15 тысяч. Всего: 30 + 10 = 40, 2 + 5 = 7, то есть 47 тысяч. Очень полезно посчитать заранее, ещё до кассы!', '<b>At the shop.</b> You buy a toy for 32 thousand and a book for 15 thousand. Total: 30 + 10 = 40, 2 + 5 = 7, so 47 thousand. It is very useful to work it out before you reach the till!'),
+      L('<b>Maktabda.</b> 1«A» sinfida 26 ta, 1«B» sinfida 23 ta o‘quvchi bor. Ikkala sinf birga sayohatga chiqsa — 49 ta o‘quvchi. Avtobusda shuncha joy bo‘lishi kerak.', '<b>В школе.</b> В 1 «А» 26 учеников, в 1 «Б» 23. Если оба класса едут на экскурсию — 49 учеников. В автобусе должно быть столько мест.', '<b>At school.</b> Class 1A has 26 pupils and 1B has 23. If both classes go on a trip, that is 49 pupils. The bus needs that many seats.'),
+      L('<b>Oshxonada.</b> Onangiz 40 ta chuchvara tugdi, buvingiz yana 35 ta. Jami 75 ta chuchvara — butun oilaga yetadi!', '<b>На кухне.</b> Мама слепила 40 чучвары, бабушка ещё 35. Всего 75 штук — хватит на всю семью!', '<b>In the kitchen.</b> Mum made 40 dumplings and Grandma made 35 more. 75 dumplings in all — enough for the whole family!'),
+      L('<b>Sportda.</b> Birinchi kuni 24 marta, ikkinchi kuni 31 marta arqondan sakradingiz. Ikki kunda 55 marta!', '<b>В спорте.</b> В первый день ты прыгнул через скакалку 24 раза, во второй — 31. За два дня — 55 раз!', '<b>In sport.</b> You skipped 24 times on day one and 31 times on day two. That is 55 times in two days!')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Odam tanasida 32 ta doimiy tish bo‘ladi. Agar unga bolalikdagi 20 ta sut tishini qo‘shsak, odam umri davomida 52 ta tishga ega bo‘ladi!', 'У взрослого человека 32 постоянных зуба. Если прибавить 20 молочных, за жизнь у человека бывает 52 зуба!', 'An adult has 32 permanent teeth. Add the 20 baby teeth and a person has 52 teeth in a lifetime!'),
+      L('Futbol maydonida ikki jamoa — har birida 11 tadan o‘yinchi. 11 + 11 = 22 ta o‘yinchi to‘p ortidan yuguradi.', 'На футбольном поле две команды по 11 игроков. 11 + 11 = 22 игрока бегут за мячом.', 'On a football pitch there are two teams of 11 players. 11 + 11 = 22 players chase the ball.'),
+      L('Arabcha alifboda 28 ta harf, lotin yozuvidagi o‘zbek alifbosida esa 29 ta harf bor.', 'В арабском алфавите 28 букв, а в узбекском латинском алфавите — 29.', 'The Arabic alphabet has 28 letters and the Uzbek Latin alphabet has 29.'),
+      L('Kompyuterlar ham qo‘shishni aynan shunday — xonama-xona bajaradi, faqat juda tez: sekundiga milliardlab marta!', 'Компьютеры тоже складывают поразрядно, только очень быстро — миллиарды раз в секунду!', 'Computers add place by place in the same way, only very fast — billions of times a second!')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('O‘nliklarni o‘nliklarga, birliklarni birliklarga qo‘shing.', 'Складывай десятки с десятками, единицы с единицами.', 'Add tens to tens and ones to ones.')
+    ], list: [
+      L('Hisoblang: 31 + 47, 60 + 25, 72 + 5.', 'Вычисли: 31 + 47, 60 + 25, 72 + 5.', 'Work out: 31 + 47, 60 + 25, 72 + 5.'),
+      L('Qaysi son 43 ga qo‘shilsa, 68 hosil bo‘ladi?', 'Какое число надо прибавить к 43, чтобы получить 68?', 'What number added to 43 gives 68?'),
+      L('Ikki xonali ikkita son o‘ylang, ularning yig‘indisi 99 bo‘lsin.', 'Придумай два двузначных числа, сумма которых 99.', 'Think of two two-digit numbers that add up to 99.'),
+      L('Oilangizdagi ikki kishining yoshini qo‘shing.', 'Сложи возраст двух членов своей семьи.', 'Add the ages of two people in your family.')
+    ], after: [
+      L('Javoblar: 1) 78, 85, 77; 2) 25 (chunki 40 + 20 = 60, 3 + 5 = 8); 3) masalan, 45 + 54 yoki 23 + 76.', 'Ответы: 1) 78, 85, 77; 2) 25 (так как 40 + 20 = 60, 3 + 5 = 8); 3) например, 45 + 54 или 23 + 76.', 'Answers: 1) 78, 85, 77; 2) 25 (because 40 + 20 = 60 and 3 + 5 = 8); 3) for example 45 + 54 or 23 + 76.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('Qo‘shiluvchi + qo‘shiluvchi = yig‘indi.', 'Слагаемое + слагаемое = сумма.', 'Addend + addend = sum.'),
+      L('<b>O‘nliklar o‘nliklarga, birliklar birliklarga</b> qo‘shiladi.', '<b>Десятки складываем с десятками, единицы с единицами.</b>', '<b>Tens add to tens, ones add to ones.</b>'),
+      L('34 + 25 = (30 + 20) + (4 + 5) = 59.', '34 + 25 = (30 + 20) + (4 + 5) = 59.', '34 + 25 = (30 + 20) + (4 + 5) = 59.'),
+      L('Bir xonali son qo‘shilsa — o‘nliklar o‘zgarmaydi; yaxlit son qo‘shilsa — birliklar o‘zgarmaydi.', 'Прибавляем однозначное — десятки не меняются; круглое — единицы не меняются.', 'Add a one-digit number and the tens stay the same; add a round number and the ones stay the same.'),
+      L('Ustunda: o‘nliklar o‘nliklar ostida, birliklar birliklar ostida; o‘ngdan boshlaymiz.', 'Столбиком: десятки под десятками, единицы под единицами; начинаем справа.', 'In columns: tens under tens, ones under ones; start on the right.'),
+      L('Javobni taxminan tekshiring.', 'Прикидывай ответ.', 'Estimate to check your answer.')
+    ] }
+  ] });
+
+  // ---------- t12. Ikki xonali sonlarni ayirish ----------
+  T.add(P, 't12', { sections: [
+    { kind: 'intro', h: L('Bog‘dagi daraxtlar', 'Деревья в саду', 'Trees in the orchard'), p: [
+      L('Bobomning katta bog‘i bor. Unda 58 tup daraxt o‘sadi. Ulardan 23 tupi olma, qolganlari o‘rik. Men bobomdan so‘radim: «Bobojon, o‘rik daraxtlari nechta?» Bobom: «Keling, birga hisoblaymiz», — dedi va yerga tayoqcha bilan yozdi.', 'У моего дедушки большой сад. В нём растут 58 деревьев. Из них 23 — яблони, остальные — абрикосы. Я спросил дедушку: «Дедушка, а сколько абрикосовых деревьев?» Дедушка сказал: «Давай посчитаем вместе» — и написал палочкой на земле.', 'My grandpa has a big orchard. 58 trees grow there. 23 of them are apple trees and the rest are apricots. I asked: “Grandpa, how many apricot trees are there?” Grandpa said, “Let’s work it out together,” and wrote with a stick on the ground.'),
+      L('«58 — bu 5 o‘nlik va 8 birlik. 23 — bu 2 o‘nlik va 3 birlik. O‘nliklardan o‘nliklarni ayiramiz: 5 − 2 = 3 o‘nlik. Birliklardan birliklarni: 8 − 3 = 5 birlik. Demak, 35 tup o‘rik!» Bobomning usuli juda oson ekan!', '«58 — это 5 десятков и 8 единиц. 23 — это 2 десятка и 3 единицы. Из десятков вычитаем десятки: 5 − 2 = 3 десятка. Из единиц единицы: 8 − 3 = 5 единиц. Значит, 35 абрикосов!» Дедушкин способ оказался очень простым!', '“58 is 5 tens and 8 ones. 23 is 2 tens and 3 ones. Take tens from tens: 5 − 2 = 3 tens. Take ones from ones: 8 − 3 = 5 ones. So there are 35 apricot trees!” Grandpa’s method turned out to be very easy!'),
+      L('Bu mavzuda biz ikki xonali sonlarni xuddi shu usulda ayirishni o‘rganamiz. Agar siz qo‘shishni yaxshi o‘zlashtirgan bo‘lsangiz, ayirish ham juda oson bo‘ladi — qoida deyarli bir xil!', 'В этой теме мы научимся вычитать двузначные числа этим же способом. Если ты хорошо освоил сложение, вычитание тоже будет очень лёгким — правило почти такое же!', 'In this topic we will learn to subtract two-digit numbers the same way. If you have mastered adding, subtracting will be easy too — the rule is almost the same!')
+    ] },
+    { kind: 'def', h: L('Ayirish va uning qismlari', 'Вычитание и его компоненты', 'Subtraction and its parts'), p: [
+      L('58 − 23 = 35 misolida:', 'В примере 58 − 23 = 35:', 'In 58 − 23 = 35:')
+    ], list: [
+      L('<b>58</b> — kamayuvchi (undan ayiramiz);', '<b>58</b> — уменьшаемое (из него вычитаем);', '<b>58</b> — the number we start with;'),
+      L('<b>23</b> — ayriluvchi (shuncha olib tashlaymiz);', '<b>23</b> — вычитаемое (столько отнимаем);', '<b>23</b> — the number we take away;'),
+      L('<b>35</b> — ayirma (qolgani).', '<b>35</b> — разность (то, что осталось).', '<b>35</b> — the difference (what is left).')
+    ], after: [
+      L('Ayirishda ham har bir sonni o‘nlik va birlikka ajratamiz: 58 = 50 + 8, 23 = 20 + 3. Keyin o‘nliklardan o‘nliklarni, birliklardan birliklarni ayiramiz.', 'При вычитании тоже раскладываем каждое число на десятки и единицы: 58 = 50 + 8, 23 = 20 + 3. Потом из десятков вычитаем десятки, из единиц — единицы.', 'In subtraction we also split each number into tens and ones: 58 = 50 + 8, 23 = 20 + 3. Then we take tens from tens and ones from ones.'),
+      L('Bu mavzuda kamayuvchining birliklari ayriluvchining birliklaridan kam bo‘lmagan misollarni ko‘ramiz. Masalan, 58 − 23 da 8 ≥ 3. Bunday ayirishni «o‘nlikdan o‘tmasdan ayirish» deyishadi.', 'В этой теме мы разберём примеры, где единиц в уменьшаемом не меньше, чем в вычитаемом. Например, в 58 − 23: 8 ≥ 3. Такое вычитание называют «вычитанием без перехода через десяток».', 'In this topic we only look at sums where the first number has at least as many ones as the second. For example, in 58 − 23: 8 ≥ 3. This is called “subtracting without crossing ten”.')
+    ] },
+    { kind: 'history', h: L('Ayirish va qaytim tarixi', 'История вычитания и сдачи', 'The story of subtraction and change'), p: [
+      L('Qadimgi Xitoyda, 2 ming yildan ko‘proq vaqt oldin, olimlar hisoblash uchun maxsus tayoqchalardan foydalanishgan. Qizil tayoqchalar qo‘shiladigan sonlarni, qora tayoqchalar esa ayiriladigan sonlarni bildirgan. Ular bu tayoqchalarni stolga o‘nliklar va birliklar bo‘yicha alohida terishgan.', 'В Древнем Китае, более 2 тысяч лет назад, учёные считали с помощью особых палочек. Красные палочки обозначали прибавляемые числа, а чёрные — вычитаемые. Их раскладывали на столе отдельно по десяткам и единицам.', 'In ancient China, more than 2 000 years ago, scholars counted with special rods. Red rods stood for numbers to add and black rods for numbers to take away. They laid the rods out on a table separately by tens and ones.'),
+      L('Buyuk Ipak yo‘lidagi savdogarlar — Samarqand, Buxoro va Xivada — har kuni qaytim hisoblashardi. Ular ayirishni juda tez bajarishgan, chunki xatoga yo‘l qo‘ysa, pul yo‘qotishardi!', 'Купцы на Великом шёлковом пути — в Самарканде, Бухаре и Хиве — каждый день считали сдачу. Вычитали они очень быстро, ведь ошибка стоила денег!', 'Merchants on the Great Silk Road — in Samarkand, Bukhara and Khiva — counted change every day. They subtracted very quickly, because a mistake cost them money!'),
+      L('<b>Al-Xorazmiy</b> o‘z kitobida ayirishni ham xonalar bo‘yicha bajarishni o‘rgatgan: birliklardan birliklar, o‘nliklardan o‘nliklar. Bu qoida 1200 yildan beri o‘zgarmagan!', '<b>Аль-Хорезми</b> в своей книге учил вычитать тоже по разрядам: единицы из единиц, десятки из десятков. Это правило не меняется уже 1200 лет!', '<b>Al-Khwarizmi</b> taught in his book to subtract place by place as well: ones from ones, tens from tens. That rule has not changed for 1 200 years!')
+    ] },
+    { kind: 'rule', h: L('Ikki xonali sonlarni ayirish qoidasi', 'Правило вычитания двузначных чисел', 'The rule for subtracting two-digit numbers'), p: [
+      L('<b>O‘nliklardan o‘nliklarni, birliklardan birliklarni ayiramiz. Keyin natijalarni birlashtiramiz.</b>', '<b>Из десятков вычитаем десятки, из единиц — единицы. Потом объединяем результаты.</b>', '<b>Take tens from tens and ones from ones. Then put the results together.</b>'),
+      L('58 − 23 = (50 − 20) + (8 − 3) = 30 + 5 = 35', '58 − 23 = (50 − 20) + (8 − 3) = 30 + 5 = 35', '58 − 23 = (50 − 20) + (8 − 3) = 30 + 5 = 35')
+    ], list: [
+      L('Ikki xonalidan ikki xonali: 76 − 24 = (70 − 20) + (6 − 4) = 50 + 2 = 52.', 'Двузначное минус двузначное: 76 − 24 = (70 − 20) + (6 − 4) = 50 + 2 = 52.', 'Two-digit minus two-digit: 76 − 24 = (70 − 20) + (6 − 4) = 50 + 2 = 52.'),
+      L('Yaxlit sonni ayirish: 87 − 30 = 57 (faqat o‘nliklar: 8 − 3 = 5).', 'Вычитание круглого числа: 87 − 30 = 57 (только десятки: 8 − 3 = 5).', 'Taking a round number: 87 − 30 = 57 (tens only: 8 − 3 = 5).'),
+      L('Bir xonali sonni ayirish: 68 − 5 = 63 (faqat birliklar: 8 − 5 = 3).', 'Вычитание однозначного: 68 − 5 = 63 (только единицы: 8 − 5 = 3).', 'Taking a one-digit number: 68 − 5 = 63 (ones only: 8 − 5 = 3).')
+    ], after: [
+      L('Javobni qo‘shish bilan tekshiramiz: ayirma + ayriluvchi = kamayuvchi. 35 + 23 = 58. To‘g‘ri! Qo‘shish va ayirish — aka-uka kabi bir-birini tekshirib turadi.', 'Ответ проверяем сложением: разность + вычитаемое = уменьшаемое. 35 + 23 = 58. Верно! Сложение и вычитание, как братья, проверяют друг друга.', 'Check the answer by adding: difference + number taken away = starting number. 35 + 23 = 58. Correct! Like brothers, addition and subtraction check each other.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: ustun qilib ayiramiz', 'Шаг за шагом: вычитаем столбиком', 'Step by step: subtracting in columns'), p: [
+      L('79 − 46 ni ustun qilib yechamiz:', 'Решим 79 − 46 столбиком:', 'Let’s work out 79 − 46 in columns:')
+    ], list: [
+      L('1-qadam. 79 ni yozing, ostiga 46 ni yozing: o‘nliklar o‘nliklar ostida, birliklar birliklar ostida.', 'Шаг 1. Запиши 79, под ним 46: десятки под десятками, единицы под единицами.', 'Step 1. Write 79 and put 46 under it: tens under tens, ones under ones.'),
+      L('2-qadam. O‘ngdan boshlang — birliklar: 9 − 6 = 3.', 'Шаг 2. Начни справа — единицы: 9 − 6 = 3.', 'Step 2. Start on the right — ones: 9 − 6 = 3.'),
+      L('3-qadam. O‘nliklar: 7 − 4 = 3.', 'Шаг 3. Десятки: 7 − 4 = 3.', 'Step 3. Tens: 7 − 4 = 3.'),
+      L('4-qadam. Javob: <b>33</b>. Tekshiruv: 33 + 46 = 79.', 'Шаг 4. Ответ: <b>33</b>. Проверка: 33 + 46 = 79.', 'Step 4. Answer: <b>33</b>. Check: 33 + 46 = 79.')
+    ], after: [
+      L('Ayirishda tartib muhim: doim kattaroq sondan (kamayuvchidan) ayiramiz. Ustunda kamayuvchi tepada, ayriluvchi pastda turadi.', 'В вычитании важен порядок: всегда вычитаем из большего числа (уменьшаемого). Столбиком уменьшаемое пишем сверху, вычитаемое — снизу.', 'Order matters in subtraction: we always take away from the bigger number (the starting number). In columns, the starting number goes on top and the number taken away underneath.'),
+      L('Buni tayoqcha va kubchalar bilan ham ko‘rsatish mumkin. Stolga 7 ta tayoqcha va 9 ta kubcha qo‘ying — bu 79. Endi 4 ta tayoqchani va 6 ta kubchani olib tashlang. Stolda 3 ta tayoqcha va 3 ta kubcha qoladi — bu 33. Qo‘lingiz bilan bajarsangiz, qoida yanada tushunarli bo‘ladi!', 'Это можно показать и на палочках с кубиками. Положи на стол 7 палочек и 9 кубиков — это 79. Теперь убери 4 палочки и 6 кубиков. На столе останется 3 палочки и 3 кубика — это 33. Когда делаешь руками, правило становится ещё понятнее!', 'You can show this with rods and cubes too. Put 7 rods and 9 cubes on the table — that is 79. Now remove 4 rods and 6 cubes. 3 rods and 3 cubes are left — that is 33. When you do it with your hands, the rule becomes even clearer!')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('O‘nliklardan o‘nliklar, birliklardan birliklar!', 'Десятки из десятков, единицы из единиц!', 'Tens from tens, ones from ones!')
+    ], ex: [
+      { q: L('Hisoblang: 76 − 24', 'Вычисли: 76 − 24', 'Work out: 76 − 24'), s: L('O‘nliklar: 70 − 20 = 50. Birliklar: 6 − 4 = 2. Javob: <b>52</b>.', 'Десятки: 70 − 20 = 50. Единицы: 6 − 4 = 2. Ответ: <b>52</b>.', 'Tens: 70 − 20 = 50. Ones: 6 − 4 = 2. Answer: <b>52</b>.') },
+      { q: L('Hisoblang: 90 − 40', 'Вычисли: 90 − 40', 'Work out: 90 − 40'), s: L('9 o‘nlik − 4 o‘nlik = 5 o‘nlik = <b>50</b>.', '9 десятков − 4 десятка = 5 десятков = <b>50</b>.', '9 tens − 4 tens = 5 tens = <b>50</b>.') },
+      { q: L('Hisoblang: 68 − 5', 'Вычисли: 68 − 5', 'Work out: 68 − 5'), s: L('O‘nliklar o‘zgarmaydi: 60. Birliklar: 8 − 5 = 3. Javob: <b>63</b>.', 'Десятки не меняются: 60. Единицы: 8 − 5 = 3. Ответ: <b>63</b>.', 'The tens stay the same: 60. Ones: 8 − 5 = 3. Answer: <b>63</b>.') },
+      { q: L('Hisoblang: 47 − 47', 'Вычисли: 47 − 47', 'Work out: 47 − 47'), s: L('Sondan o‘zini ayirsak, hech narsa qolmaydi: <b>0</b>.', 'Если из числа вычесть его само, ничего не останется: <b>0</b>.', 'Take a number away from itself and nothing is left: <b>0</b>.') },
+      { q: L('Avtobusda 45 kishi bor edi. Bekatda 21 kishi tushdi. Nechta kishi qoldi?', 'В автобусе было 45 человек. На остановке вышли 21. Сколько осталось?', 'A bus had 45 people. 21 got off at a stop. How many are left?'), s: L('45 − 21: o‘nliklar 40 − 20 = 20, birliklar 5 − 1 = 4. Javob: <b>24</b> kishi.', '45 − 21: десятки 40 − 20 = 20, единицы 5 − 1 = 4. Ответ: <b>24</b> человека.', '45 − 21: tens 40 − 20 = 20, ones 5 − 1 = 4. Answer: <b>24</b> people.') }
+    ] },
+    { kind: 'table', h: L('Ayirish jadvali', 'Таблица вычитания', 'Subtraction table'), p: [
+      L('Har bir misol o‘nliklar va birliklarga bo‘lingan.', 'Каждый пример разбит на десятки и единицы.', 'Each sum is split into tens and ones.')
+    ], table: { head: [L('Misol', 'Пример', 'Sum'), L('O‘nliklar', 'Десятки', 'Tens'), L('Birliklar', 'Единицы', 'Ones'), L('Javob', 'Ответ', 'Answer')], rows: [
+      ['58 − 23', '50 − 20 = 30', '8 − 3 = 5', '35'],
+      ['97 − 52', '90 − 50 = 40', '7 − 2 = 5', '45'],
+      ['84 − 31', '80 − 30 = 50', '4 − 1 = 3', '53'],
+      ['69 − 7', '60', '9 − 7 = 2', '62'],
+      ['75 − 40', '70 − 40 = 30', '5', '35']
+    ] }, after: [
+      L('Har bir qatorni qo‘shish bilan tekshirib ko‘ring: masalan, 45 + 52 = 97.', 'Проверь каждую строку сложением: например, 45 + 52 = 97.', 'Check each row by adding: for example, 45 + 52 = 97.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Ayirishda mana bu xatolarga ehtiyot bo‘ling:', 'При вычитании остерегайся таких ошибок:', 'Watch out for these mistakes when subtracting:')
+    ], list: [
+      L('<b>Birliklarni o‘nliklardan ayirish.</b> 68 − 5 = 18 (6 − 5 = 1 deb). Yo‘q! 5 — birlik, uni 8 dan ayiramiz: 63.', '<b>Вычитать единицы из десятков.</b> 68 − 5 = 18 (считая 6 − 5 = 1). Нет! 5 — единицы, вычитаем их из 8: 63.', '<b>Taking ones from the tens.</b> 68 − 5 = 18 (doing 6 − 5 = 1). No! 5 is ones, so take it from the 8: 63.'),
+      L('<b>Ayirish o‘rniga qo‘shish.</b> 76 − 24 = 100 deb yozish. Belgiga diqqat bilan qarang!', '<b>Сложить вместо вычитания.</b> Написать 76 − 24 = 100. Внимательно смотри на знак!', '<b>Adding instead of subtracting.</b> Writing 76 − 24 = 100. Look carefully at the sign!'),
+      L('<b>Kichikdan kattani ayirish.</b> 58 − 23 da birliklarni «3 − 8» deb hisoblash. Doim kamayuvchining raqamidan ayiramiz: 8 − 3.', '<b>Вычитать большее из меньшего.</b> В 58 − 23 считать единицы как «3 − 8». Всегда вычитаем из цифры уменьшаемого: 8 − 3.', '<b>Taking the bigger from the smaller.</b> In 58 − 23, working out the ones as “3 − 8”. Always subtract from the top number’s digit: 8 − 3.'),
+      L('<b>Nolni unutish.</b> 90 − 40 = 5 deb yozish. 5 o‘nlik — bu 50.', '<b>Забыть ноль.</b> Написать 90 − 40 = 5. 5 десятков — это 50.', '<b>Forgetting the zero.</b> Writing 90 − 40 = 5. 5 tens is 50.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Do‘konda.</b> Sizda 50 ming so‘m bor, 35 ming so‘mlik koptok oldingiz. Qaytim: 50 − 35 = 15 ming so‘m. Sotuvchi to‘g‘ri qaytim berganini o‘zingiz tekshira olasiz!', '<b>В магазине.</b> У тебя 50 тысяч сумов, ты купил мяч за 35 тысяч. Сдача: 50 − 35 = 15 тысяч. Ты сам можешь проверить, правильно ли дали сдачу!', '<b>At the shop.</b> You have 50 thousand sum and buy a ball for 35 thousand. Change: 50 − 35 = 15 thousand. You can check for yourself that the change is right!'),
+      L('<b>Kitob o‘qishda.</b> Kitobda 86 sahifa bor, siz 42 sahifani o‘qidingiz. Yana 86 − 42 = 44 sahifa qoldi.', '<b>При чтении.</b> В книге 86 страниц, ты прочитал 42. Осталось ещё 86 − 42 = 44 страницы.', '<b>Reading.</b> A book has 86 pages and you have read 42. There are 86 − 42 = 44 pages left.'),
+      L('<b>Yoshda.</b> Bobongiz 75 yoshda, siz 7 yoshdasiz. Bobongiz sizdan 75 − 7 = 68 yosh katta.', '<b>С возрастом.</b> Дедушке 75 лет, тебе 7. Дедушка старше тебя на 75 − 7 = 68 лет.', '<b>With ages.</b> Grandpa is 75 and you are 7. Grandpa is 75 − 7 = 68 years older than you.'),
+      L('<b>Ob-havoda.</b> Kunduzi 28 daraja, kechasi 15 daraja. Farq: 28 − 15 = 13 daraja. Kechasi issiq kiyim kerak!', '<b>В погоде.</b> Днём 28 градусов, ночью 15. Разница: 28 − 15 = 13 градусов. Ночью нужна тёплая одежда!', '<b>Weather.</b> 28 degrees by day, 15 at night. The difference: 28 − 15 = 13 degrees. You need warm clothes at night!')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Fil bolasi tug‘ilganda taxminan 90 kg keladi, kattalar esa 5000 kg dan ham og‘ir bo‘ladi. Fil har kuni 100 kg dan ortiq o‘t yeydi!', 'Слонёнок при рождении весит около 90 кг, а взрослые слоны — больше 5000 кг. Слон каждый день съедает больше 100 кг травы!', 'A baby elephant weighs about 90 kg at birth, and adults weigh over 5 000 kg. An elephant eats more than 100 kg of grass every day!'),
+      L('To‘lin oy taxminan har 29–30 kunda bir marta takrorlanadi. Agar oxirgi to‘lin oydan beri 12 kun o‘tgan bo‘lsa, keyingisigacha taxminan 30 − 12 = 18 kun qolganini ayirish orqali topish mumkin.', 'Полнолуние повторяется примерно каждые 29–30 дней. Если с последнего полнолуния прошло 12 дней, то до следующего осталось около 30 − 12 = 18 дней — это находим вычитанием.', 'A full moon comes round about every 29–30 days. If 12 days have passed since the last one, about 30 − 12 = 18 days are left until the next — we find that by subtracting.'),
+      L('Toshkent teleminorasining balandligi 375 metr. Bu O‘rta Osiyodagi eng baland inshootlardan biri!', 'Высота Ташкентской телебашни — 375 метров. Это одно из самых высоких сооружений Средней Азии!', 'The Tashkent TV Tower is 375 metres tall. It is one of the tallest structures in Central Asia!'),
+      L('Ayirish natijasi 0 ham bo‘lishi mumkin: 47 − 47 = 0. Nolni hindistonlik olimlar o‘ylab topishgan, al-Xorazmiy esa uni dunyoga tanitgan.', 'Разность может быть и нулём: 47 − 47 = 0. Ноль придумали индийские учёные, а аль-Хорезми рассказал о нём миру.', 'A difference can be zero: 47 − 47 = 0. Indian scholars invented zero, and al-Khwarizmi told the world about it.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Javobni har doim qo‘shish bilan tekshiring.', 'Всегда проверяй ответ сложением.', 'Always check your answer by adding.')
+    ], list: [
+      L('Hisoblang: 87 − 53, 60 − 20, 49 − 6.', 'Вычисли: 87 − 53, 60 − 20, 49 − 6.', 'Work out: 87 − 53, 60 − 20, 49 − 6.'),
+      L('Qaysi sonni 95 dan ayirsak, 61 qoladi?', 'Какое число надо вычесть из 95, чтобы осталось 61?', 'What number taken from 95 leaves 61?'),
+      L('34 + 25 = 59 bo‘lsa, 59 − 25 nechaga teng? Hisoblamasdan ayting!', 'Если 34 + 25 = 59, то чему равно 59 − 25? Скажи, не вычисляя!', 'If 34 + 25 = 59, what is 59 − 25? Say it without working it out!'),
+      L('Uyingizdagi biror narsaning narxi va sizdagi puldan masala tuzing.', 'Составь задачу о цене какой-нибудь вещи дома и о твоих деньгах.', 'Make up a problem about the price of something at home and the money you have.')
+    ], after: [
+      L('Javoblar: 1) 34, 40, 43; 2) 34; 3) 34 — chunki qo‘shish va ayirish bog‘langan!', 'Ответы: 1) 34, 40, 43; 2) 34; 3) 34 — потому что сложение и вычитание связаны!', 'Answers: 1) 34, 40, 43; 2) 34; 3) 34 — because adding and subtracting are linked!')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('Kamayuvchi − ayriluvchi = ayirma.', 'Уменьшаемое − вычитаемое = разность.', 'Starting number − number taken away = difference.'),
+      L('<b>O‘nliklardan o‘nliklar, birliklardan birliklar</b> ayiriladi.', '<b>Десятки вычитаем из десятков, единицы из единиц.</b>', '<b>Take tens from tens and ones from ones.</b>'),
+      L('58 − 23 = (50 − 20) + (8 − 3) = 35.', '58 − 23 = (50 − 20) + (8 − 3) = 35.', '58 − 23 = (50 − 20) + (8 − 3) = 35.'),
+      L('Bir xonali son ayirilsa — o‘nliklar o‘zgarmaydi; yaxlit son ayirilsa — birliklar o‘zgarmaydi.', 'Вычитаем однозначное — десятки не меняются; круглое — единицы не меняются.', 'Take away a one-digit number and the tens stay the same; take away a round number and the ones stay the same.'),
+      L('Ustunda kamayuvchi tepada, ayriluvchi pastda; o‘ngdan boshlaymiz.', 'Столбиком уменьшаемое сверху, вычитаемое снизу; начинаем справа.', 'In columns, the starting number is on top; start on the right.'),
+      L('Tekshiruv: ayirma + ayriluvchi = kamayuvchi.', 'Проверка: разность + вычитаемое = уменьшаемое.', 'Check: difference + number taken away = starting number.')
+    ] }
+  ] });
+})(this);
+(function (root) {
+  'use strict';
+  var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '1-2';
+
+  // ---------- t13. Qo'shish va ayirish bog'lanishi. Guruhlash xossasi ----------
+  T.add(P, 't13', { sections: [
+    { kind: 'intro', h: L('Aqlli hisobchi', 'Умный счетовод', 'The clever counter'), p: [
+      L('Kamola onasiga bozorda yordam berdi. Ular uchta savatga meva solishdi: birinchisiga 3 ta anor, ikkinchisiga 8 ta nok, uchinchisiga 7 ta shaftoli. «Jami nechta meva?» — so‘radi onasi. Kamola o‘yladi: «3 + 8 — bu 11, keyin 11 + 7 … biroz qiyin». Keyin u kulib yubordi: «Shoshmang! 3 va 7 — bu 10! 10 + 8 = 18!»', 'Камола помогала маме на базаре. Они разложили фрукты в три корзины: в первую 3 граната, во вторую 8 груш, в третью 7 персиков. «Сколько всего фруктов?» — спросила мама. Камола подумала: «3 + 8 — это 11, потом 11 + 7 … немного сложно». А потом засмеялась: «Подождите! 3 и 7 — это 10! 10 + 8 = 18!»', 'Kamola was helping her mother at the market. They put fruit into three baskets: 3 pomegranates in the first, 8 pears in the second and 7 peaches in the third. “How many pieces of fruit in all?” asked Mum. Kamola thought: “3 + 8 is 11, then 11 + 7 … that’s a bit hard.” Then she laughed: “Wait! 3 and 7 make 10! 10 + 8 = 18!”'),
+      L('Kamola juda aqlli ish qildi: u sonlarni qulay qilib <b>guruhladi</b>. Sonlarni qaysi tartibda qo‘shsak ham, yig‘indi o‘zgarmaydi — shuning uchun avval «do‘st» sonlarni, ya’ni birga 10 beradigan sonlarni qo‘shish mumkin.', 'Камола поступила очень умно: она удобно <b>сгруппировала</b> числа. В каком порядке ни складывай, сумма не меняется, поэтому можно сначала сложить числа-«друзья», которые вместе дают 10.', 'Kamola did something very clever: she <b>grouped</b> the numbers in a handy way. Whatever order we add in, the sum stays the same — so we can first add the “friendly” numbers that make 10 together.'),
+      L('Bu mavzuda biz ikkita muhim narsani o‘rganamiz: qo‘shish va ayirish bir-biri bilan qanday bog‘langanini va bir nechta sonni qulay usulda qo‘shishni.', 'В этой теме мы узнаем две важные вещи: как связаны сложение и вычитание и как удобно складывать несколько чисел.', 'In this topic we will learn two important things: how addition and subtraction are linked, and how to add several numbers the smart way.')
+    ] },
+    { kind: 'def', h: L('Asosiy tushunchalar', 'Основные понятия', 'Key ideas'), p: [
+      L('<b>Qo‘shish va ayirish bog‘lanishi.</b> Agar ikki sonni qo‘shib yig‘indi topsak, yig‘indidan bitta qo‘shiluvchini ayirsak, ikkinchi qo‘shiluvchi chiqadi. Qo‘shish va ayirish — bir-birining teskarisi.', '<b>Связь сложения и вычитания.</b> Если из суммы двух чисел вычесть одно слагаемое, получится другое слагаемое. Сложение и вычитание — обратные действия.', '<b>Addition and subtraction are linked.</b> If you take one addend away from a sum, you get the other addend. Addition and subtraction undo each other.'),
+      L('<b>Guruhlash xossasi.</b> Uchta sonni qo‘shganda, avval qaysi ikkitasini qo‘shishimiz muhim emas — yig‘indi bir xil chiqadi.', '<b>Сочетательное свойство.</b> Складывая три числа, неважно, какие два сложить первыми, — сумма получится одна и та же.', '<b>The grouping (associative) property.</b> When adding three numbers, it does not matter which two you add first — the sum is the same.')
+    ], list: [
+      L('35 + 12 = 47, demak 47 − 12 = 35 va 47 − 35 = 12.', '35 + 12 = 47, значит 47 − 12 = 35 и 47 − 35 = 12.', '35 + 12 = 47, so 47 − 12 = 35 and 47 − 35 = 12.'),
+      L('(2 + 8) + 5 = 2 + (8 + 5) = 15.', '(2 + 8) + 5 = 2 + (8 + 5) = 15.', '(2 + 8) + 5 = 2 + (8 + 5) = 15.'),
+      L('Harflar bilan: <b>(a + b) + c = a + (b + c)</b>.', 'Буквами: <b>(a + b) + c = a + (b + c)</b>.', 'With letters: <b>(a + b) + c = a + (b + c)</b>.')
+    ], after: [
+      L('Qavslar bu yerda qaysi ikki son birinchi qo‘shilishini ko‘rsatadi. Qo‘shishda qavslarni xohlagan joyga ko‘chirish mumkin — javob o‘zgarmaydi.', 'Скобки здесь показывают, какие два числа складываем первыми. При сложении скобки можно переставлять как угодно — ответ не изменится.', 'Here the brackets show which two numbers are added first. In addition you can move the brackets wherever you like — the answer does not change.')
+    ] },
+    { kind: 'history', h: L('Bu xossalarni kim kashf etgan?', 'Кто открыл эти свойства?', 'Who discovered these properties?'), p: [
+      L('Qo‘shish va ayirish bog‘lanishini qadimgi misrliklar yaxshi bilishgan. Ular ayirishni ko‘pincha qo‘shish orqali bajarishgan: «12 ga nechta qo‘shsam 47 bo‘ladi?» Hozir ham bozorda sotuvchilar qaytimni shunday sanaydi.', 'Связь сложения и вычитания хорошо знали древние египтяне. Они часто выполняли вычитание через сложение: «Сколько прибавить к 12, чтобы получить 47?» И сейчас продавцы на базаре так считают сдачу.', 'The ancient Egyptians knew well that adding and subtracting are linked. They often subtracted by adding: “How much do I add to 12 to get 47?” Market sellers still count change this way.'),
+      L('<b>Al-Xorazmiy</b> o‘zining mashhur «Al-jabr» kitobida tenglamalarni yechish uchun aynan shu bog‘lanishdan foydalangan. «Algebra» fanining nomi ham shu kitob nomidan kelib chiqqan! «Al-jabr» — «tiklash» degani: noma’lum sonni qo‘shish va ayirish yordamida tiklash.', '<b>Аль-Хорезми</b> в своей знаменитой книге «Аль-джабр» использовал именно эту связь для решения уравнений. Название науки «алгебра» произошло от названия этой книги! «Аль-джабр» означает «восстановление»: восстановить неизвестное число с помощью сложения и вычитания.', '<b>Al-Khwarizmi</b> used exactly this link to solve equations in his famous book “Al-jabr”. The name of the subject “algebra” comes from the title of that book! “Al-jabr” means “restoring”: finding a missing number with the help of addition and subtraction.'),
+      L('Guruhlash xossasiga nom esa ancha keyin, taxminan 200 yil oldin berilgan. Lekin odamlar undan har doim foydalanishgan — xuddi Kamola kabi!', 'Название сочетательному свойству дали гораздо позже, примерно 200 лет назад. Но люди пользовались им всегда — точно как Камола!', 'The grouping property was given its name much later, about 200 years ago. But people have always used it — just like Kamola!')
+    ] },
+    { kind: 'rule', h: L('Ikki qoida', 'Два правила', 'Two rules'), p: [
+      L('<b>1-qoida. Yig‘indidan bitta qo‘shiluvchini ayirsak, ikkinchi qo‘shiluvchi qoladi.</b>', '<b>Правило 1. Если из суммы вычесть одно слагаемое, получится другое.</b>', '<b>Rule 1. Take one addend from the sum and the other addend is left.</b>'),
+      L('Bitta qo‘shish misolidan ikkita ayirish misolini «tug‘dirish» mumkin: 6 + 4 = 10 → 10 − 4 = 6 va 10 − 6 = 4. Bu uch misol bir oila!', 'Из одного примера на сложение можно «родить» два примера на вычитание: 6 + 4 = 10 → 10 − 4 = 6 и 10 − 6 = 4. Эти три примера — одна семья!', 'One addition fact gives birth to two subtraction facts: 6 + 4 = 10 → 10 − 4 = 6 and 10 − 6 = 4. These three facts are one family!'),
+      L('<b>2-qoida. Bir nechta sonni qo‘shganda ularni istalgancha guruhlash va o‘rnini almashtirish mumkin — yig‘indi o‘zgarmaydi.</b>', '<b>Правило 2. Складывая несколько чисел, их можно как угодно группировать и переставлять — сумма не изменится.</b>', '<b>Rule 2. When adding several numbers, you can group and reorder them however you like — the sum stays the same.</b>')
+    ], list: [
+      L('Avval 10 beradigan juftlikni qidiring: 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5.', 'Сначала ищи пару, дающую 10: 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5.', 'First look for a pair that makes 10: 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5.'),
+      L('Yaxlit sonlar uchun ham: 20 + 80, 30 + 70, 40 + 60 — bular 100 beradi.', 'Для круглых чисел тоже: 20 + 80, 30 + 70, 40 + 60 — дают 100.', 'For round numbers too: 20 + 80, 30 + 70, 40 + 60 make 100.')
+    ], after: [
+      L('Diqqat: guruhlash xossasi faqat qo‘shishda ishlaydi! Ayirishda qavsni ko‘chirsak, javob o‘zgarishi mumkin: (10 − 3) − 2 = 5, lekin 10 − (3 − 2) = 9.', 'Внимание: сочетательное свойство работает только для сложения! При вычитании перенос скобок может изменить ответ: (10 − 3) − 2 = 5, а 10 − (3 − 2) = 9.', 'Careful: the grouping property works only for addition! In subtraction, moving the brackets can change the answer: (10 − 3) − 2 = 5, but 10 − (3 − 2) = 9.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: qulay usulda qo‘shamiz', 'Шаг за шагом: складываем удобным способом', 'Step by step: adding the smart way'), p: [
+      L('6 + 9 + 4 ni qulay usulda hisoblaymiz:', 'Вычислим удобным способом 6 + 9 + 4:', 'Let’s work out 6 + 9 + 4 the smart way:')
+    ], list: [
+      L('1-qadam. Barcha qo‘shiluvchilarga qarang: 6, 9, 4.', 'Шаг 1. Посмотри на все слагаемые: 6, 9, 4.', 'Step 1. Look at all the addends: 6, 9, 4.'),
+      L('2-qadam. 10 beradigan juftlikni toping: 6 + 4 = 10!', 'Шаг 2. Найди пару, дающую 10: 6 + 4 = 10!', 'Step 2. Find the pair that makes 10: 6 + 4 = 10!'),
+      L('3-qadam. Ularni guruhlang: (6 + 4) + 9.', 'Шаг 3. Сгруппируй их: (6 + 4) + 9.', 'Step 3. Group them: (6 + 4) + 9.'),
+      L('4-qadam. Hisoblang: 10 + 9 = <b>19</b>.', 'Шаг 4. Вычисли: 10 + 9 = <b>19</b>.', 'Step 4. Work it out: 10 + 9 = <b>19</b>.')
+    ], after: [
+      L('Taqqoslang: chapdan o‘ngga hisoblasak, 6 + 9 = 15, keyin 15 + 4 = 19. Javob bir xil, lekin birinchi usul ancha oson — o‘nlikdan o‘tib qo‘shish kerak bo‘lmadi!', 'Сравни: если считать слева направо, 6 + 9 = 15, потом 15 + 4 = 19. Ответ тот же, но первый способ гораздо проще — не пришлось переходить через десяток!', 'Compare: working left to right, 6 + 9 = 15, then 15 + 4 = 19. Same answer, but the first way is much easier — no crossing ten needed!')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har birida «do‘st» sonlarni qidiring.', 'В каждом ищи числа-«друзья».', 'Look for the “friendly” numbers in each one.')
+    ], ex: [
+      { q: L('Qulay usulda hisoblang: 3 + 8 + 7', 'Вычисли удобным способом: 3 + 8 + 7', 'Work out the smart way: 3 + 8 + 7'), s: L('(3 + 7) + 8 = 10 + 8 = <b>18</b>.', '(3 + 7) + 8 = 10 + 8 = <b>18</b>.', '(3 + 7) + 8 = 10 + 8 = <b>18</b>.') },
+      { q: L('Qulay usulda hisoblang: 5 + 9 + 1 + 5', 'Вычисли удобным способом: 5 + 9 + 1 + 5', 'Work out the smart way: 5 + 9 + 1 + 5'), s: L('(5 + 5) + (9 + 1) = 10 + 10 = <b>20</b>.', '(5 + 5) + (9 + 1) = 10 + 10 = <b>20</b>.', '(5 + 5) + (9 + 1) = 10 + 10 = <b>20</b>.') },
+      { q: L('Qulay usulda hisoblang: 30 + 6 + 70', 'Вычисли удобным способом: 30 + 6 + 70', 'Work out the smart way: 30 + 6 + 70'), s: L('(30 + 70) + 6 = 100 + 6 = <b>106</b>.', '(30 + 70) + 6 = 100 + 6 = <b>106</b>.', '(30 + 70) + 6 = 100 + 6 = <b>106</b>.') },
+      { q: L('35 + 12 = 47 ekanini bilib, 47 − 12 ni toping.', 'Зная, что 35 + 12 = 47, найди 47 − 12.', 'Knowing that 35 + 12 = 47, find 47 − 12.'), s: L('Yig‘indidan bitta qo‘shiluvchini (12) ayirsak, ikkinchisi qoladi: <b>35</b>.', 'Если из суммы вычесть одно слагаемое (12), останется другое: <b>35</b>.', 'Take one addend (12) from the sum and the other is left: <b>35</b>.') },
+      { q: L('Tushirib qoldirilgan sonni toping: (2 + 8) + 5 = 2 + (8 + ?)', 'Найди пропущенное число: (2 + 8) + 5 = 2 + (8 + ?)', 'Find the missing number: (2 + 8) + 5 = 2 + (8 + ?)'), s: L('Guruhlash xossasiga ko‘ra sonlar bir xil, faqat qavslar ko‘chdi. Javob: <b>5</b>.', 'По сочетательному свойству числа те же, перенесли только скобки. Ответ: <b>5</b>.', 'By the grouping property the numbers are the same; only the brackets moved. Answer: <b>5</b>.') }
+    ] },
+    { kind: 'table', h: L('Misollar oilasi', 'Семья примеров', 'Fact families'), p: [
+      L('Har bir qatorda bitta qo‘shish va ikkita ayirish misoli — ular bir oila.', 'В каждой строке один пример на сложение и два на вычитание — это одна семья.', 'Each row has one addition fact and two subtraction facts — one family.')
+    ], table: { head: [L('Qo‘shish', 'Сложение', 'Addition'), L('1-ayirish', '1-е вычитание', 'Subtraction 1'), L('2-ayirish', '2-е вычитание', 'Subtraction 2')], rows: [
+      ['7 + 5 = 12', '12 − 5 = 7', '12 − 7 = 5'],
+      ['9 + 6 = 15', '15 − 6 = 9', '15 − 9 = 6'],
+      ['20 + 30 = 50', '50 − 30 = 20', '50 − 20 = 30'],
+      ['35 + 12 = 47', '47 − 12 = 35', '47 − 35 = 12'],
+      ['41 + 26 = 67', '67 − 26 = 41', '67 − 41 = 26']
+    ] }, after: [
+      L('Bitta misolni bilsangiz, uchtasini bilasiz! Bu yodlashni uch marta osonlashtiradi.', 'Знаешь один пример — знаешь три! Это в три раза облегчает запоминание.', 'Know one fact and you know three! That makes remembering three times easier.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Bu mavzuda ko‘p uchraydigan xatolar:', 'Частые ошибки в этой теме:', 'Frequent mistakes in this topic:')
+    ], list: [
+      L('<b>Ayirishda ham guruhlash.</b> 10 − 3 − 2 ni 10 − (3 − 2) = 9 deb hisoblash. Noto‘g‘ri! To‘g‘risi: 10 − 3 − 2 = 5.', '<b>Группировать при вычитании.</b> Считать 10 − 3 − 2 как 10 − (3 − 2) = 9. Неверно! Правильно: 10 − 3 − 2 = 5.', '<b>Grouping in subtraction.</b> Treating 10 − 3 − 2 as 10 − (3 − 2) = 9. Wrong! Correct: 10 − 3 − 2 = 5.'),
+      L('<b>Qo‘shiluvchini tushirib qoldirish.</b> 3 + 8 + 7 da 3 va 7 ni qo‘shib, 8 ni unutish. Har bir sonni belgilab chiqing.', '<b>Потерять слагаемое.</b> В 3 + 8 + 7 сложить 3 и 7 и забыть 8. Отмечай каждое число.', '<b>Losing an addend.</b> In 3 + 8 + 7, adding 3 and 7 and forgetting the 8. Tick off every number.'),
+      L('<b>Noto‘g‘ri ayirish misolini tuzish.</b> 7 + 5 = 12 dan «7 − 5 = 12» deb yozish. Ayirishda doim yig‘indidan boshlaymiz: 12 − 5 = 7.', '<b>Неверно составить пример на вычитание.</b> Из 7 + 5 = 12 написать «7 − 5 = 12». При вычитании всегда начинаем с суммы: 12 − 5 = 7.', '<b>Building the subtraction wrongly.</b> From 7 + 5 = 12 writing “7 − 5 = 12”. Always start subtraction with the sum: 12 − 5 = 7.'),
+      L('<b>«Do‘st» sonlarni ko‘rmaslik.</b> 4 + 7 + 6 ni chapdan hisoblash qiyin. 4 + 6 = 10 ni ko‘ring!', '<b>Не замечать чисел-«друзей».</b> Считать 4 + 7 + 6 слева направо трудно. Заметь 4 + 6 = 10!', '<b>Missing the friendly numbers.</b> Adding 4 + 7 + 6 left to right is hard. Spot 4 + 6 = 10!')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Bozorda.</b> Siz 3 ming, 8 ming va 7 ming so‘mlik narsalar oldingiz. Aqlli hisob: (3 + 7) + 8 = 18 ming so‘m. Kalkulyatorsiz, bir zumda!', '<b>На базаре.</b> Ты купил вещи за 3, 8 и 7 тысяч. Умный счёт: (3 + 7) + 8 = 18 тысяч. Без калькулятора, в одно мгновение!', '<b>At the market.</b> You buy things for 3, 8 and 7 thousand. Smart counting: (3 + 7) + 8 = 18 thousand. No calculator, in a flash!'),
+      L('<b>Qaytimni tekshirish.</b> 50 ming so‘m berdingiz, xarid 35 ming. Sotuvchi 15 ming qaytardi. Tekshirish: 35 + 15 = 50. To‘g‘ri — qo‘shish ayirishni tekshirdi!', '<b>Проверка сдачи.</b> Ты дал 50 тысяч, покупка стоит 35. Продавец вернул 15. Проверка: 35 + 15 = 50. Верно — сложение проверило вычитание!', '<b>Checking change.</b> You paid 50 thousand for something costing 35. The seller gave back 15. Check: 35 + 15 = 50. Correct — addition checked subtraction!'),
+      L('<b>Uyda.</b> Mehmonlar keldi: 4 ta qo‘shni, 7 ta qarindosh va 6 ta do‘st. Nechta piyola kerak? (4 + 6) + 7 = 17 ta piyola.', '<b>Дома.</b> Пришли гости: 4 соседа, 7 родственников и 6 друзей. Сколько нужно пиал? (4 + 6) + 7 = 17 пиал.', '<b>At home.</b> Guests arrive: 4 neighbours, 7 relatives and 6 friends. How many tea bowls are needed? (4 + 6) + 7 = 17 bowls.'),
+      L('<b>Maktabda.</b> Uyga vazifani tekshirishda: agar 47 − 12 = 35 deb yozgan bo‘lsangiz, 35 + 12 ni hisoblang. 47 chiqsa — javobingiz to‘g‘ri!', '<b>В школе.</b> Проверяя домашнее задание: если ты написал 47 − 12 = 35, посчитай 35 + 12. Получилось 47 — ответ верный!', '<b>At school.</b> Checking homework: if you wrote 47 − 12 = 35, work out 35 + 12. If you get 47, your answer is right!')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Mashhur nemis matematigi Karl Gauss bolaligida o‘qituvchisi bergan 1 dan 100 gacha sonlarni qo‘shish masalasini bir necha daqiqada yechgan. U sonlarni juftlab guruhlagan: 1 + 100, 2 + 99, 3 + 98 … har bir juftlik 101 beradi!', 'Знаменитый немецкий математик Карл Гаусс в детстве за несколько минут сложил все числа от 1 до 100. Он сгруппировал их парами: 1 + 100, 2 + 99, 3 + 98 … каждая пара даёт 101!', 'The famous German mathematician Carl Gauss, as a boy, added all the numbers from 1 to 100 in a few minutes. He grouped them in pairs: 1 + 100, 2 + 99, 3 + 98 … each pair makes 101!'),
+      L('«Algebra» so‘zi al-Xorazmiyning «Al-jabr» kitobidan, «algoritm» so‘zi esa uning ismidan kelib chiqqan. Ikkala so‘z ham butun dunyo tillarida ishlatiladi!', 'Слово «алгебра» произошло от книги аль-Хорезми «Аль-джабр», а слово «алгоритм» — от его имени. Оба слова используются во всех языках мира!', 'The word “algebra” comes from al-Khwarizmi’s book “Al-jabr”, and “algorithm” comes from his name. Both words are used in languages all over the world!'),
+      L('Domino toshlarida nuqtalar soni qo‘shish va ayirishni mashq qilish uchun juda qulay: har bir toshda ikki son va ularning yig‘indisi yashiringan.', 'Кости домино очень удобны для тренировки сложения и вычитания: на каждой спрятаны два числа и их сумма.', 'Dominoes are great for practising adding and subtracting: every tile hides two numbers and their sum.'),
+      L('Qo‘lingizdagi 10 ta barmoq — «do‘st» juftliklarning eng yaxshi jadvali: 3 tasini bukib, qolgan 7 tasini ko‘ring!', 'Твои 10 пальцев — лучшая таблица пар-«друзей»: загни 3 и увидишь оставшиеся 7!', 'Your 10 fingers are the best table of friendly pairs: fold down 3 and you see the other 7!')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('«Do‘st» sonlarni qidiring va misollar oilasini tuzing.', 'Ищи числа-«друзья» и составляй семьи примеров.', 'Look for friendly numbers and build fact families.')
+    ], list: [
+      L('Qulay usulda hisoblang: 7 + 4 + 3, 2 + 9 + 8, 60 + 5 + 40.', 'Вычисли удобным способом: 7 + 4 + 3, 2 + 9 + 8, 60 + 5 + 40.', 'Work out the smart way: 7 + 4 + 3, 2 + 9 + 8, 60 + 5 + 40.'),
+      L('8 + 6 = 14 misolidan ikkita ayirish misolini tuzing.', 'Составь два примера на вычитание из 8 + 6 = 14.', 'Make two subtraction facts from 8 + 6 = 14.'),
+      L('52 + 23 = 75 bo‘lsa, 75 − 52 nechaga teng?', 'Если 52 + 23 = 75, то 75 − 52 = ?', 'If 52 + 23 = 75, what is 75 − 52?'),
+      L('Barmoqlaringiz yordamida 10 ning barcha «do‘st» juftliklarini toping.', 'С помощью пальцев найди все пары-«друзья» числа 10.', 'Use your fingers to find all the friendly pairs that make 10.')
+    ], after: [
+      L('Javoblar: 1) 14, 19, 105; 2) 14 − 6 = 8, 14 − 8 = 6; 3) 23; 4) 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5.', 'Ответы: 1) 14, 19, 105; 2) 14 − 6 = 8, 14 − 8 = 6; 3) 23; 4) 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5.', 'Answers: 1) 14, 19, 105; 2) 14 − 6 = 8, 14 − 8 = 6; 3) 23; 4) 1 + 9, 2 + 8, 3 + 7, 4 + 6, 5 + 5.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('Qo‘shish va ayirish — <b>teskari amallar</b>.', 'Сложение и вычитание — <b>обратные действия</b>.', 'Addition and subtraction are <b>inverse operations</b>.'),
+      L('Yig‘indidan bitta qo‘shiluvchini ayirsak, ikkinchisi qoladi: 47 − 12 = 35.', 'Из суммы вычли одно слагаемое — осталось другое: 47 − 12 = 35.', 'Take one addend from the sum and the other is left: 47 − 12 = 35.'),
+      L('Bitta qo‘shish misoli = ikkita ayirish misoli (misollar oilasi).', 'Один пример на сложение = два на вычитание (семья примеров).', 'One addition fact = two subtraction facts (a fact family).'),
+      L('<b>Guruhlash xossasi:</b> (a + b) + c = a + (b + c).', '<b>Сочетательное свойство:</b> (a + b) + c = a + (b + c).', '<b>Grouping property:</b> (a + b) + c = a + (b + c).'),
+      L('Avval 10 yoki 100 beradigan «do‘st» sonlarni qo‘shing.', 'Сначала складывай числа-«друзья», дающие 10 или 100.', 'Add the friendly numbers that make 10 or 100 first.'),
+      L('Guruhlash faqat qo‘shishda ishlaydi, ayirishda emas!', 'Группировать можно только при сложении, не при вычитании!', 'Grouping works only for addition, not subtraction!')
+    ] }
+  ] });
+
+  // ---------- t14. Tarkibli ifodalar. Misol va masalalar ----------
+  T.add(P, 't14', { sections: [
+    { kind: 'intro', h: L('Avtobus sayohati', 'Поездка на автобусе', 'A bus journey'), p: [
+      L('Shahar avtobusi bekatdan jo‘nadi. Unda 45 ta yo‘lovchi bor edi. Birinchi bekatda 20 kishi tushdi, 6 kishi chiqdi. Haydovchi amaki o‘ylab qoldi: «Endi avtobusda nechta yo‘lovchi bor?» Siz unga yordam bera olasizmi?', 'Городской автобус отъехал от остановки. В нём было 45 пассажиров. На первой остановке вышли 20 человек и вошли 6. Водитель задумался: «Сколько теперь пассажиров в автобусе?» Сможешь ему помочь?', 'A city bus pulled away from the stop with 45 passengers. At the first stop 20 people got off and 6 got on. The driver wondered: “How many passengers are on the bus now?” Can you help him?'),
+      L('Bu yerda bitta amal yetmaydi — ikkita amal kerak: avval ayirish (tushganlar), keyin qo‘shish (chiqqanlar). 45 − 20 = 25, keyin 25 + 6 = 31. Bitta yozuvda: 45 − 20 + 6 = 31. Bunday bir nechta amalli yozuv <b>tarkibli ifoda</b> deyiladi.', 'Здесь одного действия мало — нужно два: сначала вычитание (вышли), потом сложение (вошли). 45 − 20 = 25, потом 25 + 6 = 31. Одной записью: 45 − 20 + 6 = 31. Такая запись с несколькими действиями называется <b>составным выражением</b>.', 'One operation is not enough here — we need two: first subtract (people got off), then add (people got on). 45 − 20 = 25, then 25 + 6 = 31. In one line: 45 − 20 + 6 = 31. A line like this with several operations is called a <b>multi-step expression</b>.'),
+      L('Bu mavzu — butun qismning yakuni. Biz o‘rgangan hamma narsani — o‘nlik va birliklar, qavslar, qo‘shish va ayirish — bitta joyda qo‘llaymiz va ikki amalli masalalarni yechamiz.', 'Эта тема — итог всей части. Мы применим всё, чему научились, — десятки и единицы, скобки, сложение и вычитание — и будем решать задачи в два действия.', 'This topic wraps up the whole part. We will use everything we have learned — tens and ones, brackets, adding and subtracting — and solve two-step problems.')
+    ] },
+    { kind: 'def', h: L('Tarkibli ifoda nima?', 'Что такое составное выражение?', 'What is a multi-step expression?'), p: [
+      L('<b>Ifoda</b> — sonlar va amal belgilaridan tuzilgan yozuv. Bitta amalli ifoda <b>oddiy</b>: 45 − 20. Ikki yoki undan ko‘p amalli ifoda <b>tarkibli</b>: 45 − 20 + 6.', '<b>Выражение</b> — запись из чисел и знаков действий. Выражение с одним действием — <b>простое</b>: 45 − 20. С двумя и более действиями — <b>составное</b>: 45 − 20 + 6.', 'An <b>expression</b> is a line made of numbers and operation signs. One operation makes a <b>simple</b> expression: 45 − 20. Two or more make a <b>multi-step</b> expression: 45 − 20 + 6.'),
+      L('<b>Ifodaning qiymati</b> — barcha amallarni bajargandan keyin chiqqan son. 45 − 20 + 6 ifodaning qiymati — 31.', '<b>Значение выражения</b> — число, которое получается после выполнения всех действий. Значение выражения 45 − 20 + 6 — это 31.', 'The <b>value</b> of an expression is the number you get after doing all the operations. The value of 45 − 20 + 6 is 31.')
+    ], list: [
+      L('Qavssiz tarkibli ifoda: 50 − 20 + 4.', 'Составное выражение без скобок: 50 − 20 + 4.', 'Multi-step expression without brackets: 50 − 20 + 4.'),
+      L('Qavsli tarkibli ifoda: 45 − (20 + 5).', 'Составное выражение со скобками: 45 − (20 + 5).', 'Multi-step expression with brackets: 45 − (20 + 5).'),
+      L('Uch amalli ifoda: 10 + 20 + 30 − 5.', 'Выражение с тремя действиями: 10 + 20 + 30 − 5.', 'Three-step expression: 10 + 20 + 30 − 5.')
+    ], after: [
+      L('<b>Masala</b> — bu hayotiy voqea haqida savol. Uni yechish uchun masaladan ifoda tuzamiz va uning qiymatini topamiz.', '<b>Задача</b> — это вопрос о жизненной ситуации. Чтобы её решить, составляем по задаче выражение и находим его значение.', 'A <b>word problem</b> is a question about a real situation. To solve it, we write an expression from the problem and find its value.')
+    ] },
+    { kind: 'history', h: L('Masalalar tarixidan', 'Из истории задач', 'From the history of word problems'), p: [
+      L('Dunyodagi eng qadimgi matematik masalalar to‘plamlaridan biri — <b>Rind papirusi</b>. U Misrda taxminan 3600 yil oldin yozilgan. Unda non va pivoni ishchilar orasida bo‘lish, don omborlarini hisoblash haqida 80 dan ortiq masala bor.', 'Один из древнейших сборников математических задач в мире — <b>папирус Ринда</b>. Его написали в Египте примерно 3600 лет назад. В нём больше 80 задач — о том, как разделить хлеб между работниками, как подсчитать зерно в амбарах.', 'One of the oldest collections of maths problems in the world is the <b>Rhind Papyrus</b>. It was written in Egypt about 3 600 years ago. It has more than 80 problems — about sharing bread among workers and counting grain in storehouses.'),
+      L('<b>Al-Xorazmiy</b> o‘z kitobida meros taqsimlash, yer o‘lchash va savdo haqida ko‘plab masalalarni yechib ko‘rsatgan. U har bir masalani bosqichma-bosqich, amallar tartibini aniq ko‘rsatib yechgan.', '<b>Аль-Хорезми</b> в своей книге показал решения многих задач о разделе наследства, измерении земли и торговле. Каждую задачу он решал шаг за шагом, чётко указывая порядок действий.', '<b>Al-Khwarizmi</b> solved many problems in his book about sharing an inheritance, measuring land and trade. He solved each one step by step, showing the order of operations clearly.'),
+      L('<b>Beruniy</b> esa masalalarni hayotdan olgan: shaharlar orasidagi masofa, kunning uzunligi, yulduzlarning harakati. U har doim aytgan: «Hisob aniq bo‘lishi uchun tartib aniq bo‘lishi kerak».', 'А <b>Беруни</b> брал задачи из жизни: расстояние между городами, длина дня, движение звёзд. Он считал, что для точного счёта нужен точный порядок.', '<b>Biruni</b> took his problems from real life: distances between cities, the length of the day, the movement of the stars. He believed that exact counting needs an exact order.')
+    ] },
+    { kind: 'rule', h: L('Amallar tartibi', 'Порядок действий', 'Order of operations'), p: [
+      L('Tarkibli ifodada amallarni to‘g‘ri tartibda bajarish kerak:', 'В составном выражении действия нужно выполнять в правильном порядке:', 'In a multi-step expression the operations must be done in the right order:')
+    ], list: [
+      L('<b>Qavs bo‘lsa — avval qavs ichidagi amal.</b> 45 − (20 + 5) = 45 − 25 = 20.', '<b>Если есть скобки — сначала действие в скобках.</b> 45 − (20 + 5) = 45 − 25 = 20.', '<b>If there are brackets, do the inside first.</b> 45 − (20 + 5) = 45 − 25 = 20.'),
+      L('<b>Qavs bo‘lmasa — chapdan o‘ngga.</b> 45 − 20 + 5 = 25 + 5 = 30.', '<b>Если скобок нет — слева направо.</b> 45 − 20 + 5 = 25 + 5 = 30.', '<b>If there are no brackets, work left to right.</b> 45 − 20 + 5 = 25 + 5 = 30.')
+    ], after: [
+      L('Ko‘rdingizmi? Sonlar bir xil — 45, 20, 5 — lekin javoblar har xil: 20 va 30! Shuning uchun tartib juda muhim.', 'Видишь? Числа одинаковые — 45, 20, 5, — а ответы разные: 20 и 30! Поэтому порядок очень важен.', 'See? The numbers are the same — 45, 20, 5 — but the answers differ: 20 and 30! That is why order matters so much.'),
+      L('Masala yechishda ham tartibni aniqlaymiz: avval nima bo‘ldi, keyin nima bo‘ldi. Masalaning matni bizga amallar tartibini aytib beradi.', 'При решении задачи тоже определяем порядок: что случилось сначала, что потом. Текст задачи подсказывает порядок действий.', 'When solving a word problem we also work out the order: what happened first and what happened next. The story tells us the order of operations.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: masalani yechamiz', 'Шаг за шагом: решаем задачу', 'Step by step: solving a word problem'), p: [
+      L('Masala: «Savatda 30 ta olma bor edi. Oyim 10 tasini qo‘shnimizga berdi, 5 tasini kompot uchun oldi. Savatda nechta olma qoldi?»', 'Задача: «В корзине было 30 яблок. Мама отдала 10 соседке и взяла 5 на компот. Сколько яблок осталось в корзине?»', 'Problem: “There were 30 apples in a basket. Mum gave 10 to the neighbour and took 5 for compote. How many apples are left in the basket?”')
+    ], list: [
+      L('1-qadam. Masalani diqqat bilan o‘qing. Nima ma’lum? 30 ta olma, 10 tasi berildi, 5 tasi olindi.', 'Шаг 1. Внимательно прочитай задачу. Что известно? 30 яблок, 10 отдали, 5 взяли.', 'Step 1. Read the problem carefully. What do we know? 30 apples, 10 given away, 5 taken.'),
+      L('2-qadam. Nima so‘ralyapti? Nechta olma <u>qoldi</u> — demak, ayirish kerak.', 'Шаг 2. Что спрашивают? Сколько яблок <u>осталось</u> — значит, нужно вычитание.', 'Step 2. What is being asked? How many apples are <u>left</u> — so we need to subtract.'),
+      L('3-qadam. Ifoda tuzing: 30 − 10 − 5 yoki 30 − (10 + 5).', 'Шаг 3. Составь выражение: 30 − 10 − 5 или 30 − (10 + 5).', 'Step 3. Write an expression: 30 − 10 − 5 or 30 − (10 + 5).'),
+      L('4-qadam. Hisoblang: 30 − 10 = 20, 20 − 5 = 15. Javob: <b>15 ta olma</b>.', 'Шаг 4. Вычисли: 30 − 10 = 20, 20 − 5 = 15. Ответ: <b>15 яблок</b>.', 'Step 4. Work it out: 30 − 10 = 20, 20 − 5 = 15. Answer: <b>15 apples</b>.')
+    ], after: [
+      L('5-qadam — tekshiruv: 15 + 10 + 5 = 30. To‘g‘ri! Javobni har doim to‘liq gap bilan yozing: «Savatda 15 ta olma qoldi».', 'Шаг 5 — проверка: 15 + 10 + 5 = 30. Верно! Ответ всегда записывай полным предложением: «В корзине осталось 15 яблок».', 'Step 5 — check: 15 + 10 + 5 = 30. Correct! Always write the answer as a full sentence: “There are 15 apples left in the basket.”')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Avval qavsni qidiring. Qavs yo‘q bo‘lsa — chapdan o‘ngga.', 'Сначала ищи скобки. Нет скобок — слева направо.', 'Look for brackets first. No brackets — left to right.')
+    ], ex: [
+      { q: L('Hisoblang: 60 − (10 + 5)', 'Вычисли: 60 − (10 + 5)', 'Work out: 60 − (10 + 5)'), s: L('Qavs: 10 + 5 = 15. Keyin 60 − 15 = <b>45</b>.', 'Скобки: 10 + 5 = 15. Потом 60 − 15 = <b>45</b>.', 'Brackets: 10 + 5 = 15. Then 60 − 15 = <b>45</b>.') },
+      { q: L('Hisoblang: 50 − 20 + 4', 'Вычисли: 50 − 20 + 4', 'Work out: 50 − 20 + 4'), s: L('Chapdan o‘ngga: 50 − 20 = 30, 30 + 4 = <b>34</b>.', 'Слева направо: 50 − 20 = 30, 30 + 4 = <b>34</b>.', 'Left to right: 50 − 20 = 30, 30 + 4 = <b>34</b>.') },
+      { q: L('Hisoblang: (30 + 7) − 7', 'Вычисли: (30 + 7) − 7', 'Work out: (30 + 7) − 7'), s: L('Qavs: 30 + 7 = 37. Keyin 37 − 7 = <b>30</b>. Bitta sonni qo‘shib, keyin ayirsak, boshlang‘ich son qaytadi!', 'Скобки: 30 + 7 = 37. Потом 37 − 7 = <b>30</b>. Если прибавить и вычесть одно и то же число, вернёмся к началу!', 'Brackets: 30 + 7 = 37. Then 37 − 7 = <b>30</b>. Add a number and take it away again and you are back where you started!') },
+      { q: L('Avtobusda 45 kishi bor edi. Bekatda 20 kishi tushdi, 6 kishi chiqdi. Nechta yo‘lovchi bo‘ldi?', 'В автобусе было 45 человек. На остановке 20 вышли, 6 вошли. Сколько стало пассажиров?', 'A bus had 45 people. At a stop 20 got off and 6 got on. How many passengers are there now?'), s: L('45 − 20 + 6: 45 − 20 = 25, 25 + 6 = <b>31</b>. Javob: avtobusda 31 ta yo‘lovchi.', '45 − 20 + 6: 45 − 20 = 25, 25 + 6 = <b>31</b>. Ответ: в автобусе 31 пассажир.', '45 − 20 + 6: 45 − 20 = 25, 25 + 6 = <b>31</b>. Answer: there are 31 passengers.') },
+      { q: L('Sevaraning 40 ming so‘mi bor edi. U 12 ming so‘mlik daftar va 7 ming so‘mlik qalam oldi. Qancha pul qoldi?', 'У Севары было 40 тысяч сумов. Она купила тетрадь за 12 тысяч и ручку за 7 тысяч. Сколько денег осталось?', 'Sevara had 40 thousand sum. She bought a notebook for 12 thousand and a pen for 7 thousand. How much money is left?'), s: L('Avval xaridlar: 12 + 7 = 19. Keyin 40 − 19 = 21. Ifoda: 40 − (12 + 7) = <b>21</b> ming so‘m.', 'Сначала покупки: 12 + 7 = 19. Потом 40 − 19 = 21. Выражение: 40 − (12 + 7) = <b>21</b> тысяча.', 'First the shopping: 12 + 7 = 19. Then 40 − 19 = 21. Expression: 40 − (12 + 7) = <b>21</b> thousand.') }
+    ] },
+    { kind: 'table', h: L('Qavslar va tartib', 'Скобки и порядок', 'Brackets and order'), p: [
+      L('Bir xil sonlar, lekin har xil tartib — har xil javob.', 'Одинаковые числа, но разный порядок — разный ответ.', 'The same numbers in a different order give a different answer.')
+    ], table: { head: [L('Ifoda', 'Выражение', 'Expression'), L('1-amal', '1-е действие', '1st step'), L('2-amal', '2-е действие', '2nd step'), L('Qiymati', 'Значение', 'Value')], rows: [
+      ['45 − (20 + 5)', '20 + 5 = 25', '45 − 25', '20'],
+      ['45 − 20 + 5', '45 − 20 = 25', '25 + 5', '30'],
+      ['80 − (30 − 10)', '30 − 10 = 20', '80 − 20', '60'],
+      ['80 − 30 − 10', '80 − 30 = 50', '50 − 10', '40'],
+      ['(25 + 4) − 4', '25 + 4 = 29', '29 − 4', '25']
+    ] }, after: [
+      L('Har bir ifodada qaysi amal birinchi bajarilganiga e’tibor bering. Amal ustiga kichik «1» va «2» yozib qo‘yish odati xatolardan saqlaydi.', 'Обращай внимание, какое действие выполнено первым. Привычка писать над действиями маленькие «1» и «2» спасает от ошибок.', 'Notice which operation came first in each one. The habit of writing a small “1” and “2” over the operations saves you from mistakes.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Tarkibli ifoda va masalalarda ko‘p uchraydigan xatolar:', 'Частые ошибки в составных выражениях и задачах:', 'Frequent mistakes with multi-step expressions and problems:')
+    ], list: [
+      L('<b>Qavssiz ifodada o‘ngdan boshlash.</b> 50 − 20 + 4 ni 50 − 24 = 26 deb hisoblash. Qavs yo‘q — chapdan o‘ngga: 34.', '<b>Начинать справа в выражении без скобок.</b> Считать 50 − 20 + 4 как 50 − 24 = 26. Скобок нет — слева направо: 34.', '<b>Starting on the right without brackets.</b> Doing 50 − 20 + 4 as 50 − 24 = 26. No brackets — left to right: 34.'),
+      L('<b>Masalada noto‘g‘ri amal tanlash.</b> «Chiqdi» — qo‘shish, «tushdi», «berdi», «yedi» — ayirish. So‘zlarga diqqat qiling!', '<b>Выбрать не то действие в задаче.</b> «Вошли» — сложение; «вышли», «отдали», «съели» — вычитание. Внимательно читай слова!', '<b>Picking the wrong operation.</b> “Got on” means add; “got off”, “gave away”, “ate” mean subtract. Read the words carefully!'),
+      L('<b>Faqat birinchi amalni bajarish.</b> Masala ikki amalli bo‘lsa, ikkala amalni ham bajaring.', '<b>Выполнить только первое действие.</b> Если задача в два действия — выполни оба.', '<b>Doing only the first step.</b> If the problem has two steps, do both.'),
+      L('<b>Javobni to‘liq yozmaslik.</b> Faqat «31» emas, «Avtobusda 31 ta yo‘lovchi bor» deb yozing.', '<b>Не записать полный ответ.</b> Не просто «31», а «В автобусе 31 пассажир».', '<b>Not writing a full answer.</b> Not just “31” but “There are 31 passengers on the bus.”')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Do‘konda.</b> Har bir xarid — ikki amalli masala: «Menda 50 ming bor, 20 ming va 15 ming so‘mlik narsa olsam, qancha qoladi?» 50 − (20 + 15) = 15 ming so‘m.', '<b>В магазине.</b> Каждая покупка — задача в два действия: «У меня 50 тысяч; если куплю вещи за 20 и 15 тысяч, сколько останется?» 50 − (20 + 15) = 15 тысяч.', '<b>At the shop.</b> Every shopping trip is a two-step problem: “I have 50 thousand; if I buy things for 20 and 15 thousand, how much is left?” 50 − (20 + 15) = 15 thousand.'),
+      L('<b>Oshxonada.</b> Onangiz 24 ta somsa pishirdi. Oilangiz 10 tasini yedi, keyin buvingiz yana 12 ta olib keldi. Endi stolda: 24 − 10 + 12 = 26 ta somsa.', '<b>На кухне.</b> Мама испекла 24 самсы. Семья съела 10, потом бабушка принесла ещё 12. Теперь на столе: 24 − 10 + 12 = 26 самс.', '<b>In the kitchen.</b> Mum baked 24 samsas. The family ate 10, then Grandma brought 12 more. Now on the table: 24 − 10 + 12 = 26 samsas.'),
+      L('<b>Sinfda.</b> Sinfda 28 ta o‘quvchi bor. 3 tasi kasal, 2 tasi musobaqada. Darsda: 28 − (3 + 2) = 23 ta o‘quvchi.', '<b>В классе.</b> В классе 28 учеников. 3 болеют, 2 на соревнованиях. На уроке: 28 − (3 + 2) = 23 ученика.', '<b>In class.</b> A class has 28 pupils. 3 are ill and 2 are at a competition. In the lesson: 28 − (3 + 2) = 23 pupils.'),
+      L('<b>Bog‘da.</b> Daraxtda 50 ta o‘rik pishdi. Birinchi kuni 20 tasini, ikkinchi kuni 15 tasini terdik. Daraxtda yana 15 ta qoldi.', '<b>В саду.</b> На дереве созрело 50 абрикосов. В первый день сорвали 20, во второй 15. На дереве осталось ещё 15.', '<b>In the garden.</b> 50 apricots ripened on a tree. We picked 20 on the first day and 15 on the second. 15 are still on the tree.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Rind papirusi uzunligi 5 metrdan ortiq — bu sinf xonasining uzunligiga teng! Hozir u Londondagi Britaniya muzeyida saqlanadi.', 'Папирус Ринда длиной больше 5 метров — почти с классную комнату! Сейчас он хранится в Британском музее в Лондоне.', 'The Rhind Papyrus is more than 5 metres long — about the length of a classroom! Today it is kept in the British Museum in London.'),
+      L('Kalkulyatorlar ham amallar tartibiga rioya qiladi. Agar qavslarni to‘g‘ri yozmasangiz, kalkulyator ham noto‘g‘ri javob beradi!', 'Калькуляторы тоже соблюдают порядок действий. Если неправильно поставить скобки, и калькулятор ошибётся!', 'Calculators follow the order of operations too. Put the brackets in wrongly and even a calculator gives the wrong answer!'),
+      L('Ba’zi qadimgi masalalar hozir ham mashhur: «Ettita uyda yettitadan mushuk bor…» kabi masala 3600 yil oldin Rind papirusida yozilgan edi.', 'Некоторые древние задачи известны до сих пор: задача вроде «В семи домах по семь кошек…» записана в папирусе Ринда 3600 лет назад.', 'Some ancient puzzles are still famous: a riddle like “Seven houses, each with seven cats…” was written in the Rhind Papyrus 3 600 years ago.'),
+      L('Siz endi 100 gacha bo‘lgan sonlar bilan ishlay olasiz — bu birinchi sinf uchun katta yutuq! Qadimgi Misrda bunga faqat maxsus o‘qitilgan kotiblar qodir edi.', 'Ты теперь умеешь работать с числами до 100 — это большое достижение для первого класса! В Древнем Египте так умели только специально обученные писцы.', 'You can now work with numbers up to 100 — a big achievement for Grade 1! In Ancient Egypt only specially trained scribes could do that.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Avval tartibni aniqlang, keyin hisoblang.', 'Сначала определи порядок, потом считай.', 'Decide the order first, then work it out.')
+    ], list: [
+      L('Hisoblang: 70 − (20 + 8), 70 − 20 + 8, (40 + 9) − 9.', 'Вычисли: 70 − (20 + 8), 70 − 20 + 8, (40 + 9) − 9.', 'Work out: 70 − (20 + 8), 70 − 20 + 8, (40 + 9) − 9.'),
+      L('Masala: Javonda 36 ta kitob bor edi. 12 tasini o‘quvchilar oldi, 5 tasini qaytarib keltirishdi. Javonda nechta kitob bo‘ldi?', 'Задача: на полке было 36 книг. 12 взяли ученики, 5 вернули. Сколько книг стало на полке?', 'Problem: a shelf had 36 books. Pupils took 12 and brought 5 back. How many books are on the shelf now?'),
+      L('O‘zingiz «tushdi» va «chiqdi» so‘zlari bilan ikki amalli masala tuzing.', 'Сам составь задачу в два действия со словами «вышли» и «вошли».', 'Make up your own two-step problem with “got off” and “got on”.'),
+      L('Qavsni shunday qo‘yingki, javob 10 bo‘lsin: 30 − 15 + 5.', 'Поставь скобки так, чтобы получилось 10: 30 − 15 + 5.', 'Put in brackets so the answer is 10: 30 − 15 + 5.')
+    ], after: [
+      L('Javoblar: 1) 42, 58, 40; 2) 36 − 12 + 5 = 29 ta kitob; 4) 30 − (15 + 5) = 10.', 'Ответы: 1) 42, 58, 40; 2) 36 − 12 + 5 = 29 книг; 4) 30 − (15 + 5) = 10.', 'Answers: 1) 42, 58, 40; 2) 36 − 12 + 5 = 29 books; 4) 30 − (15 + 5) = 10.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('Ikki yoki undan ko‘p amalli ifoda — <b>tarkibli ifoda</b>.', 'Выражение с двумя и более действиями — <b>составное</b>.', 'An expression with two or more operations is a <b>multi-step expression</b>.'),
+      L('Qavs bo‘lsa — <b>avval qavs ichi</b>; qavs bo‘lmasa — <b>chapdan o‘ngga</b>.', 'Есть скобки — <b>сначала скобки</b>; нет скобок — <b>слева направо</b>.', 'Brackets — <b>inside first</b>; no brackets — <b>left to right</b>.'),
+      L('Bir xil sonlar har xil tartibda har xil javob berishi mumkin.', 'Одни и те же числа в разном порядке могут дать разный ответ.', 'The same numbers in a different order can give a different answer.'),
+      L('Masalani yechish: o‘qing → nima ma’lum → nima so‘ralyapti → ifoda tuzing → hisoblang → tekshiring.', 'Решение задачи: прочитай → что известно → что спрашивают → составь выражение → вычисли → проверь.', 'Solving a problem: read → what we know → what is asked → write an expression → work it out → check.'),
+      L('«Chiqdi», «keltirdi» — qo‘shish; «tushdi», «berdi», «yedi» — ayirish.', '«Вошли», «принесли» — сложение; «вышли», «отдали», «съели» — вычитание.', '“Got on”, “brought” mean add; “got off”, “gave away”, “ate” mean subtract.'),
+      L('Javobni to‘liq gap bilan yozing.', 'Записывай ответ полным предложением.', 'Write the answer as a full sentence.')
     ] }
   ] });
 })(this);

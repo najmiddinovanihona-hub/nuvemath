@@ -1115,4 +1115,208 @@
     ] }
   ] });
 })(this);
-// --END--
+(function (root) { 'use strict'; var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '2-2';
+
+  // ---------- t12. Soat va minut ----------
+  T.add(P, 't12', { sections: [
+    { kind: 'intro', h: L('Soat nima deyapti?', 'Что говорят часы?', 'What does the clock say?'), p: [
+      L('Ertalab onangiz: «Tur, soat yetti bo‘ldi!» deydi. Maktabda qo‘ng‘iroq soat 8:00 da chalinadi. Multfilm soat 18:30 da boshlanadi. Biz kun bo‘yi vaqtga qarab yashaymiz. Vaqtni bilish uchun esa <b>soatni o‘qiy olish</b> kerak.', 'Утром мама говорит: «Вставай, уже семь часов!» В школе звонок звенит в 8:00. Мультфильм начинается в 18:30. Мы весь день живём по времени. А чтобы знать время, нужно <b>уметь читать часы</b>.', 'In the morning Mum says, “Get up, it’s seven o’clock!” At school the bell rings at 8:00. The cartoon starts at 18:30. We live by time all day long. To know the time, you need to <b>be able to read a clock</b>.'),
+      L('Devordagi oddiy soatga qarang. Uning yumaloq yuzida 1 dan 12 gacha raqamlar bor va ikkita strelka aylanib turadi — biri kalta, biri uzun. Ular har xil tezlikda yuradi va har biri o‘z ishini bajaradi.', 'Посмотри на обычные настенные часы. На круглом циферблате цифры от 1 до 12 и две вращающиеся стрелки — короткая и длинная. Они движутся с разной скоростью, и у каждой своя работа.', 'Look at an ordinary wall clock. Its round face has the numbers 1 to 12 and two hands that turn: one short, one long. They move at different speeds and each has its own job.'),
+      L('Bu mavzuda soat va minut nima ekanini, strelkalar qanday ishlashini va vaqtni to‘g‘ri aytishni o‘rganamiz. Bu bilim sizga darsga kechikmaslik va kuningizni rejalashtirishda yordam beradi.', 'В этой теме узнаем, что такое час и минута, как работают стрелки и как правильно называть время. Это поможет не опаздывать на уроки и планировать свой день.', 'In this topic we learn what hours and minutes are, how the hands work and how to tell the time correctly. This will help you be on time for lessons and plan your day.')
+    ] },
+    { kind: 'def', h: L('Soat, minut, strelkalar', 'Час, минута, стрелки', 'Hours, minutes and hands'), p: [
+      L('Vaqt birliklari va soat qismlari:', 'Единицы времени и части часов:', 'Units of time and the parts of a clock:')
+    ], list: [
+      L('<b>Minut</b> — qisqa vaqt. Bir minutda qo‘lingizni 60 marta qarsak chalishingiz mumkin.', '<b>Минута</b> — короткое время. За минуту можно хлопнуть в ладоши около 60 раз.', '<b>Minute</b> — a short time. In one minute you can clap about 60 times.'),
+      L('<b>Soat</b> — 60 minut. Bitta dars 45 minut, ya’ni soatdan sal kamroq.', '<b>Час</b> — 60 минут. Один урок длится 45 минут, чуть меньше часа.', '<b>Hour</b> — 60 minutes. One lesson lasts 45 minutes, a little less than an hour.'),
+      L('<b>Kalta strelka</b> (soat strelkasi) soatni ko‘rsatadi. U sekin yuradi: bir raqamdan keyingisiga 1 soatda o‘tadi.', '<b>Короткая стрелка</b> (часовая) показывает часы. Она движется медленно: от одной цифры до следующей — за 1 час.', 'The <b>short hand</b> (hour hand) shows the hours. It moves slowly: from one number to the next in 1 hour.'),
+      L('<b>Uzun strelka</b> (minut strelkasi) minutlarni ko‘rsatadi. U tez yuradi: to‘liq aylanishi 60 minut.', '<b>Длинная стрелка</b> (минутная) показывает минуты. Она быстрая: полный круг — 60 минут.', 'The <b>long hand</b> (minute hand) shows the minutes. It is fast: one full turn takes 60 minutes.')
+    ], after: [
+      L('Soat yuzidagi ikki qo‘shni raqam orasida 5 ta mayda bo‘linma bor — har biri 1 minut. Demak, uzun strelka bir raqamdan keyingisiga o‘tsa, <b>5 minut</b> o‘tadi. Shuning uchun minutlarni beshlab sanaymiz: 5, 10, 15, 20…', 'Между двумя соседними цифрами на циферблате 5 маленьких делений — по 1 минуте. Значит, когда длинная стрелка переходит от цифры к цифре, проходит <b>5 минут</b>. Поэтому минуты считаем пятёрками: 5, 10, 15, 20…', 'Between two neighbouring numbers on the clock face there are 5 small marks, each 1 minute. So when the long hand moves from one number to the next, <b>5 minutes</b> pass. That is why we count minutes in fives: 5, 10, 15, 20…'),
+      L('Bir sutkada 24 soat bor. Kalta strelka sutkada ikki marta aylanadi: tungi 12 dan kunduzgi 12 gacha va kunduzgi 12 dan tungi 12 gacha.', 'В сутках 24 часа. Короткая стрелка за сутки делает два круга: с полуночи до полудня и с полудня до полуночи.', 'A day has 24 hours. The short hand goes round twice a day: from midnight to noon and from noon to midnight.')
+    ] },
+    { kind: 'history', h: L('Soatlar tarixi', 'История часов', 'A history of clocks'), p: [
+      L('Eng qadimgi soat — <b>quyosh soati</b>. Qadimgi Misrda, 3500 yil oldin, yerga tayoq qadab, uning soyasiga qarab vaqtni bilishgan. Lekin bulutli kunda va kechasi bu soat ishlamagan!', 'Самые древние часы — <b>солнечные</b>. В Древнем Египте, 3500 лет назад, втыкали в землю палку и узнавали время по её тени. Но в пасмурный день и ночью такие часы не работали!', 'The oldest clock is the <b>sundial</b>. In Ancient Egypt, 3 500 years ago, people pushed a stick into the ground and told the time by its shadow. But on a cloudy day or at night it didn’t work!'),
+      L('Shuning uchun <b>suv soati</b> va <b>qum soati</b> o‘ylab topilgan: idishdan suv yoki qum bir tekis oqib, vaqtni o‘lchagan. Soatni 60 minutga, minutni 60 sekundga bo‘lish odati qadimgi <b>Bobil</b>dan kelgan — ular 60 lik sanoq tizimidan foydalangan.', 'Поэтому придумали <b>водяные</b> и <b>песочные часы</b>: вода или песок равномерно вытекали и отмеряли время. Привычка делить час на 60 минут, а минуту на 60 секунд пришла из древнего <b>Вавилона</b> — там пользовались счётом шестидесятками.', 'So people invented <b>water clocks</b> and <b>hourglasses</b>: water or sand flowed out evenly and measured time. Splitting an hour into 60 minutes and a minute into 60 seconds comes from ancient <b>Babylon</b>, where people counted in sixties.'),
+      L('Buyuk olim <b>Beruniy</b> vaqtni o‘lchash va taqvimlar haqida katta kitob yozgan. U turli xalqlarning kunlarni, oylarni va yillarni qanday hisoblashini taqqoslagan. Mirzo Ulug‘bek esa Samarqanddagi rasadxonasida yulduzlarni kuzatib, yil uzunligini juda aniq hisoblagan.', 'Великий учёный <b>Беруни</b> написал большую книгу об измерении времени и календарях. Он сравнил, как разные народы считают дни, месяцы и годы. А Мирзо Улугбек в своей обсерватории в Самарканде, наблюдая звёзды, очень точно вычислил длину года.', 'The great scholar <b>Biruni</b> wrote a big book on measuring time and on calendars, comparing how different peoples counted days, months and years. Mirzo Ulugbek, watching the stars from his observatory in Samarkand, calculated the length of the year very precisely.')
+    ] },
+    { kind: 'rule', h: L('Vaqtni o‘qish qoidasi', 'Правило чтения времени', 'The rule for reading the time'), p: [
+      L('Soatni o‘qish uchun ikkita savolga javob beramiz:', 'Чтобы прочитать часы, отвечаем на два вопроса:', 'To read a clock we answer two questions:')
+    ], list: [
+      L('<b>Kalta strelka qaysi raqamda yoki qaysi raqamdan o‘tgan?</b> Bu — soat.', '<b>На какой цифре короткая стрелка или какую цифру она прошла?</b> Это — часы.', '<b>Which number is the short hand on, or which has it just passed?</b> That is the hour.'),
+      L('<b>Uzun strelka qayerda?</b> Raqamni 5 ga ko‘paytiring (beshlab sanang) — bu minutlar.', '<b>Где длинная стрелка?</b> Посчитай пятёрками до неё — это минуты.', '<b>Where is the long hand?</b> Count in fives up to it: that is the minutes.')
+    ], after: [
+      L('Uzun strelka 12 da — <b>butun soat</b>: 3:00, «soat uch». Uzun strelka 6 da — <b>yarim</b>: 3:30, «uch yarim». Uzun strelka 3 da — 15 minut (chorak), 9 da — 45 minut.', 'Длинная стрелка на 12 — <b>ровно</b>: 3:00, «три часа». На 6 — <b>половина</b>: 3:30, «половина четвёртого». На 3 — 15 минут (четверть), на 9 — 45 минут.', 'Long hand on 12: <b>o’clock</b>, 3:00, “three o’clock”. On 6: <b>half past</b>, 3:30. On 3: 15 minutes (a quarter past); on 9: 45 minutes.'),
+      L('Asosiy bog‘lanishlar: <b>1 soat = 60 minut</b>, <b>yarim soat = 30 minut</b>, <b>chorak soat = 15 minut</b>.', 'Главные связи: <b>1 час = 60 минут</b>, <b>полчаса = 30 минут</b>, <b>четверть часа = 15 минут</b>.', 'Key facts: <b>1 hour = 60 minutes</b>, <b>half an hour = 30 minutes</b>, <b>a quarter of an hour = 15 minutes</b>.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: soatni o‘qiymiz', 'Шаг за шагом: читаем часы', 'Step by step: reading a clock'), p: [
+      L('Soatda kalta strelka 4 dan sal o‘tgan, uzun strelka 4 da turibdi.', 'На часах короткая стрелка чуть дальше 4, длинная стоит на 4.', 'On the clock the short hand is just past 4 and the long hand is on 4.')
+    ], list: [
+      L('1-qadam. Kalta strelkaga qarang: u 4 dan o‘tgan, lekin 5 ga yetmagan. Demak, soat — 4.', 'Шаг 1. Смотри на короткую стрелку: она прошла 4, но не дошла до 5. Значит, часов — 4.', 'Step 1. Look at the short hand: it has passed 4 but not reached 5. So the hour is 4.'),
+      L('2-qadam. Uzun strelkaga qarang: u 4 da. Beshlab sanaymiz: 5, 10, 15, 20. Demak, 20 minut.', 'Шаг 2. Смотри на длинную стрелку: она на 4. Считаем пятёрками: 5, 10, 15, 20. Значит, 20 минут.', 'Step 2. Look at the long hand: it is on 4. Count in fives: 5, 10, 15, 20. So 20 minutes.'),
+      L('3-qadam. Birlashtiring: <b>4:20</b>, «to‘rtdan yigirma minut o‘tdi».', 'Шаг 3. Соедини: <b>4:20</b>, «двадцать минут пятого».', 'Step 3. Put it together: <b>4:20</b>, “twenty past four”.'),
+      L('4-qadam. Kun vaqtini o‘ylang: kunduzimi yoki ertalabmi? Kunduzi bo‘lsa — 16:20.', 'Шаг 4. Подумай о времени суток: день или утро? Если день — 16:20.', 'Step 4. Think about the time of day: is it morning or afternoon? In the afternoon it is 16:20.')
+    ], after: [
+      L('Elektron soatlarda vaqt raqamlar bilan yoziladi: ikki nuqtadan oldin — soat, keyin — minut. 07:45 — yetti soat qirq besh minut.', 'На электронных часах время пишут цифрами: до двоеточия — часы, после — минуты. 07:45 — семь часов сорок пять минут.', 'Digital clocks show the time in numbers: hours before the colon, minutes after. 07:45 is seven forty-five.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Avval kalta, keyin uzun strelkaga qarang.', 'Сначала смотри на короткую стрелку, потом на длинную.', 'Look at the short hand first, then the long one.')
+    ], ex: [
+      { q: L('Kalta strelka 9 da, uzun strelka 12 da. Soat necha?', 'Короткая стрелка на 9, длинная на 12. Который час?', 'Short hand on 9, long hand on 12. What time is it?'), s: L('Uzun strelka 12 da — butun soat. Javob: <b>9:00</b>, soat to‘qqiz.', 'Длинная на 12 — ровно. Ответ: <b>9:00</b>, девять часов.', 'Long hand on 12 means o’clock. Answer: <b>9:00</b>, nine o’clock.') },
+      { q: L('Kalta strelka 2 va 3 orasida, uzun strelka 6 da. Soat necha?', 'Короткая между 2 и 3, длинная на 6. Который час?', 'Short hand between 2 and 3, long hand on 6. What time is it?'), s: L('Soat 2, uzun strelka 6 da — 30 minut. Javob: <b>2:30</b>, ikki yarim.', 'Часов 2, длинная на 6 — 30 минут. Ответ: <b>2:30</b>, половина третьего.', 'The hour is 2; the long hand on 6 means 30 minutes. Answer: <b>2:30</b>, half past two.') },
+      { q: L('Uzun strelka 9 da, kalta strelka 7 dan o‘tgan. Soat necha?', 'Длинная на 9, короткая прошла 7. Который час?', 'Long hand on 9, short hand just past 7. What time is it?'), s: L('9 × 5: beshlab sanaymiz — 45 minut. Javob: <b>7:45</b>.', 'Считаем пятёрками до 9 — 45 минут. Ответ: <b>7:45</b>.', 'Count in fives to 9: 45 minutes. Answer: <b>7:45</b>.') },
+      { q: L('2 soat necha minut?', 'Сколько минут в 2 часах?', 'How many minutes are in 2 hours?'), s: L('1 soat = 60 minut. 60 + 60 = <b>120 minut</b>.', '1 час = 60 минут. 60 + 60 = <b>120 минут</b>.', '1 hour = 60 minutes. 60 + 60 = <b>120 minutes</b>.') },
+      { q: L('Qaysi uzoq: 1 soat yoki 50 minut?', 'Что дольше: 1 час или 50 минут?', 'Which is longer: 1 hour or 50 minutes?'), s: L('1 soat = 60 minut. 60 > 50. Javob: <b>1 soat uzoqroq</b>, 10 minutga.', '1 час = 60 минут. 60 > 50. Ответ: <b>1 час дольше</b>, на 10 минут.', '1 hour = 60 minutes. 60 > 50. Answer: <b>1 hour is longer</b>, by 10 minutes.') }
+    ] },
+    { kind: 'table', h: L('Uzun strelka va minutlar', 'Длинная стрелка и минуты', 'The long hand and the minutes'), p: [
+      L('Uzun strelka qaysi raqamda tursa, necha minut bo‘ladi:', 'Сколько минут, когда длинная стрелка стоит на цифре:', 'How many minutes when the long hand points at each number:')
+    ], table: { head: [L('Raqam', 'Цифра', 'Number'), L('Minut', 'Минуты', 'Minutes'), L('Raqam', 'Цифра', 'Number'), L('Minut', 'Минуты', 'Minutes')], rows: [
+      ['1', '5', '7', '35'],
+      ['2', '10', '8', '40'],
+      [L('3 (chorak)', '3 (четверть)', '3 (quarter)'), '15', '9', '45'],
+      ['4', '20', '10', '50'],
+      ['5', '25', '11', '55'],
+      [L('6 (yarim)', '6 (половина)', '6 (half)'), '30', '12', '0 / 60']
+    ] }, after: [
+      L('Bu aslida 5 ga ko‘paytirish jadvali! Beshlab sanashni bilsangiz, soatni juda tez o‘qiysiz.', 'Это на самом деле таблица умножения на 5! Умеешь считать пятёрками — будешь читать часы очень быстро.', 'This is really the 5 times table! If you can count in fives, you can read a clock very quickly.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Soatni o‘qishda bolalar ko‘pincha shunday xato qiladi:', 'Читая часы, дети часто ошибаются так:', 'Children often make these mistakes when reading a clock:')
+    ], list: [
+      L('<b>Strelkalarni adashtirish.</b> Kalta — soat, uzun — minut. Eslab qolish: «uzun yo‘l — ko‘p minut».', '<b>Путать стрелки.</b> Короткая — часы, длинная — минуты. Запомни: «длинный путь — много минут».', '<b>Mixing up the hands.</b> Short is hours, long is minutes. Remember: “long hand, lots of minutes”.'),
+      L('<b>Raqamni minut deb o‘qish.</b> Uzun strelka 4 da bo‘lsa, bu 4 minut emas, 20 minut! Beshlab sanang.', '<b>Читать цифру как минуты.</b> Длинная стрелка на 4 — это не 4 минуты, а 20! Считай пятёрками.', '<b>Reading the number as minutes.</b> Long hand on 4 is not 4 minutes but 20! Count in fives.'),
+      L('<b>Keyingi soatni aytish.</b> Kalta strelka 7 va 8 orasida bo‘lsa, hali 7 soat. 8 ga yetganda — 8 soat.', '<b>Называть следующий час.</b> Если короткая между 7 и 8, это ещё 7 часов. 8 будет, когда дойдёт до 8.', '<b>Saying the next hour.</b> If the short hand is between 7 and 8, it is still 7. It is 8 when it reaches 8.'),
+      L('<b>1 soat = 100 minut deb o‘ylash.</b> Yo‘q! Vaqt 10 lab emas, 60 lab hisoblanadi: 1 soat = 60 minut.', '<b>Думать, что 1 час = 100 минут.</b> Нет! Время считают не десятками, а шестидесятками: 1 час = 60 минут.', '<b>Thinking 1 hour = 100 minutes.</b> No! Time counts in sixties, not tens: 1 hour = 60 minutes.')
+    ] },
+    { kind: 'life', h: L('Hayotda soat', 'Часы в жизни', 'Clocks in everyday life'), p: [
+      L('<b>Maktabda.</b> Dars 45 minut, tanaffus 10 minut. Qo‘ng‘iroq jadvalini bilish darsga kechikmaslikka yordam beradi.', '<b>В школе.</b> Урок — 45 минут, перемена — 10 минут. Знание расписания звонков помогает не опаздывать.', '<b>At school.</b> A lesson is 45 minutes and a break 10 minutes. Knowing the bell times helps you not to be late.'),
+      L('<b>Uyda.</b> Kun tartibi: 7:00 da turish, 7:30 da nonushta, 21:00 da uxlash. Bolalarga kuniga taxminan 10 soat uxlash kerak.', '<b>Дома.</b> Режим дня: подъём в 7:00, завтрак в 7:30, сон в 21:00. Детям нужно спать около 10 часов в сутки.', '<b>At home.</b> A daily routine: up at 7:00, breakfast at 7:30, bed at 21:00. Children need about 10 hours of sleep a day.'),
+      L('<b>Transportda.</b> Poyezd va samolyot jadvali minutgacha aniq: «Toshkent — Samarqand poyezdi 8:00 da jo‘naydi». Bir minut kechiksangiz — poyezd ketib qoladi!', '<b>В транспорте.</b> Расписание поездов и самолётов точно до минуты: «Поезд Ташкент — Самарканд отправляется в 8:00». Опоздаешь на минуту — поезд уйдёт!', '<b>In transport.</b> Train and plane timetables are exact to the minute: “The Tashkent to Samarkand train leaves at 8:00.” Be a minute late and the train is gone!'),
+      L('<b>Oshxonada.</b> Tuxum 10 minut qaynatiladi, pirog 40 minut pishadi. Taymer — bu ham soat!', '<b>На кухне.</b> Яйцо варят 10 минут, пирог печётся 40 минут. Таймер — это тоже часы!', '<b>In the kitchen.</b> An egg boils for 10 minutes and a pie bakes for 40. A timer is a clock too!'),
+      L('<b>Sportda.</b> Futbol o‘yinining har bir bo‘limi 45 minut davom etadi. Hakam qo‘lidagi soatga qarab o‘yinni boshlaydi va tugatadi. Yuguruvchilar va suzuvchilar esa natijani minut va sekundlarda o‘lchaydi — ba’zan g‘olibni bir sekundning ulushi hal qiladi! Vaqtni bilish har bir sportchi uchun juda muhim.', '<b>В спорте.</b> Каждый тайм футбольного матча длится 45 минут. Судья начинает и заканчивает игру, глядя на часы. А бегуны и пловцы измеряют результат в минутах и секундах — иногда победителя решает доля секунды! Знать время очень важно каждому спортсмену.', '<b>In sport.</b> Each half of a football match lasts 45 minutes. The referee starts and ends the game by watching the clock. Runners and swimmers measure their results in minutes and seconds, and sometimes a fraction of a second decides the winner! Knowing the time matters to every athlete.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Londondagi mashhur «Big Ben» soatining minut strelkasi uzunligi taxminan 4 metr — ikki katta odamning bo‘yidan ham uzun!', 'Минутная стрелка знаменитых лондонских часов «Биг-Бен» длиной около 4 метров — больше роста двух взрослых!', 'The minute hand of London’s famous Big Ben clock is about 4 metres long, taller than two grown-ups!'),
+      L('Toshkentdagi Kurantlar 1947-yilda qurilgan va hozir ham shaharning ramzlaridan biri.', 'Ташкентские Куранты построены в 1947 году и до сих пор остаются одним из символов города.', 'The Tashkent Chimes clock tower was built in 1947 and is still one of the city’s symbols.'),
+      L('Yurak bir minutda taxminan 70–100 marta uradi. Bir soatda — 4 mingdan ko‘proq!', 'Сердце бьётся примерно 70–100 раз в минуту. За час — больше 4 тысяч раз!', 'Your heart beats about 70–100 times a minute: more than 4 000 times an hour!'),
+      L('Eng aniq atom soatlari millionlab yil davomida bir sekund ham adashmaydi.', 'Самые точные атомные часы не ошибутся даже на секунду за миллионы лет.', 'The most accurate atomic clocks would not lose even a second in millions of years.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Uydagi soatga qarab mashq qiling.', 'Потренируйся по часам дома.', 'Practise with a clock at home.')
+    ], list: [
+      L('Uzun strelka 12 da, kalta strelka 6 da. Soat necha?', 'Длинная на 12, короткая на 6. Который час?', 'Long hand on 12, short hand on 6. What time is it?'),
+      L('Uzun strelka 3 da, kalta strelka 10 dan o‘tgan. Soat necha?', 'Длинная на 3, короткая прошла 10. Который час?', 'Long hand on 3, short hand past 10. What time is it?'),
+      L('Yarim soat + chorak soat = necha minut?', 'Полчаса + четверть часа = сколько минут?', 'Half an hour + a quarter of an hour = how many minutes?'),
+      L('Bir minutda necha marta sakray olasiz? Sinab ko‘ring!', 'Сколько раз ты подпрыгнешь за минуту? Проверь!', 'How many times can you jump in a minute? Try it!')
+    ], after: [
+      L('Javoblar: 6:00; 10:15; 30 + 15 = 45 minut.', 'Ответы: 6:00; 10:15; 30 + 15 = 45 минут.', 'Answers: 6:00; 10:15; 30 + 15 = 45 minutes.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>1 soat = 60 minut</b>; yarim soat = 30 minut; chorak soat = 15 minut.', '<b>1 час = 60 минут</b>; полчаса = 30 минут; четверть часа = 15 минут.', '<b>1 hour = 60 minutes</b>; half an hour = 30 minutes; a quarter of an hour = 15 minutes.'),
+      L('Kalta strelka — soat, uzun strelka — minut.', 'Короткая стрелка — часы, длинная — минуты.', 'Short hand: hours. Long hand: minutes.'),
+      L('Ikki raqam orasida 5 minut — minutlarni beshlab sanaymiz.', 'Между двумя цифрами 5 минут — минуты считаем пятёрками.', 'Between two numbers is 5 minutes, so count minutes in fives.'),
+      L('Uzun strelka 12 da — butun soat, 6 da — yarim.', 'Длинная на 12 — ровно, на 6 — половина.', 'Long hand on 12: o’clock; on 6: half past.'),
+      L('Sutkada 24 soat bor.', 'В сутках 24 часа.', 'A day has 24 hours.'),
+      L('Soatni 60 minutga bo‘lish qadimgi Bobildan kelgan.', 'Деление часа на 60 минут пришло из древнего Вавилона.', 'Splitting the hour into 60 minutes comes from ancient Babylon.')
+    ] }
+  ] });
+
+  // ---------- t13. Soat va minutlar bilan hisoblash. Masalalar ----------
+  T.add(P, 't13', { sections: [
+    { kind: 'intro', h: L('Vaqtni hisoblaymiz', 'Считаем время', 'Calculating with time'), p: [
+      L('Futbol o‘yini 16:00 da boshlandi va 1 soat 30 minut davom etdi. U qachon tugadi? Avtobus yo‘lda 2 soat yurdi — bu necha minut? Siz uy vazifasini 25 minut, kitob o‘qishni 35 minut bajardingiz — jami qancha vaqt? Bunday savollar uchun vaqt bilan <b>hisoblash</b>ni bilish kerak.', 'Футбольный матч начался в 16:00 и длился 1 час 30 минут. Когда он закончился? Автобус ехал 2 часа — это сколько минут? Ты делал уроки 25 минут и читал 35 минут — сколько всего? Для таких вопросов нужно уметь <b>считать</b> время.', 'A football match started at 16:00 and lasted 1 hour 30 minutes. When did it end? A bus travelled for 2 hours: how many minutes is that? You did homework for 25 minutes and read for 35: how long in all? For such questions you need to <b>calculate</b> with time.'),
+      L('Vaqtni qo‘shish va ayirish oddiy sonlarnikiga o‘xshaydi, lekin bitta muhim farq bor: 60 minut to‘lsa, u 1 soatga aylanadi, 100 da emas! Shuning uchun ehtiyot bo‘lish kerak.', 'Складывать и вычитать время похоже на обычные числа, но есть важное отличие: когда набирается 60 минут, они превращаются в 1 час, а не в 100! Поэтому нужна осторожность.', 'Adding and subtracting time is like ordinary numbers, with one important difference: when you reach 60 minutes it becomes 1 hour, not 100! So you must be careful.'),
+      L('Bu mavzuda soat va minutlarni bir-biriga aylantirishni, vaqt oralig‘ini topishni, tugash va boshlanish vaqtini hisoblashni hamda mantiqiy masalalarni yechishni o‘rganamiz.', 'В этой теме научимся переводить часы в минуты и обратно, находить промежуток времени, вычислять время начала и конца и решать логические задачи.', 'In this topic we learn to convert between hours and minutes, find time intervals, work out start and end times and solve logic puzzles.')
+    ] },
+    { kind: 'def', h: L('Vaqt oralig‘i', 'Промежуток времени', 'Time intervals'), p: [
+      L('Vaqt haqidagi masalalarda uchta kattalik bor:', 'В задачах о времени есть три величины:', 'Time problems involve three quantities:')
+    ], list: [
+      L('<b>Boshlanish vaqti</b> — voqea qachon boshlandi (masalan, 8:00).', '<b>Время начала</b> — когда событие началось (например, 8:00).', '<b>Start time</b> — when something began (for example, 8:00).'),
+      L('<b>Davomiylik</b> yoki <b>vaqt oralig‘i</b> — qancha davom etdi (45 minut).', '<b>Продолжительность</b> или <b>промежуток</b> — сколько длилось (45 минут).', '<b>Duration</b> or <b>interval</b> — how long it lasted (45 minutes).'),
+      L('<b>Tugash vaqti</b> — qachon tugadi (8:45).', '<b>Время окончания</b> — когда закончилось (8:45).', '<b>End time</b> — when it finished (8:45).')
+    ], after: [
+      L('Ular orasidagi bog‘lanish: <b>boshlanish + davomiylik = tugash</b>. Ikkitasini bilsak, uchinchisini topamiz — xuddi qo‘shiluvchilar va yig‘indi kabi! Tugash − boshlanish = davomiylik; tugash − davomiylik = boshlanish.', 'Связь между ними: <b>начало + продолжительность = конец</b>. Зная две, найдём третью — как слагаемые и сумму! Конец − начало = продолжительность; конец − продолжительность = начало.', 'They are linked: <b>start + duration = end</b>. Knowing two, we find the third, just like addends and a sum! End − start = duration; end − duration = start.'),
+      L('Aralash yozuv: 1 soat 20 minut = 60 + 20 = 80 minut. Teskarisi: 80 minut = 1 soat 20 minut.', 'Составная запись: 1 ч 20 мин = 60 + 20 = 80 мин. Обратно: 80 мин = 1 ч 20 мин.', 'Mixed form: 1 h 20 min = 60 + 20 = 80 min. The other way: 80 min = 1 h 20 min.')
+    ] },
+    { kind: 'history', h: L('Taqvimlar va kun tartibi', 'Календари и распорядок', 'Calendars and timetables'), p: [
+      L('Qadimgi odamlar vaqtni Quyosh, Oy va yulduzlar bo‘yicha hisoblashgan. Bir kun — Yerning o‘z o‘qi atrofida bir marta aylanishi, bir yil — Quyosh atrofida bir marta aylanishi. Qadimgi misrliklar yilni 365 kunga bo‘lishgan.', 'Древние люди считали время по Солнцу, Луне и звёздам. Сутки — один оборот Земли вокруг своей оси, год — один оборот вокруг Солнца. Древние египтяне делили год на 365 дней.', 'People long ago measured time by the Sun, the Moon and the stars. A day is one turn of the Earth on its axis; a year is one trip around the Sun. The ancient Egyptians split the year into 365 days.'),
+      L('<b>Beruniy</b> «Qadimgi xalqlardan qolgan yodgorliklar» kitobida forslar, yunonlar, yahudiylar, arablar, xorazmliklar va boshqa xalqlarning taqvimlari va bayramlarini taqqoslab yozgan. U bir taqvimdagi sanani boshqasiga aylantirish usullarini ko‘rsatgan — bu juda murakkab hisob edi!', '<b>Беруни</b> в книге «Памятники минувших поколений» сравнил календари и праздники персов, греков, евреев, арабов, хорезмийцев и других народов. Он показал, как переводить дату из одного календаря в другой — это был очень сложный расчёт!', 'In his book “The Remaining Signs of Past Centuries” <b>Biruni</b> compared the calendars and festivals of the Persians, Greeks, Jews, Arabs, Khorezmians and other peoples. He showed how to convert a date from one calendar to another, a very complicated calculation!'),
+      L('<b>Mirzo Ulug‘bek</b> rasadxonasida yil uzunligini 365 kun 6 soat 10 minut deb hisoblagan. Bu hozirgi aniq qiymatdan bir minutdan sal ko‘proq farq qiladi — 600 yil oldin, teleskopsiz!', '<b>Мирзо Улугбек</b> в своей обсерватории вычислил длину года: 365 дней 6 часов 10 минут. Это отличается от современного значения чуть больше чем на минуту — 600 лет назад, без телескопа!', 'At his observatory <b>Mirzo Ulugbek</b> calculated the year as 365 days 6 hours 10 minutes. That is only a little over a minute off today’s value, 600 years ago and without a telescope!')
+    ] },
+    { kind: 'rule', h: L('Vaqt bilan hisoblash qoidalari', 'Правила вычислений со временем', 'Rules for calculating with time'), p: [
+      L('Uchta asosiy qoida:', 'Три главных правила:', 'Three main rules:')
+    ], list: [
+      L('<b>Soatni minutga:</b> soatlar sonini 60 ga ko‘paytiramiz va minutlarni qo‘shamiz. 2 soat 15 min = 60 + 60 + 15 = 135 min.', '<b>Часы в минуты:</b> каждый час — 60 минут, прибавляем минуты. 2 ч 15 мин = 60 + 60 + 15 = 135 мин.', '<b>Hours to minutes:</b> each hour is 60 minutes, then add the minutes. 2 h 15 min = 60 + 60 + 15 = 135 min.'),
+      L('<b>Minutni soatga:</b> 60 minutlik to‘liq bo‘laklarni ajratamiz. 100 min = 60 + 40 = 1 soat 40 min.', '<b>Минуты в часы:</b> выделяем полные куски по 60 минут. 100 мин = 60 + 40 = 1 ч 40 мин.', '<b>Minutes to hours:</b> take out whole blocks of 60 minutes. 100 min = 60 + 40 = 1 h 40 min.'),
+      L('<b>Vaqt qo‘shish:</b> minutlarni minutlarga, soatlarni soatlarga qo‘shamiz. Minutlar 60 yoki ko‘p bo‘lsa, 60 minutni 1 soatga aylantiramiz. 8:40 + 30 min = 8 soat 70 min = <b>9:10</b>.', '<b>Сложение времени:</b> минуты с минутами, часы с часами. Если минут 60 или больше, 60 минут превращаем в 1 час. 8:40 + 30 мин = 8 ч 70 мин = <b>9:10</b>.', '<b>Adding time:</b> minutes to minutes, hours to hours. If the minutes reach 60 or more, turn 60 minutes into 1 hour. 8:40 + 30 min = 8 h 70 min = <b>9:10</b>.')
+    ], after: [
+      L('Qulay usul: avval butun soatgacha to‘ldiramiz. 8:40 dan 9:00 gacha — 20 minut, 30 minutdan yana 10 minut qoldi → 9:10. Bu usul xatoni kamaytiradi.', 'Удобный способ: сначала дополняем до целого часа. От 8:40 до 9:00 — 20 минут, из 30 осталось ещё 10 → 9:10. Так ошибок меньше.', 'An easy method: first fill up to the whole hour. From 8:40 to 9:00 is 20 minutes, leaving 10 more of the 30 → 9:10. This cuts down mistakes.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: vaqt oralig‘ini topish', 'Шаг за шагом: находим промежуток', 'Step by step: finding an interval'), p: [
+      L('Kino 15:20 da boshlanib, 17:05 da tugadi. U qancha davom etdi?', 'Фильм начался в 15:20 и закончился в 17:05. Сколько он длился?', 'A film started at 15:20 and ended at 17:05. How long did it last?')
+    ], list: [
+      L('1-qadam. Boshlanishdan keyingi butun soatgacha: 15:20 → 16:00 — 40 minut.', 'Шаг 1. От начала до ближайшего целого часа: 15:20 → 16:00 — 40 минут.', 'Step 1. From the start to the next whole hour: 15:20 → 16:00 is 40 minutes.'),
+      L('2-qadam. Butun soatlar: 16:00 → 17:00 — 1 soat.', 'Шаг 2. Целые часы: 16:00 → 17:00 — 1 час.', 'Step 2. Whole hours: 16:00 → 17:00 is 1 hour.'),
+      L('3-qadam. Oxirgi qism: 17:00 → 17:05 — 5 minut.', 'Шаг 3. Последний кусок: 17:00 → 17:05 — 5 минут.', 'Step 3. The last piece: 17:00 → 17:05 is 5 minutes.'),
+      L('4-qadam. Qo‘shamiz: 40 min + 1 soat + 5 min = 1 soat 45 min = 105 minut.', 'Шаг 4. Складываем: 40 мин + 1 ч + 5 мин = 1 ч 45 мин = 105 минут.', 'Step 4. Add them: 40 min + 1 h + 5 min = 1 h 45 min = 105 minutes.')
+    ], after: [
+      L('Bu «ko‘prik» usuli: butun soatlar orqali sakrab o‘tamiz. Soat yuzida ham shunday sanash mumkin.', 'Это способ «мостиков»: перескакиваем через целые часы. Так же можно считать и по циферблату.', 'This is the “bridge” method: hop across using whole hours. You can count the same way on a clock face.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har bir masalada 1 soat = 60 minutni eslang.', 'В каждой задаче помни: 1 час = 60 минут.', 'Remember 1 hour = 60 minutes in every problem.')
+    ], ex: [
+      { q: L('1 soat 15 min = ? min', '1 ч 15 мин = ? мин', '1 h 15 min = ? min'), s: L('60 + 15 = <b>75 min</b>.', '60 + 15 = <b>75 мин</b>.', '60 + 15 = <b>75 min</b>.') },
+      { q: L('Dars 9:00 da boshlanib 40 minut davom etdi. Qachon tugadi?', 'Урок начался в 9:00 и длился 40 минут. Когда закончился?', 'A lesson started at 9:00 and lasted 40 minutes. When did it end?'), s: L('9:00 + 40 min = <b>9:40</b>.', '9:00 + 40 мин = <b>9:40</b>.', '9:00 + 40 min = <b>9:40</b>.') },
+      { q: L('120 minut = ? soat', '120 минут = ? ч', '120 minutes = ? hours'), s: L('60 + 60 = 120, demak <b>2 soat</b>.', '60 + 60 = 120, значит <b>2 часа</b>.', '60 + 60 = 120, so <b>2 hours</b>.') },
+      { q: L('Futbol o‘yini 16:00 da boshlanib, 1 soat 30 min davom etdi. Qachon tugadi?', 'Матч начался в 16:00 и длился 1 ч 30 мин. Когда закончился?', 'A match started at 16:00 and lasted 1 h 30 min. When did it end?'), s: L('16:00 + 1 soat = 17:00, + 30 min = <b>17:30</b>.', '16:00 + 1 ч = 17:00, + 30 мин = <b>17:30</b>.', '16:00 + 1 h = 17:00, + 30 min = <b>17:30</b>.') },
+      { q: L('Poyezd 10:50 da yetib keldi. Yo‘lda 2 soat 20 min yurgan. Qachon jo‘nagan?', 'Поезд прибыл в 10:50. В пути был 2 ч 20 мин. Когда отправился?', 'A train arrived at 10:50 after 2 h 20 min on the way. When did it leave?'), s: L('Teskari amal — ayiramiz: 10:50 − 2 soat = 8:50, − 20 min = <b>8:30</b>. Tekshiruv: 8:30 + 2 soat 20 min = 10:50 ✓.', 'Обратное действие — вычитаем: 10:50 − 2 ч = 8:50, − 20 мин = <b>8:30</b>. Проверка: 8:30 + 2 ч 20 мин = 10:50 ✓.', 'Use the inverse, subtract: 10:50 − 2 h = 8:50, − 20 min = <b>8:30</b>. Check: 8:30 + 2 h 20 min = 10:50 ✓.') }
+    ] },
+    { kind: 'table', h: L('Maktab kuni jadvali', 'Расписание школьного дня', 'A school-day timetable'), p: [
+      L('Dars 45 minut, tanaffus 10 minut. Jadvalni tekshirib ko‘ring:', 'Урок — 45 минут, перемена — 10 минут. Проверь расписание:', 'Lessons are 45 minutes and breaks 10 minutes. Check the timetable:')
+    ], table: { head: [L('Dars', 'Урок', 'Lesson'), L('Boshlanish', 'Начало', 'Start'), L('Tugash', 'Конец', 'End'), L('Tanaffus', 'Перемена', 'Break')], rows: [
+      ['1', '8:00', '8:45', '10 min'],
+      ['2', '8:55', '9:40', '10 min'],
+      ['3', '9:50', '10:35', '20 min'],
+      ['4', '10:55', '11:40', '10 min'],
+      ['5', '11:50', '12:35', '—']
+    ] }, after: [
+      L('Savol: 1-dars boshlanishidan 5-dars tugashigacha qancha vaqt o‘tadi? 8:00 dan 12:35 gacha — 4 soat 35 minut.', 'Вопрос: сколько времени проходит от начала 1-го урока до конца 5-го? С 8:00 до 12:35 — 4 часа 35 минут.', 'Question: how long is it from the start of lesson 1 to the end of lesson 5? From 8:00 to 12:35 is 4 hours 35 minutes.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Vaqt bilan hisoblashda eng ko‘p uchraydigan xatolar:', 'Самые частые ошибки при вычислениях со временем:', 'The most common mistakes with time sums:')
+    ], list: [
+      L('<b>100 lab hisoblash.</b> 8:40 + 30 min = 8:70 — xato! 70 minut = 1 soat 10 minut, demak 9:10.', '<b>Считать сотнями.</b> 8:40 + 30 мин = 8:70 — ошибка! 70 минут = 1 ч 10 мин, значит, 9:10.', '<b>Counting in hundreds.</b> 8:40 + 30 min = 8:70 is wrong! 70 minutes = 1 h 10 min, so 9:10.'),
+      L('<b>1 soat 20 min = 120 min deb o‘ylash.</b> Yo‘q: 60 + 20 = 80 minut.', '<b>Думать, что 1 ч 20 мин = 120 мин.</b> Нет: 60 + 20 = 80 минут.', '<b>Thinking 1 h 20 min = 120 min.</b> No: 60 + 20 = 80 minutes.'),
+      L('<b>Soat va minutlarni qo‘shib yuborish.</b> 2 soat + 30 min ≠ 32. Javob: 2 soat 30 min yoki 150 min.', '<b>Складывать часы с минутами как числа.</b> 2 ч + 30 мин ≠ 32. Ответ: 2 ч 30 мин или 150 мин.', '<b>Adding hours and minutes as plain numbers.</b> 2 h + 30 min ≠ 32. The answer is 2 h 30 min or 150 min.'),
+      L('<b>Vaqt oralig‘ini noto‘g‘ri topish.</b> 9:50 dan 10:10 gacha 60 minut emas, 20 minut. Butun soat orqali «ko‘prik» bilan sanang.', '<b>Неверно находить промежуток.</b> С 9:50 до 10:10 не 60 минут, а 20. Считай через целый час «мостиком».', '<b>Getting intervals wrong.</b> From 9:50 to 10:10 is 20 minutes, not 60. Use the “bridge” through the whole hour.')
+    ] },
+    { kind: 'life', h: L('Hayotda vaqt hisobi', 'Счёт времени в жизни', 'Time sums in everyday life'), p: [
+      L('<b>Sayohatda.</b> Toshkentdan Samarqandgacha tezyurar «Afrosiyob» poyezdi taxminan 2 soat yuradi. 8:00 da jo‘nasa, 10:00 atrofida yetib boradi.', '<b>В путешествии.</b> Скоростной поезд «Афросиаб» идёт от Ташкента до Самарканда около 2 часов. Отправится в 8:00 — прибудет примерно в 10:00.', '<b>Travelling.</b> The high-speed Afrosiyob train takes about 2 hours from Tashkent to Samarkand. Leave at 8:00 and you arrive around 10:00.'),
+      L('<b>Oshxonada.</b> Palov tayyorlashga taxminan 1 soat 30 minut kerak. Mehmonlar 19:00 da kelsa, qachon boshlash kerak? 19:00 − 1 soat 30 min = 17:30.', '<b>На кухне.</b> Плов готовится около 1 ч 30 мин. Гости придут в 19:00 — когда начинать? 19:00 − 1 ч 30 мин = 17:30.', '<b>In the kitchen.</b> Plov takes about 1 h 30 min to cook. If guests arrive at 19:00, when should you start? 19:00 − 1 h 30 min = 17:30.'),
+      L('<b>Sportda.</b> Futbol o‘yini 2 ta 45 minutlik bo‘limdan iborat, orada 15 minut tanaffus. Jami: 45 + 15 + 45 = 105 minut = 1 soat 45 minut.', '<b>В спорте.</b> Футбольный матч — два тайма по 45 минут и перерыв 15 минут. Всего: 45 + 15 + 45 = 105 минут = 1 ч 45 мин.', '<b>In sport.</b> A football match has two 45-minute halves with a 15-minute break. In all: 45 + 15 + 45 = 105 minutes = 1 h 45 min.'),
+      L('<b>Uyda.</b> Ekran oldida o‘tkaziladigan vaqtni hisoblang: 30 min multfilm + 25 min o‘yin = 55 min. Bu deyarli bir soat — dam olib, tashqarida o‘ynash vaqti!', '<b>Дома.</b> Посчитай время у экрана: 30 мин мультиков + 25 мин игр = 55 мин. Это почти час — пора отдохнуть и погулять!', '<b>At home.</b> Add up your screen time: 30 min of cartoons + 25 min of games = 55 min. That is nearly an hour, time for a break and some play outside!')
+    ] },
+    { kind: 'fact', h: L('Mantiqiy masalalar va faktlar', 'Логические задачи и факты', 'Logic puzzles and facts'), list: [
+      L('<b>Topishmoq:</b> 3 ta tuxumni bir vaqtda qaynatish 10 minut oladi. 6 ta tuxumni bir qozonda qaynatish qancha vaqt oladi? Javob: baribir 10 minut — ular birga qaynaydi!', '<b>Загадка:</b> 3 яйца вместе варятся 10 минут. Сколько варятся 6 яиц в одной кастрюле? Ответ: тоже 10 минут — они варятся одновременно!', '<b>Riddle:</b> 3 eggs boiled together take 10 minutes. How long do 6 eggs take in one pot? Answer: still 10 minutes, because they boil at the same time!'),
+      L('<b>Topishmoq:</b> Arra bilan yog‘ochni bir marta kesish 5 minut oladi. Yog‘ochni 3 bo‘lakka bo‘lish uchun qancha vaqt kerak? Javob: 10 minut — faqat 2 marta kesish kerak.', '<b>Загадка:</b> Один распил бревна занимает 5 минут. Сколько времени нужно, чтобы распилить бревно на 3 части? Ответ: 10 минут — нужно всего 2 распила.', '<b>Riddle:</b> One saw cut through a log takes 5 minutes. How long to cut the log into 3 pieces? Answer: 10 minutes, since only 2 cuts are needed.'),
+      L('Har 4 yilda bir marta fevral 29 kunlik bo‘ladi — bu <b>kabisa yili</b>. U yilda 366 kun bo‘ladi, chunki Yer Quyosh atrofini 365 kun va qariyb 6 soatda aylanadi.', 'Раз в 4 года в феврале 29 дней — это <b>високосный год</b>. В нём 366 дней, потому что Земля облетает Солнце за 365 дней и почти 6 часов.', 'Once every 4 years February has 29 days: a <b>leap year</b>. It has 366 days because the Earth goes round the Sun in 365 days and nearly 6 hours.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('60 minut = 1 soat ekanini unutmang.', 'Помни: 60 минут = 1 час.', 'Remember: 60 minutes = 1 hour.')
+    ], list: [
+      L('Aylantiring: 3 soat = ? min; 1 soat 45 min = ? min; 90 min = ? soat ? min.', 'Переведи: 3 ч = ? мин; 1 ч 45 мин = ? мин; 90 мин = ? ч ? мин.', 'Convert: 3 h = ? min; 1 h 45 min = ? min; 90 min = ? h ? min.'),
+      L('Multfilm 17:40 da boshlanib, 35 minut davom etdi. Qachon tugadi?', 'Мультфильм начался в 17:40 и длился 35 минут. Когда закончился?', 'A cartoon started at 17:40 and lasted 35 minutes. When did it end?'),
+      L('Aziz 14:15 da uy vazifasini boshladi va 15:00 da tugatdi. Qancha vaqt ishladi?', 'Азиз начал уроки в 14:15 и закончил в 15:00. Сколько времени он занимался?', 'Aziz started his homework at 14:15 and finished at 15:00. How long did he work?')
+    ], after: [
+      L('Javoblar: 180 min, 105 min, 1 soat 30 min. Multfilm 18:15 da tugadi (17:40 + 20 = 18:00, + 15 = 18:15). Aziz 45 minut ishladi.', 'Ответы: 180 мин, 105 мин, 1 ч 30 мин. Мультфильм закончился в 18:15 (17:40 + 20 = 18:00, + 15 = 18:15). Азиз занимался 45 минут.', 'Answers: 180 min, 105 min, 1 h 30 min. The cartoon ended at 18:15 (17:40 + 20 = 18:00, + 15 = 18:15). Aziz worked for 45 minutes.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>Boshlanish + davomiylik = tugash</b>; ikkitasini bilsak, uchinchisini topamiz.', '<b>Начало + продолжительность = конец</b>; зная две величины, найдём третью.', '<b>Start + duration = end</b>; knowing two, we can find the third.'),
+      L('1 soat 20 min = 80 min; 100 min = 1 soat 40 min.', '1 ч 20 мин = 80 мин; 100 мин = 1 ч 40 мин.', '1 h 20 min = 80 min; 100 min = 1 h 40 min.'),
+      L('60 minut to‘lsa — 1 soatga aylantiramiz: 8:40 + 30 min = 9:10.', 'Набралось 60 минут — превращаем в 1 час: 8:40 + 30 мин = 9:10.', 'When 60 minutes build up, turn them into 1 hour: 8:40 + 30 min = 9:10.'),
+      L('Vaqt oralig‘ini butun soat orqali «ko‘prik» bilan sanash qulay.', 'Промежуток удобно считать «мостиком» через целый час.', 'Count intervals with a “bridge” through the whole hour.'),
+      L('Mantiqiy masalalarda shoshilmang: 6 ta tuxum ham 10 minutda pishadi!', 'В логических задачах не спеши: 6 яиц тоже варятся 10 минут!', 'Don’t rush logic puzzles: 6 eggs still take 10 minutes!'),
+      L('Ulug‘bek yil uzunligini 600 yil oldin deyarli aniq hisoblagan.', 'Улугбек почти точно вычислил длину года 600 лет назад.', 'Ulugbek calculated the length of the year almost exactly 600 years ago.')
+    ] }
+  ] });
+})(this);

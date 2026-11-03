@@ -1108,4 +1108,417 @@
     ] }
   ] });
 })(this);
+(function (root) {
+  'use strict';
+  var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '2-3';
+
+  // ---------- t12. Bir necha marta orttirish va kamaytirish ----------
+  T.add(P, 't12', { sections: [
+    { kind: 'intro', h: L('«Ta ko‘p» va «marta ko‘p»', '«На … больше» и «в … раз больше»', '“More than” and “times as many”'), p: [
+      L('Akmalda 4 ta marka bor. Sardor aytadi: «Menda 3 <b>ta</b> ko‘p». Demak, Sardorda 4 + 3 = 7 ta. Lola esa aytadi: «Menda 3 <b>marta</b> ko‘p». Lolada qancha? 4 · 3 = 12 ta! Bitta so‘z farq qildi, javob esa butunlay boshqa.', 'У Акмаля 4 марки. Сардор говорит: «У меня <b>на</b> 3 больше». Значит, у Сардора 4 + 3 = 7. А Лола говорит: «У меня <b>в</b> 3 раза больше». Сколько у Лолы? 4 · 3 = 12! Одно слово — а ответ совсем другой.', 'Akmal has 4 stamps. Sardor says: “I have 3 <b>more</b>.” So Sardor has 4 + 3 = 7. Lola says: “I have 3 <b>times as many</b>.” How many does Lola have? 4 · 3 = 12! One word changed, and the answer is completely different.'),
+      L('Bu mavzuda «<b>marta</b> ko‘p» va «<b>marta</b> kam» degan so‘zlarni o‘rganamiz. Ular ko‘paytirish va bo‘lish bilan bog‘liq. «Ta ko‘p» va «ta kam» esa qo‘shish va ayirish bilan bog‘liq. Bu to‘rtta iborani adashtirmaslik — matnli masalalarni to‘g‘ri yechishning kaliti!', 'В этой теме изучим слова «<b>в … раз</b> больше» и «<b>в … раз</b> меньше». Они связаны с умножением и делением. А «на … больше» и «на … меньше» — со сложением и вычитанием. Не путать эти четыре выражения — ключ к правильному решению текстовых задач!', 'In this topic we learn the phrases “<b>times as many</b>” and “<b>times fewer</b>”. They go with multiplication and division. “More than” and “fewer than” go with addition and subtraction. Not mixing up these four phrases is the key to solving word problems correctly!'),
+      L('Hayotda bu so‘zlar har kuni uchraydi: «akang sendan ikki marta katta», «bu ko‘ylak ikki marta arzon», «poyezd avtobusdan uch marta tez». Ularni to‘g‘ri tushunsang, do‘konda ham, sportda ham, uyda ham adashmaysan. Tayyormisan? Boshladik!', 'В жизни эти слова встречаются каждый день: «брат старше тебя в два раза», «эта рубашка в два раза дешевле», «поезд в три раза быстрее автобуса». Если понимать их правильно, не ошибёшься ни в магазине, ни в спорте, ни дома. Готов? Начинаем!', 'These phrases come up every day: “your brother is twice your age”, “this shirt is half the price”, “the train is three times faster than the bus”. If you understand them correctly, you won’t go wrong in the shop, in sport or at home. Ready? Let’s go!')
+    ] },
+    { kind: 'def', h: L('Marta ko‘p va marta kam', 'В несколько раз больше и меньше', 'Times as many and times fewer'), p: [
+      L('Sonni bir necha <b>marta orttirish</b> — uni shuncha marta takrorlash, ya’ni ko‘paytirish. Sonni bir necha <b>marta kamaytirish</b> — uni shuncha teng qismga bo‘lib, bittasini olish, ya’ni bo‘lish.', '<b>Увеличить</b> число в несколько раз — повторить его столько раз, то есть умножить. <b>Уменьшить</b> в несколько раз — разделить на столько равных частей и взять одну, то есть разделить.', 'To make a number several <b>times bigger</b> is to repeat it that many times — to multiply. To make it several <b>times smaller</b> is to split it into that many equal parts and take one — to divide.')
+    ], list: [
+      L('«5 dan 3 <b>marta ko‘p</b>» → <b>5 · 3 = 15</b>.', '«В 3 <b>раза больше</b>, чем 5» → <b>5 · 3 = 15</b>.', '“3 <b>times as many</b> as 5” → <b>5 · 3 = 15</b>.'),
+      L('«15 dan 3 <b>marta kam</b>» → <b>15 : 3 = 5</b>.', '«В 3 <b>раза меньше</b>, чем 15» → <b>15 : 3 = 5</b>.', '“3 <b>times fewer</b> than 15” → <b>15 : 3 = 5</b>.'),
+      L('«5 dan 3 <b>ta ko‘p</b>» → <b>5 + 3 = 8</b>.', '«<b>На</b> 3 больше, чем 5» → <b>5 + 3 = 8</b>.', '“3 <b>more than</b> 5” → <b>5 + 3 = 8</b>.'),
+      L('«15 dan 3 <b>ta kam</b>» → <b>15 − 3 = 12</b>.', '«<b>На</b> 3 меньше, чем 15» → <b>15 − 3 = 12</b>.', '“3 <b>fewer than</b> 15” → <b>15 − 3 = 12</b>.')
+    ], after: [
+      L('«Ikki marta ko‘p» ni «ikki barobar» yoki «ikki hissa» deb ham aytishadi. «Ikki marta kam» esa «yarmi» degani.', '«В два раза больше» говорят ещё «вдвое больше». А «в два раза меньше» значит «половина».', '“Two times as many” is also called “twice as many” or “double”. “Two times fewer” means “half”.')
+    ] },
+    { kind: 'history', h: L('Tarixdan: savdo va marta', 'Из истории: торговля и «разы»', 'From history: trade and “times”'), p: [
+      L('Qadimgi Buyuk Ipak yo‘lida Samarqand va Buxoro savdogarlari mollarini ayirboshlashgan. «Bitta ipak gilam uchun 5 marta ko‘p jun beraman» kabi kelishuvlar bo‘lgan. Savdogarlar «marta»ni yaxshi bilishi kerak edi, aks holda zarar ko‘rishardi!', 'На древнем Великом шёлковом пути купцы Самарканда и Бухары обменивались товарами. Бывали сделки вроде «за один шёлковый ковёр дам в 5 раз больше шерсти». Купцы должны были хорошо понимать «разы», иначе терпели убыток!', 'On the ancient Great Silk Road, merchants from Samarkand and Bukhara traded goods. Deals like “for one silk carpet I’ll give 5 times as much wool” were common. Merchants had to understand “times” well, or they would lose money!'),
+      L('<b>Al-Xorazmiy</b> savdo va meros masalalarida nisbatlardan keng foydalangan: «bir aka ukasidan ikki marta ko‘p oladi» kabi shartlarni hisoblash usullarini tushuntirgan.', '<b>Аль-Хорезми</b> широко использовал отношения в задачах о торговле и наследстве: объяснял, как считать условия вроде «старший брат получает в два раза больше младшего».', '<b>Al-Khwarizmi</b> used ratios widely in problems about trade and inheritance, explaining how to work out conditions like “the elder brother gets twice as much as the younger”.'),
+      L('<b>Beruniy</b> esa turli metallarning og‘irligini taqqoslab, masalan, oltin suvdan necha marta og‘ir ekanini juda aniq o‘lchagan. Uning natijasi — taxminan 19 marta — hozirgi o‘lchovlarga juda yaqin!', 'А <b>Беруни</b>, сравнивая вес разных металлов, очень точно измерил, например, во сколько раз золото тяжелее воды. Его результат — примерно в 19 раз — очень близок к современным измерениям!', 'And <b>Biruni</b>, comparing the weights of different metals, measured very accurately how many times heavier gold is than water. His result — about 19 times — is very close to modern measurements!')
+    ] },
+    { kind: 'rule', h: L('Qoida: qaysi amalni tanlaymiz?', 'Правило: какое действие выбрать?', 'The rule: which operation?'), p: [
+      L('Masalada kalit so‘zni top va amalni tanla:', 'Найди в задаче ключевое слово и выбери действие:', 'Find the key word in the problem and choose the operation:')
+    ], list: [
+      L('«… <b>marta ko‘p</b>», «… marta orttir» → <b>ko‘paytirish (·)</b>.', '«в … раз <b>больше</b>», «увеличь в … раз» → <b>умножение (·)</b>.', '“… <b>times as many</b>”, “make … times bigger” → <b>multiply (·)</b>.'),
+      L('«… <b>marta kam</b>», «… marta kamaytir» → <b>bo‘lish (:)</b>.', '«в … раз <b>меньше</b>», «уменьши в … раз» → <b>деление (:)</b>.', '“… <b>times fewer</b>”, “make … times smaller” → <b>divide (:)</b>.'),
+      L('«… <b>ta ko‘p</b>», «… ga orttir» → <b>qo‘shish (+)</b>.', '«на … <b>больше</b>», «увеличь на …» → <b>сложение (+)</b>.', '“… <b>more</b>”, “increase by …” → <b>add (+)</b>.'),
+      L('«… <b>ta kam</b>», «… ga kamaytir» → <b>ayirish (−)</b>.', '«на … <b>меньше</b>», «уменьши на …» → <b>вычитание (−)</b>.', '“… <b>fewer</b>”, “decrease by …” → <b>subtract (−)</b>.')
+    ], after: [
+      L('Yodda saqlash uchun: «<b>marta</b>» so‘zi bo‘lsa — ko‘paytirish yoki bo‘lish. «<b>Ta</b>» so‘zi bo‘lsa — qo‘shish yoki ayirish.', 'Чтобы запомнить: есть слово «<b>в … раз</b>» — умножение или деление. Есть «<b>на</b>» — сложение или вычитание.', 'To remember: if you see “<b>times</b>”, it is multiply or divide. If you just see “more” or “fewer” by a number, it is add or subtract.'),
+      L('Javobni mantiq bilan tekshir: «marta ko‘p» javobi asl sondan katta, «marta kam» javobi kichik bo‘lishi kerak.', 'Проверяй логикой: ответ «в … раз больше» должен быть больше исходного числа, а «в … раз меньше» — меньше.', 'Check with logic: a “times as many” answer must be bigger than the starting number, and a “times fewer” answer smaller.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: matnli masala', 'Шаг за шагом: текстовая задача', 'Step by step: a word problem'), p: [
+      L('Masala: «Savatda 18 ta olma, qutida esa 3 marta kam. Qutida nechta olma?»', 'Задача: «В корзине 18 яблок, а в ящике в 3 раза меньше. Сколько яблок в ящике?»', 'Problem: “A basket has 18 apples; a box has 3 times fewer. How many apples are in the box?”')
+    ], list: [
+      L('1-qadam. Nima ma’lum? Savatda 18 ta.', 'Шаг 1. Что известно? В корзине 18.', 'Step 1. What do we know? The basket has 18.'),
+      L('2-qadam. Kalit so‘z: «3 marta kam».', 'Шаг 2. Ключевые слова: «в 3 раза меньше».', 'Step 2. Key words: “3 times fewer”.'),
+      L('3-qadam. Amal: «marta kam» → bo‘lish.', 'Шаг 3. Действие: «в … раз меньше» → деление.', 'Step 3. Operation: “times fewer” → divide.'),
+      L('4-qadam. Hisobla: 18 : 3 = 6.', 'Шаг 4. Вычисли: 18 : 3 = 6.', 'Step 4. Work it out: 18 : 3 = 6.'),
+      L('5-qadam. Tekshir: 6 · 3 = 18 — ha, 18 qutidagidan 3 marta ko‘p. Javob: 6 ta olma.', 'Шаг 5. Проверь: 6 · 3 = 18 — да, 18 в 3 раза больше. Ответ: 6 яблок.', 'Step 5. Check: 6 · 3 = 18 — yes, 18 is 3 times as many. Answer: 6 apples.')
+    ], after: [
+      L('Yana bir misol: «Qutida 6 ta olma, savatda esa 3 marta ko‘p. Savatda nechta?» Endi kalit so‘z «marta ko‘p», demak ko‘paytiramiz: 6 · 3 = 18. Ko‘rdingmi? Ikkala masalada ham bir xil sonlar ishtirok etdi, lekin savol boshqacha bo‘lgani uchun amal ham boshqacha bo‘ldi.', 'Ещё пример: «В ящике 6 яблок, а в корзине в 3 раза больше. Сколько в корзине?» Теперь ключевые слова «в … раз больше», значит умножаем: 6 · 3 = 18. Видишь? В обеих задачах те же числа, но вопрос другой — и действие другое.', 'One more: “A box has 6 apples; a basket has 3 times as many. How many in the basket?” Now the key words are “times as many”, so we multiply: 6 · 3 = 18. See? Both problems use the same numbers, but the question is different, so the operation is different too.'),
+      L('Maslahat: masalani o‘qiganda kalit so‘zning tagiga chiz va yoniga amal belgisini yozib qo‘y. Bu kichik odat ko‘p xatolardan saqlaydi.', 'Совет: читая задачу, подчеркни ключевое слово и напиши рядом знак действия. Эта маленькая привычка убережёт от многих ошибок.', 'Tip: as you read a problem, underline the key word and write the operation sign next to it. This small habit prevents many mistakes.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Kalit so‘zga e’tibor ber!', 'Обращай внимание на ключевое слово!', 'Pay attention to the key word!')
+    ], ex: [
+      { q: L('Ukamda 6 ta mashinacha bor, menda 2 marta ko‘p. Menda nechta?', 'У брата 6 машинок, у меня в 2 раза больше. Сколько у меня?', 'My brother has 6 toy cars; I have twice as many. How many do I have?'), s: L('«Marta ko‘p» → ko‘paytiramiz: 6 · 2 = 12. Javob: <b>12 ta</b>.', '«В … раз больше» → умножаем: 6 · 2 = 12. Ответ: <b>12</b>.', '“Times as many” → multiply: 6 · 2 = 12. Answer: <b>12</b>.') },
+      { q: L('Daraxtda 20 ta qush, yerda 4 marta kam. Yerda nechta qush?', 'На дереве 20 птиц, на земле в 4 раза меньше. Сколько птиц на земле?', '20 birds are in a tree; 4 times fewer are on the ground. How many on the ground?'), s: L('«Marta kam» → bo‘lamiz: 20 : 4 = 5. Javob: <b>5 ta qush</b>.', '«В … раз меньше» → делим: 20 : 4 = 5. Ответ: <b>5 птиц</b>.', '“Times fewer” → divide: 20 : 4 = 5. Answer: <b>5 birds</b>.') },
+      { q: L('Bir qalam 3 ming so‘m, ruchka esa 3 ming so‘m qimmat. Ruchka qancha?', 'Карандаш стоит 3 тысячи сумов, а ручка на 3 тысячи дороже. Сколько стоит ручка?', 'A pencil costs 3 thousand sum; a pen costs 3 thousand more. How much is the pen?'), s: L('«Ta ko‘p» (qimmat) → qo‘shamiz: 3 + 3 = 6. «Marta» so‘zi yo‘q! Javob: <b>6 ming so‘m</b>.', '«На … дороже» → складываем: 3 + 3 = 6. Слова «в … раз» нет! Ответ: <b>6 тысяч сумов</b>.', '“More” by an amount → add: 3 + 3 = 6. There is no word “times”! Answer: <b>6 thousand sum</b>.') },
+      { q: L('Sonni 5 marta orttirdik va 35 hosil bo‘ldi. Qanday son edi?', 'Число увеличили в 5 раз и получили 35. Какое было число?', 'A number was made 5 times bigger and became 35. What was the number?'), s: L('Teskari amal: 35 : 5 = 7. Tekshir: 7 · 5 = 35. Javob: <b>7</b>.', 'Обратное действие: 35 : 5 = 7. Проверка: 7 · 5 = 35. Ответ: <b>7</b>.', 'Undo it: 35 : 5 = 7. Check: 7 · 5 = 35. Answer: <b>7</b>.') }
+    ] },
+    { kind: 'table', h: L('To‘rt ibora jadvali', 'Таблица четырёх выражений', 'Table of the four phrases'), p: [
+      L('Bitta son — 12 — bilan to‘rtta iborani taqqoslaymiz. 3 soni bilan ishlaymiz.', 'Сравним четыре выражения на числе 12 с числом 3.', 'Let’s compare the four phrases using 12 and 3.')
+    ], table: { head: [L('Ibora', 'Выражение', 'Phrase'), L('Amal', 'Действие', 'Operation'), L('Hisob', 'Вычисление', 'Working'), L('Javob', 'Ответ', 'Answer')], rows: [
+      [L('3 marta ko‘p', 'в 3 раза больше', '3 times as many'), '·', '12 · 3', '36'],
+      [L('3 ta ko‘p', 'на 3 больше', '3 more'), '+', '12 + 3', '15'],
+      [L('3 marta kam', 'в 3 раза меньше', '3 times fewer'), ':', '12 : 3', '4'],
+      [L('3 ta kam', 'на 3 меньше', '3 fewer'), '−', '12 − 3', '9']
+    ] }, after: [
+      L('Ko‘rib turibsan: to‘rtta javob butunlay har xil! Shuning uchun so‘zni diqqat bilan o‘qish kerak.', 'Видишь: все четыре ответа разные! Поэтому слова нужно читать внимательно.', 'You see: all four answers are different! That is why you must read the words carefully.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Bu mavzuda eng ko‘p uchraydigan xatolar:', 'Самые частые ошибки в этой теме:', 'The most common mistakes in this topic:')
+    ], list: [
+      L('<b>«Marta»ni «ta» bilan adashtirish.</b> «4 dan 2 marta ko‘p» — 8, 6 emas!', '<b>Путать «в … раз» и «на …».</b> «В 2 раза больше 4» — это 8, а не 6!', '<b>Mixing up “times” and “more”.</b> “Twice as many as 4” is 8, not 6!'),
+      L('<b>«Ko‘p» so‘zini ko‘rib, doim ko‘paytirish.</b> «3 ta ko‘p» — bu qo‘shish. Faqat «marta ko‘p» — ko‘paytirish.', '<b>Видеть «больше» и всегда умножать.</b> «На 3 больше» — сложение. Только «в 3 раза больше» — умножение.', '<b>Seeing “more” and always multiplying.</b> “3 more” means add. Only “3 times as many” means multiply.'),
+      L('<b>«Marta kam»da ayirish.</b> «20 dan 4 marta kam» — 20 : 4 = 5, 16 emas!', '<b>Вычитать при «в … раз меньше».</b> «В 4 раза меньше 20» — 20 : 4 = 5, а не 16!', '<b>Subtracting for “times fewer”.</b> “4 times fewer than 20” is 20 : 4 = 5, not 16!'),
+      L('<b>Javobni tekshirmaslik.</b> «Marta ko‘p» javobi kichik chiqsa — xato bor.', '<b>Не проверять ответ.</b> Если ответ «в … раз больше» оказался меньше — есть ошибка.', '<b>Not checking the answer.</b> If a “times as many” answer comes out smaller, something is wrong.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Oshxonada.</b> Retsept 2 kishilik, mehmonlar esa 6 kishi. Mahsulotlarni necha marta ko‘paytirish kerak? 6 : 2 = 3 marta. 1 stakan un o‘rniga 3 stakan!', '<b>На кухне.</b> Рецепт на 2 человек, а гостей 6. Во сколько раз увеличить продукты? 6 : 2 = 3 раза. Вместо 1 стакана муки — 3!', '<b>In the kitchen.</b> A recipe serves 2, but there are 6 guests. How many times more ingredients? 6 : 2 = 3 times. Instead of 1 cup of flour — 3!'),
+      L('<b>Do‘konda.</b> Chegirmada narx 2 marta arzonlashdi: 40 ming so‘mlik o‘yinchoq endi 40 : 2 = 20 ming so‘m.', '<b>В магазине.</b> На распродаже цена снизилась в 2 раза: игрушка за 40 тысяч теперь стоит 40 : 2 = 20 тысяч сумов.', '<b>In a shop.</b> In a sale the price halved: a 40,000-sum toy now costs 40 : 2 = 20 thousand sum.'),
+      L('<b>Tabiatda.</b> Gepard odamdan taxminan 3 marta tez yuguradi. Fil sichqondan minglab marta og‘ir.', '<b>В природе.</b> Гепард бегает примерно в 3 раза быстрее человека. Слон в тысячи раз тяжелее мыши.', '<b>In nature.</b> A cheetah runs about 3 times faster than a person. An elephant is thousands of times heavier than a mouse.'),
+      L('<b>O‘sish.</b> Chaqaloq tug‘ilganda taxminan 3 kg, bir yoshda esa 3 marta og‘ir — 9 kg atrofida bo‘ladi.', '<b>Рост.</b> Новорождённый весит около 3 кг, а к году — примерно в 3 раза больше, около 9 кг.', '<b>Growing up.</b> A newborn baby weighs about 3 kg, and by age one about 3 times as much — around 9 kg.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Quyosh Yerdan taxminan 109 marta katta (diametri bo‘yicha)!', 'Солнце примерно в 109 раз больше Земли по диаметру!', 'The Sun is about 109 times wider than the Earth!'),
+      L('Ko‘k kit — dunyodagi eng katta hayvon — fil dan 20 martadan ham ko‘proq og‘ir.', 'Синий кит — самое большое животное на свете — тяжелее слона более чем в 20 раз.', 'The blue whale — the largest animal on Earth — is more than 20 times heavier than an elephant.'),
+      L('Bambuk dunyodagi eng tez o‘sadigan o‘simlik: bir kunda 1 metrgacha o‘sishi mumkin — oddiy daraxtdan yuzlab marta tez!', 'Бамбук — самое быстрорастущее растение: за день может вырасти до 1 метра — в сотни раз быстрее обычного дерева!', 'Bamboo is the fastest-growing plant: it can grow up to 1 metre a day — hundreds of times faster than an ordinary tree!'),
+      L('Ovoz havoda soniyasiga taxminan 340 metr, suvda esa 4 marta tezroq tarqaladi.', 'Звук в воздухе проходит около 340 метров в секунду, а в воде — примерно в 4 раза быстрее.', 'Sound travels about 340 metres a second in air, and about 4 times faster in water.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Har bir savolda kalit so‘zning tagiga chiz!', 'В каждом вопросе подчеркни ключевое слово!', 'Underline the key word in each question!')
+    ], list: [
+      L('7 dan 2 marta ko‘p son? 7 dan 2 ta ko‘p son?', 'Число в 2 раза больше 7? Число на 2 больше 7?', 'Twice as many as 7? 2 more than 7?'),
+      L('24 dan 4 marta kam son? 24 dan 4 ta kam son?', 'Число в 4 раза меньше 24? На 4 меньше 24?', '4 times fewer than 24? 4 fewer than 24?'),
+      L('Lolada 5 ta lenta, Malikada 3 marta ko‘p. Ikkalasida jami nechta?', 'У Лолы 5 лент, у Малики в 3 раза больше. Сколько у обеих вместе?', 'Lola has 5 ribbons; Malika has 3 times as many. How many do they have altogether?'),
+      L('Qaysi son 6 marta kamaytirilganda 3 bo‘ladi?', 'Какое число, уменьшенное в 6 раз, даёт 3?', 'Which number, made 6 times smaller, gives 3?')
+    ], after: [
+      L('Javoblar: 1) 14 va 9. 2) 6 va 20. 3) Malikada 5 · 3 = 15, jami 5 + 15 = 20. 4) 3 · 6 = 18.', 'Ответы: 1) 14 и 9. 2) 6 и 20. 3) У Малики 5 · 3 = 15, вместе 5 + 15 = 20. 4) 3 · 6 = 18.', 'Answers: 1) 14 and 9. 2) 6 and 20. 3) Malika has 5 · 3 = 15, together 5 + 15 = 20. 4) 3 · 6 = 18.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('«… <b>marta ko‘p</b>» → ko‘paytirish: 4 dan 3 marta ko‘p = 4 · 3 = 12.', '«в … раз <b>больше</b>» → умножение: в 3 раза больше 4 = 4 · 3 = 12.', '“… <b>times as many</b>” → multiply: 3 times as many as 4 = 4 · 3 = 12.'),
+      L('«… <b>marta kam</b>» → bo‘lish: 12 dan 3 marta kam = 12 : 3 = 4.', '«в … раз <b>меньше</b>» → деление: в 3 раза меньше 12 = 12 : 3 = 4.', '“… <b>times fewer</b>” → divide: 3 times fewer than 12 = 12 : 3 = 4.'),
+      L('«… <b>ta ko‘p</b>» → qo‘shish, «… <b>ta kam</b>» → ayirish.', '«на … <b>больше</b>» → сложение, «на … <b>меньше</b>» → вычитание.', '“… <b>more</b>” → add, “… <b>fewer</b>” → subtract.'),
+      L('Kalit so‘z — «marta». Uni topib, amalni tanla.', 'Ключевое слово — «раз». Найди его и выбери действие.', 'The key word is “times”. Find it and choose the operation.'),
+      L('Javobni mantiq bilan tekshir: ko‘p — katta, kam — kichik.', 'Проверяй логикой: больше — значит больше, меньше — меньше.', 'Check with logic: “as many” is bigger, “fewer” is smaller.'),
+      L('Ko‘paytirish va bo‘lish bir-birini tekshiradi.', 'Умножение и деление проверяют друг друга.', 'Multiplication and division check each other.')
+    ] }
+  ] });
+
+  // ---------- t13. 6 va 7 ga ko‘paytirish va bo‘lish ----------
+  T.add(P, 't13', { sections: [
+    { kind: 'intro', h: L('Kattaroq jadvallarga o‘tamiz', 'Переходим к большим таблицам', 'On to the bigger tables'), p: [
+      L('Tabriklaymiz! Sen 1, 2, 3, 4 va 5 lik jadvallarni bilasan. Endi <b>6 lik</b> va <b>7 lik</b> jadvallar navbati. Ular biroz qiyinroq ko‘rinadi, lekin bitta sir bor: ularning ko‘p qismini sen allaqachon bilasan!', 'Поздравляем! Ты знаешь таблицы на 1, 2, 3, 4 и 5. Теперь очередь таблиц <b>на 6</b> и <b>на 7</b>. Они кажутся сложнее, но есть секрет: большую часть их ты уже знаешь!', 'Congratulations! You know the 1, 2, 3, 4 and 5 tables. Now it is the turn of the <b>6</b> and <b>7</b> tables. They look harder, but there is a secret: you already know most of them!'),
+      L('Masalan, 6 · 3 ni hali o‘rganmagandek tuyuladi, lekin 3 · 6 = 18 ni bilasan! O‘rin almashtirish qoidasi tufayli 6 · 3 = 18. Xuddi shunday 6 · 2, 6 · 4, 6 · 5, 7 · 2, 7 · 3, 7 · 4, 7 · 5 — hammasi tanish. Yangi faqat bir nechta misol qoladi.', 'Например, кажется, что 6 · 3 ты ещё не учил, но 3 · 6 = 18 ты знаешь! По переместительному свойству 6 · 3 = 18. Так же и 6 · 2, 6 · 4, 6 · 5, 7 · 2, 7 · 3, 7 · 4, 7 · 5 — всё знакомо. Новых примеров остаётся совсем немного.', 'For example, 6 · 3 seems new, but you know 3 · 6 = 18! By the swap rule, 6 · 3 = 18. The same goes for 6 · 2, 6 · 4, 6 · 5, 7 · 2, 7 · 3, 7 · 4, 7 · 5 — all familiar. Only a few new facts are left.'),
+      L('Haftada 7 kun bor, kubikning 6 ta yog‘i, hasharotning 6 ta oyog‘i. Bu jadvallar kalendar, vaqt va tabiat bilan bog‘liq masalalarda juda kerak!', 'В неделе 7 дней, у кубика 6 граней, у насекомого 6 ног. Эти таблицы очень нужны в задачах про календарь, время и природу!', 'A week has 7 days, a dice has 6 faces, an insect has 6 legs. These tables are very useful for problems about calendars, time and nature!')
+    ] },
+    { kind: 'def', h: L('6 ga va 7 ga ko‘paytirish', 'Умножение на 6 и на 7', 'Multiplying by 6 and 7'), p: [
+      L('<b>6 ga ko‘paytirish</b> — sonni 6 marta olish. <b>7 ga ko‘paytirish</b> — sonni 7 marta olish. Bo‘lish esa — teskari amal.', '<b>Умножить на 6</b> — взять число 6 раз. <b>Умножить на 7</b> — взять число 7 раз. Деление — обратное действие.', '<b>Multiplying by 6</b> means taking a number 6 times. <b>Multiplying by 7</b> means taking it 7 times. Division is the opposite.')
+    ], list: [
+      L('Oltitalab sanash: <b>6, 12, 18, 24, 30, 36, 42, 48, 54, 60</b>.', 'Счёт шестёрками: <b>6, 12, 18, 24, 30, 36, 42, 48, 54, 60</b>.', 'Counting in sixes: <b>6, 12, 18, 24, 30, 36, 42, 48, 54, 60</b>.'),
+      L('Yettitalab sanash: <b>7, 14, 21, 28, 35, 42, 49, 56, 63, 70</b>.', 'Счёт семёрками: <b>7, 14, 21, 28, 35, 42, 49, 56, 63, 70</b>.', 'Counting in sevens: <b>7, 14, 21, 28, 35, 42, 49, 56, 63, 70</b>.'),
+      L('Ikkala qatorda ham bor son: <b>42</b> = 6 · 7 = 7 · 6.', 'Число, которое есть в обоих рядах: <b>42</b> = 6 · 7 = 7 · 6.', 'The number in both lists: <b>42</b> = 6 · 7 = 7 · 6.')
+    ], after: [
+      L('Haqiqatan ham yangi misollar: 6 · 6 = 36, 6 · 7 = 42, 6 · 8 = 48, 6 · 9 = 54, 7 · 7 = 49, 7 · 8 = 56, 7 · 9 = 63. Faqat yettita! Qolganlarini allaqachon bilasan.', 'По-настоящему новые примеры: 6 · 6 = 36, 6 · 7 = 42, 6 · 8 = 48, 6 · 9 = 54, 7 · 7 = 49, 7 · 8 = 56, 7 · 9 = 63. Всего семь! Остальные ты уже знаешь.', 'Truly new facts: 6 · 6 = 36, 6 · 7 = 42, 6 · 8 = 48, 6 · 9 = 54, 7 · 7 = 49, 7 · 8 = 56, 7 · 9 = 63. Just seven! You already know the rest.')
+    ] },
+    { kind: 'history', h: L('Tarixdan: hafta va yetti soni', 'Из истории: неделя и число семь', 'From history: the week and the number seven'), p: [
+      L('Haftada nega 7 kun? Qadimgi Bobil astronomlari osmonda ko‘z bilan ko‘rinadigan 7 ta yoritgichni kuzatishgan: Quyosh, Oy va beshta sayyora (Merkuriy, Venera, Mars, Yupiter, Saturn). Har bir kunni ulardan biriga bag‘ishlashgan. Shundan 7 kunlik hafta paydo bo‘lgan.', 'Почему в неделе 7 дней? Астрономы Древнего Вавилона наблюдали 7 светил, видимых глазом: Солнце, Луну и пять планет (Меркурий, Венеру, Марс, Юпитер, Сатурн). Каждый день посвящали одному из них. Так появилась семидневная неделя.', 'Why does a week have 7 days? Astronomers in ancient Babylon watched 7 lights visible in the sky: the Sun, the Moon and five planets (Mercury, Venus, Mars, Jupiter and Saturn). They dedicated each day to one of them. That is how the 7-day week began.'),
+      L('Oy o‘z shaklini taxminan har 7 kunda o‘zgartiradi: yangi oy, yarim oy, to‘lin oy, yana yarim oy. 4 · 7 = 28 — oyning to‘liq aylanishiga yaqin!', 'Луна меняет фазу примерно каждые 7 дней: новолуние, первая четверть, полнолуние, последняя четверть. 4 · 7 = 28 — почти полный лунный цикл!', 'The Moon changes its phase about every 7 days: new moon, first quarter, full moon, last quarter. 4 · 7 = 28 — close to a full lunar cycle!'),
+      L('<b>Beruniy</b> «Qadimgi xalqlardan qolgan yodgorliklar» kitobida turli xalqlarning kalendarlarini, hafta va oylarini taqqoslab, ularni hisoblashning aniq usullarini yozgan. Bu kitob ming yildan beri olimlar uchun muhim manba.', '<b>Беруни</b> в книге «Памятники минувших поколений» сравнил календари разных народов, их недели и месяцы, и описал точные способы их расчёта. Эта книга уже тысячу лет — важный источник для учёных.', '<b>Biruni</b>, in his book “The Remaining Signs of Past Centuries”, compared the calendars, weeks and months of many peoples and wrote exact methods for calculating them. For a thousand years this book has been an important source for scholars.')
+    ] },
+    { kind: 'rule', h: L('Qoidalar va hiylalar', 'Правила и хитрости', 'Rules and tricks'), p: [
+      L('Yangi misollarni oson eslash yo‘llari:', 'Способы легко запомнить новые примеры:', 'Easy ways to remember the new facts:')
+    ], list: [
+      L('<b>6 · a = 5 · a + a</b>. 5 lik jadvalni bilasan! 6 · 7 = 35 + 7 = 42.', '<b>6 · a = 5 · a + a</b>. Таблицу на 5 ты знаешь! 6 · 7 = 35 + 7 = 42.', '<b>6 · a = 5 · a + a</b>. You know the 5 table! 6 · 7 = 35 + 7 = 42.'),
+      L('<b>6 · a — 3 · a ni ikkilantirish</b>: 6 · 8 = 2 · (3 · 8) = 24 + 24 = 48.', '<b>6 · a — удвоить 3 · a</b>: 6 · 8 = 24 + 24 = 48.', '<b>6 · a is double 3 · a</b>: 6 · 8 = 24 + 24 = 48.'),
+      L('<b>7 · a = 5 · a + 2 · a</b>: 7 · 8 = 40 + 16 = 56.', '<b>7 · a = 5 · a + 2 · a</b>: 7 · 8 = 40 + 16 = 56.', '<b>7 · a = 5 · a + 2 · a</b>: 7 · 8 = 40 + 16 = 56.'),
+      L('<b>Sanoq qatori sirli</b>: 56 = 7 · 8 — raqamlar tartibda: 5, 6, 7, 8!', '<b>Секрет числового ряда</b>: 56 = 7 · 8 — цифры по порядку: 5, 6, 7, 8!', '<b>Number-line secret</b>: 56 = 7 · 8 — the digits go in order: 5, 6, 7, 8!'),
+      L('6 lik jadval javoblari doim juft (6 juft bo‘lgani uchun).', 'Ответы таблицы на 6 всегда чётные (ведь 6 — чётное).', 'Answers in the 6 table are always even (because 6 is even).')
+    ] },
+    { kind: 'table', h: L('6 va 7 jadvali', 'Таблица на 6 и на 7', 'The 6 and 7 tables'), p: [
+      L('Yangi misollarni qalin harf bilan belgilab qo‘ydik — ularga ko‘proq e’tibor ber.', 'Новые примеры выделены — удели им больше внимания.', 'The new facts are in bold — give them extra attention.')
+    ], table: { head: [L('6 ga ko‘paytirish', 'Умножение на 6', 'Times 6'), L('6 ga bo‘lish', 'Деление на 6', 'Divide by 6'), L('7 ga ko‘paytirish', 'Умножение на 7', 'Times 7'), L('7 ga bo‘lish', 'Деление на 7', 'Divide by 7')], rows: [
+      ['6 · 1 = 6', '6 : 6 = 1', '7 · 1 = 7', '7 : 7 = 1'], ['6 · 2 = 12', '12 : 6 = 2', '7 · 2 = 14', '14 : 7 = 2'], ['6 · 3 = 18', '18 : 6 = 3', '7 · 3 = 21', '21 : 7 = 3'],
+      ['6 · 4 = 24', '24 : 6 = 4', '7 · 4 = 28', '28 : 7 = 4'], ['6 · 5 = 30', '30 : 6 = 5', '7 · 5 = 35', '35 : 7 = 5'], ['<b>6 · 6 = 36</b>', '36 : 6 = 6', '7 · 6 = 42', '42 : 7 = 6'],
+      ['<b>6 · 7 = 42</b>', '42 : 6 = 7', '<b>7 · 7 = 49</b>', '49 : 7 = 7'], ['<b>6 · 8 = 48</b>', '48 : 6 = 8', '<b>7 · 8 = 56</b>', '56 : 7 = 8'], ['<b>6 · 9 = 54</b>', '54 : 6 = 9', '<b>7 · 9 = 63</b>', '63 : 7 = 9'],
+      ['6 · 10 = 60', '60 : 6 = 10', '7 · 10 = 70', '70 : 7 = 10']
+    ] }, after: [
+      L('Har kuni faqat qalin misollarni 5 marta takrorla — bir haftada ular yodda qoladi.', 'Каждый день повторяй выделенные примеры по 5 раз — за неделю запомнишь.', 'Repeat the bold facts 5 times a day — in a week you will know them.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: 7 · 8 ni topamiz', 'Шаг за шагом: находим 7 · 8', 'Step by step: finding 7 · 8'), p: [
+      L('7 · 8 eng qiyin misollardan biri. Uni bo‘laklarga bo‘lib topamiz:', '7 · 8 — один из самых трудных примеров. Найдём его по частям:', '7 · 8 is one of the hardest facts. Let’s find it in parts:')
+    ], list: [
+      L('1-qadam. 7 ni 5 va 2 ga ajrat: 7 = 5 + 2.', 'Шаг 1. Раздели 7 на 5 и 2: 7 = 5 + 2.', 'Step 1. Split 7 into 5 and 2: 7 = 5 + 2.'),
+      L('2-qadam. 5 · 8 = 40 (5 lik jadvaldan).', 'Шаг 2. 5 · 8 = 40 (из таблицы на 5).', 'Step 2. 5 · 8 = 40 (from the 5 table).'),
+      L('3-qadam. 2 · 8 = 16 (2 lik jadvaldan).', 'Шаг 3. 2 · 8 = 16 (из таблицы на 2).', 'Step 3. 2 · 8 = 16 (from the 2 table).'),
+      L('4-qadam. Qo‘sh: 40 + 16 = 56.', 'Шаг 4. Сложи: 40 + 16 = 56.', 'Step 4. Add: 40 + 16 = 56.'),
+      L('5-qadam. Tekshir: 56 : 8 = 7 va 56 : 7 = 8. Javob: 7 · 8 = 56.', 'Шаг 5. Проверь: 56 : 8 = 7 и 56 : 7 = 8. Ответ: 7 · 8 = 56.', 'Step 5. Check: 56 : 8 = 7 and 56 : 7 = 8. Answer: 7 · 8 = 56.')
+    ], after: [
+      L('Bu usul — bo‘laklarga ajratish — har qanday qiyin misolda yordam beradi. Bu bobolarimizdan, xususan, al-Xorazmiydan qolgan aqlli g‘oya!', 'Этот способ — разбиение на части — помогает в любом трудном примере. Это мудрая идея, дошедшая до нас от предков, в том числе от аль-Хорезми!', 'This method — splitting into parts — helps with any hard fact. It is a clever idea handed down from scholars of the past, including al-Khwarizmi!')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Hafta, kubik va hasharotlar haqida masalalar.', 'Задачи про неделю, кубики и насекомых.', 'Problems about weeks, dice and insects.')
+    ], ex: [
+      { q: L('3 haftada necha kun bor?', 'Сколько дней в 3 неделях?', 'How many days are in 3 weeks?'), s: L('Haftada 7 kun: 7 · 3 = 21. Javob: <b>21 kun</b>.', 'В неделе 7 дней: 7 · 3 = 21. Ответ: <b>21 день</b>.', 'A week has 7 days: 7 · 3 = 21. Answer: <b>21 days</b>.') },
+      { q: L('8 ta qo‘ng‘izning nechta oyog‘i bor?', 'Сколько ног у 8 жуков?', 'How many legs do 8 beetles have?'), s: L('Har hasharotda 6 ta oyoq: 6 · 8 = 48. (5 · 8 = 40, + 8 = 48.) Javob: <b>48 ta oyoq</b>.', 'У насекомого 6 ног: 6 · 8 = 48. (5 · 8 = 40, + 8 = 48.) Ответ: <b>48 ног</b>.', 'Each insect has 6 legs: 6 · 8 = 48. (5 · 8 = 40, + 8 = 48.) Answer: <b>48 legs</b>.') },
+      { q: L('63 kun necha haftaga teng?', 'Сколько недель в 63 днях?', 'How many weeks are 63 days?'), s: L('63 : 7 = 9, chunki 7 · 9 = 63. Javob: <b>9 hafta</b>.', '63 : 7 = 9, потому что 7 · 9 = 63. Ответ: <b>9 недель</b>.', '63 : 7 = 9, because 7 · 9 = 63. Answer: <b>9 weeks</b>.') },
+      { q: L('54 ta tuxumni 6 tadan qutiga joylashdi. Nechta quti kerak?', '54 яйца разложили по 6 в коробку. Сколько коробок нужно?', '54 eggs are packed 6 to a box. How many boxes are needed?'), s: L('54 : 6 = 9, chunki 6 · 9 = 54. Javob: <b>9 ta quti</b>.', '54 : 6 = 9, потому что 6 · 9 = 54. Ответ: <b>9 коробок</b>.', '54 : 6 = 9, because 6 · 9 = 54. Answer: <b>9 boxes</b>.') }
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('6 va 7 lik jadvallarda ko‘p uchraydigan chalkashliklar:', 'Частая путаница в таблицах на 6 и 7:', 'Common mix-ups with the 6 and 7 tables:')
+    ], list: [
+      L('<b>6 · 8 va 7 · 8 ni adashtirish</b> (48 va 56). Esla: 56 da «5, 6, 7, 8» tartibi.', '<b>Путать 6 · 8 и 7 · 8</b> (48 и 56). Помни: в 56 порядок «5, 6, 7, 8».', '<b>Mixing up 6 · 8 and 7 · 8</b> (48 and 56). Remember: 56 has the order “5, 6, 7, 8”.'),
+      L('<b>7 · 7 = 47 yoki 48 deb aytish.</b> To‘g‘risi 49. Tekshir: 7 · 5 = 35, + 14 = 49.', '<b>Говорить 7 · 7 = 47 или 48.</b> Правильно 49. Проверь: 7 · 5 = 35, + 14 = 49.', '<b>Saying 7 · 7 = 47 or 48.</b> It is 49. Check: 7 · 5 = 35, + 14 = 49.'),
+      L('<b>6 lik jadvalda toq javob.</b> 6 · 7 = 41? Yo‘q — 6 lik jadvalda javob doim juft: 42.', '<b>Нечётный ответ в таблице на 6.</b> 6 · 7 = 41? Нет — в таблице на 6 ответ всегда чётный: 42.', '<b>An odd answer in the 6 table.</b> 6 · 7 = 41? No — 6 table answers are always even: 42.'),
+      L('<b>Bo‘lishda jadvalni noto‘g‘ri tanlash.</b> 42 : 6 = 7, 42 : 7 = 6 — ikkalasi bitta oiladan.', '<b>Брать не ту строку при делении.</b> 42 : 6 = 7, 42 : 7 = 6 — оба из одной семейки.', '<b>Using the wrong fact when dividing.</b> 42 : 6 = 7 and 42 : 7 = 6 — both from one family.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Kalendar.</b> Ta’til 2 hafta davom etadi — 7 · 2 = 14 kun. Bayramgacha 35 kun qoldi — bu 35 : 7 = 5 hafta.', '<b>Календарь.</b> Каникулы длятся 2 недели — 7 · 2 = 14 дней. До праздника 35 дней — это 35 : 7 = 5 недель.', '<b>Calendar.</b> The holidays last 2 weeks — 7 · 2 = 14 days. There are 35 days until a festival — that is 35 : 7 = 5 weeks.'),
+      L('<b>O‘yinlar.</b> O‘yin kubigining 6 ta yog‘i bor. 4 ta kubikda 6 · 4 = 24 ta yoq. Kubikdagi nuqtalar soni 1 dan 6 gacha.', '<b>Игры.</b> У игрального кубика 6 граней. У 4 кубиков 6 · 4 = 24 грани. Точек на гранях — от 1 до 6.', '<b>Games.</b> A dice has 6 faces. Four dice have 6 · 4 = 24 faces. The faces show 1 to 6 dots.'),
+      L('<b>Do‘konda.</b> Tuxum va yogurtlar ko‘pincha 6 tadan qadoqlanadi. 7 ta qadoqda 6 · 7 = 42 ta.', '<b>В магазине.</b> Яйца и йогурты часто упаковывают по 6. В 7 упаковках 6 · 7 = 42.', '<b>In a shop.</b> Eggs and yoghurts are often sold in packs of 6. Seven packs hold 6 · 7 = 42.'),
+      L('<b>Maktabda.</b> Haftada 6 kun dars bo‘lsa va har kuni 5 ta dars, haftada 6 · 5 = 30 ta dars.', '<b>В школе.</b> Если учимся 6 дней в неделю по 5 уроков, за неделю 6 · 5 = 30 уроков.', '<b>At school.</b> With 6 school days a week and 5 lessons a day, there are 6 · 5 = 30 lessons a week.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Kamalakda 7 ta rang bor: qizil, to‘q sariq, sariq, yashil, havorang, ko‘k, binafsha.', 'В радуге 7 цветов: красный, оранжевый, жёлтый, зелёный, голубой, синий, фиолетовый.', 'A rainbow is usually described as 7 colours: red, orange, yellow, green, blue, indigo, violet.'),
+      L('Asalari uyasining har bir katagi 6 burchakli. Qor uchquni ham 6 nurli!', 'Каждая ячейка пчелиных сот — шестиугольник. И снежинка тоже шестилучевая!', 'Every cell of a honeycomb has 6 sides. And a snowflake has 6 arms too!'),
+      L('Musiqada 7 ta asosiy nota bor: do, re, mi, fa, sol, lya, si.', 'В музыке 7 основных нот: до, ре, ми, фа, соль, ля, си.', 'Music has 7 basic notes: do, re, mi, fa, sol, la, ti.'),
+      L('Yer yuzida 7 ta qit’a bor deb hisoblanadi, qadimgi dunyoda esa 7 ta mo‘jiza bo‘lgan — ulardan faqat Misr piramidalari bugungacha saqlanib qolgan.', 'На Земле принято считать 7 континентов, а в древнем мире было 7 чудес — из них до наших дней сохранились только египетские пирамиды.', 'Earth is often said to have 7 continents, and the ancient world had 7 wonders — of which only the Egyptian pyramids survive today.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Qiyin misolni bo‘laklarga ajratishni unutma!', 'Не забывай разбивать трудный пример на части!', 'Remember to split hard facts into parts!')
+    ], list: [
+      L('6 · 6, 6 · 9, 7 · 7, 7 · 9, 48 : 6, 56 : 7 = ?', '6 · 6, 6 · 9, 7 · 7, 7 · 9, 48 : 6, 56 : 7 = ?', '6 · 6, 6 · 9, 7 · 7, 7 · 9, 48 : 6, 56 : 7 = ?'),
+      L('5 haftada necha kun?', 'Сколько дней в 5 неделях?', 'How many days are in 5 weeks?'),
+      L('42 ta qalamni 6 ta o‘quvchiga teng bo‘lishdi. Har biriga nechta?', '42 карандаша поровну разделили между 6 учениками. Сколько каждому?', '42 pencils are shared equally among 6 pupils. How many each?'),
+      L('Oltitalab 60 gacha sanab chiq.', 'Посчитай шестёрками до 60.', 'Count in sixes up to 60.')
+    ], after: [
+      L('Javoblar: 1) 36, 54, 49, 63, 8, 8. 2) 7 · 5 = 35 kun. 3) 42 : 6 = 7 ta. 4) 6, 12, 18, 24, 30, 36, 42, 48, 54, 60.', 'Ответы: 1) 36, 54, 49, 63, 8, 8. 2) 7 · 5 = 35 дней. 3) 42 : 6 = 7. 4) 6, 12, 18, 24, 30, 36, 42, 48, 54, 60.', 'Answers: 1) 36, 54, 49, 63, 8, 8. 2) 7 · 5 = 35 days. 3) 42 : 6 = 7. 4) 6, 12, 18, 24, 30, 36, 42, 48, 54, 60.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('6 lik va 7 lik jadvallarning ko‘p qismini o‘rin almashtirish tufayli allaqachon bilasan.', 'Большую часть таблиц на 6 и 7 ты уже знаешь благодаря перестановке множителей.', 'Thanks to the swap rule, you already know most of the 6 and 7 tables.'),
+      L('Yangi misollar: 36, 42, 48, 54, 49, 56, 63.', 'Новые примеры: 36, 42, 48, 54, 49, 56, 63.', 'New facts: 36, 42, 48, 54, 49, 56, 63.'),
+      L('6 · a = 5 · a + a; 7 · a = 5 · a + 2 · a.', '6 · a = 5 · a + a; 7 · a = 5 · a + 2 · a.', '6 · a = 5 · a + a; 7 · a = 5 · a + 2 · a.'),
+      L('56 = 7 · 8 — «5, 6, 7, 8».', '56 = 7 · 8 — «5, 6, 7, 8».', '56 = 7 · 8 — “5, 6, 7, 8”.'),
+      L('Bo‘lish — jadvalni teskari o‘qish: 42 : 6 = 7, 42 : 7 = 6.', 'Деление — таблица наоборот: 42 : 6 = 7, 42 : 7 = 6.', 'Division is the table backwards: 42 : 6 = 7, 42 : 7 = 6.'),
+      L('Haftada 7 kun — 7 lik jadval kalendar masalalarida yordam beradi.', 'В неделе 7 дней — таблица на 7 помогает в задачах о календаре.', 'A week has 7 days — the 7 table helps with calendar problems.')
+    ] }
+  ] });
+})(this);
+(function (root) {
+  'use strict';
+  var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '2-3';
+
+  // ---------- t14. 8 va 9 ga ko‘paytirish va bo‘lish ----------
+  T.add(P, 't14', { sections: [
+    { kind: 'intro', h: L('Oxirgi cho‘qqi: 8 va 9', 'Последняя вершина: 8 и 9', 'The last peak: 8 and 9'), p: [
+      L('Ko‘paytirish jadvali — baland tog‘ga o‘xshaydi. Sen allaqachon ko‘p yo‘l bosib o‘tding: 1 dan 7 gacha jadvallarni bilasan. Endi oxirgi cho‘qqi — <b>8 lik</b> va <b>9 lik</b> jadvallar qoldi. Ular eng qiyin ko‘rinadi, lekin aslida ularda yangi misollar juda kam!', 'Таблица умножения похожа на высокую гору. Ты уже прошёл большой путь: знаешь таблицы от 1 до 7. Осталась последняя вершина — таблицы <b>на 8</b> и <b>на 9</b>. Они кажутся самыми трудными, но на самом деле новых примеров в них совсем мало!', 'The times table is like a tall mountain. You have already come a long way: you know the tables from 1 to 7. Only the last peak remains — the <b>8</b> and <b>9</b> tables. They look the hardest, but really they contain very few new facts!'),
+      L('O‘rin almashtirish qoidasini esla: 8 · 3 = 3 · 8 = 24, 9 · 6 = 6 · 9 = 54. Haqiqatan yangi misollar faqat uchta: <b>8 · 8 = 64</b>, <b>8 · 9 = 72</b> va <b>9 · 9 = 81</b>. Shuncha xolos!', 'Вспомни переместительное свойство: 8 · 3 = 3 · 8 = 24, 9 · 6 = 6 · 9 = 54. По-настоящему новых примеров всего три: <b>8 · 8 = 64</b>, <b>8 · 9 = 72</b> и <b>9 · 9 = 81</b>. И всё!', 'Remember the swap rule: 8 · 3 = 3 · 8 = 24, 9 · 6 = 6 · 9 = 54. There are only three truly new facts: <b>8 · 8 = 64</b>, <b>8 · 9 = 72</b> and <b>9 · 9 = 81</b>. That’s all!'),
+      L('9 lik jadvalda esa ajoyib «barmoq sehri» bor — uni hozir o‘rganamiz. Bu sehr bilan 9 lik jadvalni hech qachon unutmaysan!', 'А в таблице на 9 есть чудесный «фокус с пальцами» — сейчас мы его выучим. С ним таблицу на 9 ты никогда не забудешь!', 'And the 9 table has a wonderful “finger trick” — we’ll learn it now. With it you will never forget the 9 table!')
+    ] },
+    { kind: 'def', h: L('8 ga va 9 ga ko‘paytirish', 'Умножение на 8 и на 9', 'Multiplying by 8 and 9'), p: [
+      L('<b>8 ga ko‘paytirish</b> — sonni 8 marta olish; bu uch marta ikkilantirish bilan bir xil: 8 · 3 → 6 → 12 → 24. <b>9 ga ko‘paytirish</b> — sonni 9 marta olish; bu 10 marta olib, bittasini ayirish bilan bir xil: 9 · 4 = 40 − 4 = 36.', '<b>Умножить на 8</b> — взять число 8 раз; это то же, что удвоить три раза: 8 · 3 → 6 → 12 → 24. <b>Умножить на 9</b> — взять 9 раз; это то же, что взять 10 раз и отнять одно: 9 · 4 = 40 − 4 = 36.', '<b>Multiplying by 8</b> means taking a number 8 times — the same as doubling three times: 8 · 3 → 6 → 12 → 24. <b>Multiplying by 9</b> means taking it 9 times — the same as taking it 10 times and subtracting one: 9 · 4 = 40 − 4 = 36.')
+    ], list: [
+      L('Sakkiztalab sanash: <b>8, 16, 24, 32, 40, 48, 56, 64, 72, 80</b>.', 'Счёт восьмёрками: <b>8, 16, 24, 32, 40, 48, 56, 64, 72, 80</b>.', 'Counting in eights: <b>8, 16, 24, 32, 40, 48, 56, 64, 72, 80</b>.'),
+      L('To‘qqiztalab sanash: <b>9, 18, 27, 36, 45, 54, 63, 72, 81, 90</b>.', 'Счёт девятками: <b>9, 18, 27, 36, 45, 54, 63, 72, 81, 90</b>.', 'Counting in nines: <b>9, 18, 27, 36, 45, 54, 63, 72, 81, 90</b>.'),
+      L('8 ga va 9 ga bo‘lish — shu qatorlardan foydalanish: 72 : 8 = 9, 72 : 9 = 8.', 'Деление на 8 и 9 — пользуемся этими рядами: 72 : 8 = 9, 72 : 9 = 8.', 'Dividing by 8 and 9 uses these lists: 72 : 8 = 9, 72 : 9 = 8.')
+    ], after: [
+      L('9 lik qatorga qara: o‘nliklar 1, 2, 3… ga oshib boradi, birliklar esa 8, 7, 6… ga kamayib boradi. Ajoyib naqsh!', 'Посмотри на ряд девяток: десятки растут 1, 2, 3…, а единицы уменьшаются 8, 7, 6… Чудесный узор!', 'Look at the nines: the tens go up 1, 2, 3… while the ones go down 8, 7, 6… A wonderful pattern!')
+    ] },
+    { kind: 'history', h: L('Tarixdan: Pifagor jadvali va hind raqamlari', 'Из истории: таблица Пифагора и индийские цифры', 'From history: the Pythagoras table and Indian numerals'), p: [
+      L('Biz bugun ishlatadigan 0, 1, 2… 9 raqamlari Hindistonda paydo bo‘lgan. <b>Muhammad al-Xorazmiy</b> taxminan 825 yilda bu raqamlar bilan hisoblash haqida kitob yozdi. Kitob lotin tiliga tarjima qilinib, Yevropaga yetib bordi. Shuning uchun bu raqamlarni Yevropada «arab raqamlari» deb atashadi.', 'Цифры 0, 1, 2… 9, которыми мы пользуемся сегодня, появились в Индии. <b>Мухаммад аль-Хорезми</b> около 825 года написал книгу о счёте этими цифрами. Её перевели на латынь, и она дошла до Европы. Поэтому в Европе эти цифры называют «арабскими».', 'The digits 0, 1, 2… 9 we use today first appeared in India. Around 825, <b>Muhammad al-Khwarizmi</b> wrote a book about calculating with them. It was translated into Latin and reached Europe. That is why Europeans call them “Arabic numerals”.'),
+      L('O‘nlik raqamlar bilan ko‘paytirish jadvali juda qulay bo‘ldi: rim raqamlari bilan VIII · IX ni hisoblash qiyin, 8 · 9 = 72 ni esa jadvaldan bir zumda topamiz!', 'С десятичными цифрами таблица умножения стала очень удобной: VIII · IX римскими цифрами считать трудно, а 8 · 9 = 72 находим по таблице мгновенно!', 'With decimal digits the times table became very handy: VIII · IX is hard in Roman numerals, but 8 · 9 = 72 comes straight from the table!'),
+      L('Kvadrat shakldagi 10 × 10 ko‘paytirish jadvali Yevropada XIII asrdan keng tarqaldi. Ko‘pincha uni «Pifagor jadvali» deyishadi, garchi Pifagor bunday jadval tuzgani haqida ishonchli ma’lumot yo‘q.', 'Квадратная таблица умножения 10 × 10 широко распространилась в Европе с XIII века. Её часто называют «таблицей Пифагора», хотя надёжных сведений, что Пифагор её составил, нет.', 'The square 10 × 10 times table spread widely in Europe from the 13th century. It is often called the “Pythagoras table”, though there is no reliable evidence that Pythagoras made it.')
+    ] },
+    { kind: 'rule', h: L('9 lik jadvalning barmoq sehri', 'Фокус с пальцами для таблицы на 9', 'The finger trick for the 9 table'), p: [
+      L('Ikkala qo‘lingni stolga qo‘y — 10 ta barmoq. Chapdan o‘ngga ularni 1 dan 10 gacha raqamla. 9 · 4 ni topish uchun:', 'Положи обе руки на стол — 10 пальцев. Пронумеруй их слева направо от 1 до 10. Чтобы найти 9 · 4:', 'Put both hands on the table — 10 fingers. Number them 1 to 10 from left to right. To find 9 · 4:')
+    ], list: [
+      L('4-barmoqni buk.', 'Загни 4-й палец.', 'Fold down finger number 4.'),
+      L('Bukilgan barmoqdan <b>chapda</b> 3 ta barmoq — bu <b>o‘nliklar</b>: 3.', 'Слева от загнутого — 3 пальца, это <b>десятки</b>: 3.', 'To the <b>left</b> of it are 3 fingers — these are the <b>tens</b>: 3.'),
+      L('Bukilgan barmoqdan <b>o‘ngda</b> 6 ta barmoq — bu <b>birliklar</b>: 6.', 'Справа — 6 пальцев, это <b>единицы</b>: 6.', 'To the <b>right</b> are 6 fingers — these are the <b>ones</b>: 6.'),
+      L('Javob: <b>36</b>. Haqiqatan, 9 · 4 = 36!', 'Ответ: <b>36</b>. И правда, 9 · 4 = 36!', 'Answer: <b>36</b>. Indeed, 9 · 4 = 36!')
+    ], after: [
+      L('Yana ikki qoida: 9 lik jadval javoblarining raqamlari yig‘indisi doim <b>9</b> (36 → 3 + 6 = 9, 72 → 7 + 2 = 9). 8 lik jadvalda esa javoblar doim juft va birlik raqamlari 8, 6, 4, 2, 0 tartibida kamayadi.', 'Ещё два правила: сумма цифр ответов таблицы на 9 всегда равна <b>9</b> (36 → 3 + 6 = 9, 72 → 7 + 2 = 9). А в таблице на 8 ответы всегда чётные, и последние цифры убывают: 8, 6, 4, 2, 0.', 'Two more rules: the digits of every answer in the 9 table add up to <b>9</b> (36 → 3 + 6 = 9, 72 → 7 + 2 = 9). In the 8 table, answers are always even and their last digits go down 8, 6, 4, 2, 0.')
+    ] },
+    { kind: 'table', h: L('8 va 9 jadvali', 'Таблица на 8 и на 9', 'The 8 and 9 tables'), p: [
+      L('Uchta yangi misol qalin harflar bilan.', 'Три новых примера выделены.', 'The three new facts are in bold.')
+    ], table: { head: [L('8 ga ko‘paytirish', 'Умножение на 8', 'Times 8'), L('8 ga bo‘lish', 'Деление на 8', 'Divide by 8'), L('9 ga ko‘paytirish', 'Умножение на 9', 'Times 9'), L('9 ga bo‘lish', 'Деление на 9', 'Divide by 9')], rows: [
+      ['8 · 1 = 8', '8 : 8 = 1', '9 · 1 = 9', '9 : 9 = 1'], ['8 · 2 = 16', '16 : 8 = 2', '9 · 2 = 18', '18 : 9 = 2'], ['8 · 3 = 24', '24 : 8 = 3', '9 · 3 = 27', '27 : 9 = 3'],
+      ['8 · 4 = 32', '32 : 8 = 4', '9 · 4 = 36', '36 : 9 = 4'], ['8 · 5 = 40', '40 : 8 = 5', '9 · 5 = 45', '45 : 9 = 5'], ['8 · 6 = 48', '48 : 8 = 6', '9 · 6 = 54', '54 : 9 = 6'],
+      ['8 · 7 = 56', '56 : 8 = 7', '9 · 7 = 63', '63 : 9 = 7'], ['<b>8 · 8 = 64</b>', '64 : 8 = 8', '9 · 8 = 72', '72 : 9 = 8'], ['<b>8 · 9 = 72</b>', '72 : 8 = 9', '<b>9 · 9 = 81</b>', '81 : 9 = 9'],
+      ['8 · 10 = 80', '80 : 8 = 10', '9 · 10 = 90', '90 : 9 = 10']
+    ] }, after: [
+      L('8 · 8 = 64 ni eslab qolish uchun: shaxmat taxtasida 64 ta katak — 8 qatorda 8 tadan!', 'Чтобы запомнить 8 · 8 = 64: на шахматной доске 64 клетки — 8 рядов по 8!', 'To remember 8 · 8 = 64: a chessboard has 64 squares — 8 rows of 8!')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: 9 · 7 ni «10 dan» usulida', 'Шаг за шагом: 9 · 7 способом «через 10»', 'Step by step: 9 · 7 the “via 10” way'), p: [
+      L('9 soni 10 ga juda yaqin. Shundan foydalanamiz:', 'Число 9 очень близко к 10. Воспользуемся этим:', '9 is very close to 10. Let’s use that:')
+    ], list: [
+      L('1-qadam. 9 o‘rniga 10 ni ol: 10 · 7 = 70.', 'Шаг 1. Вместо 9 возьми 10: 10 · 7 = 70.', 'Step 1. Use 10 instead of 9: 10 · 7 = 70.'),
+      L('2-qadam. Biz bitta yettilikni ortiqcha oldik (10 ta, 9 ta emas).', 'Шаг 2. Мы взяли одну семёрку лишнюю (10, а не 9).', 'Step 2. We took one seven too many (10 instead of 9).'),
+      L('3-qadam. Ortiqchasini ayir: 70 − 7 = 63.', 'Шаг 3. Отними лишнее: 70 − 7 = 63.', 'Step 3. Take away the extra: 70 − 7 = 63.'),
+      L('4-qadam. Tekshir: 6 + 3 = 9 — raqamlar yig‘indisi 9. To‘g‘ri! 9 · 7 = 63.', 'Шаг 4. Проверь: 6 + 3 = 9 — сумма цифр 9. Верно! 9 · 7 = 63.', 'Step 4. Check: 6 + 3 = 9 — the digits add to 9. Correct! 9 · 7 = 63.')
+    ], after: [
+      L('8 uchun ham shunday: 8 · 7 = 10 · 7 − 2 · 7 = 70 − 14 = 56. Yoki uch marta ikkilantir: 7 → 14 → 28 → 56.', 'Для 8 так же: 8 · 7 = 10 · 7 − 2 · 7 = 70 − 14 = 56. Или удвой три раза: 7 → 14 → 28 → 56.', 'The same works for 8: 8 · 7 = 10 · 7 − 2 · 7 = 70 − 14 = 56. Or double three times: 7 → 14 → 28 → 56.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('O‘rgimchaklar, futbol va bozor haqida masalalar.', 'Задачи про пауков, футбол и рынок.', 'Problems about spiders, football and the market.')
+    ], ex: [
+      { q: L('O‘rgimchakning 8 ta oyog‘i bor. 6 ta o‘rgimchakda nechta oyoq?', 'У паука 8 ног. Сколько ног у 6 пауков?', 'A spider has 8 legs. How many legs do 6 spiders have?'), s: L('8 · 6 = 48 (6 · 8 = 48 ni 6 lik jadvaldan bilamiz). Javob: <b>48 ta oyoq</b>.', '8 · 6 = 48 (6 · 8 = 48 знаем из таблицы на 6). Ответ: <b>48 ног</b>.', '8 · 6 = 48 (we know 6 · 8 = 48 from the 6 table). Answer: <b>48 legs</b>.') },
+      { q: L('81 ta o‘quvchini 9 ta guruhga teng bo‘lishdi. Har guruhda nechta?', '81 ученика поровну разделили на 9 групп. Сколько в каждой?', '81 pupils are split equally into 9 groups. How many in each?'), s: L('81 : 9 = 9, chunki 9 · 9 = 81. Javob: <b>9 kishi</b>.', '81 : 9 = 9, потому что 9 · 9 = 81. Ответ: <b>9 человек</b>.', '81 : 9 = 9, because 9 · 9 = 81. Answer: <b>9 pupils</b>.') },
+      { q: L('Bir kilogramm olma 9 ming so‘m. 8 kg qancha turadi?', 'Килограмм яблок стоит 9 тысяч сумов. Сколько стоят 8 кг?', 'A kilo of apples costs 9 thousand sum. How much do 8 kg cost?'), s: L('9 · 8 = 80 − 8 = 72. Javob: <b>72 ming so‘m</b>.', '9 · 8 = 80 − 8 = 72. Ответ: <b>72 тысячи сумов</b>.', '9 · 8 = 80 − 8 = 72. Answer: <b>72 thousand sum</b>.') },
+      { q: L('64 ta shashka donasini 8 ta qutiga teng soldik. Har qutida nechta?', '64 шашки разложили поровну в 8 коробок. Сколько в каждой?', '64 draughts pieces go equally into 8 boxes. How many in each?'), s: L('64 : 8 = 8, chunki 8 · 8 = 64. Javob: <b>8 ta</b>.', '64 : 8 = 8, потому что 8 · 8 = 64. Ответ: <b>8</b>.', '64 : 8 = 8, because 8 · 8 = 64. Answer: <b>8</b>.') }
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('8 va 9 lik jadvallarda ehtiyot bo‘l:', 'Будь внимателен с таблицами на 8 и 9:', 'Be careful with the 8 and 9 tables:')
+    ], list: [
+      L('<b>8 · 7 va 8 · 6 ni adashtirish</b> (56 va 48). Esla: «5, 6, 7, 8» → 56 = 7 · 8.', '<b>Путать 8 · 7 и 8 · 6</b> (56 и 48). Помни: «5, 6, 7, 8» → 56 = 7 · 8.', '<b>Mixing up 8 · 7 and 8 · 6</b> (56 and 48). Remember: “5, 6, 7, 8” → 56 = 7 · 8.'),
+      L('<b>9 · 6 = 56 deb aytish.</b> Tekshir: 5 + 6 = 11, 9 emas — demak xato. To‘g‘risi 54.', '<b>Говорить 9 · 6 = 56.</b> Проверь: 5 + 6 = 11, не 9 — значит ошибка. Правильно 54.', '<b>Saying 9 · 6 = 56.</b> Check: 5 + 6 = 11, not 9 — so it’s wrong. The answer is 54.'),
+      L('<b>«10 dan» usulida noto‘g‘ri ayirish.</b> 9 · 8 = 80 − 8 = 72, 80 − 9 = 71 emas! Ko‘paytiriladigan sonni ayiramiz.', '<b>Неправильно отнимать в способе «через 10».</b> 9 · 8 = 80 − 8 = 72, а не 80 − 9 = 71! Отнимаем то число, которое умножаем.', '<b>Subtracting the wrong number in the “via 10” way.</b> 9 · 8 = 80 − 8 = 72, not 80 − 9 = 71! Subtract the number being multiplied.'),
+      L('<b>Barmoq sehrida noto‘g‘ri barmoqni bukish.</b> Barmoqlarni chapdan sanashni unutma.', '<b>Загибать не тот палец в фокусе.</b> Не забывай считать пальцы слева.', '<b>Folding the wrong finger in the trick.</b> Don’t forget to count from the left.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Sport.</b> Beysbolda jamoada 9 o‘yinchi bor: 2 ta jamoada 9 · 2 = 18 kishi. Shaxmatda har bir o‘yinchining 8 ta piyodasi bor: ikki o‘yinchida 8 · 2 = 16 ta.', '<b>Спорт.</b> В бейсболе в команде 9 игроков: в двух командах 9 · 2 = 18 человек. В шахматах у каждого игрока 8 пешек: у двоих 8 · 2 = 16.', '<b>Sport.</b> A baseball team has 9 players: two teams have 9 · 2 = 18. In chess each player has 8 pawns: two players have 8 · 2 = 16.'),
+      L('<b>Maktab.</b> Ish kuni 8 soat: 5 kunda 8 · 5 = 40 soat. Sinf o‘quvchilarini 8 kishilik guruhlarga ajratish uchun 8 ga bo‘lamiz.', '<b>Школа и работа.</b> Рабочий день 8 часов: за 5 дней 8 · 5 = 40 часов. Чтобы разделить класс на группы по 8, делим на 8.', '<b>School and work.</b> A work day is 8 hours: in 5 days that is 8 · 5 = 40 hours. To split a class into groups of 8, we divide by 8.'),
+      L('<b>Bozorda.</b> Bir dasta ko‘kat 9 ming so‘m bo‘lsa, 5 ta dasta — 9 · 5 = 45 ming so‘m. Sotuvchi bu hisobni bir zumda qiladi.', '<b>На рынке.</b> Если пучок зелени стоит 9 тысяч сумов, 5 пучков — 9 · 5 = 45 тысяч. Продавец считает это мгновенно.', '<b>At the market.</b> If a bunch of herbs costs 9 thousand sum, 5 bunches cost 9 · 5 = 45 thousand. The seller works it out in a flash.'),
+      L('<b>Tabiat.</b> Sakkizoyoqning 8 ta qo‘li bor: 4 ta sakkizoyoqda 8 · 4 = 32 ta qo‘l.', '<b>Природа.</b> У осьминога 8 щупалец: у 4 осьминогов 8 · 4 = 32.', '<b>Nature.</b> An octopus has 8 arms: 4 octopuses have 8 · 4 = 32 arms.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('9 ni istalgan songa ko‘paytirib, javob raqamlarini qo‘shib borsang, oxirida doim 9 chiqadi! 9 · 23 = 207 → 2 + 0 + 7 = 9.', 'Умножь 9 на любое число и складывай цифры ответа — в конце всегда получится 9! 9 · 23 = 207 → 2 + 0 + 7 = 9.', 'Multiply 9 by any number and keep adding the digits of the answer — you always end up with 9! 9 · 23 = 207 → 2 + 0 + 7 = 9.'),
+      L('Sakkizoyoqning nafaqat 8 ta qo‘li, balki 3 ta yuragi ham bor!', 'У осьминога не только 8 щупалец, но и 3 сердца!', 'An octopus has not only 8 arms but also 3 hearts!'),
+      L('Quyosh tizimida 8 ta sayyora bor. 2006 yilgacha Pluton ham sayyora hisoblangan va ular 9 ta edi.', 'В Солнечной системе 8 планет. До 2006 года планетой считался и Плутон, и их было 9.', 'The Solar System has 8 planets. Until 2006 Pluto was counted too, making 9.'),
+      L('Mushuklar haqida «to‘qqiz jonli» degan maqol bor — chunki ular balanddan yiqilganda ham ko‘pincha oyoqlari bilan tushadi.', 'Про кошек говорят «девять жизней» — потому что, падая с высоты, они часто приземляются на лапы.', 'People say cats have “nine lives” — because when they fall from a height they often land on their feet.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Barmoq sehri va «10 dan» usulini sinab ko‘r!', 'Попробуй фокус с пальцами и способ «через 10»!', 'Try the finger trick and the “via 10” way!')
+    ], list: [
+      L('8 · 8, 8 · 9, 9 · 9, 9 · 6, 72 : 8, 63 : 9 = ?', '8 · 8, 8 · 9, 9 · 9, 9 · 6, 72 : 8, 63 : 9 = ?', '8 · 8, 8 · 9, 9 · 9, 9 · 6, 72 : 8, 63 : 9 = ?'),
+      L('Barmoq sehri bilan 9 · 8 ni top.', 'Найди 9 · 8 с помощью фокуса с пальцами.', 'Find 9 · 8 with the finger trick.'),
+      L('5 ta o‘rgimchakda nechta oyoq?', 'Сколько ног у 5 пауков?', 'How many legs do 5 spiders have?'),
+      L('To‘qqiztalab 90 gacha sanab chiq va raqamlar yig‘indisini tekshir.', 'Посчитай девятками до 90 и проверь сумму цифр.', 'Count in nines up to 90 and check the digit sums.')
+    ], after: [
+      L('Javoblar: 1) 64, 72, 81, 54, 9, 7. 2) 8-barmoqni buk: chapda 7, o‘ngda 2 → 72. 3) 8 · 5 = 40 ta. 4) 9, 18, 27, …, 90 — har birida raqamlar yig‘indisi 9.', 'Ответы: 1) 64, 72, 81, 54, 9, 7. 2) Загни 8-й палец: слева 7, справа 2 → 72. 3) 8 · 5 = 40. 4) 9, 18, 27, …, 90 — у каждого сумма цифр 9.', 'Answers: 1) 64, 72, 81, 54, 9, 7. 2) Fold finger 8: 7 on the left, 2 on the right → 72. 3) 8 · 5 = 40. 4) 9, 18, 27, …, 90 — each has a digit sum of 9.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('8 va 9 lik jadvallarda haqiqiy yangi misollar faqat uchta: 8 · 8 = 64, 8 · 9 = 72, 9 · 9 = 81.', 'В таблицах на 8 и 9 по-настоящему новых примеров только три: 8 · 8 = 64, 8 · 9 = 72, 9 · 9 = 81.', 'The 8 and 9 tables have only three truly new facts: 8 · 8 = 64, 8 · 9 = 72, 9 · 9 = 81.'),
+      L('8 · a — uch marta ikkilantirish.', '8 · a — удвоить три раза.', '8 · a means doubling three times.'),
+      L('9 · a = 10 · a − a.', '9 · a = 10 · a − a.', '9 · a = 10 · a − a.'),
+      L('9 lik jadvalda raqamlar yig‘indisi doim 9; barmoq sehri yordam beradi.', 'В таблице на 9 сумма цифр всегда 9; помогает фокус с пальцами.', 'In the 9 table the digits always add to 9; the finger trick helps.'),
+      L('Bo‘lish — jadvalni teskari o‘qish: 72 : 8 = 9, 72 : 9 = 8.', 'Деление — таблица наоборот: 72 : 8 = 9, 72 : 9 = 8.', 'Division is the table backwards: 72 : 8 = 9, 72 : 9 = 8.'),
+      L('Endi butun ko‘paytirish jadvali qo‘lingda!', 'Теперь вся таблица умножения у тебя в руках!', 'Now the whole times table is in your hands!')
+    ] }
+  ] });
+
+  // ---------- t15. Ko‘paytirish jadvali. Bo‘luvchilar va karralilar ----------
+  T.add(P, 't15', { sections: [
+    { kind: 'intro', h: L('Butun jadval — bitta xaritada', 'Вся таблица — на одной карте', 'The whole table on one map'), p: [
+      L('Tabriklaymiz — sen tog‘ cho‘qqisiga chiqding! Endi barcha jadvallar — 1 dan 9 gacha — bitta katta xaritaga jamlanadi. Bu xarita <b>ko‘paytirish jadvali</b> deyiladi. Uni yaxshi bilgan bola keyingi sinflarda kasrlar, bo‘lish va tenglamalarni oson yechadi.', 'Поздравляем — ты на вершине! Теперь все таблицы — от 1 до 9 — собираются на одной большой карте. Она называется <b>таблица умножения</b>. Кто хорошо её знает, тот легко справится в старших классах с дробями, делением и уравнениями.', 'Congratulations — you’ve reached the top! Now all the tables from 1 to 9 come together on one big map. It is called the <b>multiplication table</b>. Children who know it well find fractions, division and equations easy in later grades.'),
+      L('Bu mavzuda ikkita yangi so‘zni ham o‘rganamiz: <b>bo‘luvchi</b> va <b>karrali</b>. Ular sonlarning «oilaviy» munosabatlarini ko‘rsatadi: qaysi son qaysi songa qoldiqsiz bo‘linadi.', 'В этой теме выучим и два новых слова: <b>делитель</b> и <b>кратное</b>. Они показывают «родственные» связи чисел: какое число делится на какое без остатка.', 'In this topic we also learn two new words: <b>factor</b> and <b>multiple</b>. They show the “family” relationships between numbers: which number divides exactly into which.'),
+      L('Masalan, 12 ta konfetni 2, 3, 4 yoki 6 kishiga teng bo‘lish mumkin, lekin 5 kishiga — yo‘q. Nega? Javobni shu mavzuda topamiz!', 'Например, 12 конфет можно поровну разделить на 2, 3, 4 или 6 человек, а на 5 — нельзя. Почему? Ответ найдём в этой теме!', 'For example, 12 sweets can be shared equally among 2, 3, 4 or 6 people, but not 5. Why? We’ll find out in this topic!')
+    ] },
+    { kind: 'def', h: L('Bo‘luvchi va karrali', 'Делитель и кратное', 'Factor and multiple'), p: [
+      L('7 · 8 = 56 misolini olaylik. Undan to‘rtta bog‘liq misol chiqadi: 7 · 8 = 56, 8 · 7 = 56, 56 : 7 = 8, 56 : 8 = 7.', 'Возьмём пример 7 · 8 = 56. Из него получаются четыре связанных примера: 7 · 8 = 56, 8 · 7 = 56, 56 : 7 = 8, 56 : 8 = 7.', 'Take 7 · 8 = 56. It gives four connected facts: 7 · 8 = 56, 8 · 7 = 56, 56 : 7 = 8, 56 : 8 = 7.')
+    ], list: [
+      L('<b>Bo‘luvchi</b> — berilgan sonni qoldiqsiz bo‘ladigan son. 7 va 8 — 56 ning bo‘luvchilari, chunki 56 ular ikkalasiga ham qoldiqsiz bo‘linadi.', '<b>Делитель</b> — число, на которое данное число делится без остатка. 7 и 8 — делители 56, потому что 56 делится на них без остатка.', 'A <b>factor</b> is a number that divides exactly into a given number. 7 and 8 are factors of 56, because 56 divides by each with nothing left over.'),
+      L('<b>Karrali</b> — berilgan songa qoldiqsiz bo‘linadigan son. 56 — 7 ga karrali va 8 ga karrali.', '<b>Кратное</b> — число, которое делится на данное без остатка. 56 кратно 7 и кратно 8.', 'A <b>multiple</b> is a number that divides exactly by a given number. 56 is a multiple of 7 and a multiple of 8.'),
+      L('Sonning karralilari — uning jadvaldagi qatori: 4 ga karralilar — 4, 8, 12, 16, 20…', 'Кратные числа — это его ряд в таблице: кратные 4 — 4, 8, 12, 16, 20…', 'A number’s multiples are its row in the table: multiples of 4 are 4, 8, 12, 16, 20…')
+    ], after: [
+      L('Eslab qolish oson: bo‘luvchi — «kichik» son, u kattasini bo‘ladi. Karrali — «katta» son, u kichigidan bir necha marta katta. Bu ikki so‘z bitta bog‘lanishni ikki tomondan aytadi: «4 — 12 ning bo‘luvchisi» va «12 — 4 ga karrali» — bir xil ma’no!', 'Запомнить легко: делитель — «маленькое» число, оно делит большое. Кратное — «большое», оно в несколько раз больше маленького. Эти слова описывают одну связь с двух сторон: «4 — делитель 12» и «12 кратно 4» — одно и то же!', 'Easy to remember: a factor is the “small” number that divides the big one; a multiple is the “big” number, several times the small one. The two words describe one link from two sides: “4 is a factor of 12” and “12 is a multiple of 4” mean the same!')
+    ] },
+    { kind: 'history', h: L('Tarixdan: Eratosfen elagi', 'Из истории: решето Эратосфена', 'From history: the sieve of Eratosthenes'), p: [
+      L('2200 yil oldin Misrning Iskandariya shahrida yashagan yunon olimi <b>Eratosfen</b> karralilar yordamida ajoyib usul o‘ylab topdi. U sonlarni yozib, avval 2 ga karralilarni, keyin 3 ga, 5 ga karralilarni o‘chirib chiqdi. Qolgan sonlar — 2, 3, 5, 7, 11, 13… — faqat 1 ga va o‘ziga bo‘linadi. Ular <b>tub sonlar</b> deyiladi. Bu usul «Eratosfen elagi» deb ataladi.', '2200 лет назад греческий учёный <b>Эратосфен</b>, живший в египетской Александрии, придумал с помощью кратных чудесный способ. Он выписал числа и вычеркнул сначала кратные 2, потом кратные 3, 5. Оставшиеся — 2, 3, 5, 7, 11, 13… — делятся только на 1 и на себя. Их называют <b>простыми числами</b>. Этот способ называется «решето Эратосфена».', 'Some 2,200 years ago the Greek scholar <b>Eratosthenes</b>, who lived in Alexandria in Egypt, invented a clever method using multiples. He wrote out numbers and crossed out the multiples of 2, then of 3, then of 5. The ones left — 2, 3, 5, 7, 11, 13… — divide only by 1 and themselves. They are called <b>prime numbers</b>. His method is called the “sieve of Eratosthenes”.'),
+      L('Eratosfen yana bir mashhur ish qilgan: soyalar burchagini o‘lchab, Yer aylanasining uzunligini hisoblagan! Ming yildan keyin <b>Beruniy</b> boshqa usul — tog‘ cho‘qqisidan ufqqa qarab — Yer kattaligini yanada aniqroq o‘lchagan.', 'Эратосфен прославился и другим: измерив угол тени, он вычислил длину окружности Земли! А через тысячу лет <b>Беруни</b> другим способом — глядя на горизонт с вершины горы — измерил размер Земли ещё точнее.', 'Eratosthenes is famous for something else too: by measuring the angle of shadows, he worked out the distance around the Earth! A thousand years later <b>Biruni</b> used a different method — looking at the horizon from a mountaintop — to measure the Earth even more accurately.'),
+      L('Hozir tub sonlar internetdagi sirlarni — bank kartalari va xabarlarni himoya qilishda ishlatiladi. Qadimiy kashfiyot bugun ham kerak!', 'Сегодня простые числа используют, чтобы защищать секреты в интернете — банковские карты и сообщения. Древнее открытие нужно и сейчас!', 'Today prime numbers are used to protect secrets on the internet — bank cards and messages. An ancient discovery is still needed now!')
+    ] },
+    { kind: 'rule', h: L('Asosiy qoidalar', 'Главные правила', 'The key rules'), p: [
+      L('Butun jadval bilan ishlashning asosiy qoidasi:', 'Главное правило работы со всей таблицей:', 'The main rule for working with the whole table:')
+    ], list: [
+      L('<b>a · b = c</b> bo‘lsa, unda <b>c : b = a</b> va <b>c : a = b</b>.', 'Если <b>a · b = c</b>, то <b>c : b = a</b> и <b>c : a = b</b>.', 'If <b>a · b = c</b>, then <b>c : b = a</b> and <b>c : a = b</b>.'),
+      L('1 — har qanday sonning bo‘luvchisi. Har bir son o‘zining bo‘luvchisi.', '1 — делитель любого числа. Каждое число — делитель самого себя.', '1 is a factor of every number. Every number is a factor of itself.'),
+      L('Har bir son o‘ziga karrali; karralilar cheksiz ko‘p (jadval davom etaveradi).', 'Каждое число кратно самому себе; кратных бесконечно много (ряд продолжается).', 'Every number is a multiple of itself; there are endlessly many multiples (the row goes on).'),
+      L('Bo‘luvchilar soni esa chekli: 12 ning bo‘luvchilari — 1, 2, 3, 4, 6, 12 (oltita).', 'А делителей конечное число: делители 12 — 1, 2, 3, 4, 6, 12 (шесть).', 'But there are only a few factors: the factors of 12 are 1, 2, 3, 4, 6, 12 (six of them).')
+    ], after: [
+      L('Bo‘luvchilarni juftlab topish qulay: 12 = 1 · 12 = 2 · 6 = 3 · 4. Har bir juftlik ikkita bo‘luvchi beradi.', 'Делители удобно находить парами: 12 = 1 · 12 = 2 · 6 = 3 · 4. Каждая пара даёт два делителя.', 'Factors are easy to find in pairs: 12 = 1 · 12 = 2 · 6 = 3 · 4. Each pair gives two factors.')
+    ] },
+    { kind: 'table', h: L('Ko‘paytirish jadvali (Pifagor jadvali)', 'Таблица умножения (таблица Пифагора)', 'The multiplication square'), p: [
+      L('Qator va ustun kesishgan joyda ularning ko‘paytmasi turadi. Masalan, 6-qator va 7-ustun kesishmasida — 42.', 'На пересечении строки и столбца — их произведение. Например, на пересечении 6-й строки и 7-го столбца — 42.', 'Where a row and a column cross, you find their product. For example, row 6 and column 7 meet at 42.')
+    ], table: { head: ['·', '1', '2', '3', '4', '5', '6', '7', '8', '9'], rows: [
+      ['1', '1', '2', '3', '4', '5', '6', '7', '8', '9'],
+      ['2', '2', '4', '6', '8', '10', '12', '14', '16', '18'],
+      ['3', '3', '6', '9', '12', '15', '18', '21', '24', '27'],
+      ['4', '4', '8', '12', '16', '20', '24', '28', '32', '36'],
+      ['5', '5', '10', '15', '20', '25', '30', '35', '40', '45'],
+      ['6', '6', '12', '18', '24', '30', '36', '42', '48', '54'],
+      ['7', '7', '14', '21', '28', '35', '42', '49', '56', '63'],
+      ['8', '8', '16', '24', '32', '40', '48', '56', '64', '72'],
+      ['9', '9', '18', '27', '36', '45', '54', '63', '72', '81']
+    ] }, after: [
+      L('Jadval diagonal bo‘yicha simmetrik: chap yuqoridan o‘ng pastga chiziq torting — ikki tomondagi sonlar ko‘zgudagi kabi bir xil. Bu o‘rin almashtirish qoidasining rasmi! Diagonaldagi sonlar — 1, 4, 9, 16, 25, 36, 49, 64, 81 — «kvadrat sonlar».', 'Таблица симметрична относительно диагонали: проведи линию из левого верхнего угла в правый нижний — числа по обе стороны одинаковы, как в зеркале. Это картинка переместительного свойства! Числа на диагонали — 1, 4, 9, 16, 25, 36, 49, 64, 81 — «квадратные числа».', 'The table is symmetrical about its diagonal: draw a line from top left to bottom right and the numbers on each side match like a mirror. That is a picture of the swap rule! The numbers on the diagonal — 1, 4, 9, 16, 25, 36, 49, 64, 81 — are “square numbers”.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: bo‘luvchilarni topamiz', 'Шаг за шагом: находим делители', 'Step by step: finding factors'), p: [
+      L('24 ning barcha bo‘luvchilarini topamiz:', 'Найдём все делители числа 24:', 'Let’s find all the factors of 24:')
+    ], list: [
+      L('1-qadam. 1 dan boshla: 24 = 1 · 24. Bo‘luvchilar: 1 va 24.', 'Шаг 1. Начни с 1: 24 = 1 · 24. Делители: 1 и 24.', 'Step 1. Start with 1: 24 = 1 · 24. Factors: 1 and 24.'),
+      L('2-qadam. 2 ni tekshir: 24 : 2 = 12. Bo‘luvchilar: 2 va 12.', 'Шаг 2. Проверь 2: 24 : 2 = 12. Делители: 2 и 12.', 'Step 2. Try 2: 24 : 2 = 12. Factors: 2 and 12.'),
+      L('3-qadam. 3 ni tekshir: 24 : 3 = 8. Bo‘luvchilar: 3 va 8.', 'Шаг 3. Проверь 3: 24 : 3 = 8. Делители: 3 и 8.', 'Step 3. Try 3: 24 : 3 = 8. Factors: 3 and 8.'),
+      L('4-qadam. 4 ni tekshir: 24 : 4 = 6. Bo‘luvchilar: 4 va 6.', 'Шаг 4. Проверь 4: 24 : 4 = 6. Делители: 4 и 6.', 'Step 4. Try 4: 24 : 4 = 6. Factors: 4 and 6.'),
+      L('5-qadam. 5 ni tekshir: 24 ni 5 ga qoldiqsiz bo‘lib bo‘lmaydi (5 lik jadvalda 24 yo‘q). Keyingi son 6 — u allaqachon topilgan, demak to‘xtaymiz.', 'Шаг 5. Проверь 5: 24 на 5 без остатка не делится (в таблице на 5 нет 24). Следующее число 6 уже найдено — останавливаемся.', 'Step 5. Try 5: 24 does not divide exactly by 5 (24 is not in the 5 table). The next number, 6, is already found — so we stop.'),
+      L('Javob: 24 ning bo‘luvchilari — 1, 2, 3, 4, 6, 8, 12, 24.', 'Ответ: делители 24 — 1, 2, 3, 4, 6, 8, 12, 24.', 'Answer: the factors of 24 are 1, 2, 3, 4, 6, 8, 12, 24.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Jadval, bo‘luvchilar va karralilar bo‘yicha masalalar.', 'Задачи на таблицу, делители и кратные.', 'Problems on the table, factors and multiples.')
+    ], ex: [
+      { q: L('6 · 7 = 42 dan ikkita bo‘lish misolini yoz.', 'Запиши два примера на деление из 6 · 7 = 42.', 'Write two division facts from 6 · 7 = 42.'), s: L('Ko‘paytmani bitta ko‘paytuvchiga bo‘lsak, ikkinchisi chiqadi. Javob: <b>42 : 6 = 7, 42 : 7 = 6</b>.', 'Делим произведение на один множитель — получаем другой. Ответ: <b>42 : 6 = 7, 42 : 7 = 6</b>.', 'Divide the product by one factor to get the other. Answer: <b>42 : 6 = 7, 42 : 7 = 6</b>.') },
+      { q: L('35 soni 5 ga karralimi? 6 ga-chi?', 'Кратно ли 35 числу 5? А числу 6?', 'Is 35 a multiple of 5? Of 6?'), s: L('5 · 7 = 35 — demak 5 ga karrali. 6 lik qatorda 30 va 36 bor, 35 yo‘q — 6 ga karrali emas. Javob: <b>5 ga — ha, 6 ga — yo‘q</b>.', '5 · 7 = 35 — значит кратно 5. В ряду на 6 есть 30 и 36, а 35 нет — не кратно 6. Ответ: <b>5 — да, 6 — нет</b>.', '5 · 7 = 35, so it is a multiple of 5. The 6 row has 30 and 36 but not 35, so it is not a multiple of 6. Answer: <b>of 5 — yes, of 6 — no</b>.') },
+      { q: L('18 ning barcha bo‘luvchilarini top.', 'Найди все делители 18.', 'Find all the factors of 18.'), s: L('Juftlab: 1 · 18, 2 · 9, 3 · 6. Javob: <b>1, 2, 3, 6, 9, 18</b>.', 'Парами: 1 · 18, 2 · 9, 3 · 6. Ответ: <b>1, 2, 3, 6, 9, 18</b>.', 'In pairs: 1 · 18, 2 · 9, 3 · 6. Answer: <b>1, 2, 3, 6, 9, 18</b>.') },
+      { q: L('3 ga ham, 4 ga ham karrali bo‘lgan, 30 dan kichik sonlarni top.', 'Найди числа меньше 30, кратные и 3, и 4.', 'Find the numbers below 30 that are multiples of both 3 and 4.'), s: L('3 ga karralilar: 3, 6, 9, 12, 15, 18, 21, 24, 27. 4 ga karralilar: 4, 8, 12, 16, 20, 24, 28. Umumiylari: <b>12 va 24</b>.', 'Кратные 3: 3, 6, 9, 12, 15, 18, 21, 24, 27. Кратные 4: 4, 8, 12, 16, 20, 24, 28. Общие: <b>12 и 24</b>.', 'Multiples of 3: 3, 6, 9, 12, 15, 18, 21, 24, 27. Multiples of 4: 4, 8, 12, 16, 20, 24, 28. In both: <b>12 and 24</b>.') }
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Bo‘luvchi va karralilarda ko‘p uchraydigan chalkashliklar:', 'Частая путаница с делителями и кратными:', 'Common mix-ups with factors and multiples:')
+    ], list: [
+      L('<b>Bo‘luvchi va karralini almashtirish.</b> «12 — 4 ning bo‘luvchisi» — xato! To‘g‘ri: «4 — 12 ning bo‘luvchisi», «12 — 4 ga karrali».', '<b>Путать делитель и кратное.</b> «12 — делитель 4» — ошибка! Верно: «4 — делитель 12», «12 кратно 4».', '<b>Swapping factor and multiple.</b> “12 is a factor of 4” is wrong! Correct: “4 is a factor of 12”, “12 is a multiple of 4”.'),
+      L('<b>1 va sonning o‘zini unutish.</b> 10 ning bo‘luvchilari: 1, 2, 5, 10 — 1 va 10 ham kiradi!', '<b>Забывать 1 и само число.</b> Делители 10: 1, 2, 5, 10 — 1 и 10 тоже!', '<b>Forgetting 1 and the number itself.</b> The factors of 10 are 1, 2, 5, 10 — 1 and 10 count too!'),
+      L('<b>Jadvalda qator va ustunni adashtirish.</b> Barmoq bilan qatorni, ikkinchi barmoq bilan ustunni ko‘rsatib, kesishmani top.', '<b>Путать строку и столбец в таблице.</b> Одним пальцем веди по строке, другим — по столбцу, и найди пересечение.', '<b>Mixing up row and column.</b> Run one finger along the row and another down the column to find where they meet.'),
+      L('<b>Bo‘luvchini yarim yo‘lda tashlab ketish.</b> Juftlab qidir: har bir topilgan bo‘luvchining «sherigi» ham bor.', '<b>Находить не все делители.</b> Ищи парами: у каждого найденного делителя есть «партнёр».', '<b>Missing some factors.</b> Look in pairs: every factor you find has a “partner”.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Jamoalarga bo‘lish.</b> Sinfda 24 o‘quvchi. Ularni teng jamoalarga qanday bo‘lish mumkin? 24 ning bo‘luvchilari yordam beradi: 2 ta jamoa 12 tadan, 3 ta 8 tadan, 4 ta 6 tadan, 6 ta 4 tadan, 8 ta 3 tadan.', '<b>Деление на команды.</b> В классе 24 ученика. Как разделить их на равные команды? Помогут делители 24: 2 команды по 12, 3 по 8, 4 по 6, 6 по 4, 8 по 3.', '<b>Making teams.</b> A class has 24 pupils. How can they form equal teams? The factors of 24 help: 2 teams of 12, 3 of 8, 4 of 6, 6 of 4, or 8 of 3.'),
+      L('<b>Qadoqlash.</b> 36 ta pechenyeni qutilarga teng joylash kerak. 36 ning bo‘luvchilari: 4 tadan 9 quti yoki 6 tadan 6 quti yoki 9 tadan 4 quti.', '<b>Упаковка.</b> 36 печений нужно разложить поровну по коробкам. Делители 36: 9 коробок по 4, или 6 по 6, или 4 по 9.', '<b>Packing.</b> 36 biscuits must go equally into boxes. The factors of 36: 9 boxes of 4, or 6 boxes of 6, or 4 boxes of 9.'),
+      L('<b>Avtobus jadvali.</b> Bir avtobus har 4 minutda, boshqasi har 6 minutda keladi. Ular bekatda qachon birga uchrashadi? 4 ga va 6 ga karrali eng kichik son — 12. Demak, har 12 minutda!', '<b>Расписание автобусов.</b> Один автобус приходит каждые 4 минуты, другой — каждые 6. Когда они встретятся на остановке? Наименьшее число, кратное 4 и 6, — 12. Значит, каждые 12 минут!', '<b>Bus timetables.</b> One bus comes every 4 minutes, another every 6. When do they meet at the stop? The smallest multiple of both 4 and 6 is 12. So every 12 minutes!'),
+      L('<b>Bog‘da.</b> 30 ta ko‘chatni teng qatorlarga ekish: 5 qator 6 tadan yoki 3 qator 10 tadan.', '<b>В саду.</b> 30 саженцев посадить равными рядами: 5 рядов по 6 или 3 ряда по 10.', '<b>In the garden.</b> Planting 30 seedlings in equal rows: 5 rows of 6 or 3 rows of 10.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('60 sonining bo‘luvchilari juda ko‘p — 12 ta! Shuning uchun soatda 60 minut: uni yarimga, uchdan birga, chorakka bo‘lish oson.', 'У числа 60 очень много делителей — 12! Поэтому в часе 60 минут: его легко разделить пополам, на три, на четыре части.', 'The number 60 has lots of factors — 12 of them! That is why an hour has 60 minutes: it splits easily into halves, thirds and quarters.'),
+      L('Ba’zi tsikadalar yer ostida 13 yoki 17 yil yashab, keyin bir vaqtda chiqadi. 13 va 17 — tub sonlar; olimlar fikricha, bu ularga dushmanlardan qochishga yordam beradi.', 'Некоторые цикады живут под землёй 13 или 17 лет, а потом выходят все разом. 13 и 17 — простые числа; учёные думают, это помогает им избегать врагов.', 'Some cicadas live underground for 13 or 17 years and then come out all at once. 13 and 17 are prime numbers; scientists think this helps them avoid predators.'),
+      L('Ko‘paytirish jadvalini yaxshi bilgan odam 9 · 9 gacha har qanday misolga 1–2 soniyada javob beradi.', 'Человек, хорошо знающий таблицу, отвечает на любой пример до 9 · 9 за 1–2 секунды.', 'Someone who knows the table well can answer any fact up to 9 · 9 in 1–2 seconds.'),
+      L('Ma’lum bo‘lgan eng katta tub son 41 milliondan ortiq raqamdan iborat — uni yozish uchun minglab kitob sahifasi kerak!', 'Самое большое известное простое число состоит из более чем 41 миллиона цифр — чтобы его записать, нужны тысячи книжных страниц!', 'The largest known prime number has more than 41 million digits — writing it out would fill thousands of book pages!')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Jadvaldan foydalanishing mumkin, lekin avval o‘zing o‘ylab ko‘r.', 'Можно пользоваться таблицей, но сначала подумай сам.', 'You may use the table, but think for yourself first.')
+    ], list: [
+      L('7 · 6, 8 · 4, 9 · 3, 56 : 8, 81 : 9, 48 : 6 = ?', '7 · 6, 8 · 4, 9 · 3, 56 : 8, 81 : 9, 48 : 6 = ?', '7 · 6, 8 · 4, 9 · 3, 56 : 8, 81 : 9, 48 : 6 = ?'),
+      L('16 ning barcha bo‘luvchilarini yoz.', 'Запиши все делители 16.', 'Write all the factors of 16.'),
+      L('7 ga karrali, 50 dan kichik barcha sonlarni yoz.', 'Запиши все числа меньше 50, кратные 7.', 'Write all the multiples of 7 below 50.'),
+      L('Qaysi son 24 ning bo‘luvchisi emas: 6, 8, 9, 12?', 'Какое число не делитель 24: 6, 8, 9, 12?', 'Which is not a factor of 24: 6, 8, 9, 12?')
+    ], after: [
+      L('Javoblar: 1) 42, 32, 27, 7, 9, 8. 2) 1, 2, 4, 8, 16. 3) 7, 14, 21, 28, 35, 42, 49. 4) 9.', 'Ответы: 1) 42, 32, 27, 7, 9, 8. 2) 1, 2, 4, 8, 16. 3) 7, 14, 21, 28, 35, 42, 49. 4) 9.', 'Answers: 1) 42, 32, 27, 7, 9, 8. 2) 1, 2, 4, 8, 16. 3) 7, 14, 21, 28, 35, 42, 49. 4) 9.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('Ko‘paytirish jadvali — 1 dan 9 gacha barcha jadvallar bitta kvadratda.', 'Таблица умножения — все таблицы от 1 до 9 в одном квадрате.', 'The multiplication square holds all the tables from 1 to 9.'),
+      L('a · b = c → c : b = a va c : a = b.', 'a · b = c → c : b = a и c : a = b.', 'a · b = c → c : b = a and c : a = b.'),
+      L('<b>Bo‘luvchi</b> — sonni qoldiqsiz bo‘ladigan son: 4 — 12 ning bo‘luvchisi.', '<b>Делитель</b> — число, на которое число делится без остатка: 4 — делитель 12.', 'A <b>factor</b> divides a number exactly: 4 is a factor of 12.'),
+      L('<b>Karrali</b> — songa qoldiqsiz bo‘linadigan son: 12 — 4 ga karrali.', '<b>Кратное</b> — число, которое делится на данное без остатка: 12 кратно 4.', 'A <b>multiple</b> divides exactly by a number: 12 is a multiple of 4.'),
+      L('Bo‘luvchilarni juftlab top; 1 va sonning o‘zini unutma.', 'Ищи делители парами; не забывай 1 и само число.', 'Find factors in pairs; don’t forget 1 and the number itself.'),
+      L('Jadval diagonalga nisbatan simmetrik — bu a · b = b · a qoidasining rasmi.', 'Таблица симметрична относительно диагонали — это картинка правила a · b = b · a.', 'The table is symmetrical about its diagonal — a picture of a · b = b · a.')
+    ] }
+  ] });
+})(this);
 // --END--

@@ -839,4 +839,728 @@
     ] }
   ] });
 })(this);
+(function (root) { 'use strict'; var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '1-4';
+
+  // ---------- t9. Tenglik va tengsizliklar ----------
+  T.add(P, 't9', { sections: [
+    { kind: 'intro', h: L('Bozordagi tarozi', 'Весы на базаре', 'The scales at the market'), p: [
+      L('Dilnoza buvisi bilan bozorga bordi. Sotuvchi amakining eski pallali tarozisi bor ekan. Bir pallaga olma qo‘ydi, ikkinchisiga toshlar. Tarozi tekis turib qoldi — demak, ikki palla <b>teng</b>. Keyin amaki yana bitta olma qo‘shdi va olmali palla pastga tushdi — endi olmalar <b>og‘irroq</b>.', 'Дилноза пошла с бабушкой на базар. У продавца были старые весы с двумя чашами. На одну чашу он положил яблоки, на другую — гирьки. Весы встали ровно — значит, чаши <b>равны</b>. Потом продавец добавил ещё одно яблоко, и чаша с яблоками опустилась — теперь яблоки <b>тяжелее</b>.', 'Dilnoza went to the market with her grandmother. The seller had old scales with two pans. He put apples on one pan and weights on the other. The scales stayed level, so the two pans were <b>equal</b>. Then he added one more apple and the apple pan went down: now the apples were <b>heavier</b>.'),
+      L('Matematikada ham shunday «tarozilar» bor. Ular <b>tenglik</b> va <b>tengsizlik</b> deyiladi. «=» belgisi tarozining tekis turganini, «&gt;» va «&lt;» belgilari esa bir tomon og‘irroq ekanini bildiradi.', 'В математике тоже есть такие «весы». Они называются <b>равенствами</b> и <b>неравенствами</b>. Знак «=» значит, что весы стоят ровно, а знаки «&gt;» и «&lt;» — что одна сторона тяжелее.', 'Maths has “scales” like these too. They are called <b>equalities</b> and <b>inequalities</b>. The “=” sign means the scales are level, and the signs “&gt;” and “&lt;” mean one side is heavier.'),
+      L('Bugun biz bu belgilarni to‘g‘ri ishlatishni, yozuv to‘g‘ri yoki noto‘g‘ri ekanini tekshirishni o‘rganamiz. Bu — matematikadagi eng muhim ko‘nikmalardan biri: har bir javobni tekshira olish!', 'Сегодня мы научимся правильно пользоваться этими знаками и проверять, верна запись или нет. Это одно из самых важных умений в математике — уметь проверить любой ответ!', 'Today we learn to use these signs correctly and to check whether a statement is true or false. This is one of the most important skills in maths: being able to check any answer!')
+    ] },
+    { kind: 'def', h: L('Tenglik va tengsizlik', 'Равенство и неравенство', 'Equality and inequality'), p: [
+      L('<b>Tenglik</b> — ikki qism «=» belgisi bilan ulangan yozuv. Masalan: 5 + 2 = 7. Chap tomonda 5 + 2, o‘ng tomonda 7. Ular teng.', '<b>Равенство</b> — запись, где две части соединены знаком «=». Например: 5 + 2 = 7. Слева 5 + 2, справа 7. Они равны.', 'An <b>equality</b> is a statement where two parts are joined by “=”. For example: 5 + 2 = 7. On the left is 5 + 2, on the right is 7. They are equal.'),
+      L('<b>Tengsizlik</b> — ikki qism «&gt;» (katta) yoki «&lt;» (kichik) belgisi bilan ulangan yozuv. Masalan: 8 &gt; 3 («sakkiz uchdan katta»), 4 &lt; 9 («to‘rt to‘qqizdan kichik»).', '<b>Неравенство</b> — запись, где две части соединены знаком «&gt;» (больше) или «&lt;» (меньше). Например: 8 &gt; 3 («восемь больше трёх»), 4 &lt; 9 («четыре меньше девяти»).', 'An <b>inequality</b> is a statement where two parts are joined by “&gt;” (greater than) or “&lt;” (less than). For example: 8 &gt; 3 (“eight is greater than three”), 4 &lt; 9 (“four is less than nine”).')
+    ], list: [
+      L('Yozuv <b>to‘g‘ri</b> bo‘lishi mumkin: 6 + 4 = 10 ✓, 12 &gt; 5 ✓.', 'Запись может быть <b>верной</b>: 6 + 4 = 10 ✓, 12 &gt; 5 ✓.', 'A statement can be <b>true</b>: 6 + 4 = 10 ✓, 12 &gt; 5 ✓.'),
+      L('Yoki <b>noto‘g‘ri</b>: 4 + 1 = 6 ✗, 3 &gt; 7 ✗.', 'Или <b>неверной</b>: 4 + 1 = 6 ✗, 3 &gt; 7 ✗.', 'Or <b>false</b>: 4 + 1 = 6 ✗, 3 &gt; 7 ✗.')
+    ], after: [
+      L('Belgini eslab qolish siri: «&gt;» va «&lt;» — och qolgan timsohning og‘zi. Timsoh doim <b>katta</b> songa qarab og‘zini ochadi! Belgining o‘tkir uchi esa kichik son tomonga qaragan.', 'Секрет, как запомнить знак: «&gt;» и «&lt;» — это рот голодного крокодила. Крокодил всегда открывает рот к <b>большему</b> числу! А острый кончик знака смотрит на меньшее число.', 'A secret for remembering the sign: “&gt;” and “&lt;” are the mouth of a hungry crocodile. The crocodile always opens its mouth towards the <b>bigger</b> number! The sharp point faces the smaller number.')
+    ] },
+    { kind: 'history', h: L('Belgilar tarixi', 'История знаков', 'The story of the signs'), p: [
+      L('Qadimda matematiklar belgilar ishlatmagan — hamma narsani so‘z bilan yozishgan: «besh va ikki yettiga teng». Bu juda uzun va noqulay edi! Buyuk <b>Al-Xorazmiy</b> ham o‘z kitoblarida masalalarni so‘zlar bilan bayon qilgan.', 'В древности математики не пользовались знаками — всё писали словами: «пять и два равно семи». Это было очень длинно и неудобно! Великий <b>Аль-Хорезми</b> тоже излагал задачи в своих книгах словами.', 'Long ago mathematicians did not use signs: they wrote everything in words, like “five and two make seven”. That was long and awkward! The great <b>Al-Khwarizmi</b> also wrote out problems in words in his books.'),
+      L('«=» belgisini 1557 yilda Uelslik shifokor va matematik <b>Robert Rekord</b> o‘ylab topgan. U shunday degan ekan: «Ikkita bir xil uzunlikdagi parallel chiziqdan ko‘ra tengroq narsa yo‘q». Shu tufayli tenglik belgisi ikki chiziqdan iborat!', 'Знак «=» придумал в 1557 году валлийский врач и математик <b>Роберт Рекорд</b>. Он говорил, что нет ничего более равного, чем две параллельные линии одинаковой длины. Поэтому знак равенства — это две чёрточки!', 'The “=” sign was invented in 1557 by the Welsh doctor and mathematician <b>Robert Recorde</b>. He said that nothing could be more equal than two parallel lines of the same length. That is why the equals sign is two little lines!'),
+      L('«&gt;» va «&lt;» belgilarini esa 1631 yilda ingliz olimi <b>Tomas Xarriot</b> kitobida birinchi marta ishlatgan. O‘sha vaqtdan beri butun dunyo maktab o‘quvchilari shu belgilarni yozadi.', 'А знаки «&gt;» и «&lt;» впервые появились в 1631 году в книге английского учёного <b>Томаса Хэрриота</b>. С тех пор этими знаками пользуются школьники всего мира.', 'The signs “&gt;” and “&lt;” first appeared in 1631 in a book by the English scholar <b>Thomas Harriot</b>. Ever since, schoolchildren all over the world have written them.')
+    ] },
+    { kind: 'rule', h: L('Tekshirish qoidasi', 'Правило проверки', 'The checking rule'), p: [
+      L('Yozuv to‘g‘rimi yoki yo‘qmi, bilish uchun <b>ikkala tomonning qiymatini hisoblab, taqqoslaymiz</b>.', 'Чтобы узнать, верна ли запись, <b>вычисляем значения обеих частей и сравниваем</b>.', 'To find out whether a statement is true, we <b>work out the value of both sides and compare them</b>.')
+    ], list: [
+      L('Tenglik to‘g‘ri, agar ikki tomon qiymati <b>bir xil</b> bo‘lsa.', 'Равенство верно, если значения обеих частей <b>одинаковы</b>.', 'An equality is true if both sides have the <b>same</b> value.'),
+      L('«&gt;» to‘g‘ri, agar chap tomon <b>katta</b> bo‘lsa.', '«&gt;» верно, если левая часть <b>больше</b>.', '“&gt;” is true if the left side is <b>bigger</b>.'),
+      L('«&lt;» to‘g‘ri, agar chap tomon <b>kichik</b> bo‘lsa.', '«&lt;» верно, если левая часть <b>меньше</b>.', '“&lt;” is true if the left side is <b>smaller</b>.')
+    ], after: [
+      L('Ikki tomonda ham ifoda bo‘lishi mumkin: 15 + 5 = 30 − 10. Chap tomon: 20. O‘ng tomon: 20. Teng — tenglik to‘g‘ri!', 'Выражения могут быть с обеих сторон: 15 + 5 = 30 − 10. Слева: 20. Справа: 20. Равны — равенство верно!', 'There can be expressions on both sides: 15 + 5 = 30 − 10. Left side: 20. Right side: 20. Equal, so the equality is true!')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: belgini qo‘yamiz', 'Шаг за шагом: ставим знак', 'Step by step: choosing the sign'), p: [
+      L('«◻» o‘rniga qaysi belgini qo‘yish kerakligini topish uchun:', 'Чтобы узнать, какой знак поставить вместо «◻»:', 'To find which sign goes in the “◻”:')
+    ], list: [
+      L('1-qadam. Chap tomonni hisoblang va natijani yozib qo‘ying.', 'Шаг 1. Вычисли левую часть и запиши результат.', 'Step 1. Work out the left side and write down the result.'),
+      L('2-qadam. O‘ng tomonni hisoblang va natijani yozib qo‘ying.', 'Шаг 2. Вычисли правую часть и запиши результат.', 'Step 2. Work out the right side and write down the result.'),
+      L('3-qadam. Ikki sonni taqqoslang: qaysi biri katta?', 'Шаг 3. Сравни два числа: какое больше?', 'Step 3. Compare the two numbers: which is bigger?'),
+      L('4-qadam. Belgini qo‘ying: timsoh og‘zi katta songa qarasin. Teng bo‘lsa — «=».', 'Шаг 4. Поставь знак: рот крокодила к большему числу. Если равны — «=».', 'Step 4. Put in the sign: the crocodile’s mouth faces the bigger number. If they are equal, use “=”.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har bir yozuvni tarozi kabi tekshiramiz.', 'Проверяем каждую запись, как весы.', 'We check each statement like a pair of scales.')
+    ], ex: [
+      { q: L('«6 + 3 = 8» — to‘g‘rimi?', '«6 + 3 = 8» — верно?', 'Is “6 + 3 = 8” true?'), s: L('Chap tomon: 6 + 3 = 9. O‘ng tomon: 8. 9 ≠ 8. Javob: <b>noto‘g‘ri</b>. To‘g‘risi: 6 + 3 = 9.', 'Слева: 6 + 3 = 9. Справа: 8. 9 ≠ 8. Ответ: <b>неверно</b>. Правильно: 6 + 3 = 9.', 'Left: 6 + 3 = 9. Right: 8. 9 ≠ 8. Answer: <b>false</b>. The true version: 6 + 3 = 9.') },
+      { q: L('15 + 5 ◻ 30 − 10 — qaysi belgi?', '15 + 5 ◻ 30 − 10 — какой знак?', '15 + 5 ◻ 30 − 10: which sign?'), s: L('Chap: 20. O‘ng: 20. Teng! Javob: <b>=</b>.', 'Слева: 20. Справа: 20. Равны! Ответ: <b>=</b>.', 'Left: 20. Right: 20. Equal! Answer: <b>=</b>.') },
+      { q: L('24 + 3 ◻ 31 − 2 — qaysi belgi?', '24 + 3 ◻ 31 − 2 — какой знак?', '24 + 3 ◻ 31 − 2: which sign?'), s: L('Chap: 27. O‘ng: 29. 27 kichik. Javob: <b>&lt;</b> (27 &lt; 29).', 'Слева: 27. Справа: 29. 27 меньше. Ответ: <b>&lt;</b> (27 &lt; 29).', 'Left: 27. Right: 29. 27 is smaller. Answer: <b>&lt;</b> (27 &lt; 29).') },
+      { q: L('«40 &gt; 4 + 30» — to‘g‘rimi?', '«40 &gt; 4 + 30» — верно?', 'Is “40 &gt; 4 + 30” true?'), s: L('O‘ng tomon: 34. 40 &gt; 34 — ha, <b>to‘g‘ri</b>.', 'Справа: 34. 40 &gt; 34 — да, <b>верно</b>.', 'Right side: 34. 40 &gt; 34 — yes, <b>true</b>.') }
+    ] },
+    { kind: 'example', h: L('Yana namunalar: hisoblamasdan taqqoslash', 'Ещё примеры: сравниваем без вычислений', 'More examples: comparing without working out'), p: [
+      L('Ba’zan ikki tomonni to‘liq hisoblash shart emas — ozgina o‘ylash yetarli. Masalan, 18 + 5 va 18 + 7 ni taqqoslaymiz. Ikkala tomonda ham 18 bor. Bir tomonga 5 qo‘shilgan, boshqasiga 7. 7 katta, demak o‘ng tomon katta. Bu usul vaqtni tejaydi va aqlni charxlaydi!', 'Иногда не обязательно вычислять обе части целиком — достаточно немного подумать. Например, сравним 18 + 5 и 18 + 7. В обеих частях есть 18. К одной прибавили 5, к другой 7. 7 больше, значит правая часть больше. Этот способ экономит время и тренирует ум!', 'Sometimes you don’t need to work out both sides fully: a little thinking is enough. For example, compare 18 + 5 and 18 + 7. Both sides have 18. One adds 5, the other adds 7. 7 is bigger, so the right side is bigger. This saves time and sharpens your mind!')
+    ], ex: [
+      { q: L('18 + 5 ◻ 18 + 7 — qaysi belgi?', '18 + 5 ◻ 18 + 7 — какой знак?', '18 + 5 ◻ 18 + 7: which sign?'), s: L('18 bir xil, 5 &lt; 7. Javob: <b>&lt;</b>.', '18 одинаково, 5 &lt; 7. Ответ: <b>&lt;</b>.', '18 is the same, 5 &lt; 7. Answer: <b>&lt;</b>.') },
+      { q: L('9 + 4 ◻ 4 + 9 — qaysi belgi?', '9 + 4 ◻ 4 + 9 — какой знак?', '9 + 4 ◻ 4 + 9: which sign?'), s: L('Bir xil sonlar, faqat o‘rni almashgan. Yig‘indi o‘zgarmaydi. Javob: <b>=</b>.', 'Те же числа, только поменялись местами. Сумма не меняется. Ответ: <b>=</b>.', 'The same numbers, just swapped. The sum does not change. Answer: <b>=</b>.') },
+      { q: L('50 − 3 ◻ 50 − 8 — qaysi belgi?', '50 − 3 ◻ 50 − 8 — какой знак?', '50 − 3 ◻ 50 − 8: which sign?'), s: L('50 dan kamroq ayirsak, ko‘proq qoladi. 3 &lt; 8, demak 50 − 3 katta. Javob: <b>&gt;</b>.', 'Если из 50 вычесть меньше, останется больше. 3 &lt; 8, значит 50 − 3 больше. Ответ: <b>&gt;</b>.', 'Take less away from 50 and more is left. 3 &lt; 8, so 50 − 3 is bigger. Answer: <b>&gt;</b>.') }
+    ] },
+    { kind: 'table', h: L('Belgilar jadvali', 'Таблица знаков', 'Table of signs'), p: [
+      L('Uchta belgini bir joyda ko‘rib chiqamiz. Har bir belgining nomi, o‘qilishi va misoli bor. Jadvalni daftaringizga ko‘chirib oling va kerak bo‘lganda qarab turing — bir necha kundan keyin u yodingizda qoladi.', 'Посмотрим на три знака вместе. У каждого знака есть название, как он читается и пример. Перепиши таблицу в тетрадь и заглядывай в неё, когда нужно, — через несколько дней она запомнится.', 'Let’s look at the three signs together. Each has a name, a way of reading it and an example. Copy the table into your notebook and look at it when you need to; after a few days you will know it by heart.')
+    ], table: { head: [L('Belgi', 'Знак', 'Sign'), L('O‘qilishi', 'Читается', 'Read as'), L('Misol', 'Пример', 'Example')], rows: [
+      ['=', L('teng', 'равно', 'equals'), '4 + 3 = 7'],
+      [L('&gt;', '&gt;', '&gt;'), L('katta', 'больше', 'is greater than'), L('9 &gt; 6', '9 &gt; 6', '9 &gt; 6')],
+      [L('&lt;', '&lt;', '&lt;'), L('kichik', 'меньше', 'is less than'), L('2 &lt; 5', '2 &lt; 5', '2 &lt; 5')]
+    ] }, after: [
+      L('Diqqat: 9 &gt; 6 va 6 &lt; 9 — bir xil fikrni ikki xil aytish. Birinchisi «to‘qqiz oltidan katta», ikkinchisi «olti to‘qqizdan kichik» deb o‘qiladi.', 'Внимание: 9 &gt; 6 и 6 &lt; 9 — одна и та же мысль, сказанная двумя способами. Первое читается «девять больше шести», второе — «шесть меньше девяти».', 'Note: 9 &gt; 6 and 6 &lt; 9 say the same thing in two ways. The first is read “nine is greater than six”, the second “six is less than nine”.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Tenglik va tengsizliklarda bolalar ko‘pincha shunday adashadi:', 'В равенствах и неравенствах дети часто ошибаются так:', 'Children often slip up with equalities and inequalities like this:')
+    ], list: [
+      L('<b>Belgini teskari qo‘yish.</b> 8 &lt; 3 deb yozish. Timsohni eslang: og‘iz katta songa qaraydi — 8 &gt; 3.', '<b>Ставить знак наоборот.</b> Писать 8 &lt; 3. Вспомни крокодила: рот к большему числу — 8 &gt; 3.', '<b>Turning the sign the wrong way.</b> Writing 8 &lt; 3. Remember the crocodile: its mouth faces the bigger number, so 8 &gt; 3.'),
+      L('<b>Faqat bir tomonni hisoblash.</b> 15 + 5 ◻ 30 − 10 da faqat chapni hisoblab, «20 &lt; 30» deyish. O‘ng tomonni ham hisoblang!', '<b>Считать только одну часть.</b> В 15 + 5 ◻ 30 − 10 вычислить только левую и сказать «20 &lt; 30». Вычисли и правую!', '<b>Working out only one side.</b> In 15 + 5 ◻ 30 − 10, working out only the left and saying “20 &lt; 30”. Work out the right side too!'),
+      L('<b>«=» ni «javob» deb tushunish.</b> «=» — bu «javob shu yerda» emas, balki «ikki tomon teng» degani.', '<b>Понимать «=» как «ответ».</b> «=» — это не «здесь ответ», а «обе части равны».', '<b>Thinking “=” means “the answer is”.</b> “=” does not mean “here comes the answer”; it means “both sides are equal”.'),
+      L('<b>Noto‘g‘ri tenglikni tuzatmaslik.</b> Agar yozuv noto‘g‘ri bo‘lsa, uni qanday to‘g‘rilash mumkinligini ham o‘ylang.', '<b>Не исправлять неверное равенство.</b> Если запись неверна, подумай, как её исправить.', '<b>Not fixing a false equality.</b> If a statement is false, think about how it could be put right.')
+    ], after: [
+      L('Har bir misoldan keyin o‘zingizga savol bering: «Tarozim tekis turibdimi?» Bu odat sizni ko‘p xatolardan saqlaydi.', 'После каждого примера спроси себя: «Мои весы стоят ровно?» Эта привычка убережёт тебя от многих ошибок.', 'After every sum, ask yourself: “Are my scales level?” This habit will save you from many mistakes.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Do‘konda.</b> Sizda 20 so‘mlik tanga bor, shirinlik 15 so‘m. 20 &gt; 15 — pul yetadi! Agar shirinlik 25 so‘m bo‘lsa, 20 &lt; 25 — yetmaydi.', '<b>В магазине.</b> У тебя 20 монет, конфета стоит 15. 20 &gt; 15 — денег хватит! Если конфета стоит 25, то 20 &lt; 25 — не хватит.', '<b>In the shop.</b> You have 20 coins and a sweet costs 15. 20 &gt; 15, so you have enough! If the sweet costs 25, 20 &lt; 25, so you don’t.'),
+      L('<b>O‘yinda.</b> Kim ko‘proq ochko to‘pladi? Bir jamoa 12, boshqasi 9. 12 &gt; 9 — birinchi jamoa yutdi. Durang bo‘lsa — 10 = 10.', '<b>В игре.</b> Кто набрал больше очков? Одна команда 12, другая 9. 12 &gt; 9 — первая победила. Ничья — 10 = 10.', '<b>In games.</b> Who scored more? One team has 12, the other 9. 12 &gt; 9, so the first team won. A draw is 10 = 10.'),
+      L('<b>Oshxonada.</b> Onam palov uchun 2 kg guruch kerakligini aytdi. Uyda 1 kg bor. 1 &lt; 2 — do‘konga borish kerak.', '<b>На кухне.</b> Мама сказала, что на плов нужно 2 кг риса. Дома есть 1 кг. 1 &lt; 2 — нужно идти в магазин.', '<b>In the kitchen.</b> Mum says plov needs 2 kg of rice. There is 1 kg at home. 1 &lt; 2, so someone must go to the shop.'),
+      L('<b>Adolat uchun.</b> Ikki aka-ukaga konfetni teng bo‘lish kerak: 5 = 5. Shunda hech kim xafa bo‘lmaydi!', '<b>Ради справедливости.</b> Двум братьям конфеты надо разделить поровну: 5 = 5. Тогда никто не обидится!', '<b>For fairness.</b> Sweets should be shared equally between two brothers: 5 = 5. Then nobody is upset!')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Robert Rekord tenglik belgisini hozirgidan ancha uzun chizgan — u deyarli butun so‘zdek uzun edi!', 'Роберт Рекорд рисовал знак равенства гораздо длиннее нынешнего — почти длиной в целое слово!', 'Robert Recorde drew his equals sign much longer than today’s, almost as long as a whole word!'),
+      L('Kompyuter dasturlarida «=» va «==» belgilari turli ma’noni bildiradi. Dasturchilar ularni hech qachon chalkashtirmasligi kerak.', 'В компьютерных программах знаки «=» и «==» означают разное. Программисты не должны их путать.', 'In computer programs, “=” and “==” mean different things. Programmers must never mix them up.'),
+      L('Eng aniq tarozilar bir gramning milliondan bir qismini ham sezadi — ular uchun «teng» degani juda-juda aniq teng!', 'Самые точные весы чувствуют миллионную долю грамма — для них «равно» значит очень-очень точно равно!', 'The most accurate scales can sense a millionth of a gram: for them “equal” means very, very exactly equal!')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Har bir misolni avval o‘zingiz yeching, keyin javoblarni tekshiring.', 'Сначала реши каждый пример сам, потом проверь ответы.', 'Solve each one yourself first, then check the answers.')
+    ], list: [
+      L('«7 + 7 = 14» — to‘g‘rimi?', '«7 + 7 = 14» — верно?', 'Is “7 + 7 = 14” true?'),
+      L('35 + 4 ◻ 40 − 1 — qaysi belgi?', '35 + 4 ◻ 40 − 1 — какой знак?', '35 + 4 ◻ 40 − 1: which sign?'),
+      L('60 − 20 ◻ 30 + 5 — qaysi belgi?', '60 − 20 ◻ 30 + 5 — какой знак?', '60 − 20 ◻ 30 + 5: which sign?'),
+      L('Noto‘g‘ri tenglikni to‘g‘rilang: 9 − 4 = 6.', 'Исправь неверное равенство: 9 − 4 = 6.', 'Fix the false equality: 9 − 4 = 6.')
+    ], after: [
+      L('Javoblar: 1) to‘g‘ri. 2) 39 = 39, ya’ni «=». 3) 40 &gt; 35, ya’ni «&gt;». 4) 9 − 4 = 5 yoki 9 − 3 = 6.', 'Ответы: 1) верно. 2) 39 = 39, то есть «=». 3) 40 &gt; 35, то есть «&gt;». 4) 9 − 4 = 5 или 9 − 3 = 6.', 'Answers: 1) true. 2) 39 = 39, so “=”. 3) 40 &gt; 35, so “&gt;”. 4) 9 − 4 = 5 or 9 − 3 = 6.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>Tenglik</b> — «=» belgili yozuv: ikki tomon teng.', '<b>Равенство</b> — запись со знаком «=»: обе части равны.', 'An <b>equality</b> is a statement with “=”: both sides are equal.'),
+      L('<b>Tengsizlik</b> — «&gt;» yoki «&lt;» belgili yozuv.', '<b>Неравенство</b> — запись со знаком «&gt;» или «&lt;».', 'An <b>inequality</b> is a statement with “&gt;” or “&lt;”.'),
+      L('Yozuv to‘g‘ri yoki noto‘g‘ri bo‘lishi mumkin.', 'Запись может быть верной или неверной.', 'A statement can be true or false.'),
+      L('Tekshirish: ikkala tomonni hisoblab, taqqoslang.', 'Проверка: вычисли обе части и сравни.', 'To check: work out both sides and compare.'),
+      L('Timsoh og‘zi doim katta songa qaraydi.', 'Рот крокодила всегда открыт к большему числу.', 'The crocodile’s mouth always faces the bigger number.'),
+      L('Ba’zan hisoblamasdan ham taqqoslash mumkin — o‘ylab ko‘ring!', 'Иногда можно сравнить и без вычислений — подумай!', 'Sometimes you can compare without working it all out: think!')
+    ] }
+  ] });
+
+  // ---------- t10. Sonli va harfiy ifodalar ----------
+  T.add(P, 't10', { sections: [
+    { kind: 'intro', h: L('Sirli quti', 'Таинственная коробка', 'The mystery box'), p: [
+      L('Bobom Aziz bilan o‘yin o‘ynadi. U stolga yopiq quti qo‘ydi va dedi: «Bu qutida bir nechta yong‘oq bor. Men yana 3 ta yong‘oq qo‘shaman. Endi qancha bo‘ladi?» Aziz o‘ylab qoldi: «Qutida nechta borligini bilmasam, qanday javob beraman?» Bobom kulib, qutiga katta <b>a</b> harfini yozdi. «Mayli, qutidagi yong‘oqlar soni — <b>a</b>. Unda jami <b>a + 3</b> ta yong‘oq bo‘ladi».', 'Дедушка играл с Азизом. Он поставил на стол закрытую коробку и сказал: «В этой коробке несколько орехов. Я положу ещё 3. Сколько станет?» Азиз задумался: «Как ответить, если я не знаю, сколько в коробке?» Дедушка засмеялся и написал на коробке большую букву <b>a</b>. «Хорошо, число орехов в коробке — <b>a</b>. Тогда всего будет <b>a + 3</b> ореха».', 'Grandpa was playing a game with Aziz. He put a closed box on the table and said, “There are some walnuts in this box. I’ll add 3 more. How many will there be?” Aziz thought: “How can I answer if I don’t know how many are in the box?” Grandpa laughed and wrote a big letter <b>a</b> on the box. “All right, the number of walnuts in the box is <b>a</b>. Then altogether there are <b>a + 3</b> walnuts.”'),
+      L('Keyin bobom qutini ochdi — ichida 5 ta yong‘oq bor ekan. «Endi bilasan: a = 5, demak a + 3 = 5 + 3 = 8». Aziz quvonib ketdi: harf — bu shunchaki yashirin son ekan!', 'Потом дедушка открыл коробку — там было 5 орехов. «Теперь ты знаешь: a = 5, значит a + 3 = 5 + 3 = 8». Азиз обрадовался: буква — это просто спрятанное число!', 'Then Grandpa opened the box: there were 5 walnuts inside. “Now you know: a = 5, so a + 3 = 5 + 3 = 8.” Aziz was delighted: a letter is just a hidden number!'),
+      L('Bugun biz <b>sonli ifoda</b> va <b>harfiy ifoda</b> bilan tanishamiz va harf o‘rniga son qo‘yib, ifodaning qiymatini topishni o‘rganamiz.', 'Сегодня мы познакомимся с <b>числовыми</b> и <b>буквенными выражениями</b> и научимся, подставляя число вместо буквы, находить значение выражения.', 'Today we meet <b>number expressions</b> and <b>letter expressions</b> and learn to find an expression’s value by putting a number in place of the letter.')
+    ] },
+    { kind: 'def', h: L('Ifoda nima?', 'Что такое выражение?', 'What is an expression?'), p: [
+      L('<b>Ifoda</b> — sonlar (yoki harflar) va amal belgilaridan (+, −) tuzilgan yozuv. Masalan: 7 + 3, 20 − 5, a + 4. Ifodada «=» belgisi yo‘q — u faqat «nima qilish kerak»ligini ko‘rsatadi.', '<b>Выражение</b> — запись из чисел (или букв) и знаков действий (+, −). Например: 7 + 3, 20 − 5, a + 4. В выражении нет знака «=» — оно лишь показывает, «что нужно сделать».', 'An <b>expression</b> is something written with numbers (or letters) and operation signs (+, −). For example: 7 + 3, 20 − 5, a + 4. An expression has no “=” sign: it just shows “what to do”.')
+    ], list: [
+      L('<b>Sonli ifoda</b> — faqat sonlardan: 7 + 3, 15 − 6, 4 + 4 + 2.', '<b>Числовое выражение</b> — только из чисел: 7 + 3, 15 − 6, 4 + 4 + 2.', 'A <b>number expression</b> has only numbers: 7 + 3, 15 − 6, 4 + 4 + 2.'),
+      L('<b>Harfiy ifoda</b> — kamida bitta harf bor: a + 3, 10 − b, c + 5.', '<b>Буквенное выражение</b> — есть хотя бы одна буква: a + 3, 10 − b, c + 5.', 'A <b>letter expression</b> has at least one letter: a + 3, 10 − b, c + 5.'),
+      L('<b>Ifoda qiymati</b> — hisoblaganda chiqqan son. 7 + 3 ifodaning qiymati 10.', '<b>Значение выражения</b> — число, которое получилось при вычислении. Значение 7 + 3 равно 10.', 'The <b>value</b> of an expression is the number you get when you work it out. The value of 7 + 3 is 10.')
+    ], after: [
+      L('Harfiy ifodada harf istalgan sonni bildirishi mumkin. a = 1 bo‘lsa, a + 3 = 4; a = 10 bo‘lsa, a + 3 = 13. Harf o‘zgaradi — qiymat ham o‘zgaradi.', 'В буквенном выражении буква может обозначать любое число. Если a = 1, то a + 3 = 4; если a = 10, то a + 3 = 13. Меняется буква — меняется и значение.', 'In a letter expression the letter can stand for any number. If a = 1, a + 3 = 4; if a = 10, a + 3 = 13. Change the letter and the value changes too.')
+    ] },
+    { kind: 'history', h: L('Tarixdan: harflar qanday matematikaga kirdi', 'Из истории: как буквы пришли в математику', 'From history: how letters entered maths'), p: [
+      L('Taxminan 1200 yil oldin Bag‘dodda ishlagan yurtdoshimiz <b>Muhammad ibn Muso al-Xorazmiy</b> noma’lum sonlarni topish haqida mashhur kitob yozgan. U noma’lum sonni «narsa» deb atagan. Uning kitobi nomidagi «al-jabr» so‘zidan bugungi «algebra» so‘zi kelib chiqqan!', 'Около 1200 лет назад наш земляк <b>Мухаммад ибн Муса аль-Хорезми</b>, работавший в Багдаде, написал знаменитую книгу о нахождении неизвестных чисел. Неизвестное число он называл «вещь». Из слова «аль-джабр» в названии его книги произошло сегодняшнее слово «алгебра»!', 'About 1,200 years ago our fellow countryman <b>Muhammad ibn Musa al-Khwarizmi</b>, who worked in Baghdad, wrote a famous book on finding unknown numbers. He called the unknown number “the thing”. The word “al-jabr” in his book’s title gave us today’s word “algebra”!'),
+      L('Keyinchalik, taxminan 400 yil oldin, fransuz olimi <b>Fransua Viyet</b> noma’lum va berilgan sonlarni harflar bilan belgilashni taklif qilgan. Bu juda qulay bo‘lib chiqdi: uzun gaplar o‘rniga qisqa yozuvlar paydo bo‘ldi.', 'Позже, около 400 лет назад, французский учёный <b>Франсуа Виет</b> предложил обозначать неизвестные и данные числа буквами. Это оказалось очень удобно: вместо длинных фраз появились короткие записи.', 'Later, about 400 years ago, the French scholar <b>François Viète</b> suggested writing unknown and given numbers as letters. This turned out to be very handy: short notes replaced long sentences.'),
+      L('Shunday qilib, bugun siz a + 3 deb yozganingizda, ming yillik tarixga ega usuldan foydalanasiz!', 'Так что, когда ты сегодня пишешь a + 3, ты пользуешься способом с тысячелетней историей!', 'So when you write a + 3 today, you are using a method with a thousand years of history!')
+    ] },
+    { kind: 'rule', h: L('Qiymatni topish qoidasi', 'Правило нахождения значения', 'The rule for finding the value'), p: [
+      L('Harfiy ifodaning qiymatini topish uchun <b>harf o‘rniga berilgan sonni qo‘yamiz va hisoblaymiz</b>.', 'Чтобы найти значение буквенного выражения, <b>подставляем вместо буквы данное число и вычисляем</b>.', 'To find the value of a letter expression, <b>put the given number in place of the letter and work it out</b>.')
+    ], list: [
+      L('a = 6 bo‘lsa: a + 4 = 6 + 4 = 10.', 'Если a = 6: a + 4 = 6 + 4 = 10.', 'If a = 6: a + 4 = 6 + 4 = 10.'),
+      L('b = 10 bo‘lsa: 20 − b = 20 − 10 = 10.', 'Если b = 10: 20 − b = 20 − 10 = 10.', 'If b = 10: 20 − b = 20 − 10 = 10.'),
+      L('c = 7 bo‘lsa: c + c = 7 + 7 = 14. Bir xil harf — bir xil son!', 'Если c = 7: c + c = 7 + 7 = 14. Одинаковые буквы — одинаковые числа!', 'If c = 7: c + c = 7 + 7 = 14. The same letter means the same number!')
+    ], after: [
+      L('Harf — bu «quti», son esa uning ichidagi narsa. Qutini ochdik — sonni ko‘rdik — hisobladik.', 'Буква — это «коробка», а число — то, что внутри. Открыли коробку — увидели число — посчитали.', 'A letter is a “box” and the number is what is inside. Open the box, see the number, work it out.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam', 'Шаг за шагом', 'Step by step'), p: [
+      L('Harfiy ifodaning qiymatini to‘rt qadamda topamiz:', 'Находим значение буквенного выражения за четыре шага:', 'We find the value of a letter expression in four steps:')
+    ], list: [
+      L('1-qadam. Ifodani ko‘chirib yozing: a + 5.', 'Шаг 1. Перепиши выражение: a + 5.', 'Step 1. Copy the expression: a + 5.'),
+      L('2-qadam. Harfning qiymatiga qarang: a = 8.', 'Шаг 2. Посмотри на значение буквы: a = 8.', 'Step 2. Look at the letter’s value: a = 8.'),
+      L('3-qadam. Harf o‘rniga sonni yozing: 8 + 5.', 'Шаг 3. Запиши число вместо буквы: 8 + 5.', 'Step 3. Write the number in place of the letter: 8 + 5.'),
+      L('4-qadam. Hisoblang: 8 + 5 = 13. Bu ifodaning qiymati.', 'Шаг 4. Вычисли: 8 + 5 = 13. Это значение выражения.', 'Step 4. Work it out: 8 + 5 = 13. That is the value of the expression.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har birida harf o‘rniga sonni qo‘yamiz.', 'В каждом подставляем число вместо буквы.', 'In each one, we put the number in place of the letter.')
+    ], ex: [
+      { q: L('a = 5 bo‘lsa, a + 7 = ?', 'Если a = 5, то a + 7 = ?', 'If a = 5, a + 7 = ?'), s: L('a o‘rniga 5: 5 + 7 = <b>12</b>.', 'Вместо a пишем 5: 5 + 7 = <b>12</b>.', 'Put 5 for a: 5 + 7 = <b>12</b>.') },
+      { q: L('b = 10 bo‘lsa, 20 − b = ?', 'Если b = 10, то 20 − b = ?', 'If b = 10, 20 − b = ?'), s: L('20 − 10 = <b>10</b>.', '20 − 10 = <b>10</b>.', '20 − 10 = <b>10</b>.') },
+      { q: L('Qaysi biri harfiy ifoda: x − 3, 8 − 3, 5?', 'Какое из них буквенное выражение: x − 3, 8 − 3, 5?', 'Which is a letter expression: x − 3, 8 − 3, 5?'), s: L('Faqat <b>x − 3</b> da harf bor. 8 − 3 — sonli ifoda, 5 esa shunchaki son.', 'Только в <b>x − 3</b> есть буква. 8 − 3 — числовое выражение, а 5 — просто число.', 'Only <b>x − 3</b> has a letter. 8 − 3 is a number expression, and 5 is just a number.') },
+      { q: L('a + 4 ifodaning qiymatini a = 1, 2, 3 da toping.', 'Найди значение a + 4 при a = 1, 2, 3.', 'Find the value of a + 4 for a = 1, 2, 3.'), s: L('1 + 4 = 5; 2 + 4 = 6; 3 + 4 = 7. Harf 1 taga oshsa — qiymat ham 1 taga oshadi.', '1 + 4 = 5; 2 + 4 = 6; 3 + 4 = 7. Буква больше на 1 — и значение больше на 1.', '1 + 4 = 5; 2 + 4 = 6; 3 + 4 = 7. When the letter goes up by 1, the value goes up by 1.') }
+    ] },
+    { kind: 'example', h: L('Yana namunalar: masaladan ifodaga', 'Ещё примеры: от задачи к выражению', 'More examples: from a story to an expression'), p: [
+      L('Harfiy ifoda masalani qisqa yozishga yordam beradi. Masalaning matnini diqqat bilan o‘qing: «qo‘shildi», «keldi», «yana» so‘zlari — qo‘shish belgisi; «ketdi», «yedi», «berdi» so‘zlari — ayirish belgisi. Noma’lum sonni esa harf bilan belgilaymiz.', 'Буквенное выражение помогает коротко записать задачу. Внимательно читай условие: слова «добавили», «пришли», «ещё» — знак сложения; слова «ушли», «съели», «отдали» — знак вычитания. А неизвестное число обозначаем буквой.', 'A letter expression helps us write a story problem briefly. Read the story carefully: words like “added”, “came” and “more” mean adding; “left”, “ate” and “gave away” mean taking away. And we write the unknown number as a letter.')
+    ], ex: [
+      { q: L('Savatda k ta olma bor edi, 2 tasini yedik. Qancha qoldi? Ifoda tuzing.', 'В корзине было k яблок, 2 съели. Сколько осталось? Составь выражение.', 'A basket had k apples and we ate 2. How many are left? Write an expression.'), s: L('«Yedik» — ayirish. Ifoda: <b>k − 2</b>. Agar k = 9 bo‘lsa, 9 − 2 = 7 ta olma.', '«Съели» — вычитание. Выражение: <b>k − 2</b>. Если k = 9, то 9 − 2 = 7 яблок.', '“Ate” means take away. Expression: <b>k − 2</b>. If k = 9, then 9 − 2 = 7 apples.') },
+      { q: L('Sinfda d ta qiz va 12 ta o‘g‘il bor. Jami nechta bola?', 'В классе d девочек и 12 мальчиков. Сколько всего детей?', 'A class has d girls and 12 boys. How many children altogether?'), s: L('«Jami» — qo‘shish. Ifoda: <b>d + 12</b>. d = 13 bo‘lsa, 13 + 12 = 25 ta bola.', '«Всего» — сложение. Выражение: <b>d + 12</b>. Если d = 13, то 13 + 12 = 25 детей.', '“Altogether” means add. Expression: <b>d + 12</b>. If d = 13, 13 + 12 = 25 children.') },
+      { q: L('Qalamdonda 10 ta qalam bor edi, n tasini do‘stimga berdim. Qancha qoldi?', 'В пенале было 10 карандашей, n я отдал другу. Сколько осталось?', 'My pencil case had 10 pencils and I gave n to a friend. How many are left?'), s: L('«Berdim» — ayirish. Ifoda: <b>10 − n</b>. n = 3 bo‘lsa, 10 − 3 = 7 ta.', '«Отдал» — вычитание. Выражение: <b>10 − n</b>. Если n = 3, то 10 − 3 = 7.', '“Gave” means take away. Expression: <b>10 − n</b>. If n = 3, 10 − 3 = 7.') }
+    ] },
+    { kind: 'table', h: L('Qiymatlar jadvali', 'Таблица значений', 'Table of values'), p: [
+      L('Jadval harfiy ifodaning qiymatlarini bir joyda ko‘rsatadi. Yuqori qatorda harfning qiymati, pastda esa ifodaning qiymati.', 'Таблица показывает значения буквенного выражения в одном месте. В верхней строке — значение буквы, внизу — значение выражения.', 'A table shows the values of a letter expression in one place. The top row has the letter’s value and the bottom row the expression’s value.')
+    ], table: { head: ['a', '2', '5', '10', '15'], rows: [
+      ['a + 5', '7', '10', '15', '20'],
+      ['20 − a', '18', '15', '10', '5']
+    ] }, after: [
+      L('Qiziq: a ortgan sari a + 5 ham ortadi, 20 − a esa kamayadi. Nega? Chunki 20 dan ko‘proq ayirsak, kamroq qoladi.', 'Интересно: чем больше a, тем больше a + 5, а 20 − a становится меньше. Почему? Потому что, если из 20 вычесть больше, останется меньше.', 'Interesting: as a grows, a + 5 grows too, but 20 − a gets smaller. Why? Because if you take more away from 20, less is left.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Harfiy ifodalar bilan ishlaganda ehtiyot bo‘ling:', 'Работая с буквенными выражениями, будь внимателен:', 'Be careful with letter expressions:')
+    ], list: [
+      L('<b>Harf va sonni yonma-yon yozish.</b> a = 5 bo‘lsa, a + 7 «57» emas! Harf o‘rniga son qo‘yib, qo‘shamiz: 5 + 7 = 12.', '<b>Писать букву и число рядом.</b> Если a = 5, то a + 7 — не «57»! Подставляем и складываем: 5 + 7 = 12.', '<b>Writing the letter and number side by side.</b> If a = 5, a + 7 is not “57”! Put the number in and add: 5 + 7 = 12.'),
+      L('<b>Harfni unutib qoldirish.</b> 20 − b da b o‘rniga son qo‘yishni unutib, «20» deb javob berish.', '<b>Забыть подставить букву.</b> В 20 − b забыть подставить число вместо b и ответить «20».', '<b>Forgetting the letter.</b> In 20 − b, forgetting to replace b and answering “20”.'),
+      L('<b>Ifoda va tenglikni chalkashtirish.</b> a + 3 — ifoda (= yo‘q). a + 3 = 8 esa — tenglama, u boshqa mavzu.', '<b>Путать выражение и равенство.</b> a + 3 — выражение (нет =). А a + 3 = 8 — уравнение, это другая тема.', '<b>Mixing up expressions and equalities.</b> a + 3 is an expression (no =). a + 3 = 8 is an equation, which is another topic.'),
+      L('<b>Bir xil harflarga turli son qo‘yish.</b> c + c da ikkala c bir xil son.', '<b>Подставлять разные числа вместо одной буквы.</b> В c + c обе буквы c — одно и то же число.', '<b>Putting different numbers for the same letter.</b> In c + c both c’s are the same number.')
+    ], after: [
+      L('Yaxshi odat: harf o‘rniga sonni qo‘yganda, uni qavsga oling yoki boshqa rangda yozing. Shunda nima o‘zgarganini aniq ko‘rasiz va adashmaysiz.', 'Хорошая привычка: подставляя число вместо буквы, пиши его другим цветом. Тогда ясно видно, что изменилось, и ты не ошибёшься.', 'A good habit: when you put the number in for the letter, write it in a different colour. Then you clearly see what changed and won’t make a mistake.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Yosh hisoblash.</b> Siz hozir a yoshdasiz. Akangiz sizdan 4 yosh katta: uning yoshi a + 4. Siz 7 yoshda bo‘lsangiz, akangiz 11 yoshda.', '<b>Считаем возраст.</b> Тебе сейчас a лет. Брат старше тебя на 4 года: ему a + 4. Если тебе 7, брату 11.', '<b>Working out ages.</b> You are a years old. Your brother is 4 years older: he is a + 4. If you are 7, he is 11.'),
+      L('<b>Avtobus chiptasi.</b> Avtobusda b ta yo‘lovchi bor, bekatda 5 kishi chiqdi: endi b + 5. Haydovchi istalgan kuni shu ifoda bilan hisoblaydi.', '<b>Автобус.</b> В автобусе b пассажиров, на остановке вошли 5: теперь b + 5. Водитель в любой день может считать по этому выражению.', '<b>The bus.</b> A bus has b passengers and 5 get on at a stop: now there are b + 5. The driver can use this expression on any day.'),
+      L('<b>Kompyuter o‘yinlari.</b> O‘yinda «ochko» harf bilan saqlanadi. Har bir yulduzcha uchun ochko + 1 bo‘ladi. Dasturchilar butun o‘yinni harfiy ifodalar bilan yozadi!', '<b>Компьютерные игры.</b> В игре «очки» хранятся под буквой. За каждую звёздочку — очки + 1. Программисты пишут всю игру буквенными выражениями!', '<b>Computer games.</b> In a game the “score” is kept in a letter. Each star gives score + 1. Programmers write the whole game with letter expressions!'),
+      L('<b>Cho‘ntak puli.</b> Har hafta onam sizga p so‘m beradi, buvim yana 10 so‘m qo‘shadi. Haftalik pulingiz — p + 10.', '<b>Карманные деньги.</b> Каждую неделю мама даёт тебе p монет, бабушка добавляет ещё 10. Твои деньги на неделю — p + 10.', '<b>Pocket money.</b> Each week Mum gives you p coins and Grandma adds 10 more. Your weekly money is p + 10.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('«Algoritm» so‘zi ham Al-Xorazmiy nomidan kelib chiqqan. Uning ismi lotin tilida «Algoritmi» deb yozilgan.', 'Слово «алгоритм» тоже произошло от имени аль-Хорезми. По-латыни его имя писали «Algoritmi».', 'The word “algorithm” also comes from al-Khwarizmi’s name, which was written “Algoritmi” in Latin.'),
+      L('Matematikada eng ko‘p ishlatiladigan harf — <b>x</b>. U noma’lum sonning «mashhur» belgisi.', 'Самая популярная буква в математике — <b>x</b>. Это «знаменитое» обозначение неизвестного.', 'The most-used letter in maths is <b>x</b>. It is the “famous” sign for an unknown number.'),
+      L('Toshkent va Xivada Al-Xorazmiyga haykallar o‘rnatilgan.', 'В Ташкенте и Хиве установлены памятники аль-Хорезми.', 'There are statues of al-Khwarizmi in Tashkent and Khiva.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Harf o‘rniga sonni qo‘yib hisoblang.', 'Подставь число вместо буквы и посчитай.', 'Put the number in place of the letter and work it out.')
+    ], list: [
+      L('a = 9 bo‘lsa, a + 6 = ?', 'Если a = 9, то a + 6 = ?', 'If a = 9, a + 6 = ?'),
+      L('m = 4 bo‘lsa, 15 − m = ?', 'Если m = 4, то 15 − m = ?', 'If m = 4, 15 − m = ?'),
+      L('O‘zingiz harfiy ifoda o‘ylab toping va uning qiymatini a = 3 da hisoblang.', 'Придумай своё буквенное выражение и найди его значение при a = 3.', 'Make up your own letter expression and find its value when a = 3.')
+    ], after: [
+      L('Javoblar: 1) 9 + 6 = 15. 2) 15 − 4 = 11.', 'Ответы: 1) 9 + 6 = 15. 2) 15 − 4 = 11.', 'Answers: 1) 9 + 6 = 15. 2) 15 − 4 = 11.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>Ifoda</b> — sonlar, harflar va amal belgilaridan tuzilgan yozuv; unda «=» yo‘q.', '<b>Выражение</b> — запись из чисел, букв и знаков действий; в нём нет «=».', 'An <b>expression</b> is made of numbers, letters and operation signs; it has no “=”.'),
+      L('<b>Sonli ifoda</b>: 7 + 3. <b>Harfiy ifoda</b>: a + 3.', '<b>Числовое выражение</b>: 7 + 3. <b>Буквенное</b>: a + 3.', '<b>Number expression</b>: 7 + 3. <b>Letter expression</b>: a + 3.'),
+      L('Harf — yashirin son, «quti».', 'Буква — спрятанное число, «коробка».', 'A letter is a hidden number, a “box”.'),
+      L('Qiymatni topish: harf o‘rniga son qo‘yib, hisoblaymiz.', 'Найти значение: подставить число вместо буквы и вычислить.', 'To find the value: put the number in for the letter and work it out.'),
+      L('Harf o‘zgarsa — qiymat ham o‘zgaradi.', 'Меняется буква — меняется значение.', 'Change the letter and the value changes.'),
+      L('Algebraning «otasi» — yurtdoshimiz Al-Xorazmiy.', '«Отец» алгебры — наш земляк аль-Хорезми.', 'The “father” of algebra is our countryman al-Khwarizmi.')
+    ] }
+  ] });
+})(this);
+(function (root) { 'use strict'; var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '1-4';
+
+  // ---------- t11. Ifodalarni taqqoslash va qiymatini hisoblash ----------
+  T.add(P, 't11', { sections: [
+    { kind: 'intro', h: L('Ikki xil hisob — ikki xil javob', 'Два счёта — два ответа', 'Two ways of counting, two answers'), p: [
+      L('Kamola va Jasur bir xil masalani yechishdi: «Savatda 40 ta olxo‘ri bor edi. 10 tasini qo‘shnimizga berdik, keyin 5 tasini bobomga berdik. Qancha qoldi?» Kamola yozdi: 40 − 10 − 5 = 25. Jasur esa: 40 − (10 + 5) = 25. Ikkalasi ham 25 ni topdi! Ular xursand bo‘lishdi.', 'Камола и Джасур решали одну и ту же задачу: «В корзине было 40 слив. 10 отдали соседу, потом 5 дедушке. Сколько осталось?» Камола написала: 40 − 10 − 5 = 25. А Джасур: 40 − (10 + 5) = 25. Оба получили 25! Они обрадовались.', 'Kamola and Jasur solved the same problem: “A basket had 40 plums. We gave 10 to our neighbour, then 5 to Grandpa. How many are left?” Kamola wrote 40 − 10 − 5 = 25. Jasur wrote 40 − (10 + 5) = 25. Both got 25! They were very pleased.'),
+      L('Lekin keyin Jasur qavsni noto‘g‘ri joyga qo‘yib yozdi: 40 − 10 + 5. Endi javob 35 chiqdi! Nega? Chunki amallar <b>qaysi tartibda</b> bajarilishi juda muhim. Qavs — bu «avval meni hisobla!» degan maxsus belgi.', 'Но потом Джасур записал без скобок: 40 − 10 + 5. И ответ получился 35! Почему? Потому что очень важно, <b>в каком порядке</b> выполнять действия. Скобки — особый знак, который говорит: «Сначала посчитай меня!»', 'But then Jasur wrote it without brackets: 40 − 10 + 5. Now the answer was 35! Why? Because the <b>order</b> in which we do the operations matters a lot. Brackets are a special sign that says “work me out first!”'),
+      L('Bugun biz ifodalarning qiymatini to‘g‘ri tartibda hisoblashni va ikki ifodani taqqoslashni o‘rganamiz. Bu bilim sizga murakkab misollarni ham tez va xatosiz yechishga yordam beradi.', 'Сегодня мы научимся вычислять значения выражений в правильном порядке и сравнивать два выражения. Эти знания помогут решать даже сложные примеры быстро и без ошибок.', 'Today we learn to work out the value of expressions in the right order and to compare two expressions. This will help you solve even tricky sums quickly and without mistakes.')
+    ] },
+    { kind: 'def', h: L('Asosiy tushunchalar', 'Основные понятия', 'Key ideas'), p: [
+      L('<b>Ifoda qiymati</b> — ifodadagi barcha amallarni bajargandan keyin chiqqan son. 30 + 5 ifodaning qiymati — 35.', '<b>Значение выражения</b> — число, которое получается после выполнения всех действий. Значение выражения 30 + 5 — 35.', 'The <b>value of an expression</b> is the number you get after doing all its operations. The value of 30 + 5 is 35.'),
+      L('<b>Amallar tartibi</b> — qaysi amalni birinchi, qaysisini keyin bajarish qoidasi.', '<b>Порядок действий</b> — правило, какое действие выполнять первым, а какое потом.', 'The <b>order of operations</b> is the rule for which operation to do first and which next.'),
+      L('<b>Qavslar</b> — ( ) belgilari. Ular ichidagi amal birinchi bajarilishi kerakligini ko‘rsatadi.', '<b>Скобки</b> — знаки ( ). Они показывают, что действие внутри них нужно выполнить первым.', '<b>Brackets</b> are the signs ( ). They show that the operation inside them must be done first.')
+    ], list: [
+      L('Qavssiz ifoda: 40 − 10 + 5.', 'Выражение без скобок: 40 − 10 + 5.', 'An expression without brackets: 40 − 10 + 5.'),
+      L('Qavsli ifoda: 40 − (10 + 5).', 'Выражение со скобками: 40 − (10 + 5).', 'An expression with brackets: 40 − (10 + 5).')
+    ], after: [
+      L('Qavslar xuddi quchoqqa o‘xshaydi: ular ichidagi sonlarni «quchoqlab» olib, birga hisoblashni so‘raydi.', 'Скобки похожи на объятия: они «обнимают» числа внутри и просят посчитать их вместе.', 'Brackets are like a hug: they “hug” the numbers inside and ask for them to be worked out together.')
+    ] },
+    { kind: 'history', h: L('Qavslar tarixi', 'История скобок', 'The story of brackets'), p: [
+      L('Qadimgi matematiklar uzun misollarni so‘z bilan yozgani uchun ularga qavs kerak bo‘lmagan. Ammo belgilar ko‘paygach, chalkashlik boshlandi: «40 dan 10 va 5 ni ayir» — avval qo‘shib keyin ayirasizmi yoki aksincha?', 'Древние математики записывали длинные примеры словами, и скобки им были не нужны. Но когда знаков стало больше, началась путаница: «из 40 вычесть 10 и 5» — сначала сложить, а потом вычесть, или наоборот?', 'Ancient mathematicians wrote long sums in words, so they didn’t need brackets. But once signs became common, confusion began: “from 40 take 10 and 5”: do you add first and then subtract, or the other way round?'),
+      L('Taxminan 500 yil oldin Yevropada matematiklar bunday chalkashlikni yo‘qotish uchun qavslarni ishlata boshlashdi. Asta-sekin bu belgi butun dunyoga tarqaldi va bugun har bir sinfda ishlatiladi.', 'Около 500 лет назад в Европе математики начали пользоваться скобками, чтобы избавиться от такой путаницы. Постепенно этот знак распространился по всему миру, и сегодня им пользуются в каждом классе.', 'About 500 years ago mathematicians in Europe began using brackets to get rid of this confusion. Little by little the sign spread round the world, and today it is used in every classroom.'),
+      L('Buyuk Xorazmiy va <b>Ulug‘bek</b> rasadxonasining olimlari, masalan <b>G‘iyosiddin Koshiy</b>, juda murakkab hisob-kitoblarni bajargan. Koshiy hatto o‘nli kasrlar bilan ishlashni tartibga solgan. Ular uchun ham amallarni to‘g‘ri tartibda bajarish eng muhim qoida edi.', 'Великий Хорезми и учёные обсерватории <b>Улугбека</b>, например <b>Гиясиддин Каши</b>, выполняли очень сложные вычисления. Каши даже привёл в порядок работу с десятичными дробями. Для них тоже главным правилом был правильный порядок действий.', 'The great Khwarizmi and the scholars of <b>Ulugbek’s</b> observatory, such as <b>Ghiyath al-Din al-Kashi</b>, did very complicated calculations. Al-Kashi even organised how to work with decimal fractions. For them too, the most important rule was doing operations in the right order.')
+    ] },
+    { kind: 'rule', h: L('Amallar tartibi qoidasi', 'Правило порядка действий', 'The order-of-operations rule'), p: [
+      L('Ikkita oddiy qoidani yodlab oling:', 'Запомни два простых правила:', 'Learn these two simple rules:')
+    ], list: [
+      L('<b>1. Qavssiz ifodada</b> qo‘shish va ayirish <b>chapdan o‘ngga</b>, tartib bilan bajariladi — xuddi kitob o‘qigandek.', '<b>1. В выражении без скобок</b> сложение и вычитание выполняются <b>слева направо</b>, по порядку — как при чтении книги.', '<b>1. Without brackets</b>, adding and subtracting are done <b>from left to right</b>, in order, just like reading a book.'),
+      L('<b>2. Qavsli ifodada</b> avval <b>qavs ichidagi</b> amal bajariladi, keyin qolganlari chapdan o‘ngga.', '<b>2. В выражении со скобками</b> сначала выполняется действие <b>в скобках</b>, потом остальные — слева направо.', '<b>2. With brackets</b>, first do the operation <b>inside the brackets</b>, then the rest from left to right.')
+    ], after: [
+      L('Namuna: 40 − 10 + 5 = 30 + 5 = 35. Lekin 40 − (10 + 5) = 40 − 15 = 25. Sonlar bir xil, amallar bir xil — javoblar esa har xil! Hammasi qavsga bog‘liq.', 'Пример: 40 − 10 + 5 = 30 + 5 = 35. А 40 − (10 + 5) = 40 − 15 = 25. Числа те же, действия те же — а ответы разные! Всё зависит от скобок.', 'Example: 40 − 10 + 5 = 30 + 5 = 35. But 40 − (10 + 5) = 40 − 15 = 25. The same numbers, the same operations, yet different answers! It all depends on the brackets.'),
+      L('<b>Ifodalarni taqqoslash</b> uchun esa avval har birining qiymatini hisoblaymiz, keyin sonlarni &gt;, &lt; yoki = belgisi bilan taqqoslaymiz.', 'А чтобы <b>сравнить выражения</b>, сначала вычисляем значение каждого, а потом сравниваем числа знаком &gt;, &lt; или =.', 'To <b>compare expressions</b>, first work out the value of each, then compare the numbers with &gt;, &lt; or =.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam', 'Шаг за шагом', 'Step by step'), p: [
+      L('Har qanday ifodani shu tartibda hisoblang:', 'Любое выражение вычисляй в таком порядке:', 'Work out any expression in this order:')
+    ], list: [
+      L('1-qadam. Qavs bormi? Bo‘lsa — avval qavs ichini hisoblang va natijani yozing.', 'Шаг 1. Есть скобки? Если да — сначала посчитай в скобках и запиши результат.', 'Step 1. Are there brackets? If so, work out the inside first and write the result.'),
+      L('2-qadam. Amallar ustiga kichik raqamlar qo‘ying: 1, 2, 3 — qaysi biri nechanchi bajariladi.', 'Шаг 2. Поставь над действиями маленькие цифры 1, 2, 3 — какое по счёту выполняется.', 'Step 2. Write small numbers 1, 2, 3 above the operations to show their order.'),
+      L('3-qadam. Raqamlar tartibida, chapdan o‘ngga hisoblang.', 'Шаг 3. Считай по порядку цифр, слева направо.', 'Step 3. Work them out in that order, from left to right.'),
+      L('4-qadam. Taqqoslash kerak bo‘lsa, ikkinchi ifodani ham shunday hisoblab, belgini qo‘ying.', 'Шаг 4. Если нужно сравнить, так же вычисли второе выражение и поставь знак.', 'Step 4. If you need to compare, work out the second expression the same way and put in the sign.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har bir misolda amallar tartibini ko‘rsatamiz.', 'В каждом примере показываем порядок действий.', 'In each example we show the order of operations.')
+    ], ex: [
+      { q: L('50 − 20 + 3 = ?', '50 − 20 + 3 = ?', '50 − 20 + 3 = ?'), s: L('Qavs yo‘q — chapdan o‘ngga. 1) 50 − 20 = 30. 2) 30 + 3 = <b>33</b>.', 'Скобок нет — слева направо. 1) 50 − 20 = 30. 2) 30 + 3 = <b>33</b>.', 'No brackets, so left to right. 1) 50 − 20 = 30. 2) 30 + 3 = <b>33</b>.') },
+      { q: L('50 − (20 + 3) = ?', '50 − (20 + 3) = ?', '50 − (20 + 3) = ?'), s: L('Avval qavs: 20 + 3 = 23. Keyin: 50 − 23 = <b>27</b>.', 'Сначала скобки: 20 + 3 = 23. Потом: 50 − 23 = <b>27</b>.', 'Brackets first: 20 + 3 = 23. Then 50 − 23 = <b>27</b>.') },
+      { q: L('(30 + 6) − 10 = ?', '(30 + 6) − 10 = ?', '(30 + 6) − 10 = ?'), s: L('Qavs: 30 + 6 = 36. Keyin: 36 − 10 = <b>26</b>.', 'Скобки: 30 + 6 = 36. Потом: 36 − 10 = <b>26</b>.', 'Brackets: 30 + 6 = 36. Then 36 − 10 = <b>26</b>.') },
+      { q: L('10 + 5 va 20 − 5 ni taqqoslang.', 'Сравни 10 + 5 и 20 − 5.', 'Compare 10 + 5 and 20 − 5.'), s: L('10 + 5 = 15, 20 − 5 = 15. Javob: <b>10 + 5 = 20 − 5</b>.', '10 + 5 = 15, 20 − 5 = 15. Ответ: <b>10 + 5 = 20 − 5</b>.', '10 + 5 = 15, 20 − 5 = 15. Answer: <b>10 + 5 = 20 − 5</b>.') }
+    ] },
+    { kind: 'example', h: L('Yana namunalar: qavs nimani o‘zgartiradi?', 'Ещё примеры: что меняют скобки?', 'More examples: what do brackets change?'), p: [
+      L('Keling, bir xil sonlar va bir xil amallar bilan ikki ifodani yonma-yon qo‘yamiz: birida qavs bor, ikkinchisida yo‘q. Shunda qavsning kuchi yaqqol ko‘rinadi. Ba’zan qavs javobni o‘zgartiradi, ba’zan esa yo‘q — buni ham bilib olamiz.', 'Давай поставим рядом два выражения с одинаковыми числами и действиями: в одном есть скобки, в другом нет. Тогда сила скобок будет хорошо видна. Иногда скобки меняют ответ, а иногда нет — узнаем и это.', 'Let’s put two expressions with the same numbers and operations side by side: one with brackets and one without. Then the power of brackets is easy to see. Sometimes brackets change the answer and sometimes they don’t; we will find that out too.')
+    ], ex: [
+      { q: L('60 − 20 + 10 va 60 − (20 + 10) ni taqqoslang.', 'Сравни 60 − 20 + 10 и 60 − (20 + 10).', 'Compare 60 − 20 + 10 and 60 − (20 + 10).'), s: L('Birinchisi: 40 + 10 = 50. Ikkinchisi: 60 − 30 = 30. 50 &gt; 30. Qavs javobni <b>o‘zgartirdi</b>.', 'Первое: 40 + 10 = 50. Второе: 60 − 30 = 30. 50 &gt; 30. Скобки <b>изменили</b> ответ.', 'First: 40 + 10 = 50. Second: 60 − 30 = 30. 50 &gt; 30. The brackets <b>changed</b> the answer.') },
+      { q: L('20 + 7 + 3 va 20 + (7 + 3) ni taqqoslang.', 'Сравни 20 + 7 + 3 и 20 + (7 + 3).', 'Compare 20 + 7 + 3 and 20 + (7 + 3).'), s: L('Birinchisi: 27 + 3 = 30. Ikkinchisi: 20 + 10 = 30. Teng! Faqat qo‘shish bo‘lsa, qavs javobni <b>o‘zgartirmaydi</b>.', 'Первое: 27 + 3 = 30. Второе: 20 + 10 = 30. Равны! Если только сложение, скобки ответ <b>не меняют</b>.', 'First: 27 + 3 = 30. Second: 20 + 10 = 30. Equal! When there is only adding, brackets <b>don’t change</b> the answer.') },
+      { q: L('Qavsni shunday qo‘yingki, 30 − 10 + 5 = 15 bo‘lsin.', 'Поставь скобки так, чтобы 30 − 10 + 5 = 15.', 'Put in brackets so that 30 − 10 + 5 = 15.'), s: L('Qavssiz 25 chiqadi. 30 − (10 + 5) = 30 − 15 = <b>15</b> ✓.', 'Без скобок получается 25. 30 − (10 + 5) = 30 − 15 = <b>15</b> ✓.', 'Without brackets you get 25. 30 − (10 + 5) = 30 − 15 = <b>15</b> ✓.') }
+    ] },
+    { kind: 'table', h: L('Taqqoslash jadvali', 'Таблица сравнения', 'Comparison table'), p: [
+      L('Jadvalda qavsli va qavssiz ifodalar yonma-yon berilgan. Qaysi qatorda javoblar teng, qaysida har xil ekaniga e’tibor bering.', 'В таблице рядом стоят выражения со скобками и без. Обрати внимание, в каких строках ответы равны, а в каких разные.', 'The table puts expressions with and without brackets side by side. Notice which rows give equal answers and which give different ones.')
+    ], table: { head: [L('Qavssiz', 'Без скобок', 'Without brackets'), L('Qiymati', 'Значение', 'Value'), L('Qavsli', 'Со скобками', 'With brackets'), L('Qiymati', 'Значение', 'Value')], rows: [
+      [L('40 − 10 + 5', '40 − 10 + 5', '40 − 10 + 5'), '35', L('40 − (10 + 5)', '40 − (10 + 5)', '40 − (10 + 5)'), '25'],
+      [L('50 − 20 − 10', '50 − 20 − 10', '50 − 20 − 10'), '20', L('50 − (20 − 10)', '50 − (20 − 10)', '50 − (20 − 10)'), '40'],
+      [L('30 + 4 + 6', '30 + 4 + 6', '30 + 4 + 6'), '40', L('30 + (4 + 6)', '30 + (4 + 6)', '30 + (4 + 6)'), '40']
+    ] }, after: [
+      L('Xulosa: ayirish ishtirok etsa, qavs javobni o‘zgartirishi mumkin. Faqat qo‘shish bo‘lsa — qavs qayerda bo‘lishidan qat’i nazar, javob bir xil.', 'Вывод: если есть вычитание, скобки могут изменить ответ. Если только сложение — ответ одинаковый, где бы ни стояли скобки.', 'Conclusion: when subtraction is involved, brackets can change the answer. With only adding, the answer is the same wherever the brackets go.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Amallar tartibida eng ko‘p uchraydigan xatolar:', 'Самые частые ошибки в порядке действий:', 'The most common mistakes with the order of operations:')
+    ], list: [
+      L('<b>Qavsni e’tiborsiz qoldirish.</b> 50 − (20 + 3) ni 50 − 20 + 3 kabi hisoblash. Qavs — «avval meni hisobla!»', '<b>Не замечать скобки.</b> Считать 50 − (20 + 3) как 50 − 20 + 3. Скобки говорят: «Сначала меня!»', '<b>Ignoring brackets.</b> Working out 50 − (20 + 3) as if it were 50 − 20 + 3. Brackets say: “Me first!”'),
+      L('<b>O‘ngdan chapga hisoblash.</b> 40 − 10 + 5 da avval 10 + 5 ni qo‘shish. Qavs bo‘lmasa — doim chapdan o‘ngga!', '<b>Считать справа налево.</b> В 40 − 10 + 5 сначала сложить 10 + 5. Если скобок нет — всегда слева направо!', '<b>Working right to left.</b> In 40 − 10 + 5, adding 10 + 5 first. With no brackets, always go left to right!'),
+      L('<b>Faqat bitta ifodani hisoblab taqqoslash.</b> Ikkala ifodaning qiymatini toping, keyin belgini qo‘ying.', '<b>Сравнивать, посчитав только одно выражение.</b> Найди значения обоих выражений, потом ставь знак.', '<b>Comparing after working out only one side.</b> Find the value of both expressions, then put in the sign.'),
+      L('<b>Oraliq natijani unutish.</b> Qavs ichini hisoblab, natijani yozmasdan qoldirish. Har bir qadamni yozib boring.', '<b>Забыть промежуточный результат.</b> Посчитать в скобках и не записать результат. Записывай каждый шаг.', '<b>Forgetting the in-between result.</b> Working out the brackets and not writing it down. Write down every step.')
+    ], after: [
+      L('Maslahat: amallar ustiga kichik raqamlar yozish odatini hosil qiling. Bu bir necha soniya oladi, lekin ko‘p xatoning oldini oladi.', 'Совет: привыкни ставить над действиями маленькие цифры. Это занимает несколько секунд, но предотвращает много ошибок.', 'Tip: get into the habit of writing small numbers above the operations. It takes a few seconds but prevents many mistakes.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Do‘konda.</b> Sizda 50 so‘m bor. Siz 20 so‘mlik daftar va 10 so‘mlik qalam oldingiz. Qancha qoldi? 50 − (20 + 10) = 20. Avval xaridlarni qo‘shib, keyin puldan ayirish qulay.', '<b>В магазине.</b> У тебя 50 монет. Ты купил тетрадь за 20 и ручку за 10. Сколько осталось? 50 − (20 + 10) = 20. Удобно сначала сложить покупки, а потом вычесть из денег.', '<b>In the shop.</b> You have 50 coins. You buy a notebook for 20 and a pen for 10. How much is left? 50 − (20 + 10) = 20. It is handy to add up the shopping first, then take it from your money.'),
+      L('<b>Avtobusda.</b> Avtobusda 30 kishi bor edi. Bekatda 8 kishi tushdi, 5 kishi chiqdi. Endi: 30 − 8 + 5 = 27. Bu yerda tartib muhim — voqealar qanday ketma-ketlikda bo‘lgan bo‘lsa, shunday hisoblaymiz.', '<b>В автобусе.</b> В автобусе было 30 человек. На остановке 8 вышли, 5 вошли. Теперь: 30 − 8 + 5 = 27. Здесь порядок важен — считаем так, как происходили события.', '<b>On the bus.</b> A bus had 30 people. At a stop 8 got off and 5 got on. Now: 30 − 8 + 5 = 27. Order matters here: we count in the order things happened.'),
+      L('<b>Kalkulyatorda.</b> Kalkulyator va kompyuterlar ham amallar tartibiga qat’iy amal qiladi. Agar qavsni unutsangiz, kalkulyator boshqa javob beradi!', '<b>На калькуляторе.</b> Калькуляторы и компьютеры тоже строго соблюдают порядок действий. Забудешь скобки — калькулятор даст другой ответ!', '<b>On a calculator.</b> Calculators and computers strictly follow the order of operations too. Forget the brackets and the calculator gives a different answer!')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Ba’zan internetda «oddiy» misol tarqaladi va millionlab odamlar turli javob beradi — chunki amallar tartibini unutishadi!', 'Иногда в интернете распространяется «простой» пример, и миллионы людей дают разные ответы — потому что забывают порядок действий!', 'Sometimes a “simple” sum goes viral online and millions of people give different answers, because they forget the order of operations!'),
+      L('Qavslarning bir necha turi bor: oddiy ( ), kvadrat [ ] va figurali { }. Katta sinflarda ularning hammasi bilan tanishasiz.', 'Скобки бывают разные: круглые ( ), квадратные [ ] и фигурные { }. В старших классах ты познакомишься со всеми.', 'There are several kinds of brackets: round ( ), square [ ] and curly { }. You will meet them all in higher grades.'),
+      L('Kompyuter dasturlarida bitta qavsni unutish butun dasturni ishlamay qolishiga sabab bo‘lishi mumkin.', 'В компьютерной программе одна забытая скобка может сломать всю программу.', 'In a computer program, one forgotten bracket can stop the whole program working.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Amallar ustiga raqam qo‘yib, hisoblang.', 'Поставь над действиями цифры и посчитай.', 'Number the operations, then work them out.')
+    ], list: [
+      L('70 − 30 + 8 = ?', '70 − 30 + 8 = ?', '70 − 30 + 8 = ?'),
+      L('70 − (30 + 8) = ?', '70 − (30 + 8) = ?', '70 − (30 + 8) = ?'),
+      L('Qaysi biri katta: 45 − 5 + 10 yoki 45 − (5 + 10)?', 'Что больше: 45 − 5 + 10 или 45 − (5 + 10)?', 'Which is bigger: 45 − 5 + 10 or 45 − (5 + 10)?')
+    ], after: [
+      L('Javoblar: 1) 48. 2) 32. 3) 50 &gt; 30, birinchisi katta.', 'Ответы: 1) 48. 2) 32. 3) 50 &gt; 30, первое больше.', 'Answers: 1) 48. 2) 32. 3) 50 &gt; 30, the first is bigger.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>Ifoda qiymati</b> — barcha amallardan keyin chiqqan son.', '<b>Значение выражения</b> — число после выполнения всех действий.', 'The <b>value</b> of an expression is the number after all the operations.'),
+      L('Qavssiz: chapdan o‘ngga hisoblaymiz.', 'Без скобок: считаем слева направо.', 'No brackets: work from left to right.'),
+      L('Qavsli: <b>avval qavs ichi</b>, keyin qolgani.', 'Со скобками: <b>сначала в скобках</b>, потом остальное.', 'With brackets: <b>inside the brackets first</b>, then the rest.'),
+      L('Qavs javobni o‘zgartirishi mumkin: 40 − 10 + 5 = 35, 40 − (10 + 5) = 25.', 'Скобки могут изменить ответ: 40 − 10 + 5 = 35, 40 − (10 + 5) = 25.', 'Brackets can change the answer: 40 − 10 + 5 = 35, 40 − (10 + 5) = 25.'),
+      L('Taqqoslash: ikkala ifodani hisoblab, belgini qo‘yamiz.', 'Сравнение: вычисляем оба выражения и ставим знак.', 'Comparing: work out both expressions, then put in the sign.')
+    ] }
+  ] });
+
+  // ---------- t12. Matematik amallarning xossalari ----------
+  T.add(P, 't12', { sections: [
+    { kind: 'intro', h: L('Aqlli hisobchi', 'Умный счётчик', 'The clever counter'), p: [
+      L('O‘qituvchi doskaga misol yozdi: 8 + 27 + 2. Bolalar hisoblay boshlashdi: 8 + 27 = 35, 35 + 2 = 37. Lekin Nodira bir zumda javob berdi: «37!» Hamma hayron bo‘ldi. «Qanday tez hisobladingiz?» — so‘radi o‘qituvchi. Nodira dedi: «Men 8 va 2 ni birlashtirdim — 10 bo‘ldi. 10 + 27 = 37. Juda oson!»', 'Учительница написала на доске пример: 8 + 27 + 2. Дети начали считать: 8 + 27 = 35, 35 + 2 = 37. А Нодира сразу ответила: «37!» Все удивились. «Как ты так быстро посчитала?» — спросила учительница. Нодира сказала: «Я соединила 8 и 2 — получилось 10. 10 + 27 = 37. Очень легко!»', 'The teacher wrote a sum on the board: 8 + 27 + 2. The children started working: 8 + 27 = 35, 35 + 2 = 37. But Nodira answered at once: “37!” Everyone was surprised. “How did you do it so fast?” asked the teacher. Nodira said, “I put 8 and 2 together to make 10. 10 + 27 = 37. Easy!”'),
+      L('Nodira sehrgar emas. U shunchaki <b>amallarning xossalari</b>ni bilardi. Bu xossalar — matematikaning maxfiy kalitlari: ular yordamida qiyin misollarni oson va tez yechish mumkin.', 'Нодира не волшебница. Она просто знала <b>свойства действий</b>. Эти свойства — секретные ключи математики: с ними трудные примеры решаются легко и быстро.', 'Nodira isn’t a magician. She simply knew the <b>properties of operations</b>. These properties are the secret keys of maths: with them, hard sums become quick and easy.'),
+      L('Bugun biz qo‘shish va ayirishning eng muhim xossalarini o‘rganamiz va o‘zimiz ham Nodira kabi «aqlli hisobchi» bo‘lamiz!', 'Сегодня мы изучим самые важные свойства сложения и вычитания и сами станем «умными счётчиками», как Нодира!', 'Today we learn the most important properties of adding and subtracting and become “clever counters” just like Nodira!')
+    ] },
+    { kind: 'def', h: L('Beshta xossa', 'Пять свойств', 'Five properties'), p: [
+      L('<b>Xossa</b> — har qanday son uchun doim to‘g‘ri bo‘ladigan qoida. Mana qo‘shish va ayirishning asosiy xossalari:', '<b>Свойство</b> — правило, которое всегда верно для любых чисел. Вот главные свойства сложения и вычитания:', 'A <b>property</b> is a rule that is always true for any numbers. Here are the main properties of adding and subtracting:')
+    ], list: [
+      L('<b>O‘rin almashtirish xossasi:</b> a + b = b + a. Qo‘shiluvchilarning o‘rni almashsa, yig‘indi o‘zgarmaydi. 3 + 5 = 5 + 3.', '<b>Переместительное свойство:</b> a + b = b + a. От перестановки слагаемых сумма не меняется. 3 + 5 = 5 + 3.', '<b>Swapping (commutative) property:</b> a + b = b + a. Changing the order of the numbers does not change the sum. 3 + 5 = 5 + 3.'),
+      L('<b>Guruhlash xossasi:</b> (a + b) + c = a + (b + c). Qo‘shiluvchilarni istalgancha guruhlash mumkin.', '<b>Сочетательное свойство:</b> (a + b) + c = a + (b + c). Слагаемые можно группировать как угодно.', '<b>Grouping (associative) property:</b> (a + b) + c = a + (b + c). You can group the numbers any way you like.'),
+      L('<b>Nolni qo‘shish:</b> a + 0 = a. Nol qo‘shsak, son o‘zgarmaydi.', '<b>Прибавление нуля:</b> a + 0 = a. Прибавим ноль — число не изменится.', '<b>Adding zero:</b> a + 0 = a. Add zero and the number stays the same.'),
+      L('<b>Nolni ayirish:</b> a − 0 = a. Hech narsa olmasak, hammasi qoladi.', '<b>Вычитание нуля:</b> a − 0 = a. Ничего не взяли — всё осталось.', '<b>Taking away zero:</b> a − 0 = a. Take nothing away and everything is left.'),
+      L('<b>Sonni o‘zidan ayirish:</b> a − a = 0. Hammasini olsak, hech narsa qolmaydi.', '<b>Вычитание числа из самого себя:</b> a − a = 0. Взяли всё — ничего не осталось.', '<b>Taking a number from itself:</b> a − a = 0. Take everything and nothing is left.')
+    ] },
+    { kind: 'history', h: L('Tarixdan: nol — buyuk kashfiyot', 'Из истории: ноль — великое открытие', 'From history: zero, a great discovery'), p: [
+      L('Bilasizmi, nol har doim bo‘lmagan! Qadimgi Rim raqamlarida nol yo‘q edi. Qadimgi Bobilliklar sonlar orasida bo‘sh joy qoldirish uchun maxsus belgi ishlatgan, lekin uni alohida son deb hisoblamagan.', 'Знаешь, ноль был не всегда! В римских цифрах ноля нет. Древние вавилоняне ставили особый знак, чтобы показать пустое место в числе, но не считали его отдельным числом.', 'Did you know zero hasn’t always existed? Roman numerals have no zero. The ancient Babylonians used a special mark to show an empty place in a number, but they didn’t think of it as a number on its own.'),
+      L('Nolni haqiqiy son sifatida Hindiston olimlari, ayniqsa <b>Brahmagupta</b>, taxminan 1400 yil oldin ta’riflagan. U birinchilardan bo‘lib a + 0 = a va a − a = 0 qoidalarini yozgan. Keyin bizning yurtdoshimiz <b>Al-Xorazmiy</b> hind raqamlari va nol haqida kitob yozib, ularni butun dunyoga tanitdi.', 'Ноль как настоящее число описали индийские учёные, особенно <b>Брахмагупта</b>, около 1400 лет назад. Он одним из первых записал правила a + 0 = a и a − a = 0. Потом наш земляк <b>аль-Хорезми</b> написал книгу об индийских цифрах и ноле и познакомил с ними весь мир.', 'Indian scholars, especially <b>Brahmagupta</b>, described zero as a real number about 1,400 years ago. He was one of the first to write the rules a + 0 = a and a − a = 0. Then our fellow countryman <b>al-Khwarizmi</b> wrote a book about Indian numerals and zero and introduced them to the whole world.'),
+      L('Shuning uchun biz ishlatadigan raqamlar ko‘pincha «hind-arab raqamlari» deb ataladi. Ular orqali nol Yevropaga ham yetib borgan.', 'Поэтому цифры, которыми мы пользуемся, часто называют «индо-арабскими». Через них ноль попал и в Европу.', 'That is why the numerals we use are often called “Hindu-Arabic numerals”. Through them, zero reached Europe too.')
+    ] },
+    { kind: 'rule', h: L('Xossalar qanday yordam beradi?', 'Как помогают свойства?', 'How do the properties help?'), p: [
+      L('Xossalarning asosiy foydasi — <b>hisoblashni osonlashtirish</b>. Asosiy sir: sonlarni shunday guruhlang yoki joyini almashtiringki, <b>yaxlit son</b> (10, 20, 30…) hosil bo‘lsin.', 'Главная польза свойств — <b>упростить вычисления</b>. Главный секрет: переставь или сгруппируй числа так, чтобы получилось <b>круглое число</b> (10, 20, 30…).', 'The main use of the properties is to <b>make working out easier</b>. The big secret: swap or group the numbers so you get a <b>round number</b> (10, 20, 30…).')
+    ], list: [
+      L('8 + 27 + 2 → (8 + 2) + 27 = 10 + 27 = 37.', '8 + 27 + 2 → (8 + 2) + 27 = 10 + 27 = 37.', '8 + 27 + 2 → (8 + 2) + 27 = 10 + 27 = 37.'),
+      L('6 + 15 + 4 → (6 + 4) + 15 = 10 + 15 = 25.', '6 + 15 + 4 → (6 + 4) + 15 = 10 + 15 = 25.', '6 + 15 + 4 → (6 + 4) + 15 = 10 + 15 = 25.'),
+      L('3 + 46 → 46 + 3 = 49 (kichik sonni katta songa qo‘shish oson).', '3 + 46 → 46 + 3 = 49 (меньшее к большему прибавлять легче).', '3 + 46 → 46 + 3 = 49 (adding a small number to a big one is easier).')
+    ], after: [
+      L('«Do‘st sonlar»ni eslab qoling — ular birga 10 ni beradi: 1 va 9, 2 va 8, 3 va 7, 4 va 6, 5 va 5. Misolda ularni ko‘rsangiz, darhol birlashtiring!', 'Запомни «числа-друзья» — вместе они дают 10: 1 и 9, 2 и 8, 3 и 7, 4 и 6, 5 и 5. Увидел их в примере — сразу объединяй!', 'Remember the “friendly numbers” that make 10 together: 1 and 9, 2 and 8, 3 and 7, 4 and 6, 5 and 5. Spot them in a sum and join them straight away!')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: qulay hisoblash', 'Шаг за шагом: удобный счёт', 'Step by step: easy counting'), p: [
+      L('Uch yoki undan ko‘p sonni qo‘shishdan oldin:', 'Прежде чем складывать три и больше чисел:', 'Before adding three or more numbers:')
+    ], list: [
+      L('1-qadam. Hamma sonlarga qarang. Nol bormi? Uni tashlab yuboring — u hech narsani o‘zgartirmaydi.', 'Шаг 1. Посмотри на все числа. Есть ноль? Его можно не считать — он ничего не меняет.', 'Step 1. Look at all the numbers. Is there a zero? Leave it out: it changes nothing.'),
+      L('2-qadam. «Do‘st sonlar»ni qidiring — birga 10 beradigan juftlarni.', 'Шаг 2. Ищи «числа-друзья» — пары, которые вместе дают 10.', 'Step 2. Look for “friendly numbers”, pairs that make 10.'),
+      L('3-qadam. Ularni birinchi qo‘shing (guruhlash xossasi).', 'Шаг 3. Сложи их первыми (сочетательное свойство).', 'Step 3. Add them first (the grouping property).'),
+      L('4-qadam. Qolgan sonni yaxlit songa qo‘shing — bu eng oson!', 'Шаг 4. Прибавь оставшееся число к круглому — это проще всего!', 'Step 4. Add the remaining number to the round number: that’s the easiest bit!')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har birida qaysi xossadan foydalanganimizni ko‘rsatamiz.', 'В каждом показываем, каким свойством пользуемся.', 'In each one we show which property we use.')
+    ], ex: [
+      { q: L('27 + 0 = ?', '27 + 0 = ?', '27 + 0 = ?'), s: L('Nol qo‘shsak, son o‘zgarmaydi: <b>27</b>.', 'Прибавили ноль — число не изменилось: <b>27</b>.', 'Adding zero leaves the number unchanged: <b>27</b>.') },
+      { q: L('45 − 45 = ?', '45 − 45 = ?', '45 − 45 = ?'), s: L('Sonni o‘zidan ayirsak: <b>0</b>.', 'Число минус само себя: <b>0</b>.', 'A number minus itself: <b>0</b>.') },
+      { q: L('8 + 15 + 2 = ?', '8 + 15 + 2 = ?', '8 + 15 + 2 = ?'), s: L('Do‘st sonlar 8 va 2: (8 + 2) + 15 = 10 + 15 = <b>25</b>.', 'Числа-друзья 8 и 2: (8 + 2) + 15 = 10 + 15 = <b>25</b>.', 'Friendly numbers 8 and 2: (8 + 2) + 15 = 10 + 15 = <b>25</b>.') },
+      { q: L('7 + 9 + 3 + 1 = ?', '7 + 9 + 3 + 1 = ?', '7 + 9 + 3 + 1 = ?'), s: L('Ikki juft do‘st son: (7 + 3) + (9 + 1) = 10 + 10 = <b>20</b>.', 'Две пары друзей: (7 + 3) + (9 + 1) = 10 + 10 = <b>20</b>.', 'Two pairs of friends: (7 + 3) + (9 + 1) = 10 + 10 = <b>20</b>.') }
+    ] },
+    { kind: 'example', h: L('Yana namunalar: xossani taniymiz', 'Ещё примеры: узнаём свойство', 'More examples: name the property'), p: [
+      L('Endi teskari vazifa: yozuvga qarab, qaysi xossa ishlatilganini aniqlaymiz. Buning uchun ikki tomonni diqqat bilan solishtiramiz: sonlar o‘rni almashganmi, qavslar ko‘chganmi yoki nol ishtirok etganmi? Xossaning nomini bilish — uni to‘g‘ri ishlatishning birinchi qadami.', 'Теперь обратная задача: по записи определим, какое свойство использовано. Для этого внимательно сравним обе части: поменялись ли числа местами, переместились ли скобки, участвует ли ноль? Знать название свойства — первый шаг к тому, чтобы правильно им пользоваться.', 'Now the reverse task: look at a statement and decide which property is being used. Compare both sides carefully: have the numbers swapped places, have the brackets moved, or is zero involved? Knowing a property’s name is the first step to using it correctly.')
+    ], ex: [
+      { q: L('6 + 9 = 9 + 6 — qaysi xossa?', '6 + 9 = 9 + 6 — какое свойство?', '6 + 9 = 9 + 6: which property?'), s: L('Sonlar o‘rni almashgan — <b>o‘rin almashtirish xossasi</b>.', 'Числа поменялись местами — <b>переместительное свойство</b>.', 'The numbers swapped places: the <b>swapping (commutative) property</b>.') },
+      { q: L('(4 + 5) + 5 = 4 + (5 + 5) — qaysi xossa?', '(4 + 5) + 5 = 4 + (5 + 5) — какое свойство?', '(4 + 5) + 5 = 4 + (5 + 5): which property?'), s: L('Sonlar o‘sha joyda, faqat qavs ko‘chgan — <b>guruhlash xossasi</b>.', 'Числа на месте, переместились только скобки — <b>сочетательное свойство</b>.', 'The numbers stay put; only the brackets moved: the <b>grouping (associative) property</b>.') },
+      { q: L('33 − 0 = 33 — qaysi xossa?', '33 − 0 = 33 — какое свойство?', '33 − 0 = 33: which property?'), s: L('<b>Nolni ayirish</b>: hech narsa olmasak, son o‘zgarmaydi.', '<b>Вычитание нуля</b>: ничего не взяли — число не изменилось.', '<b>Taking away zero</b>: take nothing and the number is unchanged.') }
+    ] },
+    { kind: 'table', h: L('Xossalar jadvali', 'Таблица свойств', 'Table of properties'), p: [
+      L('Barcha xossalarni bitta jadvalga yig‘amiz. Har bir qatorda xossaning nomi, harfli yozuvi va sonli misoli bor. Harfli yozuv xossa <b>har qanday</b> son uchun to‘g‘ri ekanini ko‘rsatadi.', 'Соберём все свойства в одну таблицу. В каждой строке — название свойства, буквенная запись и пример с числами. Буквенная запись показывает, что свойство верно для <b>любых</b> чисел.', 'Let’s collect all the properties in one table. Each row has the property’s name, its letter form and an example with numbers. The letter form shows the property is true for <b>any</b> numbers.')
+    ], table: { head: [L('Xossa', 'Свойство', 'Property'), L('Harflar bilan', 'Буквами', 'With letters'), L('Misol', 'Пример', 'Example')], rows: [
+      [L('o‘rin almashtirish', 'переместительное', 'swapping'), L('a + b = b + a', 'a + b = b + a', 'a + b = b + a'), L('4 + 9 = 9 + 4', '4 + 9 = 9 + 4', '4 + 9 = 9 + 4')],
+      [L('guruhlash', 'сочетательное', 'grouping'), L('(a + b) + c = a + (b + c)', '(a + b) + c = a + (b + c)', '(a + b) + c = a + (b + c)'), L('(2 + 8) + 5 = 2 + (8 + 5)', '(2 + 8) + 5 = 2 + (8 + 5)', '(2 + 8) + 5 = 2 + (8 + 5)')],
+      [L('nolni qo‘shish', 'прибавление нуля', 'adding zero'), L('a + 0 = a', 'a + 0 = a', 'a + 0 = a'), L('16 + 0 = 16', '16 + 0 = 16', '16 + 0 = 16')],
+      [L('nolni ayirish', 'вычитание нуля', 'taking away zero'), L('a − 0 = a', 'a − 0 = a', 'a − 0 = a'), L('16 − 0 = 16', '16 − 0 = 16', '16 − 0 = 16')],
+      [L('o‘zidan ayirish', 'вычитание самого себя', 'taking a number from itself'), L('a − a = 0', 'a − a = 0', 'a − a = 0'), L('16 − 16 = 0', '16 − 16 = 0', '16 − 16 = 0')]
+    ] }, after: [
+      L('Jadvalni daftaringizga ko‘chiring va har bir xossaga o‘zingiz yana bitta misol o‘ylab toping.', 'Перепиши таблицу в тетрадь и придумай к каждому свойству ещё один свой пример.', 'Copy the table into your notebook and make up one more example of your own for each property.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Xossalardan foydalanganda ehtiyot bo‘ling:', 'Пользуясь свойствами, будь внимателен:', 'Be careful when using the properties:')
+    ], list: [
+      L('<b>Ayirishda o‘rin almashtirish.</b> 10 − 3 ≠ 3 − 10! O‘rin almashtirish xossasi faqat qo‘shishga tegishli.', '<b>Переставлять числа при вычитании.</b> 10 − 3 ≠ 3 − 10! Переместительное свойство — только для сложения.', '<b>Swapping in subtraction.</b> 10 − 3 is not 3 − 10! The swapping property is only for adding.'),
+      L('<b>a + 0 va a − a ni chalkashtirish.</b> 5 + 0 = 5, lekin 5 − 5 = 0.', '<b>Путать a + 0 и a − a.</b> 5 + 0 = 5, а 5 − 5 = 0.', '<b>Mixing up a + 0 and a − a.</b> 5 + 0 = 5, but 5 − 5 = 0.'),
+      L('<b>Nolni qo‘shganda sonni nolga aylantirish.</b> 27 + 0 = 0 emas! Nol qo‘shish hech narsani o‘zgartirmaydi.', '<b>Думать, что с нулём число становится нулём.</b> 27 + 0 — не 0! Прибавление нуля ничего не меняет.', '<b>Thinking adding zero makes zero.</b> 27 + 0 is not 0! Adding zero changes nothing.'),
+      L('<b>Sonni tushirib qoldirish.</b> Guruhlash paytida bitta sonni unutish. Oxirida hamma sonlar ishlatilganini tekshiring.', '<b>Потерять число.</b> При группировке забыть одно число. В конце проверь, что использованы все числа.', '<b>Losing a number.</b> Forgetting one number while grouping. At the end, check that every number was used.')
+    ], after: [
+      L('Tekshirish usuli: misolni ikki xil yo‘l bilan hisoblang — oddiy tartibda va xossa yordamida. Javoblar bir xil chiqsa, hammasi to‘g‘ri!', 'Способ проверки: посчитай пример двумя путями — по порядку и с помощью свойства. Если ответы совпали — всё верно!', 'A way to check: work the sum out two ways, in order and using a property. If the answers match, it’s all correct!')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Bozorda.</b> Buvim 7 ta pomidor, 12 ta bodring va 3 ta qalampir oldi. Sotuvchi tez hisoblaydi: 7 + 3 = 10, 10 + 12 = 22 ta sabzavot.', '<b>На базаре.</b> Бабушка купила 7 помидоров, 12 огурцов и 3 перца. Продавец быстро считает: 7 + 3 = 10, 10 + 12 = 22 овоща.', '<b>At the market.</b> Grandma bought 7 tomatoes, 12 cucumbers and 3 peppers. The seller adds quickly: 7 + 3 = 10, 10 + 12 = 22 vegetables.'),
+      L('<b>O‘yinda.</b> Uch raundda 6, 8 va 4 ochko to‘pladingiz. Aqlli hisob: 6 + 4 = 10, 10 + 8 = 18 ochko.', '<b>В игре.</b> За три раунда ты набрал 6, 8 и 4 очка. Умный счёт: 6 + 4 = 10, 10 + 8 = 18 очков.', '<b>In a game.</b> In three rounds you scored 6, 8 and 4 points. Clever counting: 6 + 4 = 10, 10 + 8 = 18 points.'),
+      L('<b>Uyda.</b> Stolda 15 ta konfet bor edi, hammasi yeyildi: 15 − 15 = 0. Hech narsa qolmadi! Agar hech kim konfet olmasa: 15 − 0 = 15.', '<b>Дома.</b> На столе было 15 конфет, все съели: 15 − 15 = 0. Ничего не осталось! А если никто не взял: 15 − 0 = 15.', '<b>At home.</b> There were 15 sweets on the table and all were eaten: 15 − 15 = 0. None left! If nobody took any: 15 − 0 = 15.'),
+      L('<b>Xarid qilishda.</b> Do‘kon kassasida narsalarni qaysi tartibda qo‘yishingiz muhim emas — umumiy narx baribir bir xil chiqadi. Bu o‘rin almashtirish xossasi!', '<b>При покупках.</b> На кассе неважно, в каком порядке выкладывать товары — общая цена будет одинаковой. Это переместительное свойство!', '<b>When shopping.</b> At the till it doesn’t matter in what order you put your things down: the total price is the same. That’s the swapping property!')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Yosh nemis matematigi <b>Karl Gauss</b> bolaligida 1 dan 100 gacha bo‘lgan sonlarni bir necha daqiqada qo‘shgan: u 1 + 100, 2 + 99, 3 + 98… juftlarini tuzgan. Har bir juft 101 ga teng bo‘lgan!', 'Немецкий математик <b>Карл Гаусс</b> в детстве за несколько минут сложил все числа от 1 до 100: он составил пары 1 + 100, 2 + 99, 3 + 98… Каждая пара давала 101!', 'As a boy, the German mathematician <b>Carl Gauss</b> added all the numbers from 1 to 100 in a few minutes: he made pairs 1 + 100, 2 + 99, 3 + 98… Each pair made 101!'),
+      L('Nol — juft son. U na musbat, na manfiy.', 'Ноль — чётное число. Он ни положительный, ни отрицательный.', 'Zero is an even number. It is neither positive nor negative.'),
+      L('Kalkulyator ichidagi kichik kompyuter ham xossalardan foydalanib, tezroq hisoblaydi.', 'Маленький компьютер внутри калькулятора тоже пользуется свойствами, чтобы считать быстрее.', 'The tiny computer inside a calculator uses these properties too, to work faster.')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Do‘st sonlarni toping va qulay usulda hisoblang.', 'Найди числа-друзья и посчитай удобным способом.', 'Find the friendly numbers and work it out the easy way.')
+    ], list: [
+      L('6 + 23 + 4 = ?', '6 + 23 + 4 = ?', '6 + 23 + 4 = ?'),
+      L('9 + 5 + 1 + 5 = ?', '9 + 5 + 1 + 5 = ?', '9 + 5 + 1 + 5 = ?'),
+      L('58 − 0 = ? va 58 − 58 = ?', '58 − 0 = ? и 58 − 58 = ?', '58 − 0 = ? and 58 − 58 = ?')
+    ], after: [
+      L('Javoblar: 1) 10 + 23 = 33. 2) 10 + 10 = 20. 3) 58 va 0.', 'Ответы: 1) 10 + 23 = 33. 2) 10 + 10 = 20. 3) 58 и 0.', 'Answers: 1) 10 + 23 = 33. 2) 10 + 10 = 20. 3) 58 and 0.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>a + b = b + a</b> — o‘rin almashtirish (faqat qo‘shishda!).', '<b>a + b = b + a</b> — переместительное (только для сложения!).', '<b>a + b = b + a</b> — swapping (only for adding!).'),
+      L('<b>(a + b) + c = a + (b + c)</b> — guruhlash.', '<b>(a + b) + c = a + (b + c)</b> — сочетательное.', '<b>(a + b) + c = a + (b + c)</b> — grouping.'),
+      L('<b>a + 0 = a</b>, <b>a − 0 = a</b>, <b>a − a = 0</b>.', '<b>a + 0 = a</b>, <b>a − 0 = a</b>, <b>a − a = 0</b>.', '<b>a + 0 = a</b>, <b>a − 0 = a</b>, <b>a − a = 0</b>.'),
+      L('Do‘st sonlar (birga 10) — tez hisoblash siri.', 'Числа-друзья (вместе 10) — секрет быстрого счёта.', 'Friendly numbers (making 10) are the secret of fast counting.'),
+      L('Nolni hind olimlari kashf etgan, Al-Xorazmiy esa dunyoga tanitgan.', 'Ноль открыли индийские учёные, а аль-Хорезми познакомил с ним мир.', 'Indian scholars discovered zero, and al-Khwarizmi introduced it to the world.')
+    ] }
+  ] });
+})(this);
+(function (root) { 'use strict'; var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '1-4';
+
+  // ---------- t13. Rim raqamlari ----------
+  T.add(P, 't13', { sections: [
+    { kind: 'intro', h: L('Buvimning soati', 'Бабушкины часы', 'Grandma’s clock'), p: [
+      L('Buvimning mehmonxonasida devorda eski, chiroyli soat osig‘liq turadi. Bir kuni Bobur soatga qarab hayron bo‘ldi: unda bizning odatiy 1, 2, 3 raqamlari yo‘q, o‘rniga qandaydir harflar — I, II, III, IV, V… yozilgan! «Buvijon, bu qanday raqamlar?» — so‘radi u. Buvim jilmayib javob berdi: «Bu — <b>Rim raqamlari</b>, bolam. Ular ikki ming yildan ham qadimiyroq».', 'В гостиной у бабушки на стене висят старинные красивые часы. Однажды Бобур посмотрел на них и удивился: на них нет привычных цифр 1, 2, 3, а вместо них какие-то буквы — I, II, III, IV, V… «Бабушка, что это за цифры?» — спросил он. Бабушка улыбнулась: «Это <b>римские цифры</b>, внучек. Им больше двух тысяч лет».', 'On the wall of Grandma’s sitting room hangs a beautiful old clock. One day Bobur looked at it and was puzzled: it didn’t have the usual 1, 2, 3, but letters instead: I, II, III, IV, V… “Grandma, what numbers are these?” he asked. Grandma smiled: “These are <b>Roman numerals</b>, dear. They are more than two thousand years old.”'),
+      L('Rim raqamlarini bugun ham ko‘p joyda uchratish mumkin: soatlarda, kitob boblarida, asrlarni yozishda (XXI asr), sport musobaqalarida. Shuning uchun ularni o‘qiy olish juda foydali.', 'Римские цифры и сегодня встречаются во многих местах: на часах, в главах книг, при записи веков (XXI век), на спортивных соревнованиях. Поэтому уметь их читать очень полезно.', 'You can still see Roman numerals in many places today: on clocks, in book chapters, when writing centuries (the 21st century is XXI), and at sports events. So it is very useful to be able to read them.'),
+      L('Bugun biz asosiy Rim raqamlarini o‘rganamiz va ulardan sonlar yasashning ikki oddiy qoidasini bilib olamiz. Rim raqamlari — bu bir xil sehrli jumboq!', 'Сегодня мы выучим основные римские цифры и узнаем два простых правила, как составлять из них числа. Римские цифры — это настоящая волшебная головоломка!', 'Today we learn the main Roman numerals and two simple rules for building numbers with them. Roman numerals are a real magic puzzle!')
+    ] },
+    { kind: 'def', h: L('Asosiy Rim raqamlari', 'Основные римские цифры', 'The main Roman numerals'), p: [
+      L('Rim raqamlari lotin alifbosining bosh harflari bilan yoziladi. Bizga hozircha to‘rttasi kerak:', 'Римские цифры записываются заглавными латинскими буквами. Нам пока нужны четыре:', 'Roman numerals are written with capital Latin letters. For now we need four of them:')
+    ], list: [
+      L('<b>I</b> = 1 — bitta tayoqcha, xuddi bitta barmoq.', '<b>I</b> = 1 — одна палочка, как один палец.', '<b>I</b> = 1 — one stick, like one finger.'),
+      L('<b>V</b> = 5 — ochiq kaftga o‘xshaydi: bosh barmoq va qolgan to‘rt barmoq.', '<b>V</b> = 5 — похожа на раскрытую ладонь: большой палец и остальные четыре.', '<b>V</b> = 5 — like an open hand: the thumb and the other four fingers.'),
+      L('<b>X</b> = 10 — ikkita V ning uchma-uch qo‘yilgani, ya’ni ikki kaft.', '<b>X</b> = 10 — две V, поставленные вершинами друг к другу, то есть две ладони.', '<b>X</b> = 10 — two V’s joined point to point, that is, two hands.'),
+      L('<b>L</b> = 50.', '<b>L</b> = 50.', '<b>L</b> = 50.')
+    ], after: [
+      L('Katta sonlar uchun yana harflar bor: <b>C</b> = 100, <b>D</b> = 500, <b>M</b> = 1000. Ular bilan yuqori sinflarda tanishamiz.', 'Для больших чисел есть ещё буквы: <b>C</b> = 100, <b>D</b> = 500, <b>M</b> = 1000. С ними познакомимся в старших классах.', 'There are more letters for big numbers: <b>C</b> = 100, <b>D</b> = 500, <b>M</b> = 1000. We will meet them in higher grades.'),
+      L('Muhim farq: Rim raqamlarida <b>nol yo‘q</b>! Va raqamning qiymati uning joyiga qarab o‘zgarmaydi: X har doim 10.', 'Важное отличие: в римских цифрах <b>нет нуля</b>! И значение цифры не зависит от её места: X всегда 10.', 'An important difference: Roman numerals have <b>no zero</b>! And a numeral’s value does not depend on its place: X is always 10.')
+    ] },
+    { kind: 'history', h: L('Rim raqamlari tarixi', 'История римских цифр', 'The history of Roman numerals'), p: [
+      L('Qadimgi Rim — Italiyada joylashgan buyuk davlat bo‘lgan. Rimliklar taxminan 2500 yil oldin sonlarni yozish uchun shu belgilarni ishlata boshlashgan. Olimlar ular dastlab chorvadorlarning yog‘ochga o‘yib qo‘ygan sanoq belgilaridan kelib chiqqan deb hisoblashadi: har bir qo‘y uchun bitta chiziq (I), har beshinchisi uchun maxsus belgi (V).', 'Древний Рим — великое государство в Италии. Римляне начали пользоваться этими знаками для записи чисел около 2500 лет назад. Учёные считают, что они произошли от зарубок пастухов на палках: одна черта за каждую овцу (I), особый знак за каждую пятую (V).', 'Ancient Rome was a great state in Italy. The Romans began using these signs to write numbers about 2,500 years ago. Scholars think they grew out of the tally marks shepherds carved on sticks: one line for each sheep (I) and a special mark for every fifth one (V).'),
+      L('Rim raqamlari Yevropada ming yildan ortiq asosiy raqamlar bo‘lgan. Lekin ular bilan hisoblash juda qiyin edi — masalan, XXXVIII + XLIV ni ustun qilib qo‘shib bo‘lmaydi!', 'Римские цифры больше тысячи лет были главными в Европе. Но считать ими было очень трудно — например, XXXVIII + XLIV не сложишь столбиком!', 'Roman numerals were the main numerals in Europe for over a thousand years. But calculating with them was very hard: you can’t add XXXVIII + XLIV in a column!'),
+      L('Keyin Yevropaga hind-arab raqamlari keldi. Bunda bizning yurtdoshimiz <b>Al-Xorazmiy</b>ning kitobi katta rol o‘ynadi. 1202 yilda italiyalik <b>Fibonachchi</b> ham yangi raqamlar haqida kitob yozdi. Asta-sekin hamma qulay 0–9 raqamlariga o‘tdi, Rim raqamlari esa chiroyli bezak sifatida qoldi.', 'Потом в Европу пришли индо-арабские цифры. Большую роль в этом сыграла книга нашего земляка <b>аль-Хорезми</b>. В 1202 году итальянец <b>Фибоначчи</b> тоже написал книгу о новых цифрах. Постепенно все перешли на удобные цифры 0–9, а римские остались как красивое украшение.', 'Then Hindu-Arabic numerals arrived in Europe, with the book by our fellow countryman <b>al-Khwarizmi</b> playing a big part. In 1202 the Italian <b>Fibonacci</b> also wrote a book about the new numerals. Little by little everyone switched to the handy digits 0–9, and Roman numerals stayed on as a beautiful decoration.')
+    ] },
+    { kind: 'rule', h: L('Ikki oltin qoida', 'Два золотых правила', 'Two golden rules'), p: [
+      L('Rim raqamlaridan son yasash uchun ikkita qoidani bilish yetarli:', 'Чтобы составлять числа из римских цифр, достаточно знать два правила:', 'To build numbers from Roman numerals, you only need two rules:')
+    ], list: [
+      L('<b>Qo‘shish qoidasi.</b> Kichik raqam katta raqamdan <b>o‘ngda</b> tursa, ular <b>qo‘shiladi</b>: VI = 5 + 1 = 6, XII = 10 + 1 + 1 = 12, XV = 10 + 5 = 15.', '<b>Правило сложения.</b> Если меньшая цифра стоит <b>справа</b> от большей, они <b>складываются</b>: VI = 5 + 1 = 6, XII = 10 + 1 + 1 = 12, XV = 10 + 5 = 15.', '<b>The adding rule.</b> If a smaller numeral is to the <b>right</b> of a bigger one, they are <b>added</b>: VI = 5 + 1 = 6, XII = 10 + 1 + 1 = 12, XV = 10 + 5 = 15.'),
+      L('<b>Ayirish qoidasi.</b> Kichik raqam katta raqamdan <b>chapda</b> tursa, u <b>ayriladi</b>: IV = 5 − 1 = 4, IX = 10 − 1 = 9, XL = 50 − 10 = 40.', '<b>Правило вычитания.</b> Если меньшая цифра стоит <b>слева</b> от большей, она <b>вычитается</b>: IV = 5 − 1 = 4, IX = 10 − 1 = 9, XL = 50 − 10 = 40.', '<b>The subtracting rule.</b> If a smaller numeral is to the <b>left</b> of a bigger one, it is <b>subtracted</b>: IV = 5 − 1 = 4, IX = 10 − 1 = 9, XL = 50 − 10 = 40.')
+    ], after: [
+      L('Yana bir qoida: bir xil raqam ketma-ket <b>uch martadan ko‘p</b> yozilmaydi. Shuning uchun 4 ni IIII emas, IV deb yozamiz; 9 ni VIIII emas, IX deb yozamiz.', 'Ещё одно правило: одна и та же цифра подряд пишется <b>не больше трёх раз</b>. Поэтому 4 пишем не IIII, а IV; 9 — не VIIII, а IX.', 'One more rule: the same numeral is written <b>no more than three times</b> in a row. So 4 is IV, not IIII; and 9 is IX, not VIIII.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: Rim sonini o‘qiymiz', 'Шаг за шагом: читаем римское число', 'Step by step: reading a Roman number'), p: [
+      L('Masalan, XIV sonini o‘qiymiz:', 'Например, прочитаем число XIV:', 'For example, let’s read XIV:')
+    ], list: [
+      L('1-qadam. Har bir harfning qiymatini yozing: X = 10, I = 1, V = 5.', 'Шаг 1. Запиши значение каждой буквы: X = 10, I = 1, V = 5.', 'Step 1. Write the value of each letter: X = 10, I = 1, V = 5.'),
+      L('2-qadam. Chapdan o‘ngga qarang: kichik raqam kattadan oldin turibdimi? I (1) V (5) dan oldin — demak, IV juft: 5 − 1 = 4.', 'Шаг 2. Смотри слева направо: стоит ли меньшая цифра перед большей? I (1) перед V (5) — значит, пара IV: 5 − 1 = 4.', 'Step 2. Look from left to right: is a smaller numeral before a bigger one? I (1) is before V (5), so the pair IV is 5 − 1 = 4.'),
+      L('3-qadam. Qolganlarini qo‘shing: X + IV = 10 + 4.', 'Шаг 3. Остальное сложи: X + IV = 10 + 4.', 'Step 3. Add the rest: X + IV = 10 + 4.'),
+      L('4-qadam. Javob: XIV = 14.', 'Шаг 4. Ответ: XIV = 14.', 'Step 4. Answer: XIV = 14.')
+    ], after: [
+      L('Sonni Rim raqamida <b>yozish</b> uchun esa uni o‘nliklar va birliklarga ajratamiz: 23 = 20 + 3 = XX + III = XXIII.', 'А чтобы <b>записать</b> число римскими цифрами, разбиваем его на десятки и единицы: 23 = 20 + 3 = XX + III = XXIII.', 'To <b>write</b> a number in Roman numerals, split it into tens and ones: 23 = 20 + 3 = XX + III = XXIII.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har birida qo‘shish yoki ayirish qoidasini qo‘llaymiz.', 'В каждом применяем правило сложения или вычитания.', 'In each one we use the adding or subtracting rule.')
+    ], ex: [
+      { q: L('IX = ?', 'IX = ?', 'IX = ?'), s: L('I (1) X (10) dan chapda — ayiramiz: 10 − 1 = <b>9</b>.', 'I (1) слева от X (10) — вычитаем: 10 − 1 = <b>9</b>.', 'I (1) is left of X (10), so subtract: 10 − 1 = <b>9</b>.') },
+      { q: L('XII = ?', 'XII = ?', 'XII = ?'), s: L('Kichiklar o‘ngda — qo‘shamiz: 10 + 1 + 1 = <b>12</b>.', 'Меньшие справа — складываем: 10 + 1 + 1 = <b>12</b>.', 'The smaller ones are on the right, so add: 10 + 1 + 1 = <b>12</b>.') },
+      { q: L('17 ni Rim raqamida yozing.', 'Запиши 17 римскими цифрами.', 'Write 17 in Roman numerals.'), s: L('17 = 10 + 5 + 2 = X + V + II = <b>XVII</b>.', '17 = 10 + 5 + 2 = X + V + II = <b>XVII</b>.', '17 = 10 + 5 + 2 = X + V + II = <b>XVII</b>.') },
+      { q: L('XXIV = ?', 'XXIV = ?', 'XXIV = ?'), s: L('XX = 20, IV = 4. Jami: 20 + 4 = <b>24</b>.', 'XX = 20, IV = 4. Всего: 20 + 4 = <b>24</b>.', 'XX = 20, IV = 4. Total: 20 + 4 = <b>24</b>.') }
+    ] },
+    { kind: 'example', h: L('Yana namunalar: soat va asrlar', 'Ещё примеры: часы и века', 'More examples: clocks and centuries'), p: [
+      L('Endi Rim raqamlarini hayotda o‘qishni mashq qilamiz. Buvimning soatiga qaytamiz: kichik mil qaysi Rim raqamini ko‘rsatsa, soat shuncha bo‘ladi. Tarix kitobida esa asr raqami ko‘pincha Rim raqami bilan yoziladi — uni oddiy songa aylantirib o‘qiymiz.', 'Теперь потренируемся читать римские цифры в жизни. Вернёмся к бабушкиным часам: на какую римскую цифру показывает маленькая стрелка, столько и часов. А в учебнике истории номер века часто пишут римскими цифрами — переводим его в обычное число и читаем.', 'Now let’s practise reading Roman numerals in real life. Back to Grandma’s clock: whichever Roman numeral the short hand points to, that is the hour. And in a history book, the century is often written in Roman numerals: we turn it into an ordinary number and read it.')
+    ], ex: [
+      { q: L('Soatning kichik mili VII ni, katta mili XII ni ko‘rsatmoqda. Soat necha?', 'Маленькая стрелка показывает на VII, большая на XII. Который час?', 'The short hand points to VII and the long hand to XII. What time is it?'), s: L('VII = 5 + 2 = 7. Katta mil XII da — to‘liq soat. Javob: <b>soat 7:00</b>.', 'VII = 5 + 2 = 7. Большая стрелка на XII — ровно. Ответ: <b>7:00</b>.', 'VII = 5 + 2 = 7. The long hand on XII means o’clock. Answer: <b>7 o’clock</b>.') },
+      { q: L('Ulug‘bek XV asrda yashagan. Bu nechanchi asr?', 'Улугбек жил в XV веке. Какой это век?', 'Ulugbek lived in century XV. Which century is that?'), s: L('XV = 10 + 5 = 15. Javob: <b>15-asr</b>.', 'XV = 10 + 5 = 15. Ответ: <b>15-й век</b>.', 'XV = 10 + 5 = 15. Answer: <b>the 15th century</b>.') },
+      { q: L('Qaysi biri katta: XIV yoki XVI?', 'Что больше: XIV или XVI?', 'Which is bigger: XIV or XVI?'), s: L('XIV = 14, XVI = 16. 14 &lt; 16, demak <b>XVI katta</b>.', 'XIV = 14, XVI = 16. 14 &lt; 16, значит <b>XVI больше</b>.', 'XIV = 14, XVI = 16. 14 &lt; 16, so <b>XVI is bigger</b>.') }
+    ] },
+    { kind: 'table', h: L('1 dan 20 gacha', 'От 1 до 20', 'From 1 to 20'), p: [
+      L('Jadvalda 1 dan 12 gacha va bir nechta katta sonlar berilgan. Unda qonuniyatni toping: har 5 va 10 da yangi harf paydo bo‘ladi.', 'В таблице числа от 1 до 12 и несколько больших. Найди закономерность: на 5 и 10 появляется новая буква.', 'The table shows 1 to 12 and a few bigger numbers. Spot the pattern: a new letter appears at 5 and at 10.')
+    ], table: { head: [L('Son', 'Число', 'Number'), L('Rim', 'Римское', 'Roman'), L('Son', 'Число', 'Number'), L('Rim', 'Римское', 'Roman')], rows: [
+      ['1', 'I', '7', 'VII'], ['2', 'II', '8', 'VIII'], ['3', 'III', '9', 'IX'], ['4', 'IV', '10', 'X'],
+      ['5', 'V', '11', 'XI'], ['6', 'VI', '12', 'XII'], ['15', 'XV', '20', 'XX'], ['19', 'XIX', '50', 'L']
+    ] }, after: [
+      L('Soat siferblatida aynan I dan XII gacha raqamlar bor. Uyda Rim raqamli soat bormi? Bor bo‘lsa, unda IV o‘rniga ba’zan IIII yozilganini ko‘rishingiz mumkin — bu qadimiy soatsozlar an’anasi.', 'На циферблате часов как раз цифры от I до XII. Есть ли дома часы с римскими цифрами? Если есть, можешь заметить, что вместо IV там иногда пишут IIII — это старинная традиция часовщиков.', 'A clock face has exactly the numerals I to XII. Do you have a clock with Roman numerals at home? If so, you may notice IIII instead of IV: an old clockmakers’ tradition.')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Rim raqamlarida ko‘p uchraydigan xatolar:', 'Частые ошибки с римскими цифрами:', 'Common mistakes with Roman numerals:')
+    ], list: [
+      L('<b>IV va VI ni chalkashtirish.</b> IV = 4 (bir kam besh), VI = 6 (bir ko‘p besh). Kichik raqam qayerda turganiga qarang!', '<b>Путать IV и VI.</b> IV = 4 (пять без одного), VI = 6 (пять и один). Смотри, где стоит меньшая цифра!', '<b>Mixing up IV and VI.</b> IV = 4 (one before five), VI = 6 (one after five). Look where the smaller numeral is!'),
+      L('<b>IIII deb yozish.</b> Bir xil raqam uch martadan ko‘p yozilmaydi: 4 = IV.', '<b>Писать IIII.</b> Одна цифра пишется не больше трёх раз подряд: 4 = IV.', '<b>Writing IIII.</b> No numeral is written more than three times in a row: 4 = IV.'),
+      L('<b>Harflarni oddiy sonlardek o‘qish.</b> XI ni «10 va 1, ya’ni 101» deb o‘qish noto‘g‘ri. XI = 10 + 1 = 11.', '<b>Читать буквы как обычные цифры.</b> Читать XI как «10 и 1, то есть 101» — неверно. XI = 10 + 1 = 11.', '<b>Reading letters like ordinary digits.</b> Reading XI as “10 then 1, so 101” is wrong. XI = 10 + 1 = 11.'),
+      L('<b>Nolni qidirish.</b> Rim raqamlarida nol yo‘q — 10 ni «I0» deb yozib bo‘lmaydi, u X.', '<b>Искать ноль.</b> В римских цифрах нет ноля — 10 нельзя записать «I0», это X.', '<b>Looking for zero.</b> Roman numerals have no zero: 10 can’t be written “I0”; it is X.')
+    ], after: [
+      L('Eslab qolish uchun qo‘l bilan o‘ynang: bitta barmoq — I, ochiq kaft — V, ikki kaftni kesishtiring — X. Qo‘llaringiz har doim yoningizda!', 'Чтобы запомнить, поиграй руками: один палец — I, раскрытая ладонь — V, скрести две ладони — X. Руки всегда с тобой!', 'To remember, play with your hands: one finger is I, an open hand is V, two crossed hands are X. Your hands are always with you!')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda uchraydi?', 'Где встречаются в жизни?', 'Where do we see them?'), p: [
+      L('<b>Soatlarda.</b> Ko‘plab klassik soatlar, masalan Londondagi mashhur Big Ben minorasidagi soat, Rim raqamlari bilan bezatilgan.', '<b>На часах.</b> Многие классические часы, например знаменитые часы на башне Биг-Бен в Лондоне, украшены римскими цифрами.', '<b>On clocks.</b> Many classic clocks, such as the famous clock on the Big Ben tower in London, use Roman numerals.'),
+      L('<b>Asrlarni yozishda.</b> Biz XXI asrda yashaymiz. Amir Temur XIV asrda tug‘ilgan, Ulug‘bek esa XV asrda yashagan. Tarix kitoblarida asrlar ko‘pincha Rim raqamlari bilan yoziladi.', '<b>При записи веков.</b> Мы живём в XXI веке. Амир Темур родился в XIV веке, а Улугбек жил в XV веке. В учебниках истории века часто пишут римскими цифрами.', '<b>For centuries.</b> We live in the 21st century, written XXI. Amir Temur was born in the 14th century (XIV), and Ulugbek lived in the 15th (XV). History books often write centuries in Roman numerals.'),
+      L('<b>Kitoblarda.</b> Kitob boblari va qismlari ko‘pincha I, II, III deb raqamlanadi. Hatto bizning darsligimiz ham «IV qism»!', '<b>В книгах.</b> Главы и части книг часто нумеруют I, II, III. Даже наш учебник — «часть IV»!', '<b>In books.</b> Chapters and parts of books are often numbered I, II, III. Even our textbook is “Part IV”!'),
+      L('<b>Sportda.</b> Olimpiya o‘yinlari ham ba’zan Rim raqamlari bilan belgilanadi — masalan, «XXXIII Olimpiya o‘yinlari».', '<b>В спорте.</b> Олимпийские игры иногда тоже обозначают римскими цифрами — например, «XXXIII Олимпийские игры».', '<b>In sport.</b> The Olympic Games are sometimes numbered in Roman numerals too, for example “the XXXIII Olympic Games”.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Rim raqamlari bilan yozilgan eng uzun sonlardan biri — 3888: MMMDCCCLXXXVIII. Unda 15 ta harf bor!', 'Одно из самых длинных чисел в римской записи — 3888: MMMDCCCLXXXVIII. В нём 15 букв!', 'One of the longest numbers in Roman numerals is 3888: MMMDCCCLXXXVIII. It has 15 letters!'),
+      L('Rimliklar ko‘paytirish va bo‘lishni abak — toshchali hisob taxtasi yordamida bajarishgan.', 'Римляне умножали и делили с помощью абака — счётной доски с камешками.', 'The Romans multiplied and divided using an abacus, a counting board with pebbles.'),
+      L('Lotincha «calculus» — «toshcha» degani. Bugungi «kalkulyator» so‘zi shundan kelib chiqqan!', 'Латинское «calculus» значит «камешек». Отсюда и слово «калькулятор»!', 'The Latin word “calculus” means “pebble”. That is where the word “calculator” comes from!')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Ikki oltin qoidani eslang va yeching.', 'Вспомни два золотых правила и реши.', 'Remember the two golden rules and solve.')
+    ], list: [
+      L('VIII = ?', 'VIII = ?', 'VIII = ?'),
+      L('XIX = ?', 'XIX = ?', 'XIX = ?'),
+      L('Yoshingizni Rim raqamida yozing.', 'Запиши свой возраст римскими цифрами.', 'Write your age in Roman numerals.'),
+      L('Ikkita gugurt cho‘pidan qanday Rim raqamlarini yasash mumkin?', 'Какие римские цифры можно сложить из двух спичек?', 'Which Roman numerals can you make from two matchsticks?')
+    ], after: [
+      L('Javoblar: 1) 5 + 3 = 8. 2) 10 + 9 = 19. 3) 7 yosh — VII. 4) II, V, X.', 'Ответы: 1) 5 + 3 = 8. 2) 10 + 9 = 19. 3) 7 лет — VII. 4) II, V, X.', 'Answers: 1) 5 + 3 = 8. 2) 10 + 9 = 19. 3) Age 7 is VII. 4) II, V, X.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>I</b> = 1, <b>V</b> = 5, <b>X</b> = 10, <b>L</b> = 50.', '<b>I</b> = 1, <b>V</b> = 5, <b>X</b> = 10, <b>L</b> = 50.', '<b>I</b> = 1, <b>V</b> = 5, <b>X</b> = 10, <b>L</b> = 50.'),
+      L('Kichik raqam o‘ngda — <b>qo‘shiladi</b>: VI = 6.', 'Меньшая цифра справа — <b>прибавляется</b>: VI = 6.', 'Smaller numeral on the right is <b>added</b>: VI = 6.'),
+      L('Kichik raqam chapda — <b>ayriladi</b>: IV = 4.', 'Меньшая цифра слева — <b>вычитается</b>: IV = 4.', 'Smaller numeral on the left is <b>subtracted</b>: IV = 4.'),
+      L('Bir xil raqam uch martadan ko‘p yozilmaydi.', 'Одна цифра пишется подряд не больше трёх раз.', 'The same numeral is not written more than three times in a row.'),
+      L('Rim raqamlarida nol yo‘q.', 'В римских цифрах нет ноля.', 'Roman numerals have no zero.'),
+      L('Ular soatlarda, kitoblarda va asrlarni yozishda uchraydi.', 'Они встречаются на часах, в книгах и при записи веков.', 'They appear on clocks, in books and when writing centuries.')
+    ] }
+  ] });
+
+  // ---------- t14. Tenglamalar ----------
+  T.add(P, 't14', { sections: [
+    { kind: 'intro', h: L('Yashirin son', 'Спрятанное число', 'The hidden number'), p: [
+      L('Shahzod va singlisi Madina «yashirin son» o‘ynashdi. Shahzod qutichaga bir nechta konfet solib, uni yopdi. Keyin yoniga yana 5 ta konfet qo‘ydi va dedi: «Hammasi bo‘lib 12 ta konfet. Qutida nechta?» Madina o‘yladi: «Agar 12 tadan 5 tasini olsam, qutidagilar qoladi. 12 − 5 = 7. Qutida 7 ta!» Shahzod qutini ochdi — haqiqatan ham 7 ta konfet!', 'Шахзод и его сестрёнка Мадина играли в «спрятанное число». Шахзод положил в коробочку несколько конфет и закрыл её. Потом положил рядом ещё 5 конфет и сказал: «Всего 12 конфет. Сколько в коробке?» Мадина подумала: «Если из 12 убрать 5, останутся те, что в коробке. 12 − 5 = 7. В коробке 7!» Шахзод открыл коробку — и правда 7 конфет!', 'Shahzod and his little sister Madina played “hidden number”. Shahzod put some sweets in a little box and closed it. Then he put 5 more sweets beside it and said, “There are 12 sweets altogether. How many are in the box?” Madina thought: “If I take 5 away from 12, the ones in the box are left. 12 − 5 = 7. There are 7 in the box!” Shahzod opened the box, and there really were 7 sweets!'),
+      L('Madina hozirgina o‘zining birinchi <b>tenglamasi</b>ni yechdi! Matematikada qutini <b>x</b> harfi bilan belgilaymiz va yozamiz: x + 5 = 12. Bu — tenglama. Uni yechish — yashirin sonni topish demakdir.', 'Мадина только что решила своё первое <b>уравнение</b>! В математике коробку обозначают буквой <b>x</b> и пишут: x + 5 = 12. Это — уравнение. Решить его — значит найти спрятанное число.', 'Madina has just solved her first <b>equation</b>! In maths we write the box as the letter <b>x</b>: x + 5 = 12. That is an equation. Solving it means finding the hidden number.'),
+      L('Bugun biz tenglama nima ekanini, uning ildizini qanday topishni va javobni qanday tekshirishni o‘rganamiz. Bu — haqiqiy algebraning boshlanishi!', 'Сегодня мы узнаем, что такое уравнение, как найти его корень и как проверить ответ. Это — начало настоящей алгебры!', 'Today we learn what an equation is, how to find its root and how to check the answer. This is the beginning of real algebra!')
+    ] },
+    { kind: 'def', h: L('Tenglama va uning ildizi', 'Уравнение и его корень', 'An equation and its root'), p: [
+      L('<b>Tenglama</b> — noma’lum son harf bilan belgilangan tenglik. Masalan: x + 5 = 12, x − 4 = 10, 20 − x = 8.', '<b>Уравнение</b> — равенство, в котором неизвестное число обозначено буквой. Например: x + 5 = 12, x − 4 = 10, 20 − x = 8.', 'An <b>equation</b> is an equality in which an unknown number is written as a letter. For example: x + 5 = 12, x − 4 = 10, 20 − x = 8.'),
+      L('<b>Noma’lum</b> — biz topishimiz kerak bo‘lgan son. Ko‘pincha uni <b>x</b> harfi bilan belgilaymiz.', '<b>Неизвестное</b> — число, которое нужно найти. Чаще всего его обозначают буквой <b>x</b>.', 'The <b>unknown</b> is the number we need to find. We usually write it as the letter <b>x</b>.'),
+      L('<b>Tenglamaning ildizi</b> — x o‘rniga qo‘yganda tenglikni to‘g‘ri qiladigan son. x + 5 = 12 tenglamaning ildizi — 7, chunki 7 + 5 = 12.', '<b>Корень уравнения</b> — число, при подстановке которого вместо x равенство становится верным. Корень уравнения x + 5 = 12 — 7, потому что 7 + 5 = 12.', 'The <b>root</b> of an equation is the number that makes the equality true when put in place of x. The root of x + 5 = 12 is 7, because 7 + 5 = 12.'),
+      L('<b>Tenglamani yechish</b> — uning ildizini topish.', '<b>Решить уравнение</b> — значит найти его корень.', 'To <b>solve an equation</b> means to find its root.')
+    ], after: [
+      L('Ifoda va tenglamaning farqi: x + 5 — ifoda (=yo‘q), x + 5 = 12 — tenglama (= bor va x ni topish kerak).', 'Разница между выражением и уравнением: x + 5 — выражение (нет =), x + 5 = 12 — уравнение (есть =, и нужно найти x).', 'The difference between an expression and an equation: x + 5 is an expression (no =); x + 5 = 12 is an equation (it has = and we must find x).')
+    ] },
+    { kind: 'history', h: L('Tarixdan: algebraning otasi', 'Из истории: отец алгебры', 'From history: the father of algebra'), p: [
+      L('Tenglamalarni yechish san’ati juda qadimiy. Qadimgi Misrda, bundan 3600 yil oldin yozilgan <b>Rind papirusi</b>da «bir narsa va uning yarmi birga 15 ga teng; narsa qancha?» kabi masalalar bor. Misrliklar noma’lumni «aha» — «to‘da» deb atashgan.', 'Искусство решать уравнения очень древнее. В Древнем Египте в <b>папирусе Ринда</b>, написанном 3600 лет назад, есть задачи вроде: «Количество и его половина вместе дают 15; каково количество?» Египтяне называли неизвестное «аха» — «куча».', 'The art of solving equations is very old. In Ancient Egypt, the <b>Rhind Papyrus</b>, written 3,600 years ago, has problems like “a quantity and its half together make 15; what is the quantity?” The Egyptians called the unknown “aha”, meaning “heap”.'),
+      L('Ammo tenglamalarni yechishning aniq qoidalarini birinchi bo‘lib tartibli kitobga yozgan olim — bizning yurtdoshimiz <b>Muhammad al-Xorazmiy</b> (taxminan 780–850). Uning «Al-jabr val-muqobala» kitobi tenglamalarni bosqichma-bosqich yechishni o‘rgatgan. «Al-jabr» so‘zidan «algebra» kelib chiqqan, shuning uchun Xorazmiyni <b>algebraning otasi</b> deyishadi.', 'Но первым, кто записал чёткие правила решения уравнений в стройную книгу, был наш земляк <b>Мухаммад аль-Хорезми</b> (около 780–850). Его книга «Аль-джабр валь-мукабала» учила решать уравнения шаг за шагом. От слова «аль-джабр» произошло «алгебра», поэтому Хорезми называют <b>отцом алгебры</b>.', 'But the first scholar to set out clear rules for solving equations in an orderly book was our fellow countryman <b>Muhammad al-Khwarizmi</b> (about 780–850). His book “Al-jabr wa’l-muqabala” taught how to solve equations step by step. The word “al-jabr” gave us “algebra”, which is why al-Khwarizmi is called <b>the father of algebra</b>.'),
+      L('Xorazmiy kitobini yozishdan maqsad — odamlarga meros bo‘lish, savdo va yer o‘lchashdagi hisob-kitoblarda yordam berish edi. Demak, tenglamalar birinchi kundanoq hayotiy masalalar uchun yaratilgan!', 'Хорезми написал книгу, чтобы помочь людям в расчётах при разделе наследства, в торговле и измерении земли. Значит, уравнения с самого начала были созданы для жизненных задач!', 'Al-Khwarizmi wrote his book to help people with calculations for sharing inheritances, trading and measuring land. So equations were created for real-life problems from day one!')
+    ] },
+    { kind: 'rule', h: L('Tenglamani yechish qoidalari', 'Правила решения уравнений', 'Rules for solving equations'), p: [
+      L('Tenglamalarni yechish uchun «butun va qismlar» haqidagi bilimimizdan foydalanamiz. Uch xil tenglama va ularning qoidalari:', 'Для решения уравнений используем знания о «целом и частях». Три вида уравнений и их правила:', 'To solve equations we use what we know about “the whole and its parts”. Three kinds of equation and their rules:')
+    ], list: [
+      L('<b>x + b = c</b>. Noma’lum qo‘shiluvchi = yig‘indi − ma’lum qo‘shiluvchi. <b>x = c − b</b>. Masalan: x + 5 = 12 → x = 12 − 5 = 7.', '<b>x + b = c</b>. Неизвестное слагаемое = сумма − известное слагаемое. <b>x = c − b</b>. Например: x + 5 = 12 → x = 12 − 5 = 7.', '<b>x + b = c</b>. Unknown part = total − known part. <b>x = c − b</b>. Example: x + 5 = 12 → x = 12 − 5 = 7.'),
+      L('<b>x − b = c</b>. Noma’lum kamayuvchi = ayirma + ayriluvchi. <b>x = c + b</b>. Masalan: x − 4 = 10 → x = 10 + 4 = 14.', '<b>x − b = c</b>. Неизвестное уменьшаемое = разность + вычитаемое. <b>x = c + b</b>. Например: x − 4 = 10 → x = 10 + 4 = 14.', '<b>x − b = c</b>. The unknown starting number = what is left + what was taken. <b>x = c + b</b>. Example: x − 4 = 10 → x = 10 + 4 = 14.'),
+      L('<b>a − x = c</b>. Noma’lum ayriluvchi = kamayuvchi − ayirma. <b>x = a − c</b>. Masalan: 20 − x = 8 → x = 20 − 8 = 12.', '<b>a − x = c</b>. Неизвестное вычитаемое = уменьшаемое − разность. <b>x = a − c</b>. Например: 20 − x = 8 → x = 20 − 8 = 12.', '<b>a − x = c</b>. The unknown amount taken = starting number − what is left. <b>x = a − c</b>. Example: 20 − x = 8 → x = 20 − 8 = 12.')
+    ], after: [
+      L('Har doim o‘zingizga savol bering: «x — bu butunmi yoki bo‘lakmi?» Agar x butun bo‘lsa, bo‘laklarni <b>qo‘shamiz</b>. Agar x bo‘lak bo‘lsa, butundan boshqa bo‘lakni <b>ayiramiz</b>.', 'Всегда спрашивай себя: «x — это целое или часть?» Если x — целое, части <b>складываем</b>. Если x — часть, из целого <b>вычитаем</b> другую часть.', 'Always ask yourself: “Is x the whole or a part?” If x is the whole, we <b>add</b> the parts. If x is a part, we <b>subtract</b> the other part from the whole.')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam', 'Шаг за шагом', 'Step by step'), p: [
+      L('Har qanday tenglamani shu to‘rt qadamda yeching:', 'Любое уравнение решай в эти четыре шага:', 'Solve any equation in these four steps:')
+    ], list: [
+      L('1-qadam. Tenglamani o‘qing va x qaysi joyda turganini aniqlang.', 'Шаг 1. Прочитай уравнение и определи, где стоит x.', 'Step 1. Read the equation and see where x is.'),
+      L('2-qadam. x butunmi yoki bo‘lakmi? Kerakli qoidani tanlang.', 'Шаг 2. x — целое или часть? Выбери нужное правило.', 'Step 2. Is x the whole or a part? Choose the right rule.'),
+      L('3-qadam. Hisoblang va javobni yozing: x = …', 'Шаг 3. Вычисли и запиши ответ: x = …', 'Step 3. Work it out and write the answer: x = …'),
+      L('4-qadam. <b>Tekshiring!</b> Topgan sonni x o‘rniga qo‘ying. Tenglik to‘g‘ri bo‘lsa — javob to‘g‘ri.', 'Шаг 4. <b>Проверь!</b> Подставь найденное число вместо x. Если равенство верно — ответ правильный.', 'Step 4. <b>Check!</b> Put the number you found in place of x. If the equality is true, the answer is right.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har bir namunada yechim va tekshirish bor.', 'В каждом примере есть решение и проверка.', 'Each example has a solution and a check.')
+    ], ex: [
+      { q: L('x + 6 = 15', 'x + 6 = 15', 'x + 6 = 15'), s: L('x — bo‘lak. x = 15 − 6 = <b>9</b>. Tekshirish: 9 + 6 = 15 ✓.', 'x — часть. x = 15 − 6 = <b>9</b>. Проверка: 9 + 6 = 15 ✓.', 'x is a part. x = 15 − 6 = <b>9</b>. Check: 9 + 6 = 15 ✓.') },
+      { q: L('x − 4 = 10', 'x − 4 = 10', 'x − 4 = 10'), s: L('x — butun (undan 4 olindi, 10 qoldi). x = 10 + 4 = <b>14</b>. Tekshirish: 14 − 4 = 10 ✓.', 'x — целое (из него взяли 4, осталось 10). x = 10 + 4 = <b>14</b>. Проверка: 14 − 4 = 10 ✓.', 'x is the whole (4 was taken and 10 is left). x = 10 + 4 = <b>14</b>. Check: 14 − 4 = 10 ✓.') },
+      { q: L('20 − x = 8', '20 − x = 8', '20 − x = 8'), s: L('20 — butun, x — olingan bo‘lak, 8 — qolgan bo‘lak. x = 20 − 8 = <b>12</b>. Tekshirish: 20 − 12 = 8 ✓.', '20 — целое, x — взятая часть, 8 — оставшаяся. x = 20 − 8 = <b>12</b>. Проверка: 20 − 12 = 8 ✓.', '20 is the whole, x is the part taken, 8 is the part left. x = 20 − 8 = <b>12</b>. Check: 20 − 12 = 8 ✓.') },
+      { q: L('25 + x = 40', '25 + x = 40', '25 + x = 40'), s: L('x — bo‘lak. x = 40 − 25 = <b>15</b>. Tekshirish: 25 + 15 = 40 ✓.', 'x — часть. x = 40 − 25 = <b>15</b>. Проверка: 25 + 15 = 40 ✓.', 'x is a part. x = 40 − 25 = <b>15</b>. Check: 25 + 15 = 40 ✓.') }
+    ] },
+    { kind: 'table', h: L('Uch xil tenglama', 'Три вида уравнений', 'Three kinds of equation'), p: [
+      L('Jadvalda har bir tenglama turi, x ni topish qoidasi va misol berilgan.', 'В таблице — каждый вид уравнения, правило нахождения x и пример.', 'The table gives each kind of equation, the rule for finding x and an example.')
+    ], table: { head: [L('Tenglama', 'Уравнение', 'Equation'), L('x nima?', 'Что такое x?', 'What is x?'), L('Qoida', 'Правило', 'Rule'), L('Misol', 'Пример', 'Example')], rows: [
+      [L('x + b = c', 'x + b = c', 'x + b = c'), L('bo‘lak', 'часть', 'a part'), L('x = c − b', 'x = c − b', 'x = c − b'), L('x + 3 = 9 → x = 6', 'x + 3 = 9 → x = 6', 'x + 3 = 9 → x = 6')],
+      [L('x − b = c', 'x − b = c', 'x − b = c'), L('butun', 'целое', 'the whole'), L('x = c + b', 'x = c + b', 'x = c + b'), L('x − 3 = 9 → x = 12', 'x − 3 = 9 → x = 12', 'x − 3 = 9 → x = 12')],
+      [L('a − x = c', 'a − x = c', 'a − x = c'), L('olingan bo‘lak', 'взятая часть', 'the part taken'), L('x = a − c', 'x = a − c', 'x = a − c'), L('12 − x = 9 → x = 3', '12 − x = 9 → x = 3', '12 − x = 9 → x = 3')]
+    ] }, after: [
+      L('Uch qatordagi tenglamalarda bir xil sonlar — 3, 9, 12 bor. Ular bir oiladan: 3 + 9 = 12. Shuning uchun javoblar ham shu oiladan chiqadi!', 'В трёх строках одни и те же числа — 3, 9, 12. Они из одной семьи: 3 + 9 = 12. Поэтому и ответы — из этой семьи!', 'All three rows use the same numbers: 3, 9 and 12. They belong to one family: 3 + 9 = 12. That is why the answers come from this family too!')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Tenglamalarda eng ko‘p uchraydigan xatolar:', 'Самые частые ошибки в уравнениях:', 'The most common mistakes with equations:')
+    ], list: [
+      L('<b>Noto‘g‘ri amalni tanlash.</b> x − 4 = 10 da x = 10 − 4 = 6 deb yozish. Tekshiring: 6 − 4 = 2, 10 emas! To‘g‘risi: x = 10 + 4 = 14.', '<b>Выбрать не то действие.</b> В x − 4 = 10 написать x = 10 − 4 = 6. Проверь: 6 − 4 = 2, а не 10! Правильно: x = 10 + 4 = 14.', '<b>Choosing the wrong operation.</b> Writing x = 10 − 4 = 6 for x − 4 = 10. Check: 6 − 4 = 2, not 10! Correct: x = 10 + 4 = 14.'),
+      L('<b>Tekshirmaslik.</b> Tekshirish bir necha soniya oladi, lekin xatoni darhol ko‘rsatadi. Har doim tekshiring!', '<b>Не проверять.</b> Проверка занимает несколько секунд, но сразу показывает ошибку. Проверяй всегда!', '<b>Not checking.</b> Checking takes a few seconds but shows a mistake at once. Always check!'),
+      L('<b>a − x = c ni x − b = c bilan chalkashtirish.</b> 20 − x = 8 da x butun emas, olingan bo‘lak: x = 20 − 8 = 12.', '<b>Путать a − x = c и x − b = c.</b> В 20 − x = 8 x — не целое, а взятая часть: x = 20 − 8 = 12.', '<b>Mixing up a − x = c and x − b = c.</b> In 20 − x = 8, x is not the whole but the part taken: x = 20 − 8 = 12.'),
+      L('<b>Javobni «x =» siz yozish.</b> Javobni to‘liq yozing: x = 7.', '<b>Писать ответ без «x =».</b> Записывай ответ полностью: x = 7.', '<b>Writing the answer without “x =”.</b> Write the full answer: x = 7.')
+    ], after: [
+      L('Tarozi usulini eslang: tenglama — muvozanatdagi tarozi. Agar bir tomondan biror narsa olsangiz, ikkinchi tomondan ham xuddi shuncha oling — shunda muvozanat buzilmaydi.', 'Вспомни способ весов: уравнение — весы в равновесии. Если убрать что-то с одной чаши, убери столько же с другой — тогда равновесие сохранится.', 'Remember the balance idea: an equation is a pair of scales in balance. If you take something off one pan, take the same off the other, and the balance stays.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Tarozida.</b> Bozorda tarvuzni tortishadi. Bir pallada tarvuz va 1 kg tosh, ikkinchisida 6 kg tosh. Tarvuz qancha? x + 1 = 6, x = 5 kg.', '<b>На весах.</b> На базаре взвешивают арбуз. На одной чаше арбуз и гирька 1 кг, на другой — 6 кг. Сколько весит арбуз? x + 1 = 6, x = 5 кг.', '<b>On the scales.</b> At the market a watermelon is weighed. One pan has the watermelon and a 1 kg weight, the other has 6 kg. How heavy is the watermelon? x + 1 = 6, x = 5 kg.'),
+      L('<b>Cho‘ntak pulida.</b> Sizda biroz pul bor edi. 15 so‘mga kitob oldingiz va 10 so‘m qoldi. Avval qancha bor edi? x − 15 = 10, x = 25 so‘m.', '<b>С карманными деньгами.</b> У тебя было немного денег. Ты купил книгу за 15, и осталось 10. Сколько было сначала? x − 15 = 10, x = 25.', '<b>With pocket money.</b> You had some money. You bought a book for 15 and had 10 left. How much did you have at first? x − 15 = 10, x = 25.'),
+      L('<b>Sinfda.</b> Sinfda 30 o‘quvchi bor. Bugun bir nechtasi kasal, darsda 27 kishi. Nechta bola kelmadi? 30 − x = 27, x = 3.', '<b>В классе.</b> В классе 30 учеников. Сегодня несколько болеют, на уроке 27. Сколько не пришло? 30 − x = 27, x = 3.', '<b>In class.</b> There are 30 pupils in the class. Today some are ill and 27 are in the lesson. How many are missing? 30 − x = 27, x = 3.'),
+      L('<b>Kasblarda.</b> Muhandislar, shifokorlar, uchuvchilar va dasturchilar har kuni tenglamalar yechadi — ko‘prik qurishda, dori miqdorini hisoblashda, samolyot yoqilg‘isini o‘lchashda.', '<b>В профессиях.</b> Инженеры, врачи, лётчики и программисты каждый день решают уравнения — когда строят мосты, рассчитывают дозу лекарства, меряют топливо самолёта.', '<b>In jobs.</b> Engineers, doctors, pilots and programmers solve equations every day: building bridges, working out medicine doses, measuring a plane’s fuel.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Noma’lumni <b>x</b> bilan belgilashni 1637 yilda fransuz olimi <b>Rene Dekart</b> ommalashtirgan.', 'Обозначать неизвестное буквой <b>x</b> стало популярно благодаря французскому учёному <b>Рене Декарту</b> в 1637 году.', 'Writing the unknown as <b>x</b> became popular thanks to the French scholar <b>René Descartes</b> in 1637.'),
+      L('Xorazmiy kitobi lotin tiliga tarjima qilinib, Yevropa universitetlarida bir necha asr davomida asosiy darslik bo‘lgan.', 'Книгу аль-Хорезми перевели на латынь, и несколько веков она была главным учебником в университетах Европы.', 'Al-Khwarizmi’s book was translated into Latin and was the main textbook in European universities for several centuries.'),
+      L('Har bir tenglamani tekshirish mumkin — bu matematikaning ajoyib tomoni: javobning to‘g‘riligini o‘zingiz isbotlay olasiz!', 'Любое уравнение можно проверить — в этом чудо математики: правильность ответа ты можешь доказать сам!', 'Every equation can be checked: that is the wonder of maths. You can prove your answer is right yourself!')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Yeching va tekshiring.', 'Реши и проверь.', 'Solve and check.')
+    ], list: [
+      L('x + 8 = 20', 'x + 8 = 20', 'x + 8 = 20'),
+      L('x − 7 = 13', 'x − 7 = 13', 'x − 7 = 13'),
+      L('30 − x = 18', '30 − x = 18', '30 − x = 18'),
+      L('O‘zingiz tenglama tuzing, uning ildizi 5 bo‘lsin.', 'Составь своё уравнение с корнем 5.', 'Make up your own equation whose root is 5.')
+    ], after: [
+      L('Javoblar: 1) x = 12. 2) x = 20. 3) x = 12. 4) Masalan, x + 3 = 8.', 'Ответы: 1) x = 12. 2) x = 20. 3) x = 12. 4) Например, x + 3 = 8.', 'Answers: 1) x = 12. 2) x = 20. 3) x = 12. 4) For example, x + 3 = 8.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('<b>Tenglama</b> — noma’lum son harf bilan belgilangan tenglik.', '<b>Уравнение</b> — равенство с неизвестным, обозначенным буквой.', 'An <b>equation</b> is an equality with an unknown written as a letter.'),
+      L('<b>Ildiz</b> — tenglikni to‘g‘ri qiladigan son.', '<b>Корень</b> — число, при котором равенство верно.', 'The <b>root</b> is the number that makes the equality true.'),
+      L('x + b = c → x = c − b.', 'x + b = c → x = c − b.', 'x + b = c → x = c − b.'),
+      L('x − b = c → x = c + b.', 'x − b = c → x = c + b.', 'x − b = c → x = c + b.'),
+      L('a − x = c → x = a − c.', 'a − x = c → x = a − c.', 'a − x = c → x = a − c.'),
+      L('Har doim tekshiring: topilgan sonni x o‘rniga qo‘ying.', 'Всегда проверяй: подставь найденное число вместо x.', 'Always check: put the number you found in place of x.'),
+      L('Algebraning otasi — Al-Xorazmiy.', 'Отец алгебры — аль-Хорезми.', 'The father of algebra is al-Khwarizmi.')
+    ] }
+  ] });
+})(this);
+(function (root) { 'use strict'; var L = root.NMCurriculum.H.L, T = root.NMTheory, P = '1-4';
+
+  // ---------- t15. Masalalarni tenglamalar yordamida yechish. Takrorlash ----------
+  T.add(P, 't15', { sections: [
+    { kind: 'intro', h: L('Detektiv bo‘lamiz', 'Станем детективами', 'Let’s be detectives'), p: [
+      L('Har bir masala — kichik sirli hikoya. Unda nimadir ma’lum, nimadir esa yashirin. Masalan: «Avtobusda bir necha yo‘lovchi bor edi. Bekatda yana 6 kishi chiqdi va avtobusda 14 kishi bo‘ldi. Avval nechta yo‘lovchi bor edi?» Bu yerda yashirin narsa — avvalgi yo‘lovchilar soni. Biz detektivdek uni topishimiz kerak!', 'Каждая задача — маленькая загадочная история. В ней что-то известно, а что-то спрятано. Например: «В автобусе было несколько пассажиров. На остановке вошли ещё 6, и в автобусе стало 14. Сколько пассажиров было сначала?» Здесь спрятано число пассажиров вначале. Мы должны найти его, как детективы!', 'Every problem is a little mystery story. Something is known and something is hidden. For example: “A bus had some passengers. At a stop 6 more got on, and now there are 14. How many passengers were there at first?” What is hidden here is the number of passengers at first. We must find it, like detectives!'),
+      L('O‘tgan darsda tenglamalarni yechishni o‘rgandik. Endi ulardan haqiqiy masalalarni yechish uchun foydalanamiz. Yashirin sonni <b>x</b> deb belgilaymiz, hikoyani tenglamaga aylantiramiz va yechamiz: x + 6 = 14, x = 8.', 'На прошлом уроке мы научились решать уравнения. Теперь используем их для настоящих задач. Обозначим спрятанное число буквой <b>x</b>, превратим историю в уравнение и решим: x + 6 = 14, x = 8.', 'Last lesson we learned to solve equations. Now we use them to solve real problems. We call the hidden number <b>x</b>, turn the story into an equation and solve it: x + 6 = 14, x = 8.'),
+      L('Bu mavzu — butun IV qismning yakuni. Shuning uchun oxirida biz o‘rgangan hamma narsani takrorlaymiz: kesmalar, shakllar, ifodalar, Rim raqamlari va tenglamalar.', 'Эта тема — итог всей IV части. Поэтому в конце мы повторим всё, что изучили: отрезки, фигуры, выражения, римские цифры и уравнения.', 'This topic wraps up the whole of Part IV. So at the end we review everything we have learned: segments, shapes, expressions, Roman numerals and equations.')
+    ] },
+    { kind: 'def', h: L('Masala va tenglama', 'Задача и уравнение', 'Problems and equations'), p: [
+      L('Har bir masalada uchta qism bor:', 'В каждой задаче три части:', 'Every problem has three parts:')
+    ], list: [
+      L('<b>Shart</b> — nima ma’lum: «6 kishi chiqdi», «14 kishi bo‘ldi».', '<b>Условие</b> — что известно: «вошли 6», «стало 14».', 'The <b>conditions</b> — what we know: “6 got on”, “there are now 14”.'),
+      L('<b>Savol</b> — nimani topish kerak: «avval nechta edi?»', '<b>Вопрос</b> — что нужно найти: «сколько было сначала?»', 'The <b>question</b> — what we must find: “how many were there at first?”'),
+      L('<b>Yechim</b> — savolga javob topish yo‘li.', '<b>Решение</b> — путь к ответу на вопрос.', 'The <b>solution</b> — the way to the answer.')
+    ], after: [
+      L('<b>Masalani tenglama bilan yechish</b> — bu noma’lumni x deb belgilash, shartga qarab tenglama tuzish va uni yechish demakdir. Tenglama masalaning «qisqa tarjimasi»ga o‘xshaydi: uzun hikoya bitta qatorga sig‘adi!', '<b>Решить задачу с помощью уравнения</b> — значит обозначить неизвестное через x, по условию составить уравнение и решить его. Уравнение — как «краткий перевод» задачи: длинная история помещается в одну строку!', '<b>Solving a problem with an equation</b> means calling the unknown x, writing an equation from the conditions and solving it. An equation is like a “short translation” of the problem: a long story fits in one line!'),
+      L('Bitta masalani ko‘pincha ikki usulda yechish mumkin: oddiy amal bilan (14 − 6 = 8) yoki tenglama bilan (x + 6 = 14). Ikkalasi ham to‘g‘ri, lekin tenglama murakkab masalalarda juda qulay.', 'Одну задачу часто можно решить двумя способами: действием (14 − 6 = 8) или уравнением (x + 6 = 14). Оба верны, но уравнение очень удобно в сложных задачах.', 'A problem can often be solved two ways: with a plain operation (14 − 6 = 8) or with an equation (x + 6 = 14). Both are right, but equations are very handy for harder problems.')
+    ] },
+    { kind: 'history', h: L('Tarixdan: masalalar kitobi', 'Из истории: книги задач', 'From history: books of problems'), p: [
+      L('Odamlar ming yillardan beri masalalar yechib keladi. Qadimgi Misrdagi Rind papirusida 80 dan ortiq masala bor: non va pivoni bo‘lish, don omborlarini o‘lchash, piramida qiyaligini hisoblash haqida. Bu — dunyodagi eng qadimgi masalalar to‘plamlaridan biri.', 'Люди решают задачи тысячи лет. В египетском папирусе Ринда больше 80 задач: о разделе хлеба и пива, об измерении зернохранилищ, о наклоне пирамиды. Это один из самых древних сборников задач в мире.', 'People have been solving problems for thousands of years. The Egyptian Rhind Papyrus has over 80 problems: sharing bread and beer, measuring grain stores, working out a pyramid’s slope. It is one of the oldest problem collections in the world.'),
+      L('<b>Al-Xorazmiy</b>ning algebra kitobining katta qismi hayotiy masalalarga bag‘ishlangan: merosni oila a’zolari orasida adolatli bo‘lish, savdo-sotiq, yer o‘lchash. U har bir masalani avval tenglamaga aylantirib, keyin bosqichma-bosqich yechishni o‘rgatgan — xuddi biz bugun qilganimizdek.', 'Большая часть книги <b>аль-Хорезми</b> по алгебре посвящена жизненным задачам: справедливый раздел наследства между родственниками, торговля, измерение земли. Он учил сначала превращать задачу в уравнение, а потом решать его шаг за шагом — точно как мы сегодня.', 'Much of <b>al-Khwarizmi’s</b> algebra book is about real-life problems: sharing an inheritance fairly among relatives, trade, measuring land. He taught people to turn each problem into an equation first, then solve it step by step, exactly as we do today.'),
+      L('Buyuk olim <b>Beruniy</b> ham o‘z asarlarida ko‘plab qiziqarli masalalar keltirgan. Masalan, shaxmat taxtasidagi bug‘doy donalari haqidagi mashhur masalani hisoblab chiqqan.', 'Великий учёный <b>Беруни</b> тоже приводил в своих трудах много интересных задач. Например, он вычислил знаменитую задачу о пшеничных зёрнах на шахматной доске.', 'The great scholar <b>Biruni</b> also gave many interesting problems in his works. For example, he worked out the famous problem of the grains of wheat on a chessboard.')
+    ] },
+    { kind: 'rule', h: L('To‘rt qadam qoidasi', 'Правило четырёх шагов', 'The four-step rule'), p: [
+      L('Har qanday masalani tenglama bilan yechish uchun to‘rtta qadamni eslab qoling:', 'Чтобы решить любую задачу уравнением, запомни четыре шага:', 'To solve any problem with an equation, remember four steps:')
+    ], list: [
+      L('<b>1) Noma’lum → x.</b> Savolda nimani so‘rashayotganini toping va uni x deb belgilang.', '<b>1) Неизвестное → x.</b> Найди, о чём спрашивают, и обозначь это x.', '<b>1) Unknown → x.</b> Find what the question asks for and call it x.'),
+      L('<b>2) Tenglama.</b> Shartdagi voqealarni tartib bilan yozing: «bor edi» → x, «qo‘shildi» → +, «ketdi» → −, «bo‘ldi» → =.', '<b>2) Уравнение.</b> Запиши события по порядку: «было» → x, «добавили» → +, «ушли» → −, «стало» → =.', '<b>2) Equation.</b> Write the events in order: “there were” → x, “added” → +, “left” → −, “now there are” → =.'),
+      L('<b>3) Yechish.</b> O‘tgan darsdagi qoidalar bilan x ni toping.', '<b>3) Решение.</b> Найди x по правилам прошлого урока.', '<b>3) Solve.</b> Find x with last lesson’s rules.'),
+      L('<b>4) Tekshirish.</b> Javobni masala shartiga qo‘yib ko‘ring — hikoya to‘g‘ri chiqadimi?', '<b>4) Проверка.</b> Подставь ответ в условие — сходится ли история?', '<b>4) Check.</b> Put the answer back into the story: does it all fit?')
+    ], after: [
+      L('Javobni so‘z bilan yozishni unutmang: «Javob: avtobusda avval 8 yo‘lovchi bo‘lgan».', 'Не забудь записать ответ словами: «Ответ: сначала в автобусе было 8 пассажиров».', 'Don’t forget to write the answer in words: “Answer: at first there were 8 passengers on the bus.”')
+    ] },
+    { kind: 'steps', h: L('Qadamma-qadam: bitta masala', 'Шаг за шагом: одна задача', 'Step by step: one problem'), p: [
+      L('Masala: «Qutida bir nechta qalam bor edi. Yana 6 ta solindi va 14 ta bo‘ldi. Qutida avval nechta qalam bor edi?»', 'Задача: «В коробке было несколько карандашей. Положили ещё 6, и стало 14. Сколько карандашей было в коробке сначала?»', 'Problem: “A box had some pencils. 6 more were put in and now there are 14. How many pencils were in the box at first?”')
+    ], list: [
+      L('1-qadam. Noma’lum: avvalgi qalamlar soni → x.', 'Шаг 1. Неизвестное: сколько было карандашей → x.', 'Step 1. The unknown: the number of pencils at first → x.'),
+      L('2-qadam. Tenglama: «bor edi» x, «solindi» + 6, «bo‘ldi» = 14 → x + 6 = 14.', 'Шаг 2. Уравнение: «было» x, «положили» + 6, «стало» = 14 → x + 6 = 14.', 'Step 2. Equation: “there were” x, “put in” + 6, “now” = 14 → x + 6 = 14.'),
+      L('3-qadam. Yechish: x — bo‘lak, x = 14 − 6 = 8.', 'Шаг 3. Решение: x — часть, x = 14 − 6 = 8.', 'Step 3. Solve: x is a part, x = 14 − 6 = 8.'),
+      L('4-qadam. Tekshirish: 8 ta qalam bor edi, 6 ta solindi: 8 + 6 = 14 ✓. Javob: 8 ta qalam.', 'Шаг 4. Проверка: было 8 карандашей, положили 6: 8 + 6 = 14 ✓. Ответ: 8 карандашей.', 'Step 4. Check: there were 8 pencils and 6 were put in: 8 + 6 = 14 ✓. Answer: 8 pencils.')
+    ] },
+    { kind: 'example', h: L('Yechilgan namunalar', 'Разобранные примеры', 'Worked examples'), p: [
+      L('Har bir masalani to‘rt qadamda yechamiz.', 'Каждую задачу решаем в четыре шага.', 'We solve each problem in four steps.')
+    ], ex: [
+      { q: L('Daraxtda bir nechta qush o‘tirgan edi. 5 tasi uchib ketdi va 9 tasi qoldi. Avval nechta qush bor edi?', 'На дереве сидело несколько птиц. 5 улетели, осталось 9. Сколько птиц было сначала?', 'Some birds were sitting in a tree. 5 flew away and 9 were left. How many birds were there at first?'), s: L('x − 5 = 9. x — butun: x = 9 + 5 = <b>14</b>. Tekshirish: 14 − 5 = 9 ✓.', 'x − 5 = 9. x — целое: x = 9 + 5 = <b>14</b>. Проверка: 14 − 5 = 9 ✓.', 'x − 5 = 9. x is the whole: x = 9 + 5 = <b>14</b>. Check: 14 − 5 = 9 ✓.') },
+      { q: L('Onamda 20 ta olma bor edi. U qo‘shnilarga bir nechtasini berdi va 12 ta qoldi. Nechta olma berdi?', 'У мамы было 20 яблок. Она отдала несколько соседям, осталось 12. Сколько яблок отдала?', 'Mum had 20 apples. She gave some to the neighbours and 12 were left. How many did she give?'), s: L('20 − x = 12. x = 20 − 12 = <b>8</b>. Tekshirish: 20 − 8 = 12 ✓.', '20 − x = 12. x = 20 − 12 = <b>8</b>. Проверка: 20 − 8 = 12 ✓.', '20 − x = 12. x = 20 − 12 = <b>8</b>. Check: 20 − 8 = 12 ✓.') },
+      { q: L('Sardorda 15 ta marka bor edi. Bobosi yana bir nechta sovg‘a qildi va 23 ta bo‘ldi. Bobosi nechta marka sovg‘a qildi?', 'У Сардора было 15 марок. Дедушка подарил ещё несколько, и стало 23. Сколько марок подарил дедушка?', 'Sardor had 15 stamps. Grandpa gave him some more and now he has 23. How many did Grandpa give?'), s: L('15 + x = 23. x = 23 − 15 = <b>8</b>. Tekshirish: 15 + 8 = 23 ✓.', '15 + x = 23. x = 23 − 15 = <b>8</b>. Проверка: 15 + 8 = 23 ✓.', '15 + x = 23. x = 23 − 15 = <b>8</b>. Check: 15 + 8 = 23 ✓.') }
+    ] },
+    { kind: 'table', h: L('So‘zlardan belgilarga', 'От слов к знакам', 'From words to signs'), p: [
+      L('Masaladagi so‘zlar qaysi belgiga aylanadi? Bu jadval tenglama tuzishda yordam beradi.', 'В какой знак превращаются слова задачи? Эта таблица поможет составить уравнение.', 'Which sign does each word in a problem turn into? This table helps you write the equation.')
+    ], table: { head: [L('Masaladagi so‘zlar', 'Слова в задаче', 'Words in the problem'), L('Belgi', 'Знак', 'Sign')], rows: [
+      [L('bor edi, avval, bir nechta', 'было, сначала, несколько', 'there were, at first, some'), 'x'],
+      [L('qo‘shildi, keldi, sovg‘a qildi, chiqdi (avtobusga)', 'добавили, пришли, подарили, вошли', 'added, came, was given, got on'), '+'],
+      [L('ketdi, yedi, berdi, uchib ketdi', 'ушли, съели, отдали, улетели', 'left, ate, gave away, flew off'), '−'],
+      [L('bo‘ldi, qoldi, jami', 'стало, осталось, всего', 'now there are, were left, altogether'), '=']
+    ] }, after: [
+      L('Diqqat: «chiqdi» so‘zi ikki ma’noda bo‘lishi mumkin — avtobusga chiqdi (+) yoki avtobusdan tushib chiqib ketdi (−). Hikoyani diqqat bilan o‘qing!', 'Внимание: слово «вышли/вошли» важно не перепутать — вошли в автобус (+) или вышли из него (−). Читай историю внимательно!', 'Careful: “got on” the bus means + and “got off” means −. Read the story carefully!')
+    ] },
+    { kind: 'mistake', h: L('Tipik xatolar', 'Типичные ошибки', 'Common mistakes'), p: [
+      L('Masalalarni yechishda ko‘p uchraydigan xatolar:', 'Частые ошибки при решении задач:', 'Common mistakes when solving problems:')
+    ], list: [
+      L('<b>Masalani oxirigacha o‘qimaslik.</b> Savolni o‘qimay turib yechishni boshlash. Avval butun masalani ikki marta o‘qing.', '<b>Не дочитать задачу.</b> Начать решать, не прочитав вопрос. Сначала прочитай всю задачу дважды.', '<b>Not reading to the end.</b> Starting to solve before reading the question. Read the whole problem twice first.'),
+      L('<b>Tenglamani noto‘g‘ri tuzish.</b> «5 tasi uchib ketdi» bo‘lsa-yu, x + 5 deb yozish. «Ketdi» — ayirish!', '<b>Неверно составить уравнение.</b> «5 улетели», а написать x + 5. «Улетели» — вычитание!', '<b>Writing the wrong equation.</b> “5 flew away” but writing x + 5. “Flew away” means take away!'),
+      L('<b>Javobni tekshirmaslik.</b> Topilgan sonni hikoyaga qo‘yib ko‘ring — hammasi mos keladimi?', '<b>Не проверять ответ.</b> Подставь найденное число в историю — всё ли сходится?', '<b>Not checking the answer.</b> Put your number back into the story: does everything fit?'),
+      L('<b>Javobni so‘zsiz qoldirish.</b> «8» emas, «8 ta qalam» deb yozing.', '<b>Оставить ответ без слов.</b> Пиши не «8», а «8 карандашей».', '<b>Leaving the answer without words.</b> Write “8 pencils”, not just “8”.')
+    ], after: [
+      L('Javob mantiqiymi? Agar masalada «qoldi» bo‘lsa, avvalgi son qolgandan katta bo‘lishi kerak. Agar javobingiz kichik chiqsa — qayta tekshiring.', 'Разумен ли ответ? Если в задаче «осталось», то сначала было больше, чем осталось. Если ответ получился меньше — проверь ещё раз.', 'Does the answer make sense? If the problem says “were left”, the number at first must be bigger than what was left. If your answer is smaller, check again.')
+    ] },
+    { kind: 'life', h: L('Hayotda qayerda kerak?', 'Где это нужно в жизни?', 'Where is this used in life?'), p: [
+      L('<b>Jamg‘arma.</b> Siz velosiped uchun pul yig‘yapsiz. U 50 so‘m turadi, sizda 35 so‘m bor. Yana qancha kerak? 35 + x = 50, x = 15.', '<b>Копилка.</b> Ты копишь на велосипед. Он стоит 50, у тебя есть 35. Сколько ещё нужно? 35 + x = 50, x = 15.', '<b>Saving up.</b> You are saving for a bike. It costs 50 and you have 35. How much more do you need? 35 + x = 50, x = 15.'),
+      L('<b>Sayohat.</b> Toshkentdan Samarqandga yo‘l uzun. Biz bir qismini o‘tdik va hali 40 km qoldi. Agar butun yo‘l 300 km bo‘lsa, qancha o‘tdik? x + 40 = 300, x = 260 km. Bunday katta sonlarni keyinroq o‘rganamiz!', '<b>Путешествие.</b> Дорога из Ташкента в Самарканд длинная. Часть мы проехали, осталось 40 км. Если вся дорога 300 км, сколько проехали? x + 40 = 300, x = 260 км. Такие большие числа мы изучим позже!', '<b>A trip.</b> The road from Tashkent to Samarkand is long. We have driven part of it and 40 km are left. If the whole road is 300 km, how far have we come? x + 40 = 300, x = 260 km. We will learn such big numbers later!'),
+      L('<b>Oshxona.</b> Onam 1 litr sutning bir qismini pishiriqqa ishlatdi va yarmi qoldi. Nechta stakan ishlatildi? Oshpazlar ham har kuni shunday hisoblaydi.', '<b>Кухня.</b> Мама использовала часть литра молока для выпечки, осталась половина. Сколько стаканов ушло? Повара тоже каждый день так считают.', '<b>The kitchen.</b> Mum used part of a litre of milk for baking and half was left. How many glasses were used? Cooks work things out like this every day.')
+    ] },
+    { kind: 'summary', h: L('Takrorlash: IV qismda nimalarni o‘rgandik?', 'Повторение: что мы изучили в IV части?', 'Review: what did we learn in Part IV?'), p: [
+      L('Butun IV qism bo‘yicha qisqacha eslatma. Har bir qatorni o‘qing va o‘zingizdan so‘rang: «Men buni tushuntirib bera olamanmi?»', 'Короткая памятка по всей IV части. Прочитай каждую строку и спроси себя: «Могу ли я это объяснить?»', 'A short reminder of all of Part IV. Read each line and ask yourself: “Can I explain this?”')
+    ], list: [
+      L('<b>Kesma</b>: AB = AC + CB. <b>Siniq chiziq</b> uzunligi — bo‘g‘inlar yig‘indisi.', '<b>Отрезок</b>: AB = AC + CB. Длина <b>ломаной</b> — сумма звеньев.', '<b>Segment</b>: AB = AC + CB. A <b>broken line</b>’s length is the sum of its links.'),
+      L('<b>Perimetr</b> — tomonlar yig‘indisi. Kvadrat: a + a + a + a.', '<b>Периметр</b> — сумма сторон. Квадрат: a + a + a + a.', '<b>Perimeter</b> is the sum of the sides. Square: a + a + a + a.'),
+      L('<b>Burchaklar</b>: o‘tkir &lt; to‘g‘ri &lt; o‘tmas. <b>Simmetriya</b> — buklaganda yarimlar mos tushadi.', '<b>Углы</b>: острый &lt; прямой &lt; тупой. <b>Симметрия</b> — при сгибании половинки совпадают.', '<b>Angles</b>: acute &lt; right &lt; obtuse. <b>Symmetry</b> means the halves match when folded.'),
+      L('<b>Kub</b>: 6 yoq, 12 qirra, 8 uch.', '<b>Куб</b>: 6 граней, 12 рёбер, 8 вершин.', '<b>Cube</b>: 6 faces, 12 edges, 8 vertices.'),
+      L('<b>Amallar tartibi</b>: avval qavs, keyin chapdan o‘ngga. a + 0 = a, a − a = 0.', '<b>Порядок действий</b>: сначала скобки, потом слева направо. a + 0 = a, a − a = 0.', '<b>Order of operations</b>: brackets first, then left to right. a + 0 = a, a − a = 0.'),
+      L('<b>Rim raqamlari</b>: I, V, X, L; IV = 4, VI = 6.', '<b>Римские цифры</b>: I, V, X, L; IV = 4, VI = 6.', '<b>Roman numerals</b>: I, V, X, L; IV = 4, VI = 6.'),
+      L('<b>Masala → tenglama</b>: noma’lum → x, tenglama, yechish, tekshirish.', '<b>Задача → уравнение</b>: неизвестное → x, уравнение, решение, проверка.', '<b>Problem → equation</b>: unknown → x, equation, solve, check.')
+    ] },
+    { kind: 'fact', h: L('Qiziqarli faktlar', 'Интересные факты', 'Fun facts'), list: [
+      L('Qadimgi Hindistonda masalalar she’r shaklida yozilgan — bolalar ularni qo‘shiqdek yodlashgan!', 'В Древней Индии задачи писали в стихах — дети заучивали их, как песни!', 'In ancient India, maths problems were written as poems, and children learned them like songs!'),
+      L('Sehrli kvadratda har bir qator, ustun va diagonal yig‘indisi bir xil. Eng mashhur 3 × 3 sehrli kvadratda bu yig‘indi 15 ga teng.', 'В магическом квадрате сумма в каждой строке, столбце и диагонали одинакова. В самом известном квадрате 3 × 3 эта сумма равна 15.', 'In a magic square every row, column and diagonal adds up to the same number. In the most famous 3 × 3 magic square that number is 15.'),
+      L('Matematiklar bitta masala ustida ba’zan yuzlab yil o‘ylashgan — sabr ham detektivning eng yaxshi quroli!', 'Над одной задачей математики иногда думали сотни лет — терпение тоже лучшее оружие детектива!', 'Mathematicians have sometimes worked on a single problem for hundreds of years: patience is a detective’s best tool too!')
+    ] },
+    { kind: 'practice', h: L('O‘ylab ko‘ring', 'Подумай', 'Think about it'), p: [
+      L('Tenglama tuzib yeching va tekshiring.', 'Составь уравнение, реши и проверь.', 'Write an equation, solve it and check.')
+    ], list: [
+      L('Savatda bir nechta nok bor edi. 7 tasini yedik va 11 tasi qoldi. Avval nechta edi?', 'В корзине было несколько груш. 7 съели, осталось 11. Сколько было?', 'A basket had some pears. We ate 7 and 11 were left. How many were there?'),
+      L('Aylinada 18 ta rangli qalam bor edi. Do‘stiga bir nechtasini berdi, 13 tasi qoldi. Nechtasini berdi?', 'У Айлины было 18 цветных карандашей. Несколько она отдала подруге, осталось 13. Сколько отдала?', 'Aylina had 18 coloured pencils. She gave some to a friend and 13 were left. How many did she give?'),
+      L('XII + V = ? (javobni oddiy raqamda yozing)', 'XII + V = ? (ответ запиши обычными цифрами)', 'XII + V = ? (write the answer in ordinary digits)')
+    ], after: [
+      L('Javoblar: 1) x − 7 = 11, x = 18. 2) 18 − x = 13, x = 5. 3) 12 + 5 = 17.', 'Ответы: 1) x − 7 = 11, x = 18. 2) 18 − x = 13, x = 5. 3) 12 + 5 = 17.', 'Answers: 1) x − 7 = 11, x = 18. 2) 18 − x = 13, x = 5. 3) 12 + 5 = 17.')
+    ] },
+    { kind: 'summary', h: L('Xulosa', 'Итог', 'Summary'), list: [
+      L('Masalada noma’lumni <b>x</b> deb belgilaymiz.', 'Неизвестное в задаче обозначаем <b>x</b>.', 'We call the unknown in a problem <b>x</b>.'),
+      L('Hikoyani tartib bilan tenglamaga aylantiramiz.', 'Превращаем историю по порядку в уравнение.', 'We turn the story, in order, into an equation.'),
+      L('Tenglamani qoidalar bilan yechamiz.', 'Решаем уравнение по правилам.', 'We solve the equation with the rules.'),
+      L('Javobni masala shartiga qo‘yib tekshiramiz.', 'Проверяем ответ, подставляя его в условие.', 'We check the answer by putting it back into the story.'),
+      L('Javobni so‘z bilan yozamiz.', 'Записываем ответ словами.', 'We write the answer in words.'),
+      L('Siz IV qismni tugatdingiz — barakalla!', 'Ты закончил IV часть — молодец!', 'You have finished Part IV — well done!')
+    ] }
+  ] });
+})(this);
 // --END--
