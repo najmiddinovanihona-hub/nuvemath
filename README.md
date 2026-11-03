@@ -7,7 +7,7 @@ O‘zbek tilidagi (rus va ingliz tillari bilan) interaktiv matematika platformas
 
 ## Imkoniyatlar
 
-- **Kirish animatsiyasi (intro)** — birinchi tashrifda: matematik formulalar orbitada aylanadi, 3D jismlar va yorug' izlar, simvollar markazga yig'ilib zarrachalarga aylanadi, yorug'lik nuri o'tadi va Nuvemath logotipi paydo bo'ladi. Three.js + GSAP, «O'tkazib yuborish» tugmasi (yoki Esc), `prefers-reduced-motion` da yengil versiya, sahifa qayta yuklanmaydi. Qayta ko'rish: pastki qismdagi «Introni qayta ko'rish» yoki `?intro`.
+- **Kirish animatsiyasi (intro, ~14 s)** — birinchi tashrifda: formulalar va 3D jismlar orbitada aylanadi, ko‘zoynakli odamcha ularni kuzatadi; π orbitadan ajralib uchadi, odamcha uni ushlaydi, so‘ng π logotipdagi joyiga uchib, logotip qismma-qism (π → kitob → orbita → yulduz) yig‘iladi va odamcha qo‘l silkitadi. Three.js + GSAP, «O‘tkazib yuborish» (yoki Esc), `prefers-reduced-motion` da yengil versiya. Qayta ko‘rish: «Introni qayta ko‘rish» yoki `?intro`.
 
 - **Darslik** — 20 mavzu (11 algebra, 9 geometriya): nazariya, formulalar jadvali, namunaviy misol, jonli interaktiv qism va test. O‘qilgan mavzular va test natijalari saqlanadi.
 - **Grafiklar** — istalgan funksiya grafigi: bir nechta funksiya, kattalashtirish/siljitish (sichqoncha va barmoq), koordinata ko‘rsatkichi, nollar, ekstremumlar va kesishish nuqtalari avtomatik topiladi (π/6 kabi aniq ko‘rinishda), hosila, `a` parametri slayderi.
