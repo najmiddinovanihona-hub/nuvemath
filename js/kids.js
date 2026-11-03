@@ -25,7 +25,7 @@
       jugs: 'Idishni to‘ldiring', full: 'To‘ldi!', poured: 'Quyildi:', jars: 'banka', pourTitle: '1 l quyish', volume: 'Hajmi:', jugsHint: 'Bankani bosib, idish to‘lguncha quying va sanang.',
       order: 'Tartib bilan joylashtiring', orderBad: 'Tartib noto‘g‘ri — boshidan qayta bosing.', choose: 'To‘g‘risini tanlang', chooseFirst: 'Avval javobni tanlang.', chooseBad: 'Masalani yana bir bor diqqat bilan o‘qing.',
       drill: 'Tez hisoblang', q100: 'Mukammal! Siz haqiqiy matematiksiz! 🏆', q80: 'Juda yaxshi natija! ⭐', q50: 'Yaxshi! Yana bir bor takrorlang.', qLow: 'Mavzuni qayta ko‘rib chiqing — siz uddalaysiz!', reQuiz: '↻ Qayta topshirish',
-      kg: 'kg', l: 'l', cm: 'cm', dm: 'dm', total: 'jami' },
+      kg: 'kg', l: 'l', cm: 'cm', dm: 'dm', total: 'jami', perimeter: 'Perimetrni toping', polyHint: 'Barcha tomonlar uzunliklarini qo‘shing.' },
     ru: { check: 'Проверить', fresh: '↻ Новый пример', praise: ['Молодец!', 'Отлично!', 'Супер!', 'Совершенно верно!', 'Браво!'], retry: 'Попробуйте ещё раз.',
       cond: 'Краткая запись', solve: 'Решение:', answer: 'Ответ:', exprOk: 'Ответ верный, но проверьте выражение.', schemeHint: 'Посмотрите на схему: целое = часть + часть.',
       count3d: '3D-сцена: посчитайте', pickHint: '👆 Нажимайте на посчитанные предметы · вращайте перетаскиванием', marked: 'Отмечено:', problem: 'Решите задачу',
@@ -36,7 +36,7 @@
       jugs: 'Наполните ведро', full: 'Полно!', poured: 'Налито:', jars: 'банок', pourTitle: 'Налить 1 л', volume: 'Объём:', jugsHint: 'Нажимайте на банку, пока ведро не наполнится, и считайте.',
       order: 'Расставьте по порядку', orderBad: 'Порядок неверный — начните заново.', choose: 'Выберите верный ответ', chooseFirst: 'Сначала выберите ответ.', chooseBad: 'Прочитайте задачу ещё раз внимательно.',
       drill: 'Считаем быстро', q100: 'Безупречно! Вы настоящий математик! 🏆', q80: 'Очень хороший результат! ⭐', q50: 'Хорошо! Повторите ещё раз.', qLow: 'Повторите тему — у вас получится!', reQuiz: '↻ Пройти заново',
-      kg: 'кг', l: 'л', cm: 'см', dm: 'дм', total: 'всего' },
+      kg: 'кг', l: 'л', cm: 'см', dm: 'дм', total: 'всего', perimeter: 'Найдите периметр', polyHint: 'Сложите длины всех сторон.' },
     en: { check: 'Check', fresh: '↻ New example', praise: ['Well done!', 'Great!', 'Awesome!', 'Exactly right!', 'Bravo!'], retry: 'Try once more.',
       cond: 'Short note', solve: 'Solution:', answer: 'Answer:', exprOk: 'The answer is right — now check the expression.', schemeHint: 'Look at the diagram: whole = part + part.',
       count3d: '3D scene: count', pickHint: '👆 Tap the objects you count · drag to rotate', marked: 'Marked:', problem: 'Solve the problem',
@@ -47,7 +47,7 @@
       jugs: 'Fill the bucket', full: 'Full!', poured: 'Poured:', jars: 'jars', pourTitle: 'Pour 1 L', volume: 'Volume:', jugsHint: 'Tap the jar until the bucket is full and count.',
       order: 'Put in order', orderBad: 'Wrong order — start again.', choose: 'Choose the right answer', chooseFirst: 'Choose an answer first.', chooseBad: 'Read the problem carefully once more.',
       drill: 'Quick maths', q100: 'Perfect! You are a real mathematician! 🏆', q80: 'Very good result! ⭐', q50: 'Good! Practise once more.', qLow: 'Review the topic — you can do it!', reQuiz: '↻ Try again',
-      kg: 'kg', l: 'L', cm: 'cm', dm: 'dm', total: 'total' }
+      kg: 'kg', l: 'L', cm: 'cm', dm: 'dm', total: 'total', perimeter: 'Find the perimeter', polyHint: 'Add the lengths of all the sides.' }
   };
   function lang() { return (root.I18n && root.I18n.lang) || 'uz'; }
   function t(k) { var L = KT[lang()] || KT.uz; return L[k] !== undefined ? L[k] : KT.uz[k]; }
@@ -144,6 +144,15 @@
       var w = new T.Mesh(new T.CylinderGeometry(0.39, 0.34, 0.55, 30), new T.MeshStandardMaterial({ color: 0x3fa9ff, transparent: true, opacity: 0.75, roughness: 0.1 })); w.position.y = 0.3; g.add(w);
       return g;
     },
+    rod: function (T, c) { // o'nlik: 10 ta kichik kubdan iborat tayoqcha
+      var g = new T.Group(), m = mat(T, c || 'orange'), geo = new T.BoxGeometry(0.2, 0.2, 0.2), eg = new T.EdgesGeometry(geo), lm = new T.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.45 });
+      for (var i = 0; i < 10; i++) { var b = new T.Mesh(geo, m); b.position.set(0, 0.11 + i * 0.205, 0); g.add(b); var e = new T.LineSegments(eg, lm); e.position.copy(b.position); g.add(e); }
+      return g;
+    },
+    unit: function (T, c) { var g = new T.Group(), b = new T.Mesh(new T.BoxGeometry(0.2, 0.2, 0.2), mat(T, c || 'blue')); b.position.y = 0.11; g.add(b);
+      var e = new T.LineSegments(new T.EdgesGeometry(b.geometry), new T.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.45 })); e.position.copy(b.position); g.add(e); return g; },
+    box: function (T, c) { var g = new T.Group(), m = new T.Mesh(new T.BoxGeometry(1.0, 0.55, 0.7), mat(T, c)); m.position.y = 0.28; g.add(m);
+      var e = new T.LineSegments(new T.EdgesGeometry(m.geometry), new T.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 })); e.position.y = 0.28; g.add(e); return g; },
     star: function (T, c) {
       var s = new T.Shape(); for (var i = 0; i < 10; i++) { var r = i % 2 ? 0.2 : 0.45, a = i / 10 * Math.PI * 2 + Math.PI / 2; if (i) s.lineTo(Math.cos(a) * r, Math.sin(a) * r); else s.moveTo(Math.cos(a) * r, Math.sin(a) * r); }
       var g = new T.Group(), m = new T.Mesh(new T.ExtrudeGeometry(s, { depth: 0.16, bevelEnabled: true, bevelSize: 0.03, bevelThickness: 0.03, bevelSegments: 2 }), mat(T, c || 'yellow', { metalness: 0.3 }));
@@ -190,7 +199,7 @@
     var span = Math.max(fullW, 2), depth = Math.max.apply(0, groups.map(function (g, gi) { return Math.ceil(g.n / gw[gi]); }));
     // yumaloq "sahna" (podium) — ob'ektlar soniga qarab o'lchami
     var PR = Math.max(1.9, span / 2 + 0.9, depth * 0.62 * SC + 0.8);
-    var podium = new T.Mesh(new T.CylinderGeometry(PR, PR + 0.15, 0.25, 64), new T.MeshStandardMaterial({ color: 0x0b1330, roughness: 0.95, metalness: 0 }));
+    var podium = new T.Mesh(new T.CylinderGeometry(PR, PR + 0.15, 0.25, 64), new T.MeshBasicMaterial({ color: 0x1c2d63 }));
     podium.position.y = -0.13; scene.add(podium);
     var ring = new T.Mesh(new T.TorusGeometry(PR + 0.05, 0.035, 8, 96), new T.MeshBasicMaterial({ color: 0x5b9dff })); ring.rotation.x = Math.PI / 2; scene.add(ring);
     function size() {
@@ -574,12 +583,14 @@
   // Tanlash: to'g'ri ifoda/javobni tanlang
   W.choose = function (spec, idx) {
     var node = card(idx, spec.icon || '🎯', spec.title || t('choose'), '<div class="kd-p"></div>');
-    var box = node.querySelector('.kd-p'), d, sel = -1;
+    var box = node.querySelector('.kd-p'), d, sel = -1, st = null;
     function build() {
       d = spec.make(R); sel = -1;
       var opts = d.options.map(function (o, i) { return { o: o, i: i }; }); opts = shuffle(opts);
-      box.innerHTML = '<p class="kd-story">' + tx(d.story) + '</p>' + (d.pics || '') + '<div class="kd-opts">' + opts.map(function (x) { return '<button class="kd-opt" data-i="' + x.i + '">' + tx(x.o) + '</button>'; }).join('') + '</div>';
+      if (st) { st.dispose(); st = null; }
+      box.innerHTML = '<p class="kd-story">' + tx(d.story) + '</p>' + (d.scene ? '<div class="kd-3d small"></div>' : '') + (d.pics ? tx(d.pics) : '') + '<div class="kd-opts">' + opts.map(function (x) { return '<button class="kd-opt" data-i="' + x.i + '">' + tx(x.o) + '</button>'; }).join('') + '</div>';
       box.querySelectorAll('.kd-opt').forEach(function (b) { b.onclick = function () { box.querySelectorAll('.kd-opt').forEach(function (x) { x.classList.remove('sel', 'ok', 'bad'); }); b.classList.add('sel'); sel = +b.getAttribute('data-i'); }; });
+      if (d.scene) st = K.stage(box.querySelector('.kd-3d'), d.scene, { pick: false, perRow: d.perRow });
     }
     build();
     node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
@@ -604,6 +615,34 @@
       var ok = true; box.querySelectorAll('.kd-in').forEach(function (inp, i) { var g = num(inp.value) === ex[i].a; mark(inp, g); ok = ok && g; });
       feedback(node, ok);
     };
+    return node;
+  };
+
+  // Ko'pburchak perimetri yoki siniq chiziq uzunligi: SVG shakl, tomonlar uzunligi yozilgan
+  W.polygon = function (spec, idx) {
+    var node = card(idx, '⬠', spec.title || t('perimeter'), '<div class="kd-poly"></div><div class="kd-q"></div>');
+    var box = node.querySelector('.kd-poly'), q = node.querySelector('.kd-q'), d;
+    function build() {
+      d = spec.make(R);
+      var n = d.sides.length, pts = [], W0 = 360, H0 = 220, cx = W0 / 2, cy = H0 / 2;
+      if (d.kind === 'rect') { var w = 60 + d.sides[0] * 16, hh = 40 + d.sides[1] * 12; pts = [[cx - w / 2, cy - hh / 2], [cx + w / 2, cy - hh / 2], [cx + w / 2, cy + hh / 2], [cx - w / 2, cy + hh / 2]]; }
+      else if (d.kind === 'broken') { for (var i = 0; i <= n; i++) pts.push([30 + i * (300 / n), i % 2 ? 50 : 170]); }
+      else { for (var k = 0; k < n; k++) { var a = -Math.PI / 2 + k * 2 * Math.PI / n, rr = 88 + (k % 2) * 8; pts.push([cx + Math.cos(a) * rr * 1.25, cy + Math.sin(a) * rr]); } }
+      var path = pts.map(function (p, i) { return (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1); }).join(' ') + (d.kind === 'broken' ? '' : ' Z');
+      var labels = '', segs = d.kind === 'broken' ? n : pts.length;
+      for (var j = 0; j < segs; j++) {
+        var p1 = pts[j], p2 = pts[(j + 1) % pts.length], mx = (p1[0] + p2[0]) / 2, my = (p1[1] + p2[1]) / 2;
+        var ox = mx - cx, oy = my - cy, L0 = Math.hypot(ox, oy) || 1, off = d.kind === 'broken' ? 0 : 16;
+        var val = d.kind === 'rect' ? d.sides[j % 2] : d.sides[j];
+        labels += '<text class="kd-side" x="' + (mx + ox / L0 * off).toFixed(1) + '" y="' + (my + oy / L0 * off + (d.kind === 'broken' ? (j % 2 ? 18 : -8) : 5)).toFixed(1) + '">' + val + ' ' + tx(d.unit || t('cm')) + '</text>';
+      }
+      box.innerHTML = '<svg viewBox="0 0 360 220" class="kd-poly-svg"><path d="' + path + '" class="kd-poly-shape' + (d.kind === 'broken' ? ' open' : '') + '"/>' +
+        pts.map(function (p) { return '<circle cx="' + p[0].toFixed(1) + '" cy="' + p[1].toFixed(1) + '" r="4" class="kd-poly-pt"/>'; }).join('') + labels + '</svg>';
+      q.innerHTML = '<p class="kd-story">' + tx(d.story) + '</p><div class="kd-solve"><span class="kd-lbl">' + t('answer') + '</span>' + input(3.4, 'data-a') + ' ' + tx(d.unit || t('cm')) + '</div>';
+    }
+    build();
+    node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
+    node.querySelector('.kd-check').onclick = function () { var a = q.querySelector('[data-a]'), ok = num(a.value) === d.ans; mark(a, ok); feedback(node, ok, ok ? null : t('polyHint')); };
     return node;
   };
 

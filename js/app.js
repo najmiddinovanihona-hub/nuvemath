@@ -93,7 +93,7 @@
         return '<a class="kd-part" href="#darslik/' + grade.n + '/' + p.part + '"><span class="kd-roman">' + ROM[p.part] + '</span><div><h3>' + gName(grade.n) + ' · ' + pName(p) + '</h3><p>' + tx(p.title) + '</p><small>' +
           F('dl.partMeta', { s: p.sections.length, t: tops.length }) + ' · ' + tx(p.edition) + '</small>' +
           '<div class="bar"><span style="width:' + Math.round(done / tops.length * 100) + '%"></span></div></div></a>';
-      }).join('') + '<div class="kd-part soon"><span class="kd-roman">…</span><div><h3>' + T('dl.otherParts') + '</h3><p>' + T('dl.otherSoon') + '</p></div></div></div>';
+      }).join('') + (grade.parts.length < 4 ? '<div class="kd-part soon"><span class="kd-roman">…</span><div><h3>' + T('dl.otherParts') + '</h3><p>' + T('dl.otherSoon') + '</p></div></div>' : '') + '</div>';
   }
   function partView(part) {
     var g = part.grade, base = 'darslik/' + g + '/' + part.part, tops = CUR.topics(part), n = 0;

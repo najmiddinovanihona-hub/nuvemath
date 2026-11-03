@@ -4,74 +4,12 @@
 (function (root) {
   'use strict';
   var C = root.NMCurriculum;
-  function L(uz, ru, en) { return { uz: uz, ru: ru, en: en }; }
-  function pk(v, l) { return v && typeof v === 'object' && 'uz' in v ? v[l] : v; }
-  function mk(fn) { return { uz: fn('uz'), ru: fn('ru'), en: fn('en') }; } // har bir til uchun matn yasash
-  // ruscha ko'plik: 1 медаль, 2 медали, 5 медалей
-  function rp(n, f) { var a = n % 10, b = n % 100; return n + ' ' + (a === 1 && b !== 11 ? f[0] : a >= 2 && a <= 4 && (b < 12 || b > 14) ? f[1] : f[2]); }
-  function ep(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
-  var PCS = L('ta', 'шт.', 'pcs'), TOTAL = L('Jami', 'Всего', 'Total'), MORE = L('ko‘p', 'больше', 'more'), LESS = L('kam', 'меньше', 'fewer');
-  var P1 = L('I qism', 'I часть', 'Part I'), P2 = L('II qism', 'II часть', 'Part II'), KG = L('kg', 'кг', 'kg'), LT = L('l', 'л', 'L'), CM = L('cm', 'см', 'cm');
-  function K() { return root.NMKids; }
-
-  // ---------- Masala yasovchilar (har chaqiruvda yangi sonlar) ----------
-  // Butunni topish: a + b = ?
-  function whole(o) {
-    return function (R) {
-      var a = R(o.a[0], o.a[1]), b = R(o.b[0], o.b[1]), u = o.u || PCS;
-      return { story: o.text(a, b), pics: o.emoji ? [[o.emoji[0], a, o.labels[0]], [o.emoji[1] || o.emoji[0], b, o.labels[1]]] : null, picsOp: '+',
-        cond: [[o.cond ? o.cond[0] : P1, mk(function (l) { return a + ' ' + pk(u, l); })], [o.cond ? o.cond[1] : P2, mk(function (l) { return b + ' ' + pk(u, l); })], [TOTAL, mk(function (l) { return '? ' + pk(u, l); })]],
-        scheme: { kind: 'whole', parts: [a, b], show: [a, b], top: mk(function (l) { return '? ' + pk(u, l); }), labels: o.labels },
-        expr: [a, '+', b, '=', a + b], ans: a + b, unit: u };
-    };
-  }
-  // Qismni topish: c − a = ?
-  function part(o) {
-    return function (R) {
-      var c = R(o.c[0], o.c[1]), a = R(o.a[0], Math.min(o.a[1], c - 1)), u = o.u || PCS;
-      return { story: o.text(c, a), pics: o.emoji ? [[o.emoji, c, TOTAL]] : null,
-        cond: [[TOTAL, mk(function (l) { return c + ' ' + pk(u, l); })], [o.cond ? o.cond[0] : P1, mk(function (l) { return a + ' ' + pk(u, l); })], [o.cond ? o.cond[1] : P2, mk(function (l) { return '? ' + pk(u, l); })]],
-        scheme: { kind: 'part', parts: [a, c - a], show: [a, '?'], top: mk(function (l) { return c + ' ' + pk(u, l); }), labels: o.labels },
-        expr: [c, '−', a, '=', c - a], ans: c - a, unit: u };
-    };
-  }
-  // Orttirish: a dan d ta ko'p
-  function more(o) {
-    return function (R) {
-      var a = R(o.a[0], o.a[1]), d = R(o.d[0], o.d[1]), u = o.u || PCS;
-      return { story: o.text(a, d), cond: [[o.who[0], mk(function (l) { return a + ' ' + pk(u, l); })], [o.who[1], mk(function (l) { return '?, ' + (l === 'ru' ? 'на ' : '') + d + ' ' + pk(u, l) + ' ' + pk(MORE, l); })]],
-        scheme: { kind: 'more', a: a, b: a + d, show: [a, mk(function (l) { return '? ' + pk(u, l); }), '+' + d], labels: o.who },
-        expr: [a, '+', d, '=', a + d], ans: a + d, unit: u };
-    };
-  }
-  // Kamaytirish: a dan d ta kam
-  function less(o) {
-    return function (R) {
-      var a = R(o.a[0], o.a[1]), d = R(o.d[0], Math.min(o.d[1], a - 1)), u = o.u || PCS;
-      return { story: o.text(a, d), cond: [[o.who[0], mk(function (l) { return a + ' ' + pk(u, l); })], [o.who[1], mk(function (l) { return '?, ' + (l === 'ru' ? 'на ' : '') + d + ' ' + pk(u, l) + ' ' + pk(LESS, l); })]],
-        scheme: { kind: 'less', a: a, b: a - d, show: [a, mk(function (l) { return '? ' + pk(u, l); }), '−' + d], labels: o.who },
-        expr: [a, '−', d, '=', a - d], ans: a - d, unit: u };
-    };
-  }
-  // Taqqoslash: necha ta ko'p / kam
-  function diff(o) {
-    return function (R) {
-      var a = R(o.a[0], o.a[1]), b; do { b = R(o.b[0], o.b[1]); } while (b === a);
-      var hi = Math.max(a, b), lo = Math.min(a, b), u = o.u || PCS;
-      return { story: o.text(a, b), cond: [[o.who[0], mk(function (l) { return a + ' ' + pk(u, l); })], [o.who[1], mk(function (l) { return b + ' ' + pk(u, l); })]],
-        scheme: { kind: 'diff', a: a, b: b, show: [a, b, '?'], labels: o.who },
-        expr: [hi, '−', lo, '=', hi - lo], ans: hi - lo, unit: u };
-    };
-  }
-  function sumDrill(max) { return function (R) { var a = R(1, max - 1), b = R(1, max - a); return R(0, 1) ? { q: a + ' + ' + b, a: a + b } : { q: (a + b) + ' − ' + b, a: a }; }; }
-  function tensDrill(R) { var a = R(1, 9) * 10, b = R(1, 9); return R(0, 1) ? { q: a + ' + ' + b, a: a + b } : { q: (a + b) + ' − ' + b, a: a }; }
-  function unitDrill(u) { return function (R) { var a = R(5, 50), b = R(1, 40); return R(0, 1) ? { q: mk(function (l) { return a + ' ' + pk(u, l) + ' + ' + b + ' ' + pk(u, l); }), a: a + b, unit: u } : { q: mk(function (l) { return (a + b) + ' ' + pk(u, l) + ' − ' + b + ' ' + pk(u, l); }), a: a, unit: u }; }; }
-  function choice(story, options, a, pics) { return { story: story, options: options, a: a, pics: pics }; }
-  function pick(a) { return a[Math.floor(Math.random() * a.length)]; }
+  var H = C.H, L = H.L, pk = H.pk, mk = H.mk, rp = H.rp, PCS = H.PCS, TOTAL = H.TOTAL, MORE = H.MORE, LESS = H.LESS, KG = H.KG, LT = H.LT, CM = H.CM,
+    whole = H.whole, part = H.part, more = H.more, less = H.less, diff = H.diff, sumDrill = H.sumDrill, tensDrill = H.tensDrill, unitDrill = H.unitDrill, choice = H.choice, pick = H.pick;
   var YES_NO_Q = L('Yo‘q, unda savol yo‘q', 'Нет, в нём нет вопроса', 'No, it has no question');
 
   var part3 = {
-    grade: 1, part: 3, edition: L('Yangi nashr, 2024', 'Новое издание, 2024', 'New edition, 2024'),
+    grade: 1, part: 3, edition: L('2024-yil nashri', 'Издание 2024 г.', '2024 edition'),
     title: L('Masalalar va kattaliklar', 'Задачи и величины', 'Word problems and measurements'),
     book: L('I.V. Repyova. Matematika, 1-sinf, III qism (Toshkent, 2024)', 'И.В. Репьева. Математика, 1 класс, часть III (Ташкент, 2024)', 'I.V. Repyova. Mathematics, Grade 1, Part III (Tashkent, 2024)'),
     intro: L('Bu qismda biz masalalar bilan do‘stlashamiz: ularni o‘qish, sxema chizish, ifoda tuzish va javob topishni o‘rganamiz. So‘ng uzunlik, massa va hajmni o‘lchaymiz.',

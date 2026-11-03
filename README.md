@@ -10,7 +10,7 @@ O‘zbek tilidagi (rus va ingliz tillari bilan) interaktiv matematika platformas
 - **Kirish animatsiyasi (intro, ~14 s)** — birinchi tashrifda: formulalar va 3D jismlar orbitada aylanadi, ko‘zoynakli odamcha ularni kuzatadi; π orbitadan ajralib uchadi, odamcha uni ushlaydi, so‘ng π logotipdagi joyiga uchib, logotip qismma-qism (π → kitob → orbita → yulduz) yig‘iladi va odamcha qo‘l silkitadi. Three.js + GSAP, «O‘tkazib yuborish» (yoki Esc), `prefers-reduced-motion` da yengil versiya. Qayta ko‘rish: «Introni qayta ko‘rish» yoki `?intro`.
 
 - **Uch tilda** — butun ilova, jumladan darslik mazmuni, topshiriqlar va testlar o‘zbek, rus va ingliz tillarida.
-- **Darslik** — sinf → qism → bo‘lim → mavzu tuzilmasida (1–11-sinf). Hozir tayyor: **1-sinf, III qism** (I.V. Repyova, 2024 darsligi asosida): 5 bo‘lim, 19 mavzu, 54 ta interaktiv topshiriq (3D sahnada sanash, masala sxemalari va to‘ldirish joylari, sonli zanjir, sehrli kvadrat, jadval, chizg‘ich, pallali tarozi, idishlar, tartiblash), har bir mavzu, bo‘lim va qism uchun testlar. Topshiriqlar har safar yangi sonlar bilan yaratiladi.
+- **Darslik** — sinf → qism → bo‘lim → mavzu tuzilmasida (1–11-sinf). Hozir tayyor: **1-sinf, I–IV qismlar** (I.V. Repyova darsliklari asosida): 4 qism, 64 mavzu — narsalar va sanoq, 0–10 sonlar, 100 gacha sonlar, masalalar, kattaliklar, ko‘pburchak va perimetr, simmetriya, Rim raqamlari, tenglamalar. Har bir mavzuda 3D sahna, interaktiv topshiriqlar (sanash, sxemalar, o‘nlik tayoqchalar, perimetr, tarozi, chizg‘ich va h.k.) va testlar; har bir bo‘lim va qism uchun yakuniy testlar. Topshiriqlar har safar yangi sonlar bilan yaratiladi.
 - **Grafiklar** — istalgan funksiya grafigi: bir nechta funksiya, kattalashtirish/siljitish (sichqoncha va barmoq), koordinata ko‘rsatkichi, nollar, ekstremumlar va kesishish nuqtalari avtomatik topiladi (π/6 kabi aniq ko‘rinishda), hosila, `a` parametri slayderi.
 - **Yechuvchi**
   - Tenglama: ko‘phadni standart ko‘rinishga keltirib, chiziqli va kvadrat tenglamalarni qadam-baqadam yechadi (diskriminant, aniq radikal javob `(3 ± √17)/4`, Viyet, tekshirish); yuqori darajali va transsendent tenglamalarni (sin, 2^x, ln, √, |x|) sonli usulda yechadi.
@@ -44,7 +44,7 @@ npm test           # avtomatik testlar
 | `js/solids.js` | 3D jismlar (Three.js) va yoyilmalar |
 | `js/practice.js` | Masala generatori va javob tekshiruvi |
 | `js/kids.js`, `css/kids.css` | Interaktiv dars dvigateli: 3D sahna, topshiriq turlari, testlar |
-| `js/curriculum/index.js` | Sinf/qism tuzilmasi; `js/curriculum/g1-3.js` — 1-sinf III qism mazmuni |
+| `js/curriculum/index.js`, `helpers.js` | Sinf/qism tuzilmasi va umumiy masala yasovchilar; `g1-1.js` … `g1-4.js` — 1-sinf I–IV qismlar |
 | `js/i18n.js` | Interfeys tarjimalari |
 | `js/intro.js`, `css/intro.css` | Mustaqil intro komponenti (`NuvemathIntro.play({ force: true })`) |
 | `assets/` | Logotip: asl rasm, shaffof emblema (yorug' va qorong'i fon uchun), favicon |

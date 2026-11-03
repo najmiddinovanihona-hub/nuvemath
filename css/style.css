@@ -1,23 +1,27 @@
 /* Nuvemath — uslublar (Kolvo va Zenithra bilan bir oilaviy qorong'i "kosmik" uslub; yorug' rejim ham bor) */
 :root {
-  --bg: #060a17; --bg2: #0b1124; --card: rgba(18, 26, 52, .72); --card-b: rgba(120, 150, 255, .14);
-  --text: #e6ecff; --muted: #8a96b8; --accent: #5b9dff; --accent2: #b48cff; --ok: #3ddc97; --bad: #ff6b8b; --warn: #ffb547;
-  --plot-bg: #0a1020; --grid: rgba(160, 180, 255, .10); --grid2: rgba(160, 180, 255, .04); --axis: rgba(210, 222, 255, .55);
-  --r: 16px; --shadow: 0 10px 40px rgba(0, 0, 0, .35);
+  /* kechki rejim: qop-qora emas, chuqur ko'k-binafsha osmon */
+  --bg: #0f1a36; --bg2: #18264a; --card: rgba(30, 44, 86, .78); --card-b: rgba(140, 170, 255, .22);
+  --text: #eef2ff; --muted: #a7b4d8; --accent: #6aa6ff; --accent2: #b896ff; --ok: #3ddc97; --bad: #ff7b96; --warn: #ffbe5c;
+  --plot-bg: #121d3d; --grid: rgba(170, 190, 255, .13); --grid2: rgba(170, 190, 255, .05); --axis: rgba(220, 230, 255, .6);
+  --glow1: rgba(91, 157, 255, .26); --glow2: rgba(180, 140, 255, .22); --glow3: rgba(61, 220, 200, .10);
+  --r: 16px; --shadow: 0 10px 34px rgba(4, 8, 24, .45);
   --font: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif; --mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
 [data-theme="light"] {
-  --bg: #f3f6ff; --bg2: #e8eeff; --card: rgba(255, 255, 255, .92); --card-b: rgba(60, 90, 180, .14);
-  --text: #141a33; --muted: #5d6888; --accent: #2f6fe6; --accent2: #7a4fe0;
-  --plot-bg: #ffffff; --grid: rgba(40, 70, 160, .12); --grid2: rgba(40, 70, 160, .05); --axis: rgba(20, 30, 70, .6);
-  --shadow: 0 8px 30px rgba(30, 50, 120, .10);
+  /* kunduzgi rejim: oppoq emas, yumshoq havorang fon va aniq kontrast */
+  --bg: #e4ecfb; --bg2: #d9e4fa; --card: rgba(255, 255, 255, .86); --card-b: rgba(55, 90, 190, .20);
+  --text: #0f1838; --muted: #47557d; --accent: #2563eb; --accent2: #7c3aed; --ok: #16a36a; --bad: #e0365f; --warn: #d98a00;
+  --plot-bg: #f8fbff; --grid: rgba(40, 70, 160, .14); --grid2: rgba(40, 70, 160, .06); --axis: rgba(20, 30, 70, .65);
+  --glow1: rgba(59, 130, 246, .30); --glow2: rgba(167, 139, 250, .30); --glow3: rgba(45, 212, 191, .22);
+  --shadow: 0 10px 30px rgba(30, 60, 140, .14);
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { margin: 0; }
 body {
   font-family: var(--font); color: var(--text); background: var(--bg); min-height: 100vh; line-height: 1.55;
-  background-image: radial-gradient(1200px 600px at 85% -10%, rgba(91, 157, 255, .16), transparent 60%), radial-gradient(900px 500px at -10% 30%, rgba(180, 140, 255, .12), transparent 60%);
+  background-image: radial-gradient(1100px 620px at 88% -8%, var(--glow1), transparent 60%), radial-gradient(900px 560px at -8% 32%, var(--glow2), transparent 60%), radial-gradient(800px 500px at 60% 110%, var(--glow3), transparent 60%);
   background-attachment: fixed;
 }
 a { color: var(--accent); text-decoration: none; }
