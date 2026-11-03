@@ -288,3 +288,10 @@
 .kd-nljump { fill: none; stroke: var(--k-orange); stroke-width: 3; stroke-dasharray: 600; animation: kdDraw 1s ease both; animation-delay: var(--d); }
 .kd-nljt { fill: var(--k-orange); font: 800 13px var(--mono); text-anchor: middle; }
 .kd-codash { stroke: var(--k-pink); stroke-width: 2; stroke-dasharray: 5 4; }
+
+/* Oddiy kasr va aralash son (5-sinf) */
+.kd-fr { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.1; margin: 0 .12em; font-weight: 700; }
+.kd-fr b:first-child { border-bottom: 2px solid currentColor; padding: 0 .2em; }
+.kd-mx { display: inline-flex; align-items: center; gap: .08em; }
+.kd-fig { display: flex; justify-content: center; margin: .4rem 0; color: var(--text); }
+.kd-fig svg { max-width: 300px; width: 100%; height: auto; }

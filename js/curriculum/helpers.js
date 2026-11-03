@@ -112,7 +112,16 @@
       return { q: c + ' − x = ' + a + ';  x', a: b };
     };
   }
+  // 5-sinfdan: oddiy kasr, aralash son va o'nli kasr ko'rinishlari
+  function gcd(a, b) { return b ? gcd(b, a % b) : Math.abs(a); }
+  function fr(a, b) { return '<span class="kd-fr"><b>' + a + '</b><b>' + b + '</b></span>'; }
+  function mixed(w, a, b) { return '<span class="kd-mx">' + (w ? w : '') + (a ? fr(a, b) : '') + '</span>'; }
+  function r6(x) { return Math.round(x * 1e6) / 1e6; }
+  function dec(x, l) { var s = String(r6(x)); return l === 'en' ? s : s.replace('.', ','); }
+  // matnni uch tilda o'nli kasrlar bilan qurish: dq(function (D, l) { return D(2.5) + ' · 10'; })
+  function dq(fn) { return mk(function (l) { return fn(function (x) { return dec(x, l); }, l); }); }
   root.NMCurriculum.H = { L: L, pk: pk, mk: mk, rp: rp, ep: ep, PCS: PCS, TOTAL: TOTAL, MORE: MORE, LESS: LESS, P1: P1, P2: P2, KG: KG, LT: LT, CM: CM,
     whole: whole, part: part, more: more, less: less, diff: diff, sumDrill: sumDrill, tensDrill: tensDrill, unitDrill: unitDrill, choice: choice, pick: pick,
-    word: word, roman: roman, distinct: distinct, sortNums: sortNums, compareSign: compareSign, unknownDrill: unknownDrill, eqDrill: eqDrill };
+    word: word, roman: roman, distinct: distinct, sortNums: sortNums, compareSign: compareSign, unknownDrill: unknownDrill, eqDrill: eqDrill,
+    gcd: gcd, fr: fr, mixed: mixed, r6: r6, dec: dec, dq: dq };
 })(this);
