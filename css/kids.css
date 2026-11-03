@@ -276,3 +276,15 @@
 .kd-gl { stroke: var(--grid); stroke-width: 1.2; }
 .kd-gcell { fill: color-mix(in srgb, var(--accent) 45%, transparent); animation: kdDrop .35s ease both; animation-delay: calc(var(--i) * 18ms); }
 .kd-gfig { fill: none; stroke: var(--accent); stroke-width: 3; }
+
+/* sonli nur va koordinata burchagi */
+.kd-nl, .kd-co { width: 100%; display: block; margin: 0 auto; }
+.kd-nl { max-width: 640px; } .kd-co { max-width: 380px; }
+.kd-nlaxis { stroke: var(--text); stroke-width: 2.5; } .kd-nlarrow { fill: var(--text); }
+.kd-nltick { stroke: var(--text); stroke-width: 2; }
+.kd-nlnum { fill: var(--muted); font: 600 12px var(--mono); text-anchor: middle; }
+.kd-nlpt { fill: var(--k-pink); stroke: #fff; stroke-width: 2; animation: kdPop .5s ease both; }
+.kd-nlpl { fill: var(--text); font: 800 15px var(--font); text-anchor: middle; }
+.kd-nljump { fill: none; stroke: var(--k-orange); stroke-width: 3; stroke-dasharray: 600; animation: kdDraw 1s ease both; animation-delay: var(--d); }
+.kd-nljt { fill: var(--k-orange); font: 800 13px var(--mono); text-anchor: middle; }
+.kd-codash { stroke: var(--k-pink); stroke-width: 2; stroke-dasharray: 5 4; }

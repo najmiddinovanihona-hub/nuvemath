@@ -10,7 +10,7 @@
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function h(html) { var d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstElementChild; }
-  function num(v) { var s = String(v).trim().replace(',', '.').replace('−', '-'); return s === '' ? NaN : Number(s); }
+  function num(v) { var s = String(v).trim().replace(/\s+/g, '').replace(',', '.').replace('−', '-'); return s === '' ? NaN : Number(s); }
   K.R = R; K.pick = pick; K.shuffle = shuffle;
 
   // ---------- Uch tilli matnlar ----------
@@ -25,7 +25,7 @@
       jugs: 'Idishni to‘ldiring', full: 'To‘ldi!', poured: 'Quyildi:', jars: 'banka', pourTitle: '1 l quyish', volume: 'Hajmi:', jugsHint: 'Bankani bosib, idish to‘lguncha quying va sanang.',
       order: 'Tartib bilan joylashtiring', orderBad: 'Tartib noto‘g‘ri — boshidan qayta bosing.', choose: 'To‘g‘risini tanlang', chooseFirst: 'Avval javobni tanlang.', chooseBad: 'Masalani yana bir bor diqqat bilan o‘qing.',
       drill: 'Tez hisoblang', q100: 'Mukammal! Siz haqiqiy matematiksiz! 🏆', q80: 'Juda yaxshi natija! ⭐', q50: 'Yaxshi! Yana bir bor takrorlang.', qLow: 'Mavzuni qayta ko‘rib chiqing — siz uddalaysiz!', reQuiz: '↻ Qayta topshirish',
-      kg: 'kg', l: 'l', cm: 'cm', dm: 'dm', total: 'jami', perimeter: 'Perimetrni toping', polyHint: 'Barcha tomonlar uzunliklarini qo‘shing.', column: 'Ustun ko‘rinishida hisoblang', columnHint: 'Birliklarni birliklar ostiga, o‘nliklarni o‘nliklar ostiga yozib, o‘ngdan boshlang.', clock: 'Soat necha bo‘ldi?', clockAsk: 'Soat nechani ko‘rsatyapti? Soat va minutni yozing.', clockHint: 'Kalta strelka — soat, uzun strelka — minut.', area: 'Yuzni toping', areaHint: 'Kataklarni qatorlab sanang: qatordagi katak × qatorlar soni.' },
+      kg: 'kg', l: 'l', cm: 'cm', dm: 'dm', total: 'jami', perimeter: 'Perimetrni toping', polyHint: 'Barcha tomonlar uzunliklarini qo‘shing.', column: 'Ustun ko‘rinishida hisoblang', columnHint: 'Birliklarni birliklar ostiga, o‘nliklarni o‘nliklar ostiga yozib, o‘ngdan boshlang.', clock: 'Soat necha bo‘ldi?', clockAsk: 'Soat nechani ko‘rsatyapti? Soat va minutni yozing.', clockHint: 'Kalta strelka — soat, uzun strelka — minut.', area: 'Yuzni toping', areaHint: 'Kataklarni qatorlab sanang: qatordagi katak × qatorlar soni.', numline: 'Sonli nur', numlineHint: 'Bo‘linmalarni sanang: har bir qadam qanchaga tengligini aniqlang.', coord: 'Koordinata burchagi', coordAsk: 'Nuqtaning koordinatalarini yozing: avval x (gorizontal), keyin y (vertikal).', coordHint: 'Avval pastga — x o‘qiga, keyin chapga — y o‘qiga qarang.' },
     ru: { check: 'Проверить', fresh: '↻ Новый пример', praise: ['Молодец!', 'Отлично!', 'Супер!', 'Совершенно верно!', 'Браво!'], retry: 'Попробуйте ещё раз.',
       cond: 'Краткая запись', solve: 'Решение:', answer: 'Ответ:', exprOk: 'Ответ верный, но проверьте выражение.', schemeHint: 'Посмотрите на схему: целое = часть + часть.',
       count3d: '3D-сцена: посчитайте', pickHint: '👆 Нажимайте на посчитанные предметы · вращайте перетаскиванием', marked: 'Отмечено:', problem: 'Решите задачу',
@@ -36,7 +36,7 @@
       jugs: 'Наполните ведро', full: 'Полно!', poured: 'Налито:', jars: 'банок', pourTitle: 'Налить 1 л', volume: 'Объём:', jugsHint: 'Нажимайте на банку, пока ведро не наполнится, и считайте.',
       order: 'Расставьте по порядку', orderBad: 'Порядок неверный — начните заново.', choose: 'Выберите верный ответ', chooseFirst: 'Сначала выберите ответ.', chooseBad: 'Прочитайте задачу ещё раз внимательно.',
       drill: 'Считаем быстро', q100: 'Безупречно! Вы настоящий математик! 🏆', q80: 'Очень хороший результат! ⭐', q50: 'Хорошо! Повторите ещё раз.', qLow: 'Повторите тему — у вас получится!', reQuiz: '↻ Пройти заново',
-      kg: 'кг', l: 'л', cm: 'см', dm: 'дм', total: 'всего', perimeter: 'Найдите периметр', polyHint: 'Сложите длины всех сторон.', column: 'Вычислите столбиком', columnHint: 'Пишите единицы под единицами, десятки под десятками и начинайте справа.', clock: 'Который час?', clockAsk: 'Какое время показывают часы? Запишите часы и минуты.', clockHint: 'Короткая стрелка — часы, длинная — минуты.', area: 'Найдите площадь', areaHint: 'Считайте клетки рядами: клеток в ряду × число рядов.' },
+      kg: 'кг', l: 'л', cm: 'см', dm: 'дм', total: 'всего', perimeter: 'Найдите периметр', polyHint: 'Сложите длины всех сторон.', column: 'Вычислите столбиком', columnHint: 'Пишите единицы под единицами, десятки под десятками и начинайте справа.', clock: 'Который час?', clockAsk: 'Какое время показывают часы? Запишите часы и минуты.', clockHint: 'Короткая стрелка — часы, длинная — минуты.', area: 'Найдите площадь', areaHint: 'Считайте клетки рядами: клеток в ряду × число рядов.', numline: 'Числовой луч', numlineHint: 'Посчитайте деления: сколько стоит один шаг?', coord: 'Координатный угол', coordAsk: 'Запишите координаты точки: сначала x (по горизонтали), потом y (по вертикали).', coordHint: 'Сначала посмотрите вниз — на ось x, потом влево — на ось y.' },
     en: { check: 'Check', fresh: '↻ New example', praise: ['Well done!', 'Great!', 'Awesome!', 'Exactly right!', 'Bravo!'], retry: 'Try once more.',
       cond: 'Short note', solve: 'Solution:', answer: 'Answer:', exprOk: 'The answer is right — now check the expression.', schemeHint: 'Look at the diagram: whole = part + part.',
       count3d: '3D scene: count', pickHint: '👆 Tap the objects you count · drag to rotate', marked: 'Marked:', problem: 'Solve the problem',
@@ -47,7 +47,7 @@
       jugs: 'Fill the bucket', full: 'Full!', poured: 'Poured:', jars: 'jars', pourTitle: 'Pour 1 L', volume: 'Volume:', jugsHint: 'Tap the jar until the bucket is full and count.',
       order: 'Put in order', orderBad: 'Wrong order — start again.', choose: 'Choose the right answer', chooseFirst: 'Choose an answer first.', chooseBad: 'Read the problem carefully once more.',
       drill: 'Quick maths', q100: 'Perfect! You are a real mathematician! 🏆', q80: 'Very good result! ⭐', q50: 'Good! Practise once more.', qLow: 'Review the topic — you can do it!', reQuiz: '↻ Try again',
-      kg: 'kg', l: 'L', cm: 'cm', dm: 'dm', total: 'total', perimeter: 'Find the perimeter', polyHint: 'Add the lengths of all the sides.', column: 'Work it out in a column', columnHint: 'Put ones under ones and tens under tens, and start from the right.', clock: 'What time is it?', clockAsk: 'What time does the clock show? Write the hours and minutes.', clockHint: 'The short hand shows hours, the long hand shows minutes.', area: 'Find the area', areaHint: 'Count the squares in rows: squares in a row × number of rows.' }
+      kg: 'kg', l: 'L', cm: 'cm', dm: 'dm', total: 'total', perimeter: 'Find the perimeter', polyHint: 'Add the lengths of all the sides.', column: 'Work it out in a column', columnHint: 'Put ones under ones and tens under tens, and start from the right.', clock: 'What time is it?', clockAsk: 'What time does the clock show? Write the hours and minutes.', clockHint: 'The short hand shows hours, the long hand shows minutes.', area: 'Find the area', areaHint: 'Count the squares in rows: squares in a row × number of rows.', numline: 'Number line', numlineHint: 'Count the marks: how much is each step worth?', coord: 'Coordinate grid', coordAsk: 'Write the point’s coordinates: x first (across), then y (up).', coordHint: 'Look down to the x-axis first, then left to the y-axis.' }
   };
   function lang() { return (root.I18n && root.I18n.lang) || 'uz'; }
   function t(k) { var L = KT[lang()] || KT.uz; return L[k] !== undefined ? L[k] : KT.uz[k]; }
@@ -709,6 +709,47 @@
     build();
     node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
     node.querySelector('.kd-check').onclick = function () { var a = q.querySelector('[data-a]'), ok = num(a.value) === d.ans; mark(a, ok); feedback(node, ok, ok ? null : t(d.ask === 'perimeter' ? 'polyHint' : 'areaHint')); };
+    return node;
+  };
+
+  // Sonli (koordinata) nur: nuqta koordinatasini topish yoki sakrashlar bilan qo'shish/ayirish
+  W.numline = function (spec, idx) {
+    var node = card(idx, '📍', spec.title || t('numline'), '<div class="kd-nlw"></div><div class="kd-q"></div>');
+    var box = node.querySelector('.kd-nlw'), q = node.querySelector('.kd-q'), d;
+    function build() {
+      d = spec.make(R);
+      var n = Math.round((d.max - d.min) / d.step), W0 = 560, x0 = 30, dx = (W0 - 60) / n, X = function (v) { return x0 + (v - d.min) / d.step * dx; }, sv = '<svg viewBox="0 0 ' + W0 + ' 130" class="kd-nl">';
+      sv += '<line x1="10" y1="80" x2="' + (W0 - 10) + '" y2="80" class="kd-nlaxis"/><polygon points="' + (W0 - 10) + ',80 ' + (W0 - 22) + ',73 ' + (W0 - 22) + ',87" class="kd-nlarrow"/>';
+      for (var i = 0; i <= n; i++) { var v = d.min + i * d.step, big = !d.labelEvery || i % d.labelEvery === 0; sv += '<line x1="' + X(v) + '" y1="' + (big ? 70 : 74) + '" x2="' + X(v) + '" y2="' + (big ? 90 : 86) + '" class="kd-nltick"/>' + (big ? '<text x="' + X(v) + '" y="110" class="kd-nlnum">' + v + '</text>' : ''); }
+      if (d.jumps) { var from = d.jumps[0]; d.jumps.slice(1).forEach(function (to, k) { var a = X(from), b = X(to), m = (a + b) / 2, hgt = 18 + Math.min(40, Math.abs(b - a) / 4); sv += '<path d="M' + a + ' 74 Q' + m + ' ' + (74 - hgt * 2) + ' ' + b + ' 74" class="kd-nljump" style="--d:' + (k * 0.3) + 's"/><text x="' + m + '" y="' + (70 - hgt) + '" class="kd-nljt">' + (to > from ? '+' : '−') + Math.abs(to - from) + '</text>'; from = to; }); }
+      (d.points || []).forEach(function (p) { sv += '<circle cx="' + X(p[0]) + '" cy="80" r="7" class="kd-nlpt"/><text x="' + X(p[0]) + '" y="58" class="kd-nlpl">' + p[1] + '</text>'; });
+      box.innerHTML = sv + '</svg>';
+      q.innerHTML = '<p class="kd-story">' + tx(d.story) + '</p><div class="kd-solve"><span class="kd-lbl">' + t('answer') + '</span>' + input(4, 'data-a') + '</div>';
+    }
+    build();
+    node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
+    node.querySelector('.kd-check').onclick = function () { var a = q.querySelector('[data-a]'), ok = num(a.value) === d.ans; mark(a, ok); feedback(node, ok, ok ? null : t('numlineHint')); };
+    return node;
+  };
+
+  // Koordinata burchagi: nuqtaning (x; y) koordinatalari
+  W.coord = function (spec, idx) {
+    var node = card(idx, '📐', spec.title || t('coord'), '<div class="kd-cow"></div><div class="kd-q"></div>');
+    var box = node.querySelector('.kd-cow'), q = node.querySelector('.kd-q'), d;
+    function build() {
+      d = spec.make(R);
+      var N = 8, c = 34, o = 30, sv = '<svg viewBox="0 0 ' + (o + N * c + 30) + ' ' + (N * c + 60) + '" class="kd-co">', Y = function (v) { return 20 + (N - v) * c; }, X = function (v) { return o + v * c; };
+      for (var i = 0; i <= N; i++) { sv += '<line x1="' + X(i) + '" y1="' + Y(0) + '" x2="' + X(i) + '" y2="' + Y(N) + '" class="kd-gl"/><line x1="' + X(0) + '" y1="' + Y(i) + '" x2="' + X(N) + '" y2="' + Y(i) + '" class="kd-gl"/>'; if (i) sv += '<text x="' + X(i) + '" y="' + (Y(0) + 18) + '" class="kd-nlnum">' + i + '</text><text x="' + (X(0) - 12) + '" y="' + (Y(i) + 5) + '" class="kd-nlnum">' + i + '</text>'; }
+      sv += '<text x="' + (X(0) - 10) + '" y="' + (Y(0) + 18) + '" class="kd-nlnum">0</text><line x1="' + X(0) + '" y1="' + Y(0) + '" x2="' + (X(N) + 16) + '" y2="' + Y(0) + '" class="kd-nlaxis"/><line x1="' + X(0) + '" y1="' + Y(0) + '" x2="' + X(0) + '" y2="' + (Y(N) - 14) + '" class="kd-nlaxis"/>';
+      sv += '<text x="' + (X(N) + 18) + '" y="' + (Y(0) - 6) + '" class="kd-nlpl">x</text><text x="' + (X(0) + 10) + '" y="' + (Y(N) - 6) + '" class="kd-nlpl">y</text>';
+      sv += '<line x1="' + X(d.x) + '" y1="' + Y(d.y) + '" x2="' + X(d.x) + '" y2="' + Y(0) + '" class="kd-codash"/><line x1="' + X(d.x) + '" y1="' + Y(d.y) + '" x2="' + X(0) + '" y2="' + Y(d.y) + '" class="kd-codash"/>';
+      sv += '<circle cx="' + X(d.x) + '" cy="' + Y(d.y) + '" r="8" class="kd-nlpt"/><text x="' + (X(d.x) + 14) + '" y="' + (Y(d.y) - 10) + '" class="kd-nlpl">' + (d.name || 'A') + '</text></svg>';
+      box.innerHTML = sv;
+      q.innerHTML = '<p class="kd-story">' + tx(d.story || t('coordAsk')) + '</p><div class="kd-solve"><b>' + (d.name || 'A') + '</b> (' + input(2.4, 'data-x') + ' ; ' + input(2.4, 'data-y') + ')</div>';
+    }
+    build();
+    node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
+    node.querySelector('.kd-check').onclick = function () { var xi = q.querySelector('[data-x]'), yi = q.querySelector('[data-y]'), ox = num(xi.value) === d.x, oy = num(yi.value) === d.y; mark(xi, ox); mark(yi, oy); feedback(node, ox && oy, ox && oy ? null : t('coordHint')); };
     return node;
   };
 

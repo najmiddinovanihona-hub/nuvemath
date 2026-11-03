@@ -93,20 +93,20 @@ const asText = (v, l) => v && typeof v === 'object' && 'uz' in v ? v[l] : String
 
 function loadCurriculum() {
   const ctx = {}; ctx.window = ctx; vm.createContext(ctx);
-  ['js/kids.js', 'js/curriculum/index.js', 'js/curriculum/helpers.js', 'js/curriculum/g1-1.js', 'js/curriculum/g1-2.js', 'js/curriculum/g1-3.js', 'js/curriculum/g1-4.js', 'js/curriculum/g2-1.js', 'js/curriculum/g2-2.js', 'js/curriculum/g2-3.js', 'js/curriculum/g2-4.js'].forEach(f => vm.runInContext(fs.readFileSync(path.join(__dirname, '..', f), 'utf8'), ctx, { filename: f }));
+  ['js/kids.js', 'js/curriculum/index.js', 'js/curriculum/helpers.js', 'js/curriculum/g1-1.js', 'js/curriculum/g1-2.js', 'js/curriculum/g1-3.js', 'js/curriculum/g1-4.js', 'js/curriculum/g2-1.js', 'js/curriculum/g2-2.js', 'js/curriculum/g2-3.js', 'js/curriculum/g2-4.js', 'js/curriculum/g3-1.js', 'js/curriculum/g3-2.js', 'js/curriculum/g3-3.js', 'js/curriculum/g3-4.js'].forEach(f => vm.runInContext(fs.readFileSync(path.join(__dirname, '..', f), 'utf8'), ctx, { filename: f }));
   return ctx;
 }
-test('darslik tuzilmasi: 11 sinf, 1–2-sinflarning I–IV qismlari to‘liq', () => {
+test('darslik tuzilmasi: 11 sinf, 1–3-sinflarning I–IV qismlari to‘liq', () => {
   const ctx = loadCurriculum(), C = ctx.NMCurriculum;
   assert.strictEqual(C.grades.length, 11);
-  [0, 1].forEach(g => assert.strictEqual(JSON.stringify(C.grades[g].parts.map(p => p.part)), '[1,2,3,4]', (g + 1) + '-sinf qismlari'));
-  C.grades[0].parts.concat(C.grades[1].parts).forEach(p => {
+  [0, 1, 2].forEach(g => assert.strictEqual(JSON.stringify(C.grades[g].parts.map(p => p.part)), '[1,2,3,4]', (g + 1) + '-sinf qismlari'));
+  C.grades[0].parts.concat(C.grades[1].parts, C.grades[2].parts).forEach(p => {
   const tops = C.topics(p); assert.ok(tops.length >= 12, p.part + '-qism mavzular soni ' + tops.length);
   const ids = new Set();
   tops.forEach(t => {
     assert.ok(!ids.has(t.id), 'takroriy id ' + t.id); ids.add(t.id);
     assert.ok(t.title && t.explain && t.rule && t.keys.length, t.id + ' matn yetishmaydi');
-    assert.ok(t.acts.length >= 2, t.id + ' topshiriqlar kam');
+    assert.ok(t.acts.length >= 2, p.grade + '-' + p.part + ' ' + t.id + ' topshiriqlar kam');
     assert.ok(t.quiz.length >= 2, t.id + ' test kam');
     assert.ok(t.scene.length && t.scene.every(g => ctx.NMKids.objects.includes(g.obj)), t.id + ' 3D sahna noto‘g‘ri');
     t.quiz.forEach(q => { assert.ok(q.a >= 0 && q.a < q.o.length, t.id + ' test javobi indeksi'); ['uz', 'ru', 'en'].forEach(l => assert.strictEqual(new Set(q.o.map(o => asText(o, l))).size, q.o.length, t.id + ' takroriy variant (' + l + '): ' + asText(q.q, l))); });
@@ -119,32 +119,34 @@ test('dars dvigateli matnlari uch tilda', () => {
   const KT = loadCurriculum().NMKids.KT, keys = Object.keys(KT.uz);
   ['ru', 'en'].forEach(l => assert.deepStrictEqual(keys.filter(k => !(k in KT[l])), [], l + ' da yo‘q'));
 });
-test('1–2-sinf topshiriqlari: 300 marta yaratilganda ham sonlar to‘g‘ri', () => {
+test('1–3-sinf topshiriqlari: 300 marta yaratilganda ham sonlar to‘g‘ri', () => {
   const ctx = loadCurriculum(), K = ctx.NMKids, C = ctx.NMCurriculum;
   const evalExpr = e => { let v = e[0]; for (let i = 1; i < e.length - 2; i += 2) v = e[i] === '+' ? v + e[i + 1] : e[i] === '·' ? v * e[i + 1] : e[i] === ':' ? v / e[i + 1] : v - e[i + 1]; return v; };
-  C.grades[0].parts.concat(C.grades[1].parts).forEach(P => C.topics(P).forEach(t => t.acts.forEach((a, k) => {
+  C.grades[0].parts.concat(C.grades[1].parts, C.grades[2].parts).forEach(P => C.topics(P).forEach(t => t.acts.forEach((a, k) => {
     assert.ok(K.widgets[a.type], t.id + ' noma’lum tur ' + a.type);
     if (!a.make) return;
     for (let i = 0; i < 300; i++) {
-      const d = a.make(K.R), where = P.grade + '-' + P.part + ' ' + t.id + ' #' + (k + 1) + ' (' + a.type + ')';
+      const d = a.make(K.R), lim = P.grade === 1 ? 100 : P.grade === 2 ? 1000 : 1000000, big = Math.max(lim, 1000), where = P.grade + '-' + P.part + ' ' + t.id + ' #' + (k + 1) + ' (' + a.type + ')';
       if (i < 20) tri(d, where);
       if (a.type === 'problem' || a.type === 'count3d') {
-        assert.ok(Number.isInteger(d.ans) && d.ans >= 0 && d.ans <= (P.grade === 1 ? 100 : 1000), where + ' javob ' + d.ans);
+        assert.ok(Number.isInteger(d.ans) && d.ans >= 0 && d.ans <= lim, where + ' javob ' + d.ans);
         if (d.expr) { assert.strictEqual(d.expr[d.expr.length - 2], '=', where); assert.strictEqual(evalExpr(d.expr), d.ans, where + ' ifoda ' + d.expr.join(' ')); assert.strictEqual(d.expr[d.expr.length - 1], d.ans, where); }
         d.expr && d.expr.forEach((x, j) => { if (j % 2 === 0) assert.ok(x >= 0, where + ' manfiy son'); });
         if (d.groups) d.groups.forEach(g => assert.ok(g.n >= 1 && g.n <= 12, where + ' guruh ' + g.n));
         if (d.scheme && d.scheme.parts) d.scheme.parts.forEach(x => assert.ok(x > 0, where + ' sxema qismi ' + x));
-      } else if (a.type === 'chain') { let v = d.start; d.ops.forEach(o => { v = o[0] === '+' ? v + o[1] : v - o[1]; assert.ok(Number.isInteger(v) && v >= 0 && v <= 1000, where + ' zanjir ' + v); }); }
+      } else if (a.type === 'chain') { let v = d.start; d.ops.forEach(o => { v = o[0] === '+' ? v + o[1] : v - o[1]; assert.ok(Number.isInteger(v) && v >= 0 && v <= big, where + ' zanjir ' + v); }); }
       else if (a.type === 'choose') { assert.ok(d.a >= 0 && d.a < d.options.length, where); ['uz', 'ru', 'en'].forEach(l => assert.strictEqual(new Set(d.options.map(o => asText(o, l))).size, d.options.length, where + ' takroriy variant (' + l + ')')); }
       else if (a.type === 'order') ['uz', 'ru', 'en'].forEach(l => assert.strictEqual(new Set(d.items.map(o => asText(o, l))).size, d.items.length, where + ' takroriy element'));
-      else if (a.type === 'drill') assert.ok(Number.isInteger(d.a) && d.a >= 0 && d.a <= 1000, where + ' ' + JSON.stringify(d.q) + ' = ' + d.a);
-      else if (a.type === 'column') { assert.strictEqual(d.ans, d.op === '+' ? d.a + d.b : d.a - d.b, where); assert.ok(d.ans >= 0 && d.ans <= 1000, where); }
+      else if (a.type === 'drill') assert.ok(Number.isInteger(d.a) && d.a >= 0 && d.a <= big, where + ' ' + JSON.stringify(d.q) + ' = ' + d.a);
+      else if (a.type === 'column') { assert.strictEqual(d.ans, d.op === '+' ? d.a + d.b : d.a - d.b, where); assert.ok(d.ans >= 0 && d.ans <= big, where); }
       else if (a.type === 'clock') assert.ok(d.h >= 1 && d.h <= 12 && d.m >= 0 && d.m < 60 && d.m % 5 === 0, where + ' ' + d.h + ':' + d.m);
       else if (a.type === 'grid') { assert.ok(d.a >= 1 && d.a <= 12 && d.b >= 1 && d.b <= 7, where); assert.strictEqual(d.ans, d.ask === 'perimeter' ? 2 * (d.a + d.b) : d.a * d.b, where); }
       else if (a.type === 'ruler') assert.ok(d.len > 0 && (d.start || 0) + d.len <= (d.max || 15), where);
       else if (a.type === 'scale') assert.ok(d.mass > 0 && d.mass <= 30, where);
       else if (a.type === 'jugs') assert.ok(d.cap > 0 && d.cap <= 12, where);
       else if (a.type === 'polygon') assert.strictEqual(d.ans, d.kind === 'rect' ? 2 * (d.sides[0] + d.sides[1]) : d.sides.reduce((x, y) => x + y, 0), where);
+      else if (a.type === 'numline') { assert.ok(typeof d.ans === 'number' && Number.isFinite(d.ans), where + ' javob'); assert.ok(d.max > d.min && d.step > 0 && Number.isInteger(Math.round((d.max - d.min) / d.step)), where + ' nur'); (d.points || []).forEach(p => assert.ok(p[0] >= d.min && p[0] <= d.max, where + ' nuqta ' + p[0])); }
+      else if (a.type === 'coord') assert.ok([d.x, d.y].every(v => Number.isInteger(v) && v >= 0 && v <= 8), where + ' (' + d.x + ';' + d.y + ')');
       if (d.scene) d.scene.forEach(g => assert.ok(K.objects.includes(g.obj), where + ' 3D ob’ekt ' + g.obj));
       if (d.groups) d.groups.forEach(g => assert.ok(K.objects.includes(g.obj), where + ' 3D ob’ekt ' + g.obj));
     }
