@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nuvemath — See Math. Explore Dimensions.</title>
+<meta name="description" content="Nuvemath — interaktiv algebra va geometriya platformasi: darslar, funksiya grafiklari, qadam-baqadam tenglama yechuvchi, jonli geometrik chizmalar, 3D jismlar va cheksiz mashqlar.">
+<meta name="theme-color" content="#050b1d">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/intro.css">
+<script>
+// Mavzu rangi va intro qo'riqchisi: intro faqat birinchi tashrifda (yoki ?intro bilan) — sahifa chaqnab ko'rinmasligi uchun oldindan yashiriladi
+(function () {
+  var h = document.documentElement;
+  try { h.setAttribute('data-theme', localStorage.getItem('ak-theme') || 'dark'); } catch (e) {}
+  var seen = false; try { seen = localStorage.getItem('nm-intro-seen') === '1'; } catch (e) {}
+  if (!seen || /[?&]intro\b/.test(location.search)) h.classList.add('nm-intro-on');
+})();
+</script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#home" aria-label="Nuvemath">
+    <img class="emb on-dark" src="assets/emblem-dark.png" alt="" width="54" height="32">
+    <img class="emb on-light" src="assets/emblem.png" alt="" width="54" height="32">
+    <span><b class="wm"><span class="wm1">Nuve</span><span class="wm2">math</span></b><small id="tagline"></small></span>
+  </a>
+  <nav id="nav" class="nav"></nav>
+  <div class="tools">
+    <div class="lang"><button data-l="uz">UZ</button><button data-l="ru">RU</button><button data-l="en">EN</button></div>
+    <button id="theme" class="icon-btn" title="Theme">☀</button>
+    <button id="burger" class="icon-btn burger" aria-label="Menu">☰</button>
+  </div>
+</header>
+<main id="view" class="view"></main>
+<footer class="foot"><span id="foot"></span> <button id="replay" class="link-btn" type="button"></button></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script src="js/intro.js" defer></script>
+<script src="js/expr.js" defer></script>
+<script src="js/solver.js" defer></script>
+<script src="js/practice.js" defer></script>
+<script src="js/lessons.js" defer></script>
+<script src="js/plotter.js" defer></script>
+<script src="js/geometry.js" defer></script>
+<script src="js/solids.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

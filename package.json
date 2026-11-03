@@ -1,0 +1,11 @@
+{
+  "name": "nuvemath",
+  "version": "1.0.0",
+  "description": "Nuvemath — o‘zbek tilidagi interaktiv algebra va geometriya platformasi",
+  "private": true,
+  "scripts": {
+    "test": "node test/run.js",
+    "start": "node serve.js"
+  },
+  "license": "MIT"
+}
