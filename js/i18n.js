@@ -60,7 +60,8 @@
       'pr.pyth': 'Pifagor teoremasi', 'pr.triArea': 'Uchburchak yuzi', 'pr.circle': 'Doira', 'pr.angles': 'Burchaklar', 'pr.solid': 'Jismlar hajmi', 'pr.coord': 'Koordinatalar', 'pr.trig': 'Trigonometriya',
       'pr.reset': 'Natijani tozalash',
       'foot.made': 'Nuvemath — o‘zbek tilidagi interaktiv matematika platformasi. Kolvo (kimyo) va Zenithra (astronomiya) loyihalarining hamrohi.',
-      'theme': 'Mavzu rangi', 'intro.skip': 'O‘tkazib yuborish', 'intro.replay': 'Introni qayta ko‘rish'
+      'theme': 'Mavzu rangi', 'dl.heroSub': '1-sinfdan 11-sinfgacha matematika — qismlar, mavzular, 3D sahnalar, interaktiv topshiriqlar va testlar.', 'dl.grade': 'sinf', 'dl.gradeShort': '{n}-sinf', 'dl.partShort': '{p} qism', 'dl.partsTopics': '{p} qism · {t} mavzu', 'dl.soon': 'Tez orada', 'dl.gradeTitle': '{n}-sinf matematika', 'dl.pickPart': 'Qismni tanlang.', 'dl.partMeta': '{s} bo‘lim · {t} mavzu', 'dl.otherParts': 'Boshqa qismlar', 'dl.otherSoon': 'Tez orada qo‘shiladi.', 'dl.learned': '{a} / {b} mavzu o‘rganildi', 'dl.source': 'Manba:', 'dl.secN': '{n}-bo‘lim', 'dl.topicMeta': '{a} topshiriq · {q} test', 'dl.secTest': 'Bo‘lim testi', 'dl.finalOf': '{p} qism yakuniy testi', 'dl.best': 'eng yaxshi natija', 'dl.topicN': '{n}-mavzu', 'dl.keys': 'Tayanch so‘zlar:', 'dl.remember': 'Esda tuting', 'dl.tasks': 'Topshiriqlar', 'dl.topicTest': 'Mavzu testi', 'dl.finalTest': 'Yakuniy test', 'dl.qCount': '{n} ta savol · har safar yangi tartibda. Omad!', 'dl.backList': 'Mavzular ro‘yxati', 'sub.lat': 'yon', 'sub.base': 'asos', 'sub.in': 'ichki',
+      'intro.skip': 'O‘tkazib yuborish', 'intro.replay': 'Introni qayta ko‘rish'
     },
     ru: {
       'brand.tag': 'See Math. Explore Dimensions.',
@@ -120,7 +121,8 @@
       'pr.pyth': 'Теорема Пифагора', 'pr.triArea': 'Площадь треугольника', 'pr.circle': 'Круг', 'pr.angles': 'Углы', 'pr.solid': 'Объёмы тел', 'pr.coord': 'Координаты', 'pr.trig': 'Тригонометрия',
       'pr.reset': 'Сбросить результаты',
       'foot.made': 'Nuvemath — интерактивная платформа математики на узбекском языке. Спутник проектов Kolvo (химия) и Zenithra (астрономия).',
-      'theme': 'Тема', 'intro.skip': 'Пропустить', 'intro.replay': 'Посмотреть интро снова'
+      'theme': 'Тема', 'dl.heroSub': 'Математика с 1 по 11 класс — части, темы, 3D-сцены, интерактивные задания и тесты.', 'dl.grade': 'класс', 'dl.gradeShort': '{n} класс', 'dl.partShort': 'Часть {p}', 'dl.partsTopics': 'частей: {p} · тем: {t}', 'dl.soon': 'Скоро', 'dl.gradeTitle': 'Математика, {n} класс', 'dl.pickPart': 'Выберите часть.', 'dl.partMeta': 'разделов: {s} · тем: {t}', 'dl.otherParts': 'Другие части', 'dl.otherSoon': 'Скоро будут добавлены.', 'dl.learned': 'Изучено тем: {a} из {b}', 'dl.source': 'Источник:', 'dl.secN': 'Раздел {n}', 'dl.topicMeta': 'заданий: {a} · вопросов: {q}', 'dl.secTest': 'Тест по разделу', 'dl.finalOf': 'Итоговый тест, часть {p}', 'dl.best': 'лучший результат', 'dl.topicN': 'Тема {n}', 'dl.keys': 'Ключевые слова:', 'dl.remember': 'Запомните', 'dl.tasks': 'Задания', 'dl.topicTest': 'Тест по теме', 'dl.finalTest': 'Итоговый тест', 'dl.qCount': 'Вопросов: {n} · каждый раз в новом порядке. Удачи!', 'dl.backList': 'Список тем', 'sub.lat': 'бок', 'sub.base': 'осн', 'sub.in': 'впис',
+      'intro.skip': 'Пропустить', 'intro.replay': 'Посмотреть интро снова'
     },
     en: {
       'brand.tag': 'See Math. Explore Dimensions.',
@@ -180,7 +182,8 @@
       'pr.pyth': 'Pythagorean theorem', 'pr.triArea': 'Triangle area', 'pr.circle': 'Circle', 'pr.angles': 'Angles', 'pr.solid': 'Volumes of solids', 'pr.coord': 'Coordinates', 'pr.trig': 'Trigonometry',
       'pr.reset': 'Reset progress',
       'foot.made': 'Nuvemath — an interactive maths platform in Uzbek. A companion to Kolvo (chemistry) and Zenithra (astronomy).',
-      'theme': 'Theme', 'intro.skip': 'Skip intro', 'intro.replay': 'Replay intro'
+      'theme': 'Theme', 'dl.heroSub': 'Maths from grade 1 to grade 11 — parts, topics, 3D scenes, interactive tasks and tests.', 'dl.grade': 'grade', 'dl.gradeShort': 'Grade {n}', 'dl.partShort': 'Part {p}', 'dl.partsTopics': 'Parts: {p} · Topics: {t}', 'dl.soon': 'Coming soon', 'dl.gradeTitle': 'Grade {n} maths', 'dl.pickPart': 'Choose a part.', 'dl.partMeta': '{s} sections · {t} topics', 'dl.otherParts': 'Other parts', 'dl.otherSoon': 'Coming soon.', 'dl.learned': '{a} / {b} topics studied', 'dl.source': 'Source:', 'dl.secN': 'Section {n}', 'dl.topicMeta': '{a} tasks · {q} questions', 'dl.secTest': 'Section test', 'dl.finalOf': 'Part {p} final test', 'dl.best': 'best score', 'dl.topicN': 'Topic {n}', 'dl.keys': 'Key words:', 'dl.remember': 'Remember', 'dl.tasks': 'Tasks', 'dl.topicTest': 'Topic test', 'dl.finalTest': 'Final test', 'dl.qCount': '{n} questions · in a new order every time. Good luck!', 'dl.backList': 'Topic list', 'sub.lat': 'lat', 'sub.base': 'base', 'sub.in': 'in',
+      'intro.skip': 'Skip intro', 'intro.replay': 'Replay intro'
     }
   };
   var lang = 'uz';

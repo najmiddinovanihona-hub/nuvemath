@@ -9,6 +9,7 @@ O‘zbek tilidagi (rus va ingliz tillari bilan) interaktiv matematika platformas
 
 - **Kirish animatsiyasi (intro, ~14 s)** — birinchi tashrifda: formulalar va 3D jismlar orbitada aylanadi, ko‘zoynakli odamcha ularni kuzatadi; π orbitadan ajralib uchadi, odamcha uni ushlaydi, so‘ng π logotipdagi joyiga uchib, logotip qismma-qism (π → kitob → orbita → yulduz) yig‘iladi va odamcha qo‘l silkitadi. Three.js + GSAP, «O‘tkazib yuborish» (yoki Esc), `prefers-reduced-motion` da yengil versiya. Qayta ko‘rish: «Introni qayta ko‘rish» yoki `?intro`.
 
+- **Uch tilda** — butun ilova, jumladan darslik mazmuni, topshiriqlar va testlar o‘zbek, rus va ingliz tillarida.
 - **Darslik** — sinf → qism → bo‘lim → mavzu tuzilmasida (1–11-sinf). Hozir tayyor: **1-sinf, III qism** (I.V. Repyova, 2024 darsligi asosida): 5 bo‘lim, 19 mavzu, 54 ta interaktiv topshiriq (3D sahnada sanash, masala sxemalari va to‘ldirish joylari, sonli zanjir, sehrli kvadrat, jadval, chizg‘ich, pallali tarozi, idishlar, tartiblash), har bir mavzu, bo‘lim va qism uchun testlar. Topshiriqlar har safar yangi sonlar bilan yaratiladi.
 - **Grafiklar** — istalgan funksiya grafigi: bir nechta funksiya, kattalashtirish/siljitish (sichqoncha va barmoq), koordinata ko‘rsatkichi, nollar, ekstremumlar va kesishish nuqtalari avtomatik topiladi (π/6 kabi aniq ko‘rinishda), hosila, `a` parametri slayderi.
 - **Yechuvchi**

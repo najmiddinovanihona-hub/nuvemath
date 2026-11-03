@@ -20,25 +20,25 @@
       case 'cube':
         r.push(['sol.volume', 'V = a³', Math.pow(v.a, 3)], ['sol.total', 'S = 6a²', 6 * v.a * v.a], ['sol.diag', 'd = a√3', v.a * Math.sqrt(3)]); break;
       case 'box':
-        r.push(['sol.volume', 'V = abc', v.a * v.b * v.c], ['sol.lateral', 'S<sub>yon</sub> = 2c(a + b)', 2 * v.c * (v.a + v.b)],
+        r.push(['sol.volume', 'V = abc', v.a * v.b * v.c], ['sol.lateral', 'S<sub>' + T('sub.lat') + '</sub> = 2c(a + b)', 2 * v.c * (v.a + v.b)],
           ['sol.total', 'S = 2(ab + bc + ac)', 2 * (v.a * v.b + v.b * v.c + v.a * v.c)], ['sol.diag', 'd = √(a² + b² + c²)', Math.sqrt(v.a * v.a + v.b * v.b + v.c * v.c)]); break;
       case 'prism':
         var Sb = v.n * v.a * v.a / (4 * Math.tan(PI / v.n));
-        r.push(['sol.volume', 'V = S<sub>asos</sub>·h, &nbsp;S<sub>asos</sub> = na² / (4·tg(π/n)) = ' + n2(Sb), Sb * v.h],
-          ['sol.lateral', 'S<sub>yon</sub> = n·a·h', v.n * v.a * v.h], ['sol.total', 'S = S<sub>yon</sub> + 2S<sub>asos</sub>', v.n * v.a * v.h + 2 * Sb]); break;
+        r.push(['sol.volume', 'V = S<sub>' + T('sub.base') + '</sub>·h, &nbsp;S<sub>' + T('sub.base') + '</sub> = na² / (4·tg(π/n)) = ' + n2(Sb), Sb * v.h],
+          ['sol.lateral', 'S<sub>' + T('sub.lat') + '</sub> = n·a·h', v.n * v.a * v.h], ['sol.total', 'S = S<sub>' + T('sub.lat') + '</sub> + 2S<sub>' + T('sub.base') + '</sub>', v.n * v.a * v.h + 2 * Sb]); break;
       case 'pyramid':
         var Sp = v.n * v.a * v.a / (4 * Math.tan(PI / v.n)), rin = v.a / (2 * Math.tan(PI / v.n)), ap = Math.sqrt(v.h * v.h + rin * rin);
-        r.push(['sol.volume', 'V = ⅓·S<sub>asos</sub>·h, &nbsp;S<sub>asos</sub> = ' + n2(Sp), Sp * v.h / 3],
-          ['sol.slant', 'l = √(h² + r<sub>ichki</sub>²)', ap], ['sol.lateral', 'S<sub>yon</sub> = ½·n·a·l', v.n * v.a * ap / 2], ['sol.total', 'S = S<sub>yon</sub> + S<sub>asos</sub>', v.n * v.a * ap / 2 + Sp]); break;
+        r.push(['sol.volume', 'V = ⅓·S<sub>' + T('sub.base') + '</sub>·h, &nbsp;S<sub>' + T('sub.base') + '</sub> = ' + n2(Sp), Sp * v.h / 3],
+          ['sol.slant', 'l = √(h² + r<sub>' + T('sub.in') + '</sub>²)', ap], ['sol.lateral', 'S<sub>' + T('sub.lat') + '</sub> = ½·n·a·l', v.n * v.a * ap / 2], ['sol.total', 'S = S<sub>' + T('sub.lat') + '</sub> + S<sub>' + T('sub.base') + '</sub>', v.n * v.a * ap / 2 + Sp]); break;
       case 'cylinder':
-        r.push(['sol.volume', 'V = πr²h', PI * v.r * v.r * v.h], ['sol.lateral', 'S<sub>yon</sub> = 2πrh', 2 * PI * v.r * v.h], ['sol.total', 'S = 2πr(r + h)', 2 * PI * v.r * (v.r + v.h)]); break;
+        r.push(['sol.volume', 'V = πr²h', PI * v.r * v.r * v.h], ['sol.lateral', 'S<sub>' + T('sub.lat') + '</sub> = 2πrh', 2 * PI * v.r * v.h], ['sol.total', 'S = 2πr(r + h)', 2 * PI * v.r * (v.r + v.h)]); break;
       case 'cone':
         var L = Math.sqrt(v.r * v.r + v.h * v.h);
-        r.push(['sol.volume', 'V = ⅓πr²h', PI * v.r * v.r * v.h / 3], ['sol.slant', 'l = √(r² + h²)', L], ['sol.lateral', 'S<sub>yon</sub> = πrl', PI * v.r * L], ['sol.total', 'S = πr(r + l)', PI * v.r * (v.r + L)]); break;
+        r.push(['sol.volume', 'V = ⅓πr²h', PI * v.r * v.r * v.h / 3], ['sol.slant', 'l = √(r² + h²)', L], ['sol.lateral', 'S<sub>' + T('sub.lat') + '</sub> = πrl', PI * v.r * L], ['sol.total', 'S = πr(r + l)', PI * v.r * (v.r + L)]); break;
       case 'frustum':
         var Lf = Math.sqrt(Math.pow(v.R - v.r, 2) + v.h * v.h);
         r.push(['sol.volume', 'V = ⅓πh(R² + Rr + r²)', PI * v.h * (v.R * v.R + v.R * v.r + v.r * v.r) / 3], ['sol.slant', 'l = √((R − r)² + h²)', Lf],
-          ['sol.lateral', 'S<sub>yon</sub> = πl(R + r)', PI * Lf * (v.R + v.r)], ['sol.total', 'S = π(l(R + r) + R² + r²)', PI * (Lf * (v.R + v.r) + v.R * v.R + v.r * v.r)]); break;
+          ['sol.lateral', 'S<sub>' + T('sub.lat') + '</sub> = πl(R + r)', PI * Lf * (v.R + v.r)], ['sol.total', 'S = π(l(R + r) + R² + r²)', PI * (Lf * (v.R + v.r) + v.R * v.R + v.r * v.r)]); break;
       case 'sphere':
         r.push(['sol.volume', 'V = ⁴⁄₃πr³', 4 / 3 * PI * Math.pow(v.r, 3)], ['sol.total', 'S = 4πr²', 4 * PI * v.r * v.r]); break;
     }

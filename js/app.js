@@ -54,8 +54,11 @@
   }
   function stat(v, l) { return '<div class="stat"><b>' + v + '</b><span>' + l + '</span></div>'; }
   // ---------- Darslik: sinf → qism → bo'lim → mavzu ----------
-  var CUR = window.NMCurriculum, Kd = window.NMKids, ROM = CUR.ROMAN;
+  var CUR = window.NMCurriculum, Kd = window.NMKids, ROM = CUR.ROMAN, tx = Kd.tx;
+  function F(key, map) { return T(key).replace(/\{(\w+)\}/g, function (m, k) { return map[k] !== undefined ? map[k] : m; }); }
   function uid(part, t) { return 'g' + part.grade + 'p' + part.part + '-' + t; }
+  function gName(g) { return F('dl.gradeShort', { n: g }); }
+  function pName(p) { return F('dl.partShort', { p: ROM[p.part] }); }
   function crumbs(list) { return '<nav class="kd-crumbs">' + list.map(function (c, i) { return i < list.length - 1 ? '<a href="#' + c[1] + '">' + c[0] + '</a>' : '<span>' + c[0] + '</span>'; }).join('<i>›</i>') + '</nav>'; }
   // harakatlanuvchi fon shakllari
   function floaters(n) {
@@ -75,53 +78,55 @@
     partView(part);
   }
   function gradesView() {
-    view.innerHTML = '<section class="kd-hero">' + floaters(12) + '<h1>Darslik</h1><p>1-sinfdan 11-sinfgacha matematika — qismlar, mavzular, 3D sahnalar, interaktiv topshiriqlar va testlar.</p></section>' +
+    view.innerHTML = '<section class="kd-hero">' + floaters(12) + '<h1>' + T('nav.lessons') + '</h1><p>' + T('dl.heroSub') + '</p></section>' +
       '<div class="kd-grades">' + CUR.grades.map(function (g) {
         var ok = g.parts.length > 0, nT = g.parts.reduce(function (a, p) { return a + CUR.topics(p).length; }, 0);
-        return '<a class="kd-grade' + (ok ? '' : ' soon') + '" ' + (ok ? 'href="#darslik/' + g.n + '"' : 'aria-disabled="true"') + '><b>' + g.n + '</b><span>sinf</span><small>' + (ok ? g.parts.length + ' qism · ' + nT + ' mavzu' : 'Tez orada') + '</small></a>';
+        return '<a class="kd-grade' + (ok ? '' : ' soon') + '" ' + (ok ? 'href="#darslik/' + g.n + '"' : 'aria-disabled="true"') + '><b>' + g.n + '</b><span>' + T('dl.grade') + '</span><small>' +
+          (ok ? F('dl.partsTopics', { p: g.parts.length, t: nT }) : T('dl.soon')) + '</small></a>';
       }).join('') + '</div>';
   }
   function gradeView(grade) {
-    view.innerHTML = crumbs([['Darslik', 'darslik'], [grade.n + '-sinf', '']]) +
-      '<section class="kd-hero small">' + floaters(8) + '<h1>' + grade.n + '-sinf matematika</h1><p>Qismni tanlang.</p></section>' +
+    view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(grade.n), '']]) +
+      '<section class="kd-hero small">' + floaters(8) + '<h1>' + F('dl.gradeTitle', { n: grade.n }) + '</h1><p>' + T('dl.pickPart') + '</p></section>' +
       '<div class="kd-parts">' + grade.parts.map(function (p) {
         var tops = CUR.topics(p), done = tops.filter(function (t) { return P.read[uid(p, t.id)]; }).length;
-        return '<a class="kd-part" href="#darslik/' + grade.n + '/' + p.part + '"><span class="kd-roman">' + ROM[p.part] + '</span><div><h3>' + grade.n + '-sinf · ' + ROM[p.part] + ' qism</h3><p>' + p.title + '</p><small>' + p.sections.length + ' bo‘lim · ' + tops.length + ' mavzu · ' + p.edition + '</small>' +
+        return '<a class="kd-part" href="#darslik/' + grade.n + '/' + p.part + '"><span class="kd-roman">' + ROM[p.part] + '</span><div><h3>' + gName(grade.n) + ' · ' + pName(p) + '</h3><p>' + tx(p.title) + '</p><small>' +
+          F('dl.partMeta', { s: p.sections.length, t: tops.length }) + ' · ' + tx(p.edition) + '</small>' +
           '<div class="bar"><span style="width:' + Math.round(done / tops.length * 100) + '%"></span></div></div></a>';
-      }).join('') + '<div class="kd-part soon"><span class="kd-roman">…</span><div><h3>Boshqa qismlar</h3><p>Tez orada qo‘shiladi.</p></div></div></div>';
+      }).join('') + '<div class="kd-part soon"><span class="kd-roman">…</span><div><h3>' + T('dl.otherParts') + '</h3><p>' + T('dl.otherSoon') + '</p></div></div></div>';
   }
   function partView(part) {
     var g = part.grade, base = 'darslik/' + g + '/' + part.part, tops = CUR.topics(part), n = 0;
     var done = tops.filter(function (t) { return P.read[uid(part, t.id)]; }).length, fin = P.tests[uid(part, 'final')];
-    view.innerHTML = crumbs([['Darslik', 'darslik'], [g + '-sinf', 'darslik/' + g], [ROM[part.part] + ' qism', '']]) +
-      '<section class="kd-hero">' + floaters(12) + '<span class="kd-badge">' + g + '-sinf · ' + ROM[part.part] + ' qism</span><h1>' + part.title + '</h1><p>' + part.intro + '</p>' +
-      '<div class="kd-progress"><div class="bar"><span style="width:' + Math.round(done / tops.length * 100) + '%"></span></div><small>' + done + ' / ' + tops.length + ' mavzu o‘rganildi</small></div>' +
-      '<p class="kd-src">Manba: ' + part.book + '</p></section>' +
+    view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(g), 'darslik/' + g], [pName(part), '']]) +
+      '<section class="kd-hero">' + floaters(12) + '<span class="kd-badge">' + gName(g) + ' · ' + pName(part) + '</span><h1>' + tx(part.title) + '</h1><p>' + tx(part.intro) + '</p>' +
+      '<div class="kd-progress"><div class="bar"><span style="width:' + Math.round(done / tops.length * 100) + '%"></span></div><small>' + F('dl.learned', { a: done, b: tops.length }) + '</small></div>' +
+      '<p class="kd-src">' + T('dl.source') + ' ' + tx(part.book) + '</p></section>' +
       part.sections.map(function (s, si) {
         var tk = P.tests[uid(part, s.id)];
-        return '<section class="kd-sec c-' + s.color + '"><header><span class="kd-sec-ic">' + s.icon + '</span><div><small>' + (si + 1) + '-bo‘lim</small><h2>' + s.title + '</h2></div></header><ol class="kd-topics">' +
+        return '<section class="kd-sec c-' + s.color + '"><header><span class="kd-sec-ic">' + s.icon + '</span><div><small>' + F('dl.secN', { n: si + 1 }) + '</small><h2>' + tx(s.title) + '</h2></div></header><ol class="kd-topics">' +
           s.topics.map(function (t) {
             n++; var id = uid(part, t.id), q = P.quiz[id];
-            return '<li><a href="#' + base + '/' + t.id + '"><span class="kd-tn">' + n + '</span><span class="kd-tt"><b>' + t.title + '</b><small>' + t.lessons + ' · ' + t.acts.length + ' topshiriq · ' + t.quiz.length + ' test</small></span>' +
+            return '<li><a href="#' + base + '/' + t.id + '"><span class="kd-tn">' + n + '</span><span class="kd-tt"><b>' + tx(t.title) + '</b><small>' + tx(t.lessons) + ' · ' + F('dl.topicMeta', { a: t.acts.length, q: t.quiz.length }) + '</small></span>' +
               '<span class="kd-ts">' + (P.read[id] ? '<i class="ok">✓</i>' : '') + (q ? '<i>' + q.best + '/' + q.total + '</i>' : '') + '</span></a></li>';
-          }).join('') + '</ol><a class="kd-sec-test" href="#' + base + '/test/' + s.id + '">📝 Bo‘lim testi' + (tk ? ' <b>' + tk.best + '/' + tk.total + '</b>' : '') + '</a></section>';
+          }).join('') + '</ol><a class="kd-sec-test" href="#' + base + '/test/' + s.id + '">📝 ' + T('dl.secTest') + (tk ? ' <b>' + tk.best + '/' + tk.total + '</b>' : '') + '</a></section>';
       }).join('') +
-      '<a class="kd-final" href="#' + base + '/test/final">🏆 ' + ROM[part.part] + ' qism yakuniy testi' + (fin ? ' — eng yaxshi natija: <b>' + fin.best + '/' + fin.total + '</b>' : '') + '</a>';
+      '<a class="kd-final" href="#' + base + '/test/final">🏆 ' + F('dl.finalOf', { p: ROM[part.part] }) + (fin ? ' — ' + T('dl.best') + ': <b>' + fin.best + '/' + fin.total + '</b>' : '') + '</a>';
   }
   function topicView(part, t) {
     var tops = CUR.topics(part), i = tops.indexOf(t), prev = tops[i - 1], next = tops[i + 1], base = 'darslik/' + part.grade + '/' + part.part, id = uid(part, t.id);
     P.read[id] = P.read[id] || Date.now(); save();
-    view.innerHTML = crumbs([['Darslik', 'darslik'], [part.grade + '-sinf', 'darslik/' + part.grade], [ROM[part.part] + ' qism', base], [t.title, '']]) +
+    view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(part.grade), 'darslik/' + part.grade], [pName(part), base], [tx(t.title), '']]) +
       '<section class="kd-topic-hero c-' + t.section.color + '">' + floaters(10) +
-      '<div class="kd-th-text"><span class="kd-badge">' + (i + 1) + '-mavzu · ' + t.lessons + '</span><h1>' + t.title + '</h1>' +
-      '<div class="kd-keys"><span>Tayanch so‘zlar:</span>' + t.keys.map(function (k) { return '<b>' + k + '</b>'; }).join('') + '</div></div>' +
+      '<div class="kd-th-text"><span class="kd-badge">' + F('dl.topicN', { n: i + 1 }) + ' · ' + tx(t.lessons) + '</span><h1>' + tx(t.title) + '</h1>' +
+      '<div class="kd-keys"><span>' + T('dl.keys') + '</span>' + t.keys.map(function (k) { return '<b>' + tx(k) + '</b>'; }).join('') + '</div></div>' +
       '<div class="kd-th-3d" id="kd-hero3d"></div></section>' +
       Kd.say(t.explain) +
-      '<div class="kd-rule"><span>💡 Esda tuting</span><div>' + t.rule + '</div></div>' +
-      '<h2 class="kd-h2">Topshiriqlar</h2><div id="kd-acts" class="kd-acts"></div>' +
-      '<h2 class="kd-h2">Mavzu testi</h2><div class="card" id="kd-quiz"></div>' +
-      '<div class="les-foot">' + (prev ? '<a class="btn ghost sm" href="#' + base + '/' + prev.id + '">← ' + prev.title + '</a>' : '') + '<span class="grow"></span>' +
-      (next ? '<a class="btn sm" href="#' + base + '/' + next.id + '">' + next.title + ' →</a>' : '<a class="btn sm" href="#' + base + '/test/final">🏆 Yakuniy test →</a>') + '</div>';
+      '<div class="kd-rule"><span>💡 ' + T('dl.remember') + '</span><div>' + tx(t.rule) + '</div></div>' +
+      '<h2 class="kd-h2">' + T('dl.tasks') + '</h2><div id="kd-acts" class="kd-acts"></div>' +
+      '<h2 class="kd-h2">' + T('dl.topicTest') + '</h2><div class="card" id="kd-quiz"></div>' +
+      '<div class="les-foot">' + (prev ? '<a class="btn ghost sm" href="#' + base + '/' + prev.id + '">← ' + tx(prev.title) + '</a>' : '') + '<span class="grow"></span>' +
+      (next ? '<a class="btn sm" href="#' + base + '/' + next.id + '">' + tx(next.title) + ' →</a>' : '<a class="btn sm" href="#' + base + '/test/final">🏆 ' + T('dl.finalTest') + ' →</a>') + '</div>';
     Kd.stage(document.getElementById('kd-hero3d'), t.scene, { pick: false });
     var acts = document.getElementById('kd-acts');
     t.acts.forEach(function (a, k) { acts.appendChild(Kd.renderActivity(a, k + 1)); });
@@ -131,10 +136,10 @@
     var base = 'darslik/' + part.grade + '/' + part.part, sec = part.sections.filter(function (s) { return s.id === sid; })[0];
     var topics = sec ? sec.topics : CUR.topics(part), pool = [];
     topics.forEach(function (t) { t.quiz.forEach(function (q) { pool.push(q); }); });
-    var qs = Kd.shuffle(pool).slice(0, sec ? 10 : 15), key = uid(part, sec ? sec.id : 'final');
-    view.innerHTML = crumbs([['Darslik', 'darslik'], [part.grade + '-sinf', 'darslik/' + part.grade], [ROM[part.part] + ' qism', base], [sec ? 'Bo‘lim testi' : 'Yakuniy test', '']]) +
-      '<section class="kd-hero small">' + floaters(8) + '<span class="kd-badge">' + (sec ? sec.icon + ' ' + sec.title : '🏆 ' + ROM[part.part] + ' qism') + '</span><h1>' + (sec ? 'Bo‘lim testi' : 'Yakuniy test') + '</h1><p>' + qs.length + ' ta savol · har safar yangi tartibda. Omad!</p></section>' +
-      '<div class="card" id="kd-test"></div><div class="les-foot"><a class="btn ghost sm" href="#' + base + '">← Mavzular ro‘yxati</a></div>';
+    var qs = Kd.shuffle(pool).slice(0, sec ? 10 : 15), key = uid(part, sec ? sec.id : 'final'), name = sec ? T('dl.secTest') : T('dl.finalTest');
+    view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(part.grade), 'darslik/' + part.grade], [pName(part), base], [name, '']]) +
+      '<section class="kd-hero small">' + floaters(8) + '<span class="kd-badge">' + (sec ? sec.icon + ' ' + tx(sec.title) : '🏆 ' + pName(part)) + '</span><h1>' + name + '</h1><p>' + F('dl.qCount', { n: qs.length }) + '</p></section>' +
+      '<div class="card" id="kd-test"></div><div class="les-foot"><a class="btn ghost sm" href="#' + base + '">← ' + T('dl.backList') + '</a></div>';
     Kd.quiz(document.getElementById('kd-test'), qs, function (r, n) { var pr = P.tests[key]; P.tests[key] = { best: Math.max(r, pr ? pr.best : 0), total: n }; save(); });
   }
 
