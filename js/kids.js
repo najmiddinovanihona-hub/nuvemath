@@ -24,7 +24,7 @@
       scale: 'Tarozida torting', balanced: '⚖️ Muvozanat!', leftHeavy: 'Chap palla og‘ir', rightHeavy: 'O‘ng palla og‘ir', onRight: 'o‘ng pallada:', remove: '↶ Olib tashlash', mass: 'Massasi:', scaleHint: 'Tarozini muvozanatga keltiring: o‘ng pallaga toshlar qo‘ying.',
       jugs: 'Idishni to‘ldiring', full: 'To‘ldi!', poured: 'Quyildi:', jars: 'banka', pourTitle: '1 l quyish', volume: 'Hajmi:', jugsHint: 'Bankani bosib, idish to‘lguncha quying va sanang.',
       order: 'Tartib bilan joylashtiring', orderBad: 'Tartib noto‘g‘ri — boshidan qayta bosing.', choose: 'To‘g‘risini tanlang', chooseFirst: 'Avval javobni tanlang.', chooseBad: 'Masalani yana bir bor diqqat bilan o‘qing.',
-      drill: 'Tez hisoblang', q100: 'Mukammal! Siz haqiqiy matematiksiz! 🏆', q80: 'Juda yaxshi natija! ⭐', q50: 'Yaxshi! Yana bir bor takrorlang.', qLow: 'Mavzuni qayta ko‘rib chiqing — siz uddalaysiz!', reQuiz: '↻ Qayta topshirish',
+      drill: 'Tez hisoblang', q100: 'Mukammal! Siz haqiqiy matematiksiz! 🏆', q80: 'Juda yaxshi natija! ⭐', q50: 'Yaxshi! Yana bir bor takrorlang.', qLow: 'Mavzuni qayta ko‘rib chiqing — siz uddalaysiz!', reQuiz: '↻ Qayta topshirish', qPass: 'Mavzu o‘zlashtirildi — natija 80% dan yuqori! 🎓', qFail: 'Mavzuni o‘zlashtirish uchun kamida 80% to‘plang. Nazariyani qayta o‘qib, yana urinib ko‘ring.', qNeed: 'O‘tish uchun: 80%',
       kg: 'kg', l: 'l', cm: 'cm', dm: 'dm', total: 'jami', perimeter: 'Perimetrni toping', polyHint: 'Barcha tomonlar uzunliklarini qo‘shing.', column: 'Ustun ko‘rinishida hisoblang', columnHint: 'Birliklarni birliklar ostiga, o‘nliklarni o‘nliklar ostiga yozib, o‘ngdan boshlang.', clock: 'Soat necha bo‘ldi?', clockAsk: 'Soat nechani ko‘rsatyapti? Soat va minutni yozing.', clockHint: 'Kalta strelka — soat, uzun strelka — minut.', area: 'Yuzni toping', areaHint: 'Kataklarni qatorlab sanang: qatordagi katak × qatorlar soni.', numline: 'Sonli nur', numlineHint: 'Bo‘linmalarni sanang: har bir qadam qanchaga tengligini aniqlang.', coord: 'Koordinata burchagi', coordAsk: 'Nuqtaning koordinatalarini yozing: avval x (gorizontal), keyin y (vertikal).', coordHint: 'Avval pastga — x o‘qiga, keyin chapga — y o‘qiga qarang.' },
     ru: { check: 'Проверить', fresh: '↻ Новый пример', praise: ['Молодец!', 'Отлично!', 'Супер!', 'Совершенно верно!', 'Браво!'], retry: 'Попробуйте ещё раз.',
       cond: 'Краткая запись', solve: 'Решение:', answer: 'Ответ:', exprOk: 'Ответ верный, но проверьте выражение.', schemeHint: 'Посмотрите на схему: целое = часть + часть.',
@@ -35,7 +35,7 @@
       scale: 'Взвесьте на весах', balanced: '⚖️ Равновесие!', leftHeavy: 'Левая чаша тяжелее', rightHeavy: 'Правая чаша тяжелее', onRight: 'на правой чаше:', remove: '↶ Убрать', mass: 'Масса:', scaleHint: 'Уравновесьте весы: кладите гири на правую чашу.',
       jugs: 'Наполните ведро', full: 'Полно!', poured: 'Налито:', jars: 'банок', pourTitle: 'Налить 1 л', volume: 'Объём:', jugsHint: 'Нажимайте на банку, пока ведро не наполнится, и считайте.',
       order: 'Расставьте по порядку', orderBad: 'Порядок неверный — начните заново.', choose: 'Выберите верный ответ', chooseFirst: 'Сначала выберите ответ.', chooseBad: 'Прочитайте задачу ещё раз внимательно.',
-      drill: 'Считаем быстро', q100: 'Безупречно! Вы настоящий математик! 🏆', q80: 'Очень хороший результат! ⭐', q50: 'Хорошо! Повторите ещё раз.', qLow: 'Повторите тему — у вас получится!', reQuiz: '↻ Пройти заново',
+      drill: 'Считаем быстро', q100: 'Безупречно! Вы настоящий математик! 🏆', q80: 'Очень хороший результат! ⭐', q50: 'Хорошо! Повторите ещё раз.', qLow: 'Повторите тему — у вас получится!', reQuiz: '↻ Пройти заново', qPass: 'Тема усвоена — результат выше 80%! 🎓', qFail: 'Чтобы усвоить тему, наберите не меньше 80%. Перечитайте теорию и попробуйте снова.', qNeed: 'Проходной балл: 80%',
       kg: 'кг', l: 'л', cm: 'см', dm: 'дм', total: 'всего', perimeter: 'Найдите периметр', polyHint: 'Сложите длины всех сторон.', column: 'Вычислите столбиком', columnHint: 'Пишите единицы под единицами, десятки под десятками и начинайте справа.', clock: 'Который час?', clockAsk: 'Какое время показывают часы? Запишите часы и минуты.', clockHint: 'Короткая стрелка — часы, длинная — минуты.', area: 'Найдите площадь', areaHint: 'Считайте клетки рядами: клеток в ряду × число рядов.', numline: 'Числовой луч', numlineHint: 'Посчитайте деления: сколько стоит один шаг?', coord: 'Координатный угол', coordAsk: 'Запишите координаты точки: сначала x (по горизонтали), потом y (по вертикали).', coordHint: 'Сначала посмотрите вниз — на ось x, потом влево — на ось y.' },
     en: { check: 'Check', fresh: '↻ New example', praise: ['Well done!', 'Great!', 'Awesome!', 'Exactly right!', 'Bravo!'], retry: 'Try once more.',
       cond: 'Short note', solve: 'Solution:', answer: 'Answer:', exprOk: 'The answer is right — now check the expression.', schemeHint: 'Look at the diagram: whole = part + part.',
@@ -46,7 +46,7 @@
       scale: 'Weigh it', balanced: '⚖️ Balanced!', leftHeavy: 'Left pan is heavier', rightHeavy: 'Right pan is heavier', onRight: 'on the right pan:', remove: '↶ Remove', mass: 'Mass:', scaleHint: 'Balance the scale by putting weights on the right pan.',
       jugs: 'Fill the bucket', full: 'Full!', poured: 'Poured:', jars: 'jars', pourTitle: 'Pour 1 L', volume: 'Volume:', jugsHint: 'Tap the jar until the bucket is full and count.',
       order: 'Put in order', orderBad: 'Wrong order — start again.', choose: 'Choose the right answer', chooseFirst: 'Choose an answer first.', chooseBad: 'Read the problem carefully once more.',
-      drill: 'Quick maths', q100: 'Perfect! You are a real mathematician! 🏆', q80: 'Very good result! ⭐', q50: 'Good! Practise once more.', qLow: 'Review the topic — you can do it!', reQuiz: '↻ Try again',
+      drill: 'Quick maths', q100: 'Perfect! You are a real mathematician! 🏆', q80: 'Very good result! ⭐', q50: 'Good! Practise once more.', qLow: 'Review the topic — you can do it!', reQuiz: '↻ Try again', qPass: 'Topic mastered — over 80%! 🎓', qFail: 'Score at least 80% to master the topic. Reread the theory and try again.', qNeed: 'Pass mark: 80%',
       kg: 'kg', l: 'L', cm: 'cm', dm: 'dm', total: 'total', perimeter: 'Find the perimeter', polyHint: 'Add the lengths of all the sides.', column: 'Work it out in a column', columnHint: 'Put ones under ones and tens under tens, and start from the right.', clock: 'What time is it?', clockAsk: 'What time does the clock show? Write the hours and minutes.', clockHint: 'The short hand shows hours, the long hand shows minutes.', area: 'Find the area', areaHint: 'Count the squares in rows: squares in a row × number of rows.', numline: 'Number line', numlineHint: 'Count the marks: how much is each step worth?', coord: 'Coordinate grid', coordAsk: 'Write the point’s coordinates: x first (across), then y (up).', coordHint: 'Look down to the x-axis first, then left to the y-axis.' }
   };
   function lang() { return (root.I18n && root.I18n.lang) || 'uz'; }
@@ -82,6 +82,7 @@
   // ---------- 3D sahna ----------
   var PAL = { blue: 0x4f8dff, green: 0x3ddc97, orange: 0xffa53d, pink: 0xff6b8b, violet: 0xa78bfa, cyan: 0x3fd0e0, red: 0xff5a5f, yellow: 0xffd23f, gray: 0x8792b0, white: 0xf3f6ff, brown: 0x9c6b3f, gold: 0xffc43d };
   function mat(THREE, c, extra) { return new THREE.MeshStandardMaterial(Object.assign({ color: PAL[c] !== undefined ? PAL[c] : c, roughness: 0.42, metalness: 0.08 }, extra || {})); }
+  var RAINBOW = ['#ff5a5f', '#ffa53d', '#ffd23f', '#3ddc97', '#3fd0e0', '#4f8dff', '#a78bfa', '#ff6b8b', '#7bed9f', '#ffb8d1'];
   var BUILD = {
     cube: function (T, c) { var g = new T.Group(), m = new T.Mesh(new T.BoxGeometry(0.78, 0.78, 0.78), mat(T, c)); m.position.y = 0.39; g.add(m);
       var e = new T.LineSegments(new T.EdgesGeometry(m.geometry), new T.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 })); e.position.y = 0.39; g.add(e); return g; },
@@ -185,14 +186,16 @@
     var rim = new T.DirectionalLight(0x7fb0ff, 0.5); rim.position.set(-6, 3, -4); scene.add(rim);
     var world = new T.Group(); scene.add(world);
     var items = [], total = 0;
-    var gw = groups.map(function (g) { return Math.min(g.n, opts.perRow || 4); }), SC = 1.3;
+    var gw = groups.map(function (g) { return Math.min(g.n, opts.perRow || 4); }), SC = opts.rainbow ? 1.6 : 1.3;
     var gap = 1.08 * SC, clusterGap = (groups.length > 2 ? 1.7 : 1.0) * SC, widths = gw.map(function (c) { return (c - 1) * gap; });
     var fullW = widths.reduce(function (a, b) { return a + b; }, 0) + clusterGap * (groups.length - 1);
     var x0 = -fullW / 2, delay = 0;
     groups.forEach(function (g, gi) {
       var per = gw[gi], rows = Math.ceil(g.n / per);
       for (var i = 0; i < g.n; i++) {
-        var o = BUILD[g.obj](T, g.color || ['blue', 'orange', 'green', 'pink'][gi % 4]);
+        var col0 = opts.rainbow ? RAINBOW[(gi * 3 + i) % RAINBOW.length] : (g.color || ['blue', 'orange', 'green', 'pink'][gi % 4]);
+        var o = BUILD[g.obj](T, col0);
+        if (opts.rainbow) { o.userData.hover = true; o.userData.spinSelf = g.obj !== 'star' && Math.random() < 0.6; o.traverse(function (m) { if (m.material && m.material.emissive && m.material.color) { m.material.emissive.copy(m.material.color).multiplyScalar(0.12); } }); }
         var col = i % per, row = Math.floor(i / per);
         o.userData.home = new T.Vector3(x0 + col * gap, 0, (row - (rows - 1) / 2) * 1.1 * SC); o.scale.setScalar(SC); o.userData.sc = SC;
         o.position.set(o.userData.home.x, 6 + Math.random() * 2, o.userData.home.z);
@@ -208,6 +211,9 @@
     var podium = new T.Mesh(new T.CylinderGeometry(PR, PR + 0.15, 0.25, 64), new T.MeshBasicMaterial({ color: 0x1c2d63 }));
     podium.position.y = -0.13; scene.add(podium);
     var ring = new T.Mesh(new T.TorusGeometry(PR + 0.05, 0.035, 8, 96), new T.MeshBasicMaterial({ color: 0x5b9dff })); ring.rotation.x = Math.PI / 2; scene.add(ring);
+    // uchqunlar: sahna atrofida suzuvchi rangli zarrachalar
+    var sparks = [];
+    if (opts.rainbow) for (var si = 0; si < 18; si++) { var sp = new T.Mesh(new T.SphereGeometry(0.06 + Math.random() * 0.05, 8, 8), new T.MeshBasicMaterial({ color: RAINBOW[si % RAINBOW.length], transparent: true, opacity: 0.85 })); sp.userData = { a: Math.random() * Math.PI * 2, r: PR * (0.6 + Math.random() * 0.7), h: 0.4 + Math.random() * 2.2, v: 0.3 + Math.random() * 0.6 }; scene.add(sp); sparks.push(sp); }
     function size() {
       var w = box.clientWidth, hh = box.clientHeight; if (!w || !hh) return;
       rnd.setSize(w, hh, false); cam.aspect = w / hh;
@@ -245,6 +251,8 @@
       var now = performance.now(), dt = Math.min(0.05, (now - last) / 1000), t = (now - t0) / 1000; last = now;
       if (!drag) rotY += Math.sin(t * 0.35) * 0.0012;
       world.rotation.y += (rotY - world.rotation.y) * 0.12;
+      ring.material.color.setHSL((t * 0.08) % 1, 0.8, 0.62);
+      sparks.forEach(function (sp, k) { var u = sp.userData, a = u.a + t * u.v; sp.position.set(Math.cos(a) * u.r, u.h + Math.sin(t * 1.5 + k) * 0.25, Math.sin(a) * u.r); });
       items.forEach(function (o) {
         var u = o.userData;
         if (t > u.delay) {
@@ -784,13 +792,60 @@
               (pct === 100 ? t('q100') : pct >= 80 ? t('q80') : pct >= 50 ? t('q50') : t('qLow')) +
               '</span><button class="btn sm ghost kd-retry">' + t('reQuiz') + '</button></div>';
             if (pct >= 80) K.confetti(res);
-            res.querySelector('.kd-retry').onclick = function () { K.quiz(box, questions, onDone); };
-            if (onDone) onDone(right, qs.length);
+            if (questions.gate) res.innerHTML += '<p class="kd-gate ' + (pct >= 80 ? 'ok' : 'no') + '">' + (pct >= 80 ? t('qPass') : t('qFail')) + '</p>';
+            res.querySelector('.kd-retry').onclick = function () { K.quiz(box, questions.rebuild ? questions.rebuild() : questions, onDone); };
+            if (onDone) onDone(right, qs.length, pct);
           }
         };
       });
     });
   };
 
+  // Mavzu testi: qo'lda yozilgan savollar + topshiriq generatorlaridan tuzilgan savollar, kamida `n` ta
+  function stripFig(h) { return String(h).replace(/<div class="kd-(fig|pics)"[\s\S]*?<\/svg><\/div>/g, '').replace(/<div class="kd-pics">[\s\S]*?<\/div>/g, ''); }
+  function fmtAns(v, l) { if (typeof v !== 'number') return String(v); var s = String(Math.round(v * 1e6) / 1e6); return l === 'en' ? s : s.replace('.', ','); }
+  function distract(a) {
+    var out = [], c = [a + 1, a - 1, a + 2, a - 2, a * 2, a + 10, a - 10, a * 10, Math.round(a / 2), a + 100, a - 100, a + 0.1, a - 0.1, -a, a + 5, a - 5];
+    if (typeof a !== 'number' || !isFinite(a)) return ['?', '??'];
+    for (var i = 0; i < c.length && out.length < 2; i++) { var v = Math.round(c[i] * 1e6) / 1e6; if (v !== a && out.indexOf(v) < 0 && (a >= 0 ? v >= 0 : true) && Number.isInteger(a) === Number.isInteger(v)) out.push(v); }
+    while (out.length < 2) out.push(a + out.length + 3);
+    return out;
+  }
+  function L3(fn) { return { uz: fn('uz'), ru: fn('ru'), en: fn('en') }; }
+  K.buildQuiz = function (topic, n) {
+    n = n || 10;
+    var GEN = ['drill', 'problem', 'choose', 'count3d', 'chain', 'grid', 'column', 'polygon', 'numline', 'coord', 'ruler', 'scale', 'jugs', 'clock'];
+    var qs = topic.quiz.slice(), gens = topic.acts.filter(function (a) { return a.make && GEN.indexOf(a.type) >= 0; });
+    var tries = 0, seen = {};
+    function L3s(v) { return L3(function (l) { return stripFig(typeof v === 'object' && v && 'uz' in v ? v[l] : v); }); }
+    function num3(ans, unit) { var w = distract(ans); return [ans, w[0], w[1]].map(function (v) { return L3(function (l) { return fmtAns(v, l) + (unit ? ' ' + (typeof unit === 'object' ? unit[l] : unit) : ''); }); }); }
+    qs.forEach(function (q) { seen[JSON.stringify(q.q) + '|' + JSON.stringify(q.o[q.a])] = 1; });
+    while (qs.length < Math.max(n, topic.quiz.length) && gens.length && tries++ < 200) {
+      var a = gens[tries % gens.length], d = a.make(R), q = null, ty = a.type;
+      try {
+        if (ty === 'choose') q = { q: d.story, o: d.options, a: d.a, pic: d.pics ? tx(d.pics) : undefined };
+        else if (ty === 'drill') q = { q: L3(function (l) { return tx(typeof d.q === 'object' && 'uz' in d.q ? d.q[l] : d.q) + ' = ?'; }), o: num3(d.a), a: 0 };
+        else if (ty === 'problem' || ty === 'count3d' || ty === 'grid' || ty === 'numline' || ty === 'polygon') {
+          var st = d.story || (ty === 'count3d' ? { uz: 'Jami nechta?', ru: 'Сколько всего?', en: 'How many in all?' } : ty === 'polygon' ? { uz: 'Tomonlari ' + d.sides.join(', ') + '. Perimetri?', ru: 'Стороны ' + d.sides.join(', ') + '. Периметр?', en: 'Sides ' + d.sides.join(', ') + '. Perimeter?' } : { uz: 'Javob?', ru: 'Ответ?', en: 'Answer?' });
+          if (ty === 'count3d' && d.groups) st = L3(function (l) { return (typeof d.story === 'object' && d.story && 'uz' in d.story ? d.story[l] : d.story || '') + ' (' + d.groups.map(function (g) { return g.n; }).join(' + ') + ')'; });
+          if (ty === 'grid') st = L3(function (l) { return (d.ask === 'perimeter' ? { uz: 'Perimetr: ', ru: 'Периметр: ', en: 'Perimeter: ' } : { uz: 'Yuz: ', ru: 'Площадь: ', en: 'Area: ' })[l] + d.a + ' × ' + d.b; });
+          q = { q: L3s(st), o: num3(d.ans, d.unit), a: 0 };
+        }
+        else if (ty === 'chain') { var v = d.start; d.ops.forEach(function (o) { v = o[0] === '+' ? v + o[1] : v - o[1]; }); q = { q: L3(function () { return d.start + ' ' + d.ops.map(function (o) { return (o[0] === '+' ? '+ ' : '− ') + o[1]; }).join(' ') + ' = ?'; }), o: num3(v), a: 0 }; }
+        else if (ty === 'column') q = { q: L3(function () { return d.a + ' ' + (d.op === '-' ? '−' : d.op === '*' ? '×' : '+') + ' ' + d.b + ' = ?'; }), o: num3(d.ans), a: 0 };
+        else if (ty === 'coord') q = { q: L3(function (l) { return { uz: 'Nuqta A(' + d.x + '; ' + d.y + ') — x koordinatasi?', ru: 'Точка A(' + d.x + '; ' + d.y + ') — координата x?', en: 'Point A(' + d.x + '; ' + d.y + ') — the x-coordinate?' }[l]; }), o: num3(d.x), a: 0 };
+        else if (ty === 'ruler') q = { q: L3(function (l) { return { uz: 'Kesma ' + (d.start || 0) + ' dan ' + ((d.start || 0) + d.len) + ' gacha. Uzunligi (cm)?', ru: 'Отрезок от ' + (d.start || 0) + ' до ' + ((d.start || 0) + d.len) + '. Длина (см)?', en: 'A segment from ' + (d.start || 0) + ' to ' + ((d.start || 0) + d.len) + '. Length (cm)?' }[l]; }), o: num3(d.len), a: 0 };
+        else if (ty === 'scale') q = { q: L3(function (l) { return { uz: 'Tarozi: toshlar ' + d.mass + ' kg ni ko‘rsatadi. Massa?', ru: 'Весы: гири показывают ' + d.mass + ' кг. Масса?', en: 'The scale shows ' + d.mass + ' kg of weights. Mass?' }[l]; }), o: num3(d.mass, { uz: 'kg', ru: 'кг', en: 'kg' }), a: 0 };
+        else if (ty === 'jugs') q = { q: L3(function (l) { return { uz: 'Idish sig‘imi ' + d.cap + ' l. Ikkita shunday idish?', ru: 'Ёмкость сосуда ' + d.cap + ' л. Два таких сосуда?', en: 'A jug holds ' + d.cap + ' l. Two such jugs?' }[l]; }), o: num3(d.cap * 2, { uz: 'l', ru: 'л', en: 'l' }), a: 0 };
+        else if (ty === 'clock') { var mm = (d.m < 10 ? '0' : '') + d.m; q = { q: L3(function (l) { return { uz: 'Soat ' + d.h + ':' + mm + '. Soat strelkasi qaysi raqamda (yoki undan keyin)?', ru: 'Время ' + d.h + ':' + mm + '. На какой цифре (или после неё) часовая стрелка?', en: 'The time is ' + d.h + ':' + mm + '. Which number is the hour hand on (or just past)?' }[l]; }), o: num3(d.h), a: 0 }; }
+      } catch (e) { q = null; }
+      if (!q || !q.o || q.o.length < 2) continue;
+      var key = JSON.stringify(q.q) + '|' + JSON.stringify(q.o[q.a]); if (seen[key]) continue; seen[key] = 1;
+      qs.push(q);
+    }
+    var out = shuffle(qs).slice(0, Math.max(n, Math.min(qs.length, 12)));
+    out.gate = true; out.rebuild = function () { return K.buildQuiz(topic, n); };
+    return out;
+  };
   root.NMKids = K;
 })(this);

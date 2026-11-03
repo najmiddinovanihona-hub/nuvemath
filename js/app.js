@@ -8,7 +8,7 @@
 
   // ---------- Progress (localStorage) ----------
   var P = load();
-  function load() { try { return Object.assign({ read: {}, quiz: {}, tests: {}, solved: 0, tried: 0, best: 0, byTopic: {} }, JSON.parse(localStorage.getItem('ak-progress') || '{}')); } catch (e) { return { read: {}, quiz: {}, tests: {}, solved: 0, tried: 0, best: 0, byTopic: {} }; } }
+  function load() { try { return Object.assign({ read: {}, quiz: {}, tests: {}, theory: {}, solved: 0, tried: 0, best: 0, byTopic: {} }, JSON.parse(localStorage.getItem('ak-progress') || '{}')); } catch (e) { return { read: {}, quiz: {}, tests: {}, solved: 0, tried: 0, best: 0, byTopic: {} }; } }
   function save() { try { localStorage.setItem('ak-progress', JSON.stringify(P)); } catch (e) {} }
 
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -74,6 +74,7 @@
     var part = CUR.part(g, p); if (!part) return gradeView(grade);
     if (t === 'test') return testView(part, args[3]);
     var topic = t && CUR.topics(part).filter(function (x) { return x.id === t; })[0];
+    if (topic && args[3] === 'sinov') return sinovView(part, topic, args[4]);
     if (topic) return topicView(part, topic);
     partView(part);
   }
@@ -85,6 +86,9 @@
           (ok ? F('dl.partsTopics', { p: g.parts.length, t: nT }) : T('dl.soon')) + '</small></a>';
       }).join('') + '</div>';
   }
+  function passed(id) { var q = P.quiz[id]; return !!(q && q.total && q.best / q.total >= 0.8); }
+  function unlockAll() { try { return localStorage.getItem('nm-unlock') === '1'; } catch (e) { return false; } }
+  function locked() { return false; } // foydalanuvchi talabi: barcha mavzular ochiq
   function gradeView(grade) {
     view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(grade.n), '']]) +
       '<section class="kd-hero small">' + floaters(8) + '<h1>' + F('dl.gradeTitle', { n: grade.n }) + '</h1><p>' + T('dl.pickPart') + '</p></section>' +
@@ -106,8 +110,8 @@
         var tk = P.tests[uid(part, s.id)];
         return '<section class="kd-sec c-' + s.color + '"><header><span class="kd-sec-ic">' + s.icon + '</span><div><small>' + F('dl.secN', { n: si + 1 }) + '</small><h2>' + tx(s.title) + '</h2></div></header><ol class="kd-topics">' +
           s.topics.map(function (t) {
-            n++; var id = uid(part, t.id), q = P.quiz[id];
-            return '<li><a href="#' + base + '/' + t.id + '"><span class="kd-tn">' + n + '</span><span class="kd-tt"><b>' + tx(t.title) + '</b><small>' + tx(t.lessons) + ' · ' + F('dl.topicMeta', { a: t.acts.length, q: t.quiz.length }) + '</small></span>' +
+            n++; var id = uid(part, t.id), q = P.quiz[id], lk = locked(part, t);
+            return '<li class="' + (lk ? 'locked' : passed(id) ? 'passed' : '') + '"><a href="#' + base + '/' + t.id + '"><span class="kd-tn">' + (lk ? '🔒' : passed(id) ? '✓' : n) + '</span><span class="kd-tt"><b>' + tx(t.title) + '</b><small>' + tx(t.lessons) + ' · ' + F('dl.topicMeta', { a: t.acts.length, q: Math.max(10, t.quiz.length) }) + '</small></span>' +
               '<span class="kd-ts">' + (P.read[id] ? '<i class="ok">✓</i>' : '') + (q ? '<i>' + q.best + '/' + q.total + '</i>' : '') + '</span></a></li>';
           }).join('') + '</ol><a class="kd-sec-test" href="#' + base + '/test/' + s.id + '">📝 ' + T('dl.secTest') + (tk ? ' <b>' + tk.best + '/' + tk.total + '</b>' : '') + '</a></section>';
       }).join('') +
@@ -115,22 +119,84 @@
   }
   function topicView(part, t) {
     var tops = CUR.topics(part), i = tops.indexOf(t), prev = tops[i - 1], next = tops[i + 1], base = 'darslik/' + part.grade + '/' + part.part, id = uid(part, t.id);
+    if (locked(part, t)) {
+      view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(part.grade), 'darslik/' + part.grade], [pName(part), base], [tx(t.title), '']]) +
+        '<section class="kd-hero small">' + floaters(6) + '<h1>🔒 ' + tx(t.title) + '</h1><p>' + T('dl.locked') + '</p></section>' +
+        '<div class="les-foot"><a class="btn sm" href="#' + base + '/' + prev.id + '">← ' + T('dl.prevTopic') + ': ' + tx(prev.title) + '</a></div>';
+      return;
+    }
     P.read[id] = P.read[id] || Date.now(); save();
+    var ok = passed(id);
     view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(part.grade), 'darslik/' + part.grade], [pName(part), base], [tx(t.title), '']]) +
       '<section class="kd-topic-hero c-' + t.section.color + '">' + floaters(10) +
       '<div class="kd-th-text"><span class="kd-badge">' + F('dl.topicN', { n: i + 1 }) + ' · ' + tx(t.lessons) + '</span><h1>' + tx(t.title) + '</h1>' +
       '<div class="kd-keys"><span>' + T('dl.keys') + '</span>' + t.keys.map(function (k) { return '<b>' + tx(k) + '</b>'; }).join('') + '</div></div>' +
       '<div class="kd-th-3d" id="kd-hero3d"></div></section>' +
       Kd.say(t.explain) +
+      '<h2 class="kd-h2">📖 ' + T('dl.theory') + '</h2><div id="kd-theory" class="kd-theory-box"><p class="muted">' + T('dl.loading') + '</p></div>' +
       '<div class="kd-rule"><span>💡 ' + T('dl.remember') + '</span><div>' + tx(t.rule) + '</div></div>' +
       '<h2 class="kd-h2">' + T('dl.tasks') + '</h2><div id="kd-acts" class="kd-acts"></div>' +
-      '<h2 class="kd-h2">' + T('dl.topicTest') + '</h2><div class="card" id="kd-quiz"></div>' +
+      '<a class="kd-go-test c-' + t.section.color + '" href="#' + base + '/' + t.id + '/sinov"><span class="kd-gt-ic">📝</span><span><b>' + T('dl.toTest') + '</b><small>' + T('dl.toTestSub') + '</small></span>' + (P.quiz[id] ? '<i>' + P.quiz[id].best + '/' + P.quiz[id].total + '</i>' : '') + '<em>→</em></a>' +
       '<div class="les-foot">' + (prev ? '<a class="btn ghost sm" href="#' + base + '/' + prev.id + '">← ' + tx(prev.title) + '</a>' : '') + '<span class="grow"></span>' +
-      (next ? '<a class="btn sm" href="#' + base + '/' + next.id + '">' + tx(next.title) + ' →</a>' : '<a class="btn sm" href="#' + base + '/test/final">🏆 ' + T('dl.finalTest') + ' →</a>') + '</div>';
-    Kd.stage(document.getElementById('kd-hero3d'), t.scene, { pick: false });
+      (next ? '<a class="btn sm kd-next" id="kd-next" href="#' + base + '/' + next.id + '">' + tx(next.title) + ' →</a>' : '<a class="btn sm" href="#' + base + '/test/final">🏆 ' + T('dl.finalTest') + ' →</a>') + '</div>';
+    Kd.stage(document.getElementById('kd-hero3d'), t.scene, { pick: false, rainbow: true });
+    var thBox = document.getElementById('kd-theory');
+    window.NMTheory.load(part).then(function () {
+      var spec = window.NMTheory.get(window.NMTheory.key(part), t.id);
+      if (!spec) { thBox.innerHTML = '<p class="muted">' + T('dl.theorySoon') + '</p>'; return; }
+      window.NMTheory.render(thBox, spec, { onAllRead: function () { P.theory[id] = 1; save(); }, onFinish: function () { var el = document.getElementById('kd-acts'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); } });
+    });
     var acts = document.getElementById('kd-acts');
     t.acts.forEach(function (a, k) { acts.appendChild(Kd.renderActivity(a, k + 1)); });
-    Kd.quiz(document.getElementById('kd-quiz'), t.quiz, function (r, n) { var pr = P.quiz[id]; P.quiz[id] = { best: Math.max(r, pr ? pr.best : 0), total: n }; save(); });
+    void ok;
+  }
+  // ---------- Mavzu testi va uyga vazifa (alohida ekran, himoyalangan) ----------
+  function sinovView(part, t, tab) {
+    var base = 'darslik/' + part.grade + '/' + part.part, id = uid(part, t.id), tops = CUR.topics(part), i = tops.indexOf(t), next = tops[i + 1];
+    tab = tab === 'uy' ? 'uy' : 'test';
+    view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(part.grade), 'darslik/' + part.grade], [pName(part), base], [tx(t.title), base + '/' + t.id], [tab === 'uy' ? T('dl.hwTab') : T('dl.testTab'), '']]) +
+      '<section class="kd-hero small c-' + t.section.color + '">' + floaters(6) + '<span class="kd-badge">' + F('dl.topicN', { n: i + 1 }) + ' · ' + tx(t.title) + '</span><h1>' + (tab === 'uy' ? '🏠 ' + T('dl.hwTab') : '📝 ' + T('dl.testTab')) + '</h1><p>' + (tab === 'uy' ? T('dl.hwIntro') : T('dl.testIntro')) + '</p></section>' +
+      '<div class="tabs kd-sv-tabs"><a class="tab' + (tab === 'test' ? ' on' : '') + '" href="#' + base + '/' + t.id + '/sinov">📝 ' + T('dl.testTab') + '</a><a class="tab' + (tab === 'uy' ? ' on' : '') + '" href="#' + base + '/' + t.id + '/sinov/uy">🏠 ' + T('dl.hwTab') + '</a></div>' +
+      '<div id="kd-sv-body"></div>' +
+      '<div class="les-foot"><a class="btn ghost sm" href="#' + base + '/' + t.id + '">← ' + T('dl.backTopic') + '</a><span class="grow"></span>' + (next ? '<a class="btn sm" href="#' + base + '/' + next.id + '">' + tx(next.title) + ' →</a>' : '<a class="btn sm" href="#' + base + '/test/final">🏆 ' + T('dl.finalTest') + ' →</a>') + '</div>';
+    var body = document.getElementById('kd-sv-body');
+    if (tab === 'test') {
+      body.innerHTML = '<div class="kd-secure-note">🔒 ' + T('dl.secureNote') + '</div><div class="card kd-secure-zone" id="kd-quiz"></div>';
+      Kd.quiz(document.getElementById('kd-quiz'), Kd.buildQuiz(t, 10), function (r, n) { var pr = P.quiz[id]; P.quiz[id] = { best: Math.max(r, pr ? pr.best : 0), total: n }; save(); });
+      secure(true);
+    } else {
+      secure(false);
+      body.innerHTML = '<div id="kd-hw-acts" class="kd-acts"></div><h2 class="kd-h2">🧠 ' + T('dl.hwThink') + '</h2><div class="card" id="kd-hw-think"><p class="muted">' + T('dl.loading') + '</p></div>';
+      var box = document.getElementById('kd-hw-acts');
+      t.acts.forEach(function (a, k) { box.appendChild(Kd.renderActivity(a, k + 1)); });
+      window.NMTheory.load(part).then(function () {
+        var spec = window.NMTheory.get(window.NMTheory.key(part), t.id), el = document.getElementById('kd-hw-think'); if (!el) return;
+        var items = []; (spec && spec.sections || []).forEach(function (s) { if (s.kind === 'practice') (s.list || []).forEach(function (x) { items.push(x); }); });
+        el.innerHTML = items.length ? '<ol class="kd-hw-list">' + items.map(function (x) { return '<li>' + tx(x) + '</li>'; }).join('') + '</ol>' : '<p class="muted">' + T('dl.hwNone') + '</p>';
+      });
+    }
+  }
+  // Test ekrani himoyasi: brauzer ekran suratini butunlay taqiqlay olmaydi, lekin buni qiyinlashtiramiz:
+  // matnni belgilash/nusxalash/chop etish o'chiriladi, oyna fokusni yo'qotsa yoki PrintScreen/Win/Cmd bosilsa — test xiralashadi.
+  var SEC = { on: false };
+  function shield(on) { document.body.classList.toggle('kd-shielded', !!on); }
+  function secure(on) {
+    SEC.on = on; document.body.classList.toggle('kd-secure', on);
+    if (!on) { shield(false); return; }
+    if (SEC.bound) return; SEC.bound = true;
+    var sh = document.createElement('div'); sh.className = 'kd-shield'; sh.innerHTML = '<div><b>🔒</b><p>' + T('dl.shield') + '</p></div>';
+    sh.onclick = function () { shield(false); }; document.body.appendChild(sh);
+    window.addEventListener('blur', function () { if (SEC.on) shield(true); });
+    document.addEventListener('visibilitychange', function () { if (SEC.on && document.hidden) shield(true); });
+    document.addEventListener('keydown', function (e) {
+      if (!SEC.on) return;
+      var k = e.key || '';
+      if (k === 'PrintScreen' || k === 'Meta' || k === 'OS' || (e.ctrlKey || e.metaKey) && /^[pscau]$/i.test(k) || e.shiftKey && (e.metaKey || e.ctrlKey)) { e.preventDefault(); shield(true); try { navigator.clipboard && navigator.clipboard.writeText(''); } catch (x) {} }
+    }, true);
+    document.addEventListener('keyup', function (e) { if (SEC.on && e.key === 'PrintScreen') { shield(true); try { navigator.clipboard && navigator.clipboard.writeText(''); } catch (x) {} } }, true);
+    ['contextmenu', 'copy', 'cut', 'dragstart', 'selectstart'].forEach(function (ev) { document.addEventListener(ev, function (e) { if (SEC.on && e.target.closest && e.target.closest('.kd-secure-zone, .kd-hero')) e.preventDefault(); }, true); });
+    window.addEventListener('beforeprint', function () { if (SEC.on) shield(true); });
+    window.addEventListener('hashchange', function () { if (!/\/sinov(\/|$)/.test(location.hash) || /\/sinov\/uy/.test(location.hash)) secure(false); });
   }
   function testView(part, sid) {
     var base = 'darslik/' + part.grade + '/' + part.part, sec = part.sections.filter(function (s) { return s.id === sid; })[0];

@@ -295,3 +295,72 @@
 .kd-mx { display: inline-flex; align-items: center; gap: .08em; }
 .kd-fig { display: flex; justify-content: center; margin: .4rem 0; color: var(--text); }
 .kd-fig svg { max-width: 300px; width: 100%; height: auto; }
+
+/* ---------- Nazariya: sahifalab o'qish ---------- */
+.kd-theory-box { margin: .6rem 0 1.2rem; }
+.kd-theory { display: grid; grid-template-columns: 230px 1fr; gap: 1rem; align-items: start; }
+.kd-toc { position: sticky; top: 76px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: .8rem .6rem; }
+.kd-toc b { display: block; padding: 0 .4rem .5rem; font-size: .85rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.kd-toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; max-height: 60vh; overflow: auto; }
+.kd-toc button { width: 100%; text-align: left; background: none; border: 0; color: var(--text); font: inherit; font-size: .88rem; padding: .4rem .5rem; border-radius: 10px; cursor: pointer; opacity: .75; }
+.kd-toc button:hover { background: var(--line); opacity: 1; }
+.kd-toc button.seen { opacity: .95; }
+.kd-toc button.on { background: var(--accent); color: #fff; opacity: 1; font-weight: 700; }
+.kd-tbody { min-height: 320px; }
+.kd-tp { display: none; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 1.1rem 1.3rem 1.3rem; line-height: 1.7; font-size: 1.04rem; animation: kd-fade .35s ease; }
+.kd-tp.on { display: block; }
+@keyframes kd-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.kd-tp header { display: flex; gap: .8rem; align-items: center; margin-bottom: .6rem; }
+.kd-tp header small { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; }
+.kd-tp header h3 { margin: 0; font-size: 1.35rem; }
+.kd-tp-ic { font-size: 1.9rem; width: 2.6rem; height: 2.6rem; display: grid; place-items: center; border-radius: 12px; background: var(--line); }
+.kd-tp p { margin: .55rem 0; }
+.kd-tp ul { padding-left: 1.3rem; margin: .5rem 0; }
+.kd-tp li { margin: .25rem 0; }
+.kd-tp.kind-rule { border-color: #ffd23f88; background: linear-gradient(135deg, var(--card), rgba(255, 210, 63, .08)); }
+.kd-tp.kind-mistake { border-color: #ff6b8b88; }
+.kd-tp.kind-fact, .kd-tp.kind-history { border-color: #a78bfa88; }
+.kd-tp.kind-life { border-color: #3ddc9788; }
+.kd-tp.kind-summary { border-color: #4f8dff88; }
+.kd-ex-box { margin: .7rem 0; padding: .7rem .9rem; border-radius: 12px; background: rgba(79, 141, 255, .08); border-left: 4px solid #4f8dff; }
+.kd-ex-q { font-weight: 700; }
+.kd-ex-box details { margin-top: .35rem; }
+.kd-ex-box summary { cursor: pointer; color: var(--accent); font-weight: 700; }
+.kd-ex-s { padding: .4rem 0 0; }
+.kd-tbl { overflow: auto; margin: .6rem 0; }
+.kd-tbl table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.kd-tbl th, .kd-tbl td { border: 1px solid var(--line); padding: .35rem .6rem; text-align: center; }
+.kd-tbl th { background: var(--line); }
+.kd-tnav { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin-top: .7rem; }
+.kd-tpage { color: var(--muted); font-size: .9rem; font-weight: 700; }
+@media (max-width: 760px) { .kd-theory { grid-template-columns: 1fr; } .kd-toc { position: static; } .kd-toc ol { max-height: 180px; } }
+/* qulf va o'tish */
+.kd-topics li.locked a { opacity: .55; }
+.kd-topics li.passed .kd-tn { background: #3ddc97; color: #0b1f16; }
+.kd-need { font-size: .75rem; font-weight: 600; color: var(--muted); margin-left: .5rem; }
+.kd-gate { margin: .6rem 0 0; padding: .6rem .9rem; border-radius: 12px; font-weight: 700; }
+.kd-gate.ok { background: rgba(61, 220, 151, .15); color: #3ddc97; }
+.kd-gate.no { background: rgba(255, 107, 139, .15); color: #ff6b8b; }
+a.btn.disabled { opacity: .5; pointer-events: auto; cursor: not-allowed; }
+
+/* ---------- Test va uyga vazifa tugmasi ---------- */
+.kd-go-test { display: flex; align-items: center; gap: 1rem; margin: 1.6rem 0 .6rem; padding: 1.1rem 1.3rem; border-radius: 20px; text-decoration: none; color: #fff; background: linear-gradient(120deg, #4f8dff, #a78bfa 55%, #ff6b8b); box-shadow: 0 12px 30px -12px rgba(79, 141, 255, .6); transition: transform .15s; }
+.kd-go-test:hover { transform: translateY(-2px); }
+.kd-gt-ic { font-size: 2.2rem; }
+.kd-go-test b { display: block; font-size: 1.25rem; }
+.kd-go-test small { opacity: .9; }
+.kd-go-test i { margin-left: auto; font-style: normal; font-weight: 800; background: rgba(255, 255, 255, .25); padding: .2rem .6rem; border-radius: 999px; }
+.kd-go-test em { font-style: normal; font-size: 1.6rem; margin-left: .4rem; }
+.kd-sv-tabs { margin: 1rem 0; }
+.kd-hw-list { margin: 0; padding-left: 1.3rem; line-height: 1.7; }
+.kd-secure-note { margin: .4rem 0 .8rem; padding: .6rem .9rem; border-radius: 12px; background: rgba(255, 210, 63, .14); font-size: .9rem; font-weight: 600; }
+/* himoya: belgilash, nusxalash, chop etish taqiqlangan; fokus yo'qolsa — xiralashadi */
+body.kd-secure .kd-secure-zone, body.kd-secure .kd-secure-zone * { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+body.kd-secure .kd-secure-zone { position: relative; }
+body.kd-secure .kd-secure-zone::after { content: 'Nuvemath · Nuvemath · Nuvemath · Nuvemath · Nuvemath · Nuvemath'; position: absolute; inset: 0; pointer-events: none; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; font-weight: 800; color: rgba(127, 150, 200, .08); transform: rotate(-24deg); white-space: nowrap; overflow: hidden; }
+.kd-shield { display: none; }
+body.kd-secure.kd-shielded .kd-secure-zone { filter: blur(22px); }
+body.kd-secure.kd-shielded .kd-shield { display: grid; place-items: center; position: fixed; inset: 0; z-index: 9999; background: rgba(10, 18, 40, .82); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); color: #fff; text-align: center; cursor: pointer; }
+.kd-shield b { font-size: 3rem; display: block; }
+.kd-shield p { font-size: 1.1rem; font-weight: 700; max-width: 22rem; }
+@media print { body.kd-secure * { visibility: hidden !important; } body.kd-secure::after { content: 'Nuvemath — test chop etilmaydi'; visibility: visible; } }

@@ -155,6 +155,22 @@ test('1–7-sinf topshiriqlari: 300 marta yaratilganda ham sonlar to‘g‘ri', 
     }
   })));
 });
+test('mavzu testlari: har bir mavzuda kamida 10 ta to‘g‘ri savol (buildQuiz)', () => {
+  const ctx = loadCurriculum(); vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/theory.js'), 'utf8'), ctx);
+  const C = ctx.NMCurriculum, K = ctx.NMKids;
+  C.grades.forEach(g => g.parts.forEach(p => C.topics(p).forEach(t => { for (let i = 0; i < 3; i++) {
+    const qs = K.buildQuiz(t, 10), where = p.grade + '-' + p.part + ' ' + t.id;
+    assert.ok(qs.length >= 10, where + ' savollar ' + qs.length);
+    qs.forEach(q => ['uz', 'ru', 'en'].forEach(l => { const o = q.o.map(x => asText(x, l)); assert.strictEqual(new Set(o).size, o.length, where + ' takroriy variant (' + l + ')'); assert.ok(q.a >= 0 && q.a < o.length, where); assert.ok(asText(q.q, l), where + ' bo‘sh savol'); }));
+  } })));
+});
+test('nazariya moduli: namuna mavzu 10+ sahifa va uch tilda', () => {
+  const ctx = loadCurriculum(); vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/theory.js'), 'utf8'), ctx);
+  vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/theory/g1-1.js'), 'utf8'), ctx);
+  const TH = ctx.NMTheory, spec = TH.get('1-1', 't1'); assert.ok(spec, 'g1-1 t1 nazariyasi');
+  assert.ok(spec.sections.length >= 10); ['uz', 'ru', 'en'].forEach(l => assert.ok(TH.stats(spec, l).words >= 800, l));
+  tri(spec, '1-1 t1');
+});
 test('tarjimalar: barcha kalitlar uch tilda', () => {
   const ctx = { localStorage: { getItem: () => null }, navigator: { language: 'uz' }, document: {} }; ctx.window = ctx; vm.createContext(ctx);
   vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/i18n.js'), 'utf8').replace(/\(this\)\s*;\s*$/, '(window);'), ctx);
