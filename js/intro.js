@@ -117,6 +117,7 @@
         var p = target(); if (!p) return;
         if (!headC || frame++ % 20 === 0) headC = center(head);
         var dx = p.x - headC.x, dy = p.y - headC.y, d = Math.hypot(dx, dy) || 1;
+        if (!isFinite(dx) || !isFinite(dy)) return;
         var tx = dx / d * 3.1, ty = dy / d * 2.6, tr_ = Math.max(-16, Math.min(16, dx / innerWidth * 46));
         cur.px += (tx - cur.px) * 0.18; cur.py += (ty - cur.py) * 0.18; cur.rot += (tr_ - cur.rot) * 0.08;
         pupils.setAttribute('transform', 'translate(' + cur.px.toFixed(2) + ' ' + cur.py.toFixed(2) + ')');

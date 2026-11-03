@@ -9,7 +9,7 @@ O‘zbek tilidagi (rus va ingliz tillari bilan) interaktiv matematika platformas
 
 - **Kirish animatsiyasi (intro, ~14 s)** — birinchi tashrifda: formulalar va 3D jismlar orbitada aylanadi, ko‘zoynakli odamcha ularni kuzatadi; π orbitadan ajralib uchadi, odamcha uni ushlaydi, so‘ng π logotipdagi joyiga uchib, logotip qismma-qism (π → kitob → orbita → yulduz) yig‘iladi va odamcha qo‘l silkitadi. Three.js + GSAP, «O‘tkazib yuborish» (yoki Esc), `prefers-reduced-motion` da yengil versiya. Qayta ko‘rish: «Introni qayta ko‘rish» yoki `?intro`.
 
-- **Darslik** — 20 mavzu (11 algebra, 9 geometriya): nazariya, formulalar jadvali, namunaviy misol, jonli interaktiv qism va test. O‘qilgan mavzular va test natijalari saqlanadi.
+- **Darslik** — sinf → qism → bo‘lim → mavzu tuzilmasida (1–11-sinf). Hozir tayyor: **1-sinf, III qism** (I.V. Repyova, 2024 darsligi asosida): 5 bo‘lim, 19 mavzu, 54 ta interaktiv topshiriq (3D sahnada sanash, masala sxemalari va to‘ldirish joylari, sonli zanjir, sehrli kvadrat, jadval, chizg‘ich, pallali tarozi, idishlar, tartiblash), har bir mavzu, bo‘lim va qism uchun testlar. Topshiriqlar har safar yangi sonlar bilan yaratiladi.
 - **Grafiklar** — istalgan funksiya grafigi: bir nechta funksiya, kattalashtirish/siljitish (sichqoncha va barmoq), koordinata ko‘rsatkichi, nollar, ekstremumlar va kesishish nuqtalari avtomatik topiladi (π/6 kabi aniq ko‘rinishda), hosila, `a` parametri slayderi.
 - **Yechuvchi**
   - Tenglama: ko‘phadni standart ko‘rinishga keltirib, chiziqli va kvadrat tenglamalarni qadam-baqadam yechadi (diskriminant, aniq radikal javob `(3 ± √17)/4`, Viyet, tekshirish); yuqori darajali va transsendent tenglamalarni (sin, 2^x, ln, √, |x|) sonli usulda yechadi.
@@ -42,7 +42,8 @@ npm test           # avtomatik testlar
 | `js/geometry.js` | Jonli 2D chizmalar |
 | `js/solids.js` | 3D jismlar (Three.js) va yoyilmalar |
 | `js/practice.js` | Masala generatori va javob tekshiruvi |
-| `js/lessons.js` | Darslik mavzulari (3 tilda) |
+| `js/kids.js`, `css/kids.css` | Interaktiv dars dvigateli: 3D sahna, topshiriq turlari, testlar |
+| `js/curriculum/index.js` | Sinf/qism tuzilmasi; `js/curriculum/g1-3.js` — 1-sinf III qism mazmuni |
 | `js/i18n.js` | Interfeys tarjimalari |
 | `js/intro.js`, `css/intro.css` | Mustaqil intro komponenti (`NuvemathIntro.play({ force: true })`) |
 | `assets/` | Logotip: asl rasm, shaffof emblema (yorug' va qorong'i fon uchun), favicon |

@@ -81,21 +81,50 @@ test('javob formatlari', () => {
   assert.ok(Practice.check({ ans: [1] }, 'abc').bad);
 });
 
-// ---------- Darslik ma'lumotlari ----------
-test('darsliklar to‘liq va uch tilda', () => {
-  const ctx = {}; vm.createContext(ctx);
-  vm.runInContext(fs.readFileSync(path.join(__dirname, '../js/lessons.js'), 'utf8'), ctx);
-  const L = ctx.LESSONS; assert.ok(L.length >= 18);
+// ---------- Darslik: sinf → qism → mavzu ma'lumotlari ----------
+function loadCurriculum() {
+  const ctx = {}; ctx.window = ctx; vm.createContext(ctx);
+  ['js/kids.js', 'js/curriculum/index.js', 'js/curriculum/g1-3.js'].forEach(f => vm.runInContext(fs.readFileSync(path.join(__dirname, '..', f), 'utf8'), ctx, { filename: f }));
+  return ctx;
+}
+test('darslik tuzilmasi: 11 sinf, 1-sinf III qism to‘liq', () => {
+  const ctx = loadCurriculum(), C = ctx.NMCurriculum;
+  assert.strictEqual(C.grades.length, 11);
+  const p = C.part(1, 3); assert.ok(p, '1-sinf III qism yo‘q');
+  const tops = C.topics(p); assert.ok(tops.length >= 15, 'mavzular soni ' + tops.length);
   const ids = new Set();
-  L.forEach(l => {
-    assert.ok(!ids.has(l.id), 'takroriy id ' + l.id); ids.add(l.id);
-    ['title', 'theory'].forEach(k => ['uz', 'ru', 'en'].forEach(lang => assert.ok(l[k][lang], l.id + ' ' + k + ' ' + lang)));
-    assert.ok(l.formulas.length && l.example.steps.length && l.quiz.length, l.id);
-    l.quiz.forEach(q => assert.ok(q.a >= 0 && q.a < q.o.length, l.id + ' quiz javob indeksi'));
-    assert.ok(['plot', 'geo', 'solid', 'calc', 'practice'].includes(l.widget.type), l.id);
-    if (l.solve) Solver.solveEquation(l.solve);
-    if (l.widget.fns) l.widget.fns.forEach(f => Expr.parse(f));
+  tops.forEach(t => {
+    assert.ok(!ids.has(t.id), 'takroriy id ' + t.id); ids.add(t.id);
+    assert.ok(t.title && t.explain && t.rule && t.keys.length, t.id + ' matn yetishmaydi');
+    assert.ok(t.acts.length >= 2, t.id + ' topshiriqlar kam');
+    assert.ok(t.quiz.length >= 2, t.id + ' test kam');
+    assert.ok(t.scene.length && t.scene.every(g => ctx.NMKids.objects.includes(g.obj)), t.id + ' 3D sahna noto‘g‘ri');
+    t.quiz.forEach(q => { assert.ok(q.a >= 0 && q.a < q.o.length, t.id + ' test javobi indeksi'); assert.strictEqual(new Set(q.o).size, q.o.length, t.id + ' takroriy variant: ' + q.q); });
   });
+});
+test('1-sinf topshiriqlari: 300 marta yaratilganda ham sonlar to‘g‘ri', () => {
+  const ctx = loadCurriculum(), K = ctx.NMKids, C = ctx.NMCurriculum;
+  const evalExpr = e => { let v = e[0]; for (let i = 1; i < e.length - 2; i += 2) v = e[i] === '+' ? v + e[i + 1] : v - e[i + 1]; return v; };
+  C.topics(C.part(1, 3)).forEach(t => t.acts.forEach((a, k) => {
+    assert.ok(K.widgets[a.type], t.id + ' noma’lum tur ' + a.type);
+    if (!a.make) return;
+    for (let i = 0; i < 300; i++) {
+      const d = a.make(K.R), where = t.id + ' #' + (k + 1) + ' (' + a.type + ')';
+      if (a.type === 'problem' || a.type === 'count3d') {
+        assert.ok(Number.isInteger(d.ans) && d.ans >= 0 && d.ans <= 100, where + ' javob ' + d.ans);
+        if (d.expr) { assert.strictEqual(d.expr[d.expr.length - 2], '=', where); assert.strictEqual(evalExpr(d.expr), d.ans, where + ' ifoda ' + d.expr.join(' ')); assert.strictEqual(d.expr[d.expr.length - 1], d.ans, where); }
+        d.expr && d.expr.forEach((x, j) => { if (j % 2 === 0) assert.ok(x >= 0, where + ' manfiy son'); });
+        if (d.groups) d.groups.forEach(g => assert.ok(g.n >= 1 && g.n <= 12, where + ' guruh ' + g.n));
+        if (d.scheme && d.scheme.parts) d.scheme.parts.forEach(x => assert.ok(x > 0, where + ' sxema qismi ' + x));
+      } else if (a.type === 'chain') { let v = d.start; d.ops.forEach(o => { v = o[0] === '+' ? v + o[1] : v - o[1]; assert.ok(v >= 0 && v <= 100, where + ' zanjir ' + v); }); }
+      else if (a.type === 'choose') { assert.ok(d.a >= 0 && d.a < d.options.length, where); assert.strictEqual(new Set(d.options).size, d.options.length, where + ' takroriy variant: ' + d.options.join(' | ')); }
+      else if (a.type === 'order') assert.strictEqual(new Set(d.items).size, d.items.length, where + ' takroriy element');
+      else if (a.type === 'drill') assert.ok(Number.isInteger(d.a) && d.a >= 0 && d.a <= 200, where + ' ' + d.q + ' = ' + d.a);
+      else if (a.type === 'ruler') assert.ok(d.len > 0 && (d.start || 0) + d.len <= (d.max || 15), where);
+      else if (a.type === 'scale') assert.ok(d.mass > 0 && d.mass <= 30, where);
+      else if (a.type === 'jugs') assert.ok(d.cap > 0 && d.cap <= 12, where);
+    }
+  }));
 });
 test('tarjimalar: barcha kalitlar uch tilda', () => {
   const ctx = { localStorage: { getItem: () => null }, navigator: { language: 'uz' }, document: {} }; ctx.window = ctx; vm.createContext(ctx);
