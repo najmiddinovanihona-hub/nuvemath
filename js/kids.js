@@ -25,7 +25,7 @@
       jugs: 'Idishni to‘ldiring', full: 'To‘ldi!', poured: 'Quyildi:', jars: 'banka', pourTitle: '1 l quyish', volume: 'Hajmi:', jugsHint: 'Bankani bosib, idish to‘lguncha quying va sanang.',
       order: 'Tartib bilan joylashtiring', orderBad: 'Tartib noto‘g‘ri — boshidan qayta bosing.', choose: 'To‘g‘risini tanlang', chooseFirst: 'Avval javobni tanlang.', chooseBad: 'Masalani yana bir bor diqqat bilan o‘qing.',
       drill: 'Tez hisoblang', q100: 'Mukammal! Siz haqiqiy matematiksiz! 🏆', q80: 'Juda yaxshi natija! ⭐', q50: 'Yaxshi! Yana bir bor takrorlang.', qLow: 'Mavzuni qayta ko‘rib chiqing — siz uddalaysiz!', reQuiz: '↻ Qayta topshirish',
-      kg: 'kg', l: 'l', cm: 'cm', dm: 'dm', total: 'jami', perimeter: 'Perimetrni toping', polyHint: 'Barcha tomonlar uzunliklarini qo‘shing.' },
+      kg: 'kg', l: 'l', cm: 'cm', dm: 'dm', total: 'jami', perimeter: 'Perimetrni toping', polyHint: 'Barcha tomonlar uzunliklarini qo‘shing.', column: 'Ustun ko‘rinishida hisoblang', columnHint: 'Birliklarni birliklar ostiga, o‘nliklarni o‘nliklar ostiga yozib, o‘ngdan boshlang.', clock: 'Soat necha bo‘ldi?', clockAsk: 'Soat nechani ko‘rsatyapti? Soat va minutni yozing.', clockHint: 'Kalta strelka — soat, uzun strelka — minut.', area: 'Yuzni toping', areaHint: 'Kataklarni qatorlab sanang: qatordagi katak × qatorlar soni.' },
     ru: { check: 'Проверить', fresh: '↻ Новый пример', praise: ['Молодец!', 'Отлично!', 'Супер!', 'Совершенно верно!', 'Браво!'], retry: 'Попробуйте ещё раз.',
       cond: 'Краткая запись', solve: 'Решение:', answer: 'Ответ:', exprOk: 'Ответ верный, но проверьте выражение.', schemeHint: 'Посмотрите на схему: целое = часть + часть.',
       count3d: '3D-сцена: посчитайте', pickHint: '👆 Нажимайте на посчитанные предметы · вращайте перетаскиванием', marked: 'Отмечено:', problem: 'Решите задачу',
@@ -36,7 +36,7 @@
       jugs: 'Наполните ведро', full: 'Полно!', poured: 'Налито:', jars: 'банок', pourTitle: 'Налить 1 л', volume: 'Объём:', jugsHint: 'Нажимайте на банку, пока ведро не наполнится, и считайте.',
       order: 'Расставьте по порядку', orderBad: 'Порядок неверный — начните заново.', choose: 'Выберите верный ответ', chooseFirst: 'Сначала выберите ответ.', chooseBad: 'Прочитайте задачу ещё раз внимательно.',
       drill: 'Считаем быстро', q100: 'Безупречно! Вы настоящий математик! 🏆', q80: 'Очень хороший результат! ⭐', q50: 'Хорошо! Повторите ещё раз.', qLow: 'Повторите тему — у вас получится!', reQuiz: '↻ Пройти заново',
-      kg: 'кг', l: 'л', cm: 'см', dm: 'дм', total: 'всего', perimeter: 'Найдите периметр', polyHint: 'Сложите длины всех сторон.' },
+      kg: 'кг', l: 'л', cm: 'см', dm: 'дм', total: 'всего', perimeter: 'Найдите периметр', polyHint: 'Сложите длины всех сторон.', column: 'Вычислите столбиком', columnHint: 'Пишите единицы под единицами, десятки под десятками и начинайте справа.', clock: 'Который час?', clockAsk: 'Какое время показывают часы? Запишите часы и минуты.', clockHint: 'Короткая стрелка — часы, длинная — минуты.', area: 'Найдите площадь', areaHint: 'Считайте клетки рядами: клеток в ряду × число рядов.' },
     en: { check: 'Check', fresh: '↻ New example', praise: ['Well done!', 'Great!', 'Awesome!', 'Exactly right!', 'Bravo!'], retry: 'Try once more.',
       cond: 'Short note', solve: 'Solution:', answer: 'Answer:', exprOk: 'The answer is right — now check the expression.', schemeHint: 'Look at the diagram: whole = part + part.',
       count3d: '3D scene: count', pickHint: '👆 Tap the objects you count · drag to rotate', marked: 'Marked:', problem: 'Solve the problem',
@@ -47,7 +47,7 @@
       jugs: 'Fill the bucket', full: 'Full!', poured: 'Poured:', jars: 'jars', pourTitle: 'Pour 1 L', volume: 'Volume:', jugsHint: 'Tap the jar until the bucket is full and count.',
       order: 'Put in order', orderBad: 'Wrong order — start again.', choose: 'Choose the right answer', chooseFirst: 'Choose an answer first.', chooseBad: 'Read the problem carefully once more.',
       drill: 'Quick maths', q100: 'Perfect! You are a real mathematician! 🏆', q80: 'Very good result! ⭐', q50: 'Good! Practise once more.', qLow: 'Review the topic — you can do it!', reQuiz: '↻ Try again',
-      kg: 'kg', l: 'L', cm: 'cm', dm: 'dm', total: 'total', perimeter: 'Find the perimeter', polyHint: 'Add the lengths of all the sides.' }
+      kg: 'kg', l: 'L', cm: 'cm', dm: 'dm', total: 'total', perimeter: 'Find the perimeter', polyHint: 'Add the lengths of all the sides.', column: 'Work it out in a column', columnHint: 'Put ones under ones and tens under tens, and start from the right.', clock: 'What time is it?', clockAsk: 'What time does the clock show? Write the hours and minutes.', clockHint: 'The short hand shows hours, the long hand shows minutes.', area: 'Find the area', areaHint: 'Count the squares in rows: squares in a row × number of rows.' }
   };
   function lang() { return (root.I18n && root.I18n.lang) || 'uz'; }
   function t(k) { var L = KT[lang()] || KT.uz; return L[k] !== undefined ? L[k] : KT.uz[k]; }
@@ -149,6 +149,12 @@
       for (var i = 0; i < 10; i++) { var b = new T.Mesh(geo, m); b.position.set(0, 0.11 + i * 0.205, 0); g.add(b); var e = new T.LineSegments(eg, lm); e.position.copy(b.position); g.add(e); }
       return g;
     },
+    flat: function (T, c) { // yuzlik: 10×10 kubchali plita
+      var g = new T.Group(), b = new T.Mesh(new T.BoxGeometry(2.05, 0.2, 2.05), mat(T, c || 'green')); b.position.y = 0.11; g.add(b);
+      var pts = []; for (var i = 0; i <= 10; i++) { var v = -1.025 + i * 0.205; pts.push(new T.Vector3(v, 0.215, -1.025), new T.Vector3(v, 0.215, 1.025), new T.Vector3(-1.025, 0.215, v), new T.Vector3(1.025, 0.215, v)); }
+      g.add(new T.LineSegments(new T.BufferGeometry().setFromPoints(pts), new T.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.5 })));
+      return g;
+    },
     unit: function (T, c) { var g = new T.Group(), b = new T.Mesh(new T.BoxGeometry(0.2, 0.2, 0.2), mat(T, c || 'blue')); b.position.y = 0.11; g.add(b);
       var e = new T.LineSegments(new T.EdgesGeometry(b.geometry), new T.LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.45 })); e.position.copy(b.position); g.add(e); return g; },
     box: function (T, c) { var g = new T.Group(), m = new T.Mesh(new T.BoxGeometry(1.0, 0.55, 0.7), mat(T, c)); m.position.y = 0.28; g.add(m);
@@ -180,7 +186,7 @@
     var world = new T.Group(); scene.add(world);
     var items = [], total = 0;
     var gw = groups.map(function (g) { return Math.min(g.n, opts.perRow || 4); }), SC = 1.3;
-    var gap = 1.08 * SC, clusterGap = 1.0 * SC, widths = gw.map(function (c) { return (c - 1) * gap; });
+    var gap = 1.08 * SC, clusterGap = (groups.length > 2 ? 1.7 : 1.0) * SC, widths = gw.map(function (c) { return (c - 1) * gap; });
     var fullW = widths.reduce(function (a, b) { return a + b; }, 0) + clusterGap * (groups.length - 1);
     var x0 = -fullW / 2, delay = 0;
     groups.forEach(function (g, gi) {
@@ -331,7 +337,7 @@
     var nums = expr.filter(function (x, i) { return i % 2 === 0; }), wantOps = expr.filter(function (x, i) { return i % 2 === 1 && x !== '='; });
     var ok = true, userOps = [].map.call(ops, function (b) { return b.getAttribute('data-op'); });
     // qo'shishda o'rin almashtirish mumkin
-    var commut = wantOps.every(function (o) { return o === '+'; }) && nums.length === 3 &&
+    var commut = (wantOps.every(function (o) { return o === '+'; }) || wantOps.every(function (o) { return o === '·'; })) && nums.length === 3 &&
       vals[0] === nums[1] && vals[1] === nums[0] && vals[2] === nums[2];
     [].forEach.call(ins, function (inp, i) { var good = commut || vals[i] === nums[i]; mark(inp, good); ok = ok && good; });
     [].forEach.call(ops, function (b, i) { var good = userOps[i] === wantOps[i]; b.classList.toggle('bad', !good); b.classList.toggle('ok', good); ok = ok && good; });
@@ -339,7 +345,7 @@
   };
   function bindOps(node) {
     node.querySelectorAll('.kd-op').forEach(function (b) {
-      b.onclick = function () { var o = { '?': '+', '+': '−', '−': '+' }[b.getAttribute('data-op')]; b.setAttribute('data-op', o); b.textContent = o; b.classList.remove('ok', 'bad'); };
+      b.onclick = function () { var o = { '?': '+', '+': '−', '−': '·', '·': ':', ':': '+' }[b.getAttribute('data-op')]; b.setAttribute('data-op', o); b.textContent = o; b.classList.remove('ok', 'bad'); };
     });
   }
 
@@ -383,7 +389,7 @@
       if (st) st.dispose();
       var stg = node.querySelector('.kd-3d'); stg.innerHTML = '';
       d = spec.make(R);
-      st = K.stage(stg, d.groups, { onPick: function (n) { node.querySelector('.kd-picked').textContent = n; } });
+      st = K.stage(stg, d.groups, { perRow: d.perRow, onPick: function (n) { node.querySelector('.kd-picked').textContent = n; } });
       node.querySelector('.kd-q').innerHTML = '<p class="kd-story">' + tx(d.story) + '</p>' + (d.expr ? '<div class="kd-solve">' + exprHTML(d.expr.length) + '</div>' : '') +
         '<div class="kd-solve"><span class="kd-lbl">' + t('answer') + '</span>' + input(3.4, 'data-ans') + ' <span class="kd-unit">' + tx(d.unit || '') + '</span> <span class="kd-tag">' + t('marked') + ' <b class="kd-picked">0</b></span></div>';
       bindOps(node);
@@ -643,6 +649,66 @@
     build();
     node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
     node.querySelector('.kd-check').onclick = function () { var a = q.querySelector('[data-a]'), ok = num(a.value) === d.ans; mark(a, ok); feedback(node, ok, ok ? null : t('polyHint')); };
+    return node;
+  };
+
+  // Ustun ko'rinishida qo'shish/ayirish
+  W.column = function (spec, idx) {
+    var node = card(idx, '🧾', spec.title || t('column'), '<div class="kd-colw"></div>');
+    var box = node.querySelector('.kd-colw'), d;
+    function build() {
+      d = spec.make(R);
+      var w = Math.max(String(d.a).length, String(d.b).length, String(d.ans).length) + 1;
+      function row(v, op) { var s = String(v); while (s.length < w) s = ' ' + s; return '<div class="kd-colr"><span class="kd-colop">' + (op || '') + '</span>' + s.split('').map(function (c) { return '<span>' + (c === ' ' ? '' : c) + '</span>'; }).join('') + '</div>'; }
+      box.innerHTML = (d.story ? '<p class="kd-story">' + tx(d.story) + '</p>' : '') + '<div class="kd-colbox" style="--w:' + w + '">' + row(d.a) + row(d.b, d.op === '-' ? '−' : '+') + '<div class="kd-colline"></div>' +
+        '<div class="kd-colr"><span class="kd-colop"></span>' + input(Math.max(3, w * 0.9), 'data-a') + '</div></div>';
+    }
+    build();
+    node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
+    node.querySelector('.kd-check').onclick = function () { var a = box.querySelector('[data-a]'), ok = num(a.value) === d.ans; mark(a, ok); feedback(node, ok, ok ? null : t('columnHint')); };
+    return node;
+  };
+
+  // Soat: strelkalarga qarab vaqtni yozish
+  W.clock = function (spec, idx) {
+    var node = card(idx, '🕒', spec.title || t('clock'), '<div class="kd-clockw"></div><div class="kd-q"></div>');
+    var box = node.querySelector('.kd-clockw'), q = node.querySelector('.kd-q'), d;
+    function build() {
+      d = spec.make(R);
+      var ticks = '', nums = '';
+      for (var i = 0; i < 60; i++) { var a = i * Math.PI / 30, big = i % 5 === 0, r1 = big ? 78 : 83; ticks += '<line x1="' + (100 + Math.sin(a) * r1).toFixed(1) + '" y1="' + (100 - Math.cos(a) * r1).toFixed(1) + '" x2="' + (100 + Math.sin(a) * 88).toFixed(1) + '" y2="' + (100 - Math.cos(a) * 88).toFixed(1) + '" class="' + (big ? 'kd-tk big' : 'kd-tk') + '"/>'; }
+      for (var k = 1; k <= 12; k++) { var b = k * Math.PI / 6; nums += '<text x="' + (100 + Math.sin(b) * 64).toFixed(1) + '" y="' + (106 - Math.cos(b) * 64).toFixed(1) + '" class="kd-cnum">' + k + '</text>'; }
+      var ha = ((d.h % 12) + d.m / 60) * 30, ma = d.m * 6;
+      box.innerHTML = '<svg viewBox="0 0 200 200" class="kd-clock"><circle cx="100" cy="100" r="94" class="kd-cface"/>' + ticks + nums +
+        '<line x1="100" y1="100" x2="100" y2="52" class="kd-hh" style="transform:rotate(' + ha + 'deg)"/><line x1="100" y1="100" x2="100" y2="24" class="kd-mh" style="transform:rotate(' + ma + 'deg)"/><circle cx="100" cy="100" r="6" class="kd-cpin"/></svg>';
+      q.innerHTML = '<p class="kd-story">' + tx(d.story || t('clockAsk')) + '</p><div class="kd-solve">' + input(2.6, 'data-h') + ' <b>:</b> ' + input(2.6, 'data-m') + '</div>';
+    }
+    build();
+    node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
+    node.querySelector('.kd-check').onclick = function () {
+      var hI = q.querySelector('[data-h]'), mI = q.querySelector('[data-m]'), hv = num(hI.value), okH = hv === d.h || hv === d.h + 12 || (d.h === 12 && hv === 0), okM = num(mI.value) === d.m;
+      mark(hI, okH); mark(mI, okM); feedback(node, okH && okM, okH && okM ? null : t('clockHint'));
+    };
+    return node;
+  };
+
+  // Katak qog'ozda yuz (yoki perimetr)
+  W.grid = function (spec, idx) {
+    var node = card(idx, '▦', spec.title || t('area'), '<div class="kd-gridw"></div><div class="kd-q"></div>');
+    var box = node.querySelector('.kd-gridw'), q = node.querySelector('.kd-q'), d;
+    function build() {
+      d = spec.make(R);
+      var cols = 12, rows = 7, c = 26, x0 = R(0, cols - d.a), y0 = R(0, rows - d.b), s = '<svg viewBox="0 0 ' + (cols * c + 2) + ' ' + (rows * c + 2) + '" class="kd-gridsvg">';
+      for (var i = 0; i <= cols; i++) s += '<line x1="' + (1 + i * c) + '" y1="1" x2="' + (1 + i * c) + '" y2="' + (1 + rows * c) + '" class="kd-gl"/>';
+      for (var j = 0; j <= rows; j++) s += '<line x1="1" y1="' + (1 + j * c) + '" x2="' + (1 + cols * c) + '" y2="' + (1 + j * c) + '" class="kd-gl"/>';
+      for (var y = 0; y < d.b; y++) for (var x = 0; x < d.a; x++) s += '<rect x="' + (2 + (x0 + x) * c) + '" y="' + (2 + (y0 + y) * c) + '" width="' + (c - 2) + '" height="' + (c - 2) + '" rx="3" class="kd-gcell" style="--i:' + (y * d.a + x) + '"/>';
+      s += '<rect x="' + (1 + x0 * c) + '" y="' + (1 + y0 * c) + '" width="' + d.a * c + '" height="' + d.b * c + '" class="kd-gfig"/></svg>';
+      box.innerHTML = s;
+      q.innerHTML = '<p class="kd-story">' + tx(d.story) + '</p><div class="kd-solve"><span class="kd-lbl">' + t('answer') + '</span>' + input(3.4, 'data-a') + ' ' + tx(d.unit || '') + '</div>';
+    }
+    build();
+    node.querySelector('.kd-new').onclick = function () { build(); node.querySelector('.kd-fb').textContent = ''; };
+    node.querySelector('.kd-check').onclick = function () { var a = q.querySelector('[data-a]'), ok = num(a.value) === d.ans; mark(a, ok); feedback(node, ok, ok ? null : t(d.ask === 'perimeter' ? 'polyHint' : 'areaHint')); };
     return node;
   };
 

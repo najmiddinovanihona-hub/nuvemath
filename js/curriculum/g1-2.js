@@ -89,7 +89,7 @@
             'Brackets say “work me out first!” If an expression has brackets, do the <b>operation inside the brackets first</b>, then the rest.'),
           rule: '10 − (3 + 2) = 10 − 5 = 5<br>(10 − 3) + 2 = 7 + 2 = 9',
           acts: [
-            { type: 'drill', title: L('Qavsli misollar', 'Примеры со скобками', 'Sums with brackets'), make: function (R) { var a = R(8, 20), b = R(1, 5), c = R(1, 4); return pick([{ q: a + ' − (' + b + ' + ' + c + ')', a: a - b - c }, { q: '(' + a + ' − ' + b + ') + ' + c, a: a - b + c }, { q: '(' + b + ' + ' + c + ') + ' + a, a: a + b + c }]); } },
+            { type: 'drill', title: L('Qavsli misollar', 'Примеры со скобками', 'Sums with brackets'), make: function (R) { var b = R(1, 5), c = R(1, 4), a = R(b + c + 1, 20); return pick([{ q: a + ' − (' + b + ' + ' + c + ')', a: a - b - c }, { q: '(' + a + ' − ' + b + ') + ' + c, a: a - b + c }, { q: '(' + b + ' + ' + c + ') + ' + a, a: a + b + c }]); } },
             { type: 'choose', title: L('Qaysi biri avval?', 'Что сначала?', 'Which first?'), icon: '1️⃣', make: function (R) { var a = R(10, 18), b = R(1, 4), c = R(1, 4); return choice(L('<span class="kd-big">' + a + ' − (' + b + ' + ' + c + ')</span> — qaysi amal birinchi bajariladi?', '<span class="kd-big">' + a + ' − (' + b + ' + ' + c + ')</span> — какое действие выполняется первым?', '<span class="kd-big">' + a + ' − (' + b + ' + ' + c + ')</span> — which operation comes first?'), [b + ' + ' + c, a + ' − ' + b], 0); } }
           ],
           quiz: [

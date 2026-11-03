@@ -256,3 +256,23 @@
 .kd-poly-pt { fill: var(--k-pink); }
 .kd-side { fill: var(--text); font: 700 14px var(--mono); text-anchor: middle; paint-order: stroke; stroke: var(--card); stroke-width: 4px; }
 .kd-3d.small { height: 220px; margin-bottom: 12px; }
+
+/* ustun ko'rinishida hisoblash */
+.kd-colbox { display: inline-flex; flex-direction: column; align-items: flex-end; padding: 14px 18px; border-radius: 16px; background: var(--bg2); font: 700 1.6rem var(--mono); }
+.kd-colr { display: flex; align-items: center; }
+.kd-colr span { display: inline-block; width: 1.1em; text-align: center; }
+.kd-colr .kd-colop { width: 1.2em; color: var(--accent); }
+.kd-colline { align-self: stretch; height: 3px; margin: 4px 0 8px; background: var(--text); border-radius: 2px; }
+/* soat */
+.kd-clock { width: 200px; height: 200px; display: block; margin: 0 auto; }
+.kd-cface { fill: var(--card); stroke: var(--accent); stroke-width: 5; }
+.kd-tk { stroke: var(--muted); stroke-width: 1.4; } .kd-tk.big { stroke: var(--text); stroke-width: 3; }
+.kd-cnum { fill: var(--text); font: 700 15px var(--font); text-anchor: middle; }
+.kd-hh, .kd-mh { transform-origin: 100px 100px; transition: transform .8s cubic-bezier(.3, 1.4, .5, 1); stroke-linecap: round; }
+.kd-hh { stroke: var(--text); stroke-width: 7; } .kd-mh { stroke: var(--k-pink); stroke-width: 4; }
+.kd-cpin { fill: var(--k-orange); }
+/* katak qog'oz */
+.kd-gridsvg { width: 100%; max-width: 440px; display: block; margin: 0 auto; }
+.kd-gl { stroke: var(--grid); stroke-width: 1.2; }
+.kd-gcell { fill: color-mix(in srgb, var(--accent) 45%, transparent); animation: kdDrop .35s ease both; animation-delay: calc(var(--i) * 18ms); }
+.kd-gfig { fill: none; stroke: var(--accent); stroke-width: 3; }
