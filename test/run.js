@@ -93,15 +93,16 @@ const asText = (v, l) => v && typeof v === 'object' && 'uz' in v ? v[l] : String
 
 function loadCurriculum() {
   const ctx = {}; ctx.window = ctx; vm.createContext(ctx);
-  ['js/kids.js', 'js/curriculum/index.js', 'js/curriculum/helpers.js', 'js/curriculum/g1-1.js', 'js/curriculum/g1-2.js', 'js/curriculum/g1-3.js', 'js/curriculum/g1-4.js', 'js/curriculum/g2-1.js', 'js/curriculum/g2-2.js', 'js/curriculum/g2-3.js', 'js/curriculum/g2-4.js', 'js/curriculum/g3-1.js', 'js/curriculum/g3-2.js', 'js/curriculum/g3-3.js', 'js/curriculum/g3-4.js', 'js/curriculum/g4-1.js', 'js/curriculum/g5-1.js', 'js/curriculum/g5-2.js'].forEach(f => vm.runInContext(fs.readFileSync(path.join(__dirname, '..', f), 'utf8'), ctx, { filename: f }));
+  ['js/kids.js', 'js/curriculum/index.js', 'js/curriculum/helpers.js', 'js/curriculum/g1-1.js', 'js/curriculum/g1-2.js', 'js/curriculum/g1-3.js', 'js/curriculum/g1-4.js', 'js/curriculum/g2-1.js', 'js/curriculum/g2-2.js', 'js/curriculum/g2-3.js', 'js/curriculum/g2-4.js', 'js/curriculum/g3-1.js', 'js/curriculum/g3-2.js', 'js/curriculum/g3-3.js', 'js/curriculum/g3-4.js', 'js/curriculum/g4-1.js', 'js/curriculum/g5-1.js', 'js/curriculum/g5-2.js', 'js/curriculum/g6-1.js', 'js/curriculum/g6-2.js'].forEach(f => vm.runInContext(fs.readFileSync(path.join(__dirname, '..', f), 'utf8'), ctx, { filename: f }));
   return ctx;
 }
 test('darslik tuzilmasi: 11 sinf, 1–3-sinflarning I–IV qismlari to‘liq', () => {
   const ctx = loadCurriculum(), C = ctx.NMCurriculum;
   assert.strictEqual(C.grades.length, 11);
   assert.strictEqual(JSON.stringify(C.grades[4].parts.map(p => p.part)), '[1,2]', '5-sinf qismlari');
+  assert.strictEqual(JSON.stringify(C.grades[5].parts.map(p => p.part)), '[1,2]', '6-sinf qismlari');
   [0, 1, 2].forEach(g => assert.strictEqual(JSON.stringify(C.grades[g].parts.map(p => p.part)), '[1,2,3,4]', (g + 1) + '-sinf qismlari'));
-  C.grades[0].parts.concat(C.grades[1].parts, C.grades[2].parts, C.grades[3].parts, C.grades[4].parts).forEach(p => {
+  C.grades[0].parts.concat(C.grades[1].parts, C.grades[2].parts, C.grades[3].parts, C.grades[4].parts, C.grades[5].parts).forEach(p => {
   const tops = C.topics(p); assert.ok(tops.length >= 12, p.part + '-qism mavzular soni ' + tops.length);
   const ids = new Set();
   tops.forEach(t => {
@@ -120,10 +121,10 @@ test('dars dvigateli matnlari uch tilda', () => {
   const KT = loadCurriculum().NMKids.KT, keys = Object.keys(KT.uz);
   ['ru', 'en'].forEach(l => assert.deepStrictEqual(keys.filter(k => !(k in KT[l])), [], l + ' da yo‘q'));
 });
-test('1–5-sinf topshiriqlari: 300 marta yaratilganda ham sonlar to‘g‘ri', () => {
+test('1–6-sinf topshiriqlari: 300 marta yaratilganda ham sonlar to‘g‘ri', () => {
   const ctx = loadCurriculum(), K = ctx.NMKids, C = ctx.NMCurriculum;
   const evalExpr = e => { let v = e[0]; for (let i = 1; i < e.length - 2; i += 2) v = e[i] === '+' ? v + e[i + 1] : e[i] === '·' ? v * e[i + 1] : e[i] === ':' ? v / e[i + 1] : v - e[i + 1]; return v; };
-  C.grades[0].parts.concat(C.grades[1].parts, C.grades[2].parts, C.grades[3].parts, C.grades[4].parts).forEach(P => C.topics(P).forEach(t => t.acts.forEach((a, k) => {
+  C.grades[0].parts.concat(C.grades[1].parts, C.grades[2].parts, C.grades[3].parts, C.grades[4].parts, C.grades[5].parts).forEach(P => C.topics(P).forEach(t => t.acts.forEach((a, k) => {
     assert.ok(K.widgets[a.type], t.id + ' noma’lum tur ' + a.type);
     if (!a.make) return;
     for (let i = 0; i < 300; i++) {
