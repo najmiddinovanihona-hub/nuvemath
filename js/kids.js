@@ -660,7 +660,7 @@
       d = spec.make(R);
       var w = Math.max(String(d.a).length, String(d.b).length, String(d.ans).length) + 1;
       function row(v, op) { var s = String(v); while (s.length < w) s = ' ' + s; return '<div class="kd-colr"><span class="kd-colop">' + (op || '') + '</span>' + s.split('').map(function (c) { return '<span>' + (c === ' ' ? '' : c) + '</span>'; }).join('') + '</div>'; }
-      box.innerHTML = (d.story ? '<p class="kd-story">' + tx(d.story) + '</p>' : '') + '<div class="kd-colbox" style="--w:' + w + '">' + row(d.a) + row(d.b, d.op === '-' ? '−' : '+') + '<div class="kd-colline"></div>' +
+      box.innerHTML = (d.story ? '<p class="kd-story">' + tx(d.story) + '</p>' : '') + '<div class="kd-colbox" style="--w:' + w + '">' + row(d.a) + row(d.b, d.op === '-' ? '−' : d.op === '*' ? '×' : '+') + '<div class="kd-colline"></div>' +
         '<div class="kd-colr"><span class="kd-colop"></span>' + input(Math.max(3, w * 0.9), 'data-a') + '</div></div>';
     }
     build();
