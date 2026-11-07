@@ -106,6 +106,7 @@ test('darslik tuzilmasi: 11 sinf, 1–3-sinflarning I–IV qismlari to‘liq', (
   assert.strictEqual(JSON.stringify(C.grades[7].parts.map(p => p.part)), '[1,2]', '8-sinf qismlari');
   assert.strictEqual(JSON.stringify(C.grades[8].parts.map(p => p.part)), '[1,2]', '9-sinf qismlari');
   assert.strictEqual(JSON.stringify(C.grades[9].parts.map(p => p.part)), '[1,2]', '10-sinf qismlari');
+  assert.strictEqual(JSON.stringify(C.grades[10].parts.map(p => p.part)), '[1,2]', '11-sinf qismlari');
   [0, 1, 2].forEach(g => assert.strictEqual(JSON.stringify(C.grades[g].parts.map(p => p.part)), '[1,2,3,4]', (g + 1) + '-sinf qismlari'));
   allParts(C).forEach(p => {
   const tops = C.topics(p); assert.ok(tops.length >= 12, p.part + '-qism mavzular soni ' + tops.length);
