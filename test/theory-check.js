@@ -23,6 +23,8 @@ C.grades.forEach(g => g.parts.forEach(p => {
   const f = path.join(root, 'js/theory/g' + key + '.js');
   if (!fs.existsSync(f)) { problems.push(key + ': fayl yo‘q (js/theory/g' + key + '.js)'); C.topics(p).forEach(() => total++); return; }
   try { vm.runInContext(fs.readFileSync(f, 'utf8'), ctx, { filename: f }); } catch (e) { problems.push(key + ': sintaksis xatosi — ' + e.message); return; }
+  const fb = path.join(root, 'js/theory/g' + key + 'b.js'); // vaqtinchalik ikkinchi yarmi (keyin asosiy faylga qo'shiladi)
+  if (fs.existsSync(fb)) { try { vm.runInContext(fs.readFileSync(fb, 'utf8'), ctx, { filename: fb }); } catch (e) { problems.push(key + 'b: sintaksis xatosi — ' + e.message); return; } }
   C.topics(p).forEach(t => {
     total++;
     const spec = TH.get(key, t.id), where = key + ' ' + t.id;
