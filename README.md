@@ -21,6 +21,16 @@ O‘zbek tilidagi (rus va ingliz tillari bilan) interaktiv matematika platformas
 - **Mashq** — 14 mavzu × 3 daraja bo‘yicha cheksiz yangi masalalar, darhol tekshiruv, yordam, to‘liq yechim, ball va ketma-ketlik.
 - Uch til (UZ/RU/EN), qorong‘i va yorug‘ rejim, telefonga moslashgan.
 
+
+### Qo‘shimcha bo‘limlar (2026-11)
+- **Imtihonga tayyorlov** (`#imtihon`, `js/exam.js`) — F.R. Usmonov va boshq. «Matematikadan qo‘llanma» mundarijasi bo‘yicha 26 bob (16 algebra, 10 geometriya); har bir bob testi va vaqtli sinov imtihonlari (30 savol/60 daq, 15/25, faqat algebra yoki geometriya). Savollar darslikdagi 5–11-sinf mavzu testlari va generatorlaridan har safar yangidan tuziladi; natija boblar bo‘yicha tahlil qilinadi va zaif mavzularga havola beriladi.
+- **Grafiklar**: urinma (sichqoncha nuqtasida, tenglamasi bilan) va aniq integral — grafik ostidagi yuz.
+- **3D jismlar**: tekislik bilan kesish (balandlik va og‘ish), kesim ko‘pburchagi va uning yuzi.
+- **O‘yin elementlari** (`js/game.js`): XP, daraja, kunlik seriya 🔥, kunlik maqsad, 15 ta nishon.
+- **Xatolar ustida ishlash** (`#takror`, `js/review.js`): noto‘g‘ri javob berilgan savollar 1, 3, 7, 16, 35 kundan keyin qayta so‘raladi.
+- **Natijalar** (`#natija`, `js/results.js`): sinflar bo‘yicha progress, zaif mavzular, so‘nggi testlar, chop etish; har bir mavzu uchun **ish varag‘i** (`#varaq/g/p/t`) javoblari bilan.
+- **Qidiruv** (🔍 yoki Ctrl+K), **ovozli nazariya** (🔊, brauzerning Web Speech API si; o‘zbekcha ovoz Microsoft Edge da bor), **oflayn rejim** (`sw.js`, `manifest.webmanifest`).
+
 ## Ishga tushirish
 
 Hech qanday o‘rnatish shart emas — `index.html` ni brauzerda ochish kifoya (3D jismlar uchun internet kerak: Three.js CDN'dan yuklanadi).
