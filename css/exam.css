@@ -1,0 +1,40 @@
+/* Nuvemath — Imtihonga tayyorlov */
+.ex-hero { background: radial-gradient(circle at 10% 15%, rgba(255, 190, 92, .28), transparent 50%), radial-gradient(circle at 90% 85%, rgba(106, 166, 255, .32), transparent 55%), linear-gradient(135deg, rgba(30, 44, 86, .9), rgba(24, 38, 74, .9)); }
+[data-theme="light"] .ex-hero { background: radial-gradient(circle at 10% 15%, rgba(255, 190, 92, .35), transparent 50%), radial-gradient(circle at 90% 85%, rgba(59, 130, 246, .25), transparent 55%), linear-gradient(135deg, #fff, #eef3ff); }
+.ex-mocks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 10px 0 18px; }
+.ex-mock { display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 18px; color: #fff; box-shadow: var(--shadow); transition: transform .15s, filter .15s; }
+.ex-mock:hover { transform: translateY(-3px); filter: brightness(1.08); }
+.ex-mock b { font: 800 1.15rem var(--font-h, var(--font)); } .ex-mock span { opacity: .92; font-size: .92rem; }
+.ex-mock.m-full { background: linear-gradient(135deg, #ff7b54, #ffb547); } .ex-mock.m-short { background: linear-gradient(135deg, #3ddc97, #20a4c8); }
+.ex-mock.m-alg { background: linear-gradient(135deg, #6aa6ff, #8a5cff); } .ex-mock.m-geo { background: linear-gradient(135deg, #ff6b8b, #b896ff); }
+.ex-grp { margin: 14px 0 8px; color: var(--muted); font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; }
+.ex-chs { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.ex-ch { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px; background: var(--card); border: 1px solid var(--card-b); color: var(--text); transition: transform .15s, border-color .15s; }
+.ex-ch:hover { transform: translateY(-2px); border-color: var(--accent); }
+.ex-ic { flex: 0 0 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-weight: 800; font-size: 1.15rem; }
+.ex-tt { flex: 1; display: flex; flex-direction: column; } .ex-tt b { font-size: .95rem; line-height: 1.25; } .ex-tt small { color: var(--muted); }
+.ex-go { color: var(--accent); font-weight: 700; font-size: .85rem; white-space: nowrap; }
+.ex-pc { font-weight: 800; padding: 4px 9px; border-radius: 99px; font-size: .85rem; }
+.ex-pc.great, .ex-hb .great, .ex-pr .great { background: var(--ok); } .ex-pc.ok, .ex-hb .ok, .ex-pr .ok { background: var(--warn); } .ex-pc.low, .ex-hb .low, .ex-pr .low { background: var(--bad); }
+.ex-pc { color: #fff; }
+.ex-hbars { display: flex; align-items: flex-end; gap: 14px; height: 150px; padding-top: 8px; }
+.ex-hb { flex: 1; max-width: 70px; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 3px; }
+.ex-hb span { width: 100%; border-radius: 8px 8px 3px 3px; } .ex-hb b { font-size: .85rem; } .ex-hb small { color: var(--muted); font-size: .7rem; }
+.ex-bar { position: sticky; top: 64px; z-index: 20; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 10px 14px; margin: 0 0 14px; border-radius: 14px; background: var(--card); border: 1px solid var(--card-b); backdrop-filter: blur(10px); box-shadow: var(--shadow); }
+.ex-bar .btn { margin-left: auto; }
+.ex-timer { font: 700 1.1rem var(--mono, monospace); padding: 4px 10px; border-radius: 10px; background: rgba(106, 166, 255, .15); }
+.ex-timer.warn { background: var(--bad); color: #fff; animation: exPulse 1s infinite; }
+@keyframes exPulse { 50% { opacity: .6; } }
+.ex-q .kd-opt.sel { outline: 3px solid var(--accent); background: rgba(106, 166, 255, .18); }
+.ex-q.ex-ok { border-left: 4px solid var(--ok); } .ex-q.ex-bad { border-left: 4px solid var(--bad); }
+.ex-none { color: var(--bad); font-weight: 600; margin: 6px 0 0; }
+.ex-result h2 { margin-top: 0; }
+.ex-score { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding: 14px 18px; border-radius: 14px; color: #fff; margin-bottom: 10px; }
+.ex-score.great { background: linear-gradient(135deg, #20b97a, #3ddc97); } .ex-score.ok { background: linear-gradient(135deg, #e09400, #ffbe5c); } .ex-score.low { background: linear-gradient(135deg, #d93a5e, #ff7b96); }
+.ex-score b { font-size: 2rem; } .ex-score span { font-size: 1.4rem; font-weight: 700; } .ex-score i { font-style: normal; margin-left: auto; font-weight: 700; }
+.ex-per { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.ex-pr { display: grid; grid-template-columns: minmax(0, 1fr) 30% 48px; align-items: center; gap: 10px; color: var(--text); font-size: .9rem; }
+.ex-pr .bar { height: 10px; } .ex-pr .bar span { display: block; height: 100%; border-radius: 99px; }
+.ex-links { margin: 6px 0 12px; padding-left: 20px; columns: 2 260px; } .ex-links li { margin: 3px 0; break-inside: avoid; }
+@media (max-width: 600px) { .ex-pr { grid-template-columns: 1fr 70px 40px; font-size: .8rem; } .ex-bar { top: 56px; } }
+.ex-q.ex-ok, .ex-q.ex-bad { padding-left: 10px; }

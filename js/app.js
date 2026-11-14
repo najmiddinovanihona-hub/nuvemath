@@ -2,9 +2,9 @@
 (function () {
   'use strict';
   var view = document.getElementById('view');
-  var ROUTES = ['home', 'darslik', 'grafik', 'yechuvchi', 'chizma', 'jismlar', 'mashq'];
-  var NAV = { home: 'nav.home', darslik: 'nav.lessons', grafik: 'nav.plot', yechuvchi: 'nav.solve', chizma: 'nav.geo', jismlar: 'nav.solids', mashq: 'nav.practice' };
-  var ICONS = { home: '⌂', darslik: '📖', grafik: '📈', yechuvchi: '🧮', chizma: '📐', jismlar: '🧊', mashq: '🎯' };
+  var ROUTES = ['home', 'darslik', 'imtihon', 'grafik', 'yechuvchi', 'chizma', 'jismlar', 'mashq'];
+  var NAV = { home: 'nav.home', darslik: 'nav.lessons', imtihon: 'nav.exam', grafik: 'nav.plot', yechuvchi: 'nav.solve', chizma: 'nav.geo', jismlar: 'nav.solids', mashq: 'nav.practice' };
+  var ICONS = { home: '⌂', darslik: '📖', imtihon: '🎓', grafik: '📈', yechuvchi: '🧮', chizma: '📐', jismlar: '🧊', mashq: '🎯' };
 
   // ---------- Progress (localStorage) ----------
   var P = load();
@@ -29,8 +29,9 @@
     document.querySelectorAll('#nav a').forEach(function (a) { a.classList.toggle('on', a.getAttribute('data-r') === r); });
     document.body.setAttribute('data-route', r);
     if (window.NMKids) NMKids.disposeAll();
+    if (window.NMExam) NMExam.stop();
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
-    ({ home: home, darslik: lessons, grafik: function () { Plotter.mount(view); }, yechuvchi: solver, chizma: function () { Geometry.mount(view); }, jismlar: function () { Solids.mount(view); }, mashq: practice })[r](parts.slice(1));
+    ({ home: home, darslik: lessons, imtihon: function (a) { NMExam.mount(view, a); }, grafik: function () { Plotter.mount(view); }, yechuvchi: solver, chizma: function () { Geometry.mount(view); }, jismlar: function () { Solids.mount(view); }, mashq: practice })[r](parts.slice(1));
     window.scrollTo(0, 0);
     document.getElementById('nav').classList.remove('open');
   }
@@ -39,7 +40,7 @@
   // ---------- Bosh sahifa ----------
   function home() {
     var allT = window.NMCurriculum.allTopics().length, nRead = Object.keys(P.read).filter(function (k) { return /^g\d+p\d+-/.test(k); }).length;
-    var cards = [['darslik', 'home.c.lessons'], ['grafik', 'home.c.plot'], ['yechuvchi', 'home.c.solve'], ['chizma', 'home.c.geo'], ['jismlar', 'home.c.solids'], ['mashq', 'home.c.practice']];
+    var cards = [['darslik', 'home.c.lessons'], ['imtihon', 'home.c.exam'], ['grafik', 'home.c.plot'], ['yechuvchi', 'home.c.solve'], ['chizma', 'home.c.geo'], ['jismlar', 'home.c.solids'], ['mashq', 'home.c.practice']];
     view.innerHTML =
       '<section class="hero">' +
       '<div class="hero-logo"><img class="on-dark" src="assets/emblem-dark.png" alt="Nuvemath"><img class="on-light" src="assets/emblem.png" alt="Nuvemath"></div>' +

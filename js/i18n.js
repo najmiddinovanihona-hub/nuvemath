@@ -5,7 +5,8 @@
     uz: {
       'brand.tag': 'See Math. Explore Dimensions.',
       'nav.home': 'Bosh sahifa', 'nav.lessons': 'Darslik', 'nav.plot': 'Grafiklar', 'nav.solve': 'Yechuvchi',
-      'nav.geo': 'Chizma', 'nav.solids': '3D jismlar', 'nav.practice': 'Mashq',
+      'nav.geo': 'Chizma', 'nav.solids': '3D jismlar', 'nav.practice': 'Mashq', 'nav.exam': 'Imtihon',
+      'home.c.exam': 'Milliy sertifikat va DTMga tayyorlov: 26 bob bo‘yicha testlar va vaqtli sinov imtihoni.',
       'home.title': 'Matematikani ko‘rib, ushlab, o‘ynab o‘rganing',
       'home.sub': 'Interaktiv darslar, funksiya grafiklari, qadam-baqadam tenglama yechish, jonli geometrik chizmalar va 3D jismlar — barchasi bir joyda.',
       'home.start': 'Darslikni boshlash', 'home.try': 'Tenglama yechish',
@@ -66,7 +67,8 @@
     ru: {
       'brand.tag': 'See Math. Explore Dimensions.',
       'nav.home': 'Главная', 'nav.lessons': 'Учебник', 'nav.plot': 'Графики', 'nav.solve': 'Решатель',
-      'nav.geo': 'Чертёж', 'nav.solids': '3D тела', 'nav.practice': 'Практика',
+      'nav.geo': 'Чертёж', 'nav.solids': '3D тела', 'nav.practice': 'Практика', 'nav.exam': 'Экзамен',
+      'home.c.exam': 'Подготовка к сертификату и вступительным: тесты по 26 главам и пробный экзамен на время.',
       'home.title': 'Изучайте математику — видя, трогая и играя',
       'home.sub': 'Интерактивные уроки, графики функций, пошаговое решение уравнений, живые геометрические чертежи и 3D тела — всё в одном месте.',
       'home.start': 'Начать учебник', 'home.try': 'Решить уравнение',
@@ -127,7 +129,8 @@
     en: {
       'brand.tag': 'See Math. Explore Dimensions.',
       'nav.home': 'Home', 'nav.lessons': 'Lessons', 'nav.plot': 'Graphs', 'nav.solve': 'Solver',
-      'nav.geo': 'Sketch', 'nav.solids': '3D solids', 'nav.practice': 'Practice',
+      'nav.geo': 'Sketch', 'nav.solids': '3D solids', 'nav.practice': 'Practice', 'nav.exam': 'Exam',
+      'home.c.exam': 'Certificate and entrance exam prep: tests for 26 chapters and a timed mock exam.',
       'home.title': 'Learn maths by seeing, touching and playing',
       'home.sub': 'Interactive lessons, function graphs, step-by-step equation solving, live geometric constructions and 3D solids — all in one place.',
       'home.start': 'Start the lessons', 'home.try': 'Solve an equation',

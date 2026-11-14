@@ -274,3 +274,4 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
   .lesson h2 { font-size: 1.3rem; }
 }
 @media (prefers-reduced-motion: reduce) { .spin, .wave, .view.enter, .hero-logo img { animation: none; } }
+.vec { position: relative; display: inline-block; font-style: normal; } .vec::after { content: "→"; position: absolute; left: 0; right: 0; top: -.72em; font-size: .7em; line-height: 1; text-align: center; }
