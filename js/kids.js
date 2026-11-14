@@ -786,6 +786,7 @@
           b.classList.add(o.ok ? 'ok' : 'bad');
           q.o.forEach(function (x, j) { if (x.ok) el.querySelectorAll('.kd-opt')[j].classList.add('ok'); });
           done++; if (o.ok) right++;
+          if (questions.meta && root.NMReview) root.NMReview.record(questions[+el.getAttribute('data-i')], o.ok, questions.meta);
           if (done === qs.length) {
             var pct = Math.round(right / qs.length * 100), res = box.querySelector('.kd-qz-res');
             res.innerHTML = '<div class="kd-score ' + (pct >= 80 ? 'great' : pct >= 50 ? 'ok' : 'low') + '"><b>' + right + ' / ' + qs.length + '</b><span>' +
@@ -793,7 +794,7 @@
               '</span><button class="btn sm ghost kd-retry">' + t('reQuiz') + '</button></div>';
             if (pct >= 80) K.confetti(res);
             if (questions.gate) res.innerHTML += '<p class="kd-gate ' + (pct >= 80 ? 'ok' : 'no') + '">' + (pct >= 80 ? t('qPass') : t('qFail')) + '</p>';
-            res.querySelector('.kd-retry').onclick = function () { K.quiz(box, questions.rebuild ? questions.rebuild() : questions, onDone); };
+            res.querySelector('.kd-retry').onclick = function () { var nq = questions.rebuild ? questions.rebuild() : questions; if (questions.meta) nq.meta = questions.meta; K.quiz(box, nq, onDone); };
             if (onDone) onDone(right, qs.length, pct);
           }
         };

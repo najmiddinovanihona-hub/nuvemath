@@ -2,9 +2,9 @@
 (function () {
   'use strict';
   var view = document.getElementById('view');
-  var ROUTES = ['home', 'darslik', 'imtihon', 'grafik', 'yechuvchi', 'chizma', 'jismlar', 'mashq'];
-  var NAV = { home: 'nav.home', darslik: 'nav.lessons', imtihon: 'nav.exam', grafik: 'nav.plot', yechuvchi: 'nav.solve', chizma: 'nav.geo', jismlar: 'nav.solids', mashq: 'nav.practice' };
-  var ICONS = { home: '⌂', darslik: '📖', imtihon: '🎓', grafik: '📈', yechuvchi: '🧮', chizma: '📐', jismlar: '🧊', mashq: '🎯' };
+  var ROUTES = ['home', 'darslik', 'imtihon', 'grafik', 'yechuvchi', 'chizma', 'jismlar', 'mashq', 'natija', 'takror', 'varaq'];
+  var NAV = { home: 'nav.home', darslik: 'nav.lessons', imtihon: 'nav.exam', grafik: 'nav.plot', yechuvchi: 'nav.solve', chizma: 'nav.geo', jismlar: 'nav.solids', mashq: 'nav.practice', natija: 'nav.results' };
+  var ICONS = { home: '⌂', darslik: '📖', imtihon: '🎓', grafik: '📈', yechuvchi: '🧮', chizma: '📐', jismlar: '🧊', mashq: '🎯', natija: '📊' };
 
   // ---------- Progress (localStorage) ----------
   var P = load();
@@ -17,11 +17,12 @@
   // ---------- Navigatsiya ----------
   function renderNav() {
     var nav = document.getElementById('nav');
-    nav.innerHTML = ROUTES.map(function (r) { return '<a href="#' + r + '" data-r="' + r + '"><span class="ni">' + ICONS[r] + '</span><span>' + T(NAV[r]) + '</span></a>'; }).join('');
+    nav.innerHTML = ROUTES.filter(function (r) { return NAV[r]; }).map(function (r) { return '<a href="#' + r + '" data-r="' + r + '"><span class="ni">' + ICONS[r] + '</span><span>' + T(NAV[r]) + '</span></a>'; }).join('');
     document.querySelectorAll('.lang button').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-l') === I18n.lang); });
     document.getElementById('tagline').textContent = T('brand.tag');
     document.getElementById('foot').textContent = T('foot.made');
     document.getElementById('replay').textContent = T('intro.replay');
+    if (window.NMGame) NMGame.chip();
   }
   function route() {
     var h = decodeURIComponent(location.hash.replace(/^#\/?/, '')), parts = h.split('/'), r = parts[0] || 'home';
@@ -31,7 +32,7 @@
     if (window.NMKids) NMKids.disposeAll();
     if (window.NMExam) NMExam.stop();
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
-    ({ home: home, darslik: lessons, imtihon: function (a) { NMExam.mount(view, a); }, grafik: function () { Plotter.mount(view); }, yechuvchi: solver, chizma: function () { Geometry.mount(view); }, jismlar: function () { Solids.mount(view); }, mashq: practice })[r](parts.slice(1));
+    ({ home: home, darslik: lessons, imtihon: function (a) { NMExam.mount(view, a); }, natija: function (a) { NMResults.mount(view, a); }, takror: function (a) { NMReview.mount(view, a); }, varaq: function (a) { NMResults.sheet(view, a); }, grafik: function () { Plotter.mount(view); }, yechuvchi: solver, chizma: function () { Geometry.mount(view); }, jismlar: function () { Solids.mount(view); }, mashq: practice })[r](parts.slice(1));
     window.scrollTo(0, 0);
     document.getElementById('nav').classList.remove('open');
   }
@@ -51,7 +52,9 @@
       '<section class="cards">' + cards.map(function (c) { return '<a class="card feat" href="#' + c[0] + '"><span class="fi">' + ICONS[c[0]] + '</span><h3>' + T(NAV[c[0]]) + '</h3><p>' + T(c[1]) + '</p></a>'; }).join('') + '</section>' +
       '<section class="card stats"><h3>' + T('home.progress') + '</h3><div class="stat-row">' +
       stat(nRead + ' / ' + allT, T('home.read')) + stat(P.solved, T('home.solved')) + stat(P.best, T('home.streak')) +
-      '</div><div class="bar"><span style="width:' + Math.round(nRead / Math.max(1, allT) * 100) + '%"></span></div></section>';
+      '</div><div class="bar"><span style="width:' + Math.round(nRead / Math.max(1, allT) * 100) + '%"></span></div></section>' +
+      (window.NMReview ? (function () { var c = NMReview.counts(); return c.total ? '<a class="card rv-home" href="#takror"><span>🔁</span><div><b>' + T('home.review') + '</b><small>' + F('home.reviewSub', { d: c.due, t: c.total }) + '</small></div><em>→</em></a>' : ''; })() : '') +
+      (window.NMGame ? NMGame.panel() : '');
   }
   function stat(v, l) { return '<div class="stat"><b>' + v + '</b><span>' + l + '</span></div>'; }
   // ---------- Darslik: sinf → qism → bo'lim → mavzu ----------
@@ -126,6 +129,7 @@
         '<div class="les-foot"><a class="btn sm" href="#' + base + '/' + prev.id + '">← ' + T('dl.prevTopic') + ': ' + tx(prev.title) + '</a></div>';
       return;
     }
+    if (!P.read[id] && window.NMGame) NMGame.award(5, 'read');
     P.read[id] = P.read[id] || Date.now(); save();
     var ok = passed(id);
     view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(part.grade), 'darslik/' + part.grade], [pName(part), base], [tx(t.title), '']]) +
@@ -138,6 +142,7 @@
       '<div class="kd-rule"><span>💡 ' + T('dl.remember') + '</span><div>' + tx(t.rule) + '</div></div>' +
       '<h2 class="kd-h2">' + T('dl.tasks') + '</h2><div id="kd-acts" class="kd-acts"></div>' +
       '<a class="kd-go-test c-' + t.section.color + '" href="#' + base + '/' + t.id + '/sinov"><span class="kd-gt-ic">📝</span><span><b>' + T('dl.toTest') + '</b><small>' + T('dl.toTestSub') + '</small></span>' + (P.quiz[id] ? '<i>' + P.quiz[id].best + '/' + P.quiz[id].total + '</i>' : '') + '<em>→</em></a>' +
+      '<a class="kd-sheet-link" href="#varaq/' + part.grade + '/' + part.part + '/' + t.id + '">🖨️ ' + T('dl.sheet') + '</a>' +
       '<div class="les-foot">' + (prev ? '<a class="btn ghost sm" href="#' + base + '/' + prev.id + '">← ' + tx(prev.title) + '</a>' : '') + '<span class="grow"></span>' +
       (next ? '<a class="btn sm kd-next" id="kd-next" href="#' + base + '/' + next.id + '">' + tx(next.title) + ' →</a>' : '<a class="btn sm" href="#' + base + '/test/final">🏆 ' + T('dl.finalTest') + ' →</a>') + '</div>';
     Kd.stage(document.getElementById('kd-hero3d'), t.scene, { pick: false, rainbow: true });
@@ -145,7 +150,7 @@
     window.NMTheory.load(part).then(function () {
       var spec = window.NMTheory.get(window.NMTheory.key(part), t.id);
       if (!spec) { thBox.innerHTML = '<p class="muted">' + T('dl.theorySoon') + '</p>'; return; }
-      window.NMTheory.render(thBox, spec, { onAllRead: function () { P.theory[id] = 1; save(); }, onFinish: function () { var el = document.getElementById('kd-acts'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); } });
+      window.NMTheory.render(thBox, spec, { onAllRead: function () { if (!P.theory[id] && window.NMGame) NMGame.award(15, 'theory'); P.theory[id] = 1; save(); }, onFinish: function () { var el = document.getElementById('kd-acts'); if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); } });
     });
     var acts = document.getElementById('kd-acts');
     t.acts.forEach(function (a, k) { acts.appendChild(Kd.renderActivity(a, k + 1)); });
@@ -163,7 +168,8 @@
     var body = document.getElementById('kd-sv-body');
     if (tab === 'test') {
       body.innerHTML = '<div class="kd-secure-note">🔒 ' + T('dl.secureNote') + '</div><div class="card kd-secure-zone" id="kd-quiz"></div>';
-      Kd.quiz(document.getElementById('kd-quiz'), Kd.buildQuiz(t, 10), function (r, n) { var pr = P.quiz[id]; P.quiz[id] = { best: Math.max(r, pr ? pr.best : 0), total: n }; save(); });
+      var tq = Kd.buildQuiz(t, 10); tq.meta = { key: id, href: base + '/' + t.id, title: t.title };
+      Kd.quiz(document.getElementById('kd-quiz'), tq, function (r, n) { var pr = P.quiz[id]; P.quiz[id] = { best: Math.max(r, pr ? pr.best : 0), total: n, at: Date.now() }; save(); if (window.NMGame) NMGame.award(r * 2 + (r === n ? 10 : 0), 'test', { perfect: r === n }); });
       secure(true);
     } else {
       secure(false);
@@ -207,7 +213,8 @@
     view.innerHTML = crumbs([[T('nav.lessons'), 'darslik'], [gName(part.grade), 'darslik/' + part.grade], [pName(part), base], [name, '']]) +
       '<section class="kd-hero small">' + floaters(8) + '<span class="kd-badge">' + (sec ? sec.icon + ' ' + tx(sec.title) : '🏆 ' + pName(part)) + '</span><h1>' + name + '</h1><p>' + F('dl.qCount', { n: qs.length }) + '</p></section>' +
       '<div class="card" id="kd-test"></div><div class="les-foot"><a class="btn ghost sm" href="#' + base + '">← ' + T('dl.backList') + '</a></div>';
-    Kd.quiz(document.getElementById('kd-test'), qs, function (r, n) { var pr = P.tests[key]; P.tests[key] = { best: Math.max(r, pr ? pr.best : 0), total: n }; save(); });
+    qs.meta = { key: key, href: base, title: sec ? sec.title : part.title };
+    Kd.quiz(document.getElementById('kd-test'), qs, function (r, n) { var pr = P.tests[key]; P.tests[key] = { best: Math.max(r, pr ? pr.best : 0), total: n }; save(); if (window.NMGame) NMGame.award(r * 2 + (r === n ? 15 : 0), 'test', { perfect: r === n }); });
   }
 
   // ---------- Yechuvchi ----------
@@ -358,7 +365,7 @@
       var r = Practice.check(p, inp.value);
       if (r.bad) { res.innerHTML = '<div class="hintbox">⚠ ' + T('err.parse') + '</div>'; return; }
       done = true; P.tried++;
-      if (r.ok) { P.solved++; streak++; P.best = Math.max(P.best, streak); } else streak = 0;
+      if (r.ok) { P.solved++; streak++; P.best = Math.max(P.best, streak); if (window.NMGame) NMGame.award(3, 'practice'); } else streak = 0;
       var bt = P.byTopic[p.topic] || (P.byTopic[p.topic] = [0, 0]); bt[1]++; if (r.ok) bt[0]++;
       save(); score();
       inp.disabled = true;

@@ -170,6 +170,7 @@
       var right = 0, per = {};
       qs.forEach(function (it, i) {
         var ok = ans[i] >= 0 && opts[i][ans[i]].ok; if (ok) right++;
+        if (root.NMReview) root.NMReview.record(it.q, ok, { key: it.key, href: 'darslik/' + it.grade + '/' + it.part + '/' + it.tid, title: topicIndex()[it.key].t.title });
         var pc = per[it.ch] || (per[it.ch] = { r: 0, n: 0, keys: {} }); pc.n++; if (ok) pc.r++; else pc.keys[it.key] = it;
         var el = view.querySelector('.ex-q[data-i="' + i + '"]'); el.classList.add('done', ok ? 'ex-ok' : 'ex-bad');
         el.querySelectorAll('.kd-opt').forEach(function (b, j) { if (opts[i][j].ok) b.classList.add('ok'); else if (j === ans[i]) b.classList.add('bad'); });
@@ -179,7 +180,7 @@
       if (cfg.kind === 'ch') { var id = cfg.chs[0].id, pr = D.ch[id]; if (!pr || right / n > pr.best / pr.total) D.ch[id] = { best: right, total: n }; }
       else { D.mocks.push({ d: Date.now(), r: right, n: n, t: used, m: cfg.mode }); if (D.mocks.length > 30) D.mocks = D.mocks.slice(-30); Object.keys(per).forEach(function (cid) { var p = per[cid], pr2 = D.ch[cid]; if (p.n >= 3 && (!pr2 || p.r / p.n > pr2.best / pr2.total)) D.ch[cid] = { best: p.r, total: p.n }; }); }
       save(D);
-      if (root.NMGame) root.NMGame.award(right * 5, cfg.kind === 'mock' ? 'mock' : 'exam');
+      if (root.NMGame) root.NMGame.award(right * 3 + (cfg.kind === 'mock' ? 20 : 5), cfg.kind === 'mock' ? 'mock' : 'exam', { perfect: right === n && n >= 10 });
       var weak = Object.keys(per).map(function (cid) { return { c: BY[cid], p: per[cid] }; }).filter(function (w) { return w.p.r / w.p.n < 0.7; }).sort(function (a, b) { return a.p.r / a.p.n - b.p.r / b.p.n; });
       var grade = pct >= 86 ? 5 : pct >= 71 ? 4 : pct >= 56 ? 3 : 2;
       var res = document.getElementById('ex-res');
