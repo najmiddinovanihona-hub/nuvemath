@@ -5,7 +5,7 @@
   var COLORS = ['#5b9dff', '#ff6b8b', '#3ddc97', '#ffb547', '#b48cff', '#3fd0e0'];
   var EXAMPLES = ['x^2 - 4', 'sin(x)', '1/x', 'sqrt(x)', '2^x', 'ln(x)', 'abs(x) - 2', 'a*x^2', 'x^3 - 3x', 'tan(x)'];
 
-  var st = { fns: [], view: { cx: 0, cy: 0, scale: 50 }, a: 1, deriv: false, hover: null, mounted: false };
+  var st = { fns: [], view: { cx: 0, cy: 0, scale: 50 }, a: 1, deriv: false, tan: false, integ: false, ia: 0, ib: 2, hover: null, mounted: false };
   var cv, ctx, listEl, infoEl, dpr = 1;
 
   function parseFn(src) {
@@ -107,6 +107,22 @@
       plot(o.f, o.color, 2.4, []);
       if (st.deriv) plot(derivative(o.f), o.color, 1.4, [6, 5]);
     });
+    // aniq integral: birinchi faol funksiya ostidagi yuz
+    var first = st.fns.filter(function (o) { return o.on && o.f; })[0];
+    st.integVal = null;
+    if (st.integ && first && isFinite(st.ia) && isFinite(st.ib) && st.ia !== st.ib) {
+      var lo = Math.min(st.ia, st.ib), hi = Math.max(st.ia, st.ib), N = 400, hstep = (hi - lo) / N;
+      ['pos', 'neg'].forEach(function (sgn) {
+        ctx.beginPath(); ctx.moveTo(sx(lo), sy(0));
+        for (var k = 0; k <= N; k++) { var xx = lo + k * hstep, yy = first.f(xx); if (!isFinite(yy)) yy = 0; yy = sgn === 'pos' ? Math.max(0, yy) : Math.min(0, yy); ctx.lineTo(sx(xx), Math.max(-1e4, Math.min(1e4, sy(yy)))); }
+        ctx.lineTo(sx(hi), sy(0)); ctx.closePath(); ctx.fillStyle = sgn === 'pos' ? 'rgba(61,220,151,.30)' : 'rgba(255,107,139,.30)'; ctx.fill();
+      });
+      ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.setLineDash([4, 4]); ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(sx(lo), 0); ctx.lineTo(sx(lo), h); ctx.moveTo(sx(hi), 0); ctx.lineTo(sx(hi), h); ctx.stroke(); ctx.setLineDash([]);
+      var sum = 0, ok = true, M = 1000, hh2 = (hi - lo) / M;
+      for (var m = 0; m <= M; m++) { var v = first.f(lo + m * hh2); if (!isFinite(v)) { ok = false; break; } sum += v * (m === 0 || m === M ? 1 : m % 2 ? 4 : 2); }
+      st.integVal = ok ? sum * hh2 / 3 * (st.ib >= st.ia ? 1 : -1) : NaN; st.integFn = first;
+    }
     // maxsus nuqtalar (tahlil og'ir — ko'rinish to'xtagach hisoblanadi va keshlanadi)
     var key = JSON.stringify([st.view, st.a, st.fns.map(function (o) { return [o.src, o.on]; })]);
     if (key !== cache.key) {
@@ -125,13 +141,20 @@
       st.fns.forEach(function (o) {
         if (!o.on || !o.f) return;
         var y = o.f(st.hover.x);
-        if (isFinite(y) && Math.abs(sy(y) - st.hover.py) < 40 && (!best || Math.abs(sy(y) - st.hover.py) < best.d)) best = { y: y, c: o.color, d: Math.abs(sy(y) - st.hover.py) };
+        if (isFinite(y) && Math.abs(sy(y) - st.hover.py) < 40 && (!best || Math.abs(sy(y) - st.hover.py) < best.d)) best = { y: y, c: o.color, d: Math.abs(sy(y) - st.hover.py), f: o.f };
       });
       var hx = st.hover.x, hy = best ? best.y : wy(st.hover.py);
       ctx.setLineDash([3, 4]); ctx.strokeStyle = 'rgba(200,215,255,.35)'; ctx.lineWidth = 1;
       ctx.beginPath(); ctx.moveTo(sx(hx), 0); ctx.lineTo(sx(hx), h); ctx.stroke(); ctx.setLineDash([]);
       if (best) { ctx.beginPath(); ctx.arc(sx(hx), sy(hy), 5, 0, 7); ctx.fillStyle = best.c; ctx.fill(); }
       var label = '(' + round(hx) + '; ' + round(hy) + ')';
+      if (st.tan && best) {
+        var kk = derivative(best.f)(hx), bb = hy - kk * hx;
+        if (isFinite(kk)) {
+          ctx.strokeStyle = '#ffd166'; ctx.lineWidth = 1.8; ctx.beginPath(); ctx.moveTo(0, sy(hy + kk * (wx(0) - hx))); ctx.lineTo(w, sy(hy + kk * (wx(w) - hx))); ctx.stroke();
+          label += '  y = ' + round(kk) + 'x ' + (bb < 0 ? '− ' + round(-bb) : '+ ' + round(bb)) + '  (k = ' + round(kk) + ')';
+        }
+      }
       ctx.font = '600 12px "IBM Plex Mono", monospace';
       var tw = ctx.measureText(label).width + 14, bx = Math.min(sx(hx) + 10, w - tw - 4), by = Math.max(sy(hy) - 30, 4);
       ctx.fillStyle = 'rgba(8,12,28,.88)'; roundRect(bx, by, tw, 22, 6); ctx.fill();
@@ -201,6 +224,7 @@
       html += '<div><span class="k">' + T('plot.roots') + ':</span> ' + (r.roots.length ? r.roots.slice(0, 8).map(function (x) { return 'x = ' + fx(x); }).join(', ') + (r.roots.length > 8 ? ' …' : '') : '<span class="muted">' + T('plot.none') + '</span>') + '</div>';
       html += '<div><span class="k">' + T('plot.ext') + ':</span> ' + (r.ext.length ? r.ext.slice(0, 6).map(function (e) { return T('plot.' + e.kind) + ' (' + fx(e.x) + '; ' + fx(e.y) + ')'; }).join(', ') + (r.ext.length > 6 ? ' …' : '') : '<span class="muted">' + T('plot.none') + '</span>') + '</div></div>';
     });
+    if (st.integ && st.integVal !== null && st.integVal !== undefined) html += '<div class="an-fn an-int"><span class="sw" style="background:' + st.integFn.color + '"></span><b>∫<sub>' + round(st.ia) + '</sub><sup>' + round(st.ib) + '</sup> (' + esc(st.integFn.src) + ') dx ≈ ' + (isFinite(st.integVal) ? round(st.integVal) : '—') + '</b></div>';
     if (A.inter.length) html += '<div class="an-fn"><span class="k">' + T('plot.inter') + ':</span> ' + A.inter.slice(0, 8).map(function (p) { return '(' + fx(p.x) + '; ' + fx(p.y) + ')'; }).join(', ') + '</div>';
     if (html !== lastInfo) { infoEl.innerHTML = html; lastInfo = html; }
   }
@@ -258,6 +282,9 @@
       '<div id="pl-list"></div>' +
       '<div class="row gap"><button class="btn sm" id="pl-add" data-t="plot.add"></button><button class="btn sm ghost" id="pl-reset" data-t="plot.reset"></button></div>' +
       '<label class="chk"><input type="checkbox" id="pl-deriv"> <span data-t="plot.deriv"></span></label>' +
+      '<label class="chk"><input type="checkbox" id="pl-tan"> <span data-t="plot.tangent"></span></label>' +
+      '<label class="chk"><input type="checkbox" id="pl-int"> <span data-t="plot.integral"></span></label>' +
+      '<div class="row gap pl-intr" id="pl-intr" hidden><span>a =</span><input class="inp xs" id="pl-ia" type="number" step="0.5"><span>b =</span><input class="inp xs" id="pl-ib" type="number" step="0.5"></div>' +
       '<div id="pl-param" hidden><label class="lbl"><span data-t="plot.param"></span> = <b id="pl-aval">1</b></label><input type="range" id="pl-a" min="-5" max="5" step="0.1" value="1"></div>' +
       '<div class="examples"><span class="muted" data-t="plot.examples"></span> ' + EXAMPLES.map(function (x) { return '<button class="chip" data-ex="' + x + '">' + x + '</button>'; }).join('') + '</div>' +
       '<div id="pl-info" class="an"></div>' +
@@ -271,6 +298,11 @@
     el.querySelector('#pl-add').onclick = function () { addFn(''); var ins = listEl.querySelectorAll('input'); ins[ins.length - 1].focus(); };
     el.querySelector('#pl-reset').onclick = function () { st.view = { cx: 0, cy: 0, scale: 50 }; draw(); };
     var dch = el.querySelector('#pl-deriv'); dch.checked = st.deriv; dch.onchange = function () { st.deriv = dch.checked; draw(); };
+    var tch = el.querySelector('#pl-tan'); tch.checked = st.tan; tch.onchange = function () { st.tan = tch.checked; draw(); };
+    var ich = el.querySelector('#pl-int'), irow = el.querySelector('#pl-intr'), ia = el.querySelector('#pl-ia'), ib = el.querySelector('#pl-ib');
+    ich.checked = st.integ; irow.hidden = !st.integ; ia.value = st.ia; ib.value = st.ib;
+    ich.onchange = function () { st.integ = ich.checked; irow.hidden = !st.integ; draw(); };
+    ia.oninput = function () { st.ia = parseFloat(ia.value); draw(); }; ib.oninput = function () { st.ib = parseFloat(ib.value); draw(); };
     var ain = el.querySelector('#pl-a'), aval = el.querySelector('#pl-aval'); ain.value = st.a; aval.textContent = st.a;
     ain.oninput = function () { st.a = +ain.value; aval.textContent = st.a; draw(); };
     el.querySelectorAll('[data-ex]').forEach(function (b) { b.onclick = function () { addFn(b.getAttribute('data-ex')); }; });
