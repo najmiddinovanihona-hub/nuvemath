@@ -8,7 +8,7 @@
     cylinder: [['r', 0.5, 4, 2], ['h', 1, 6, 4]], cone: [['r', 0.5, 4, 2.5], ['h', 1, 6, 4]],
     frustum: [['R', 1, 4, 3], ['r', 0.5, 4, 1.5], ['h', 1, 6, 3]], sphere: [['r', 0.5, 4, 2.5]]
   };
-  var st = { kind: 'cube', v: {}, wire: false, rotate: true, net: false };
+  var st = { kind: 'cube', v: {}, wire: false, rotate: true, net: false, cut: false, cutH: 0.5, cutA: 0, secArea: null };
   KINDS.forEach(function (k) { st.v[k] = {}; PARAMS[k].forEach(function (p) { st.v[k][p[0]] = p[3]; }); });
 
   function n2(x) { return (Math.round(x * 100) / 100).toString(); }
@@ -51,7 +51,7 @@
     if (!root.THREE) { box.innerHTML = '<p class="muted pad">' + T('sol.no3d') + '</p>'; return null; }
     var THREE = root.THREE;
     var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2)); renderer.localClippingEnabled = true;
     box.appendChild(renderer.domElement);
     var scene = new THREE.Scene(), cam = new THREE.PerspectiveCamera(40, 1, 0.1, 200);
     scene.add(new THREE.AmbientLight(0xffffff, 0.55));
@@ -95,10 +95,36 @@
       case 'frustum': geo = new THREE.CylinderGeometry(v.r, v.R, v.h, 64, 1); geo.translate(0, v.h / 2, 0); break;
       case 'sphere': geo = new THREE.SphereGeometry(v.r, 48, 32); geo.translate(0, v.r, 0); break;
     }
-    var mat = new THREE.MeshPhongMaterial({ color: 0x5b9dff, transparent: true, opacity: st.wire ? 0.08 : 0.55, shininess: 60, side: THREE.DoubleSide, depthWrite: false });
+    // kesuvchi tekislik: balandlik ulushi cutH va og'ish burchagi cutA (Oz o'qi atrofida)
+    var H = { cube: v.a, box: v.c, sphere: 2 * v.r }[st.kind]; if (H === undefined) H = v.h;
+    var clip = null, nrm = null, cst = 0;
+    st.secArea = null;
+    if (st.cut) {
+      var ang = st.cutA * Math.PI / 180;
+      nrm = new THREE.Vector3(-Math.sin(ang), -Math.cos(ang), 0);
+      var P0 = new THREE.Vector3(0, H * st.cutH, 0); cst = -nrm.dot(P0);
+      clip = [new THREE.Plane(nrm, cst)];
+    }
+    var mat = new THREE.MeshPhongMaterial({ color: 0x5b9dff, transparent: true, opacity: st.wire ? 0.08 : 0.55, shininess: 60, side: THREE.DoubleSide, depthWrite: false, clippingPlanes: clip });
     g.add(new THREE.Mesh(geo, mat));
     var edgeAngle = /cylinder|cone|frustum|sphere/.test(st.kind) ? 30 : 1;
-    g.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, edgeAngle), new THREE.LineBasicMaterial({ color: 0xcfe0ff })));
+    g.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, edgeAngle), new THREE.LineBasicMaterial({ color: 0xcfe0ff, clippingPlanes: clip })));
+    if (st.cut) {
+      // kesib olingan qismning xira izi
+      g.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, edgeAngle), new THREE.LineBasicMaterial({ color: 0xcfe0ff, transparent: true, opacity: 0.16 })));
+      var sec = section(THREE, geo, nrm, cst);
+      if (sec) {
+        st.secArea = sec.area;
+        var cen = sec.pts.reduce(function (a, p) { return a.add(p.clone()); }, new THREE.Vector3()).multiplyScalar(1 / sec.pts.length), pos = [];
+        for (var i = 0; i < sec.pts.length; i++) { var p1 = sec.pts[i], p2 = sec.pts[(i + 1) % sec.pts.length]; pos.push(cen.x, cen.y, cen.z, p1.x, p1.y, p1.z, p2.x, p2.y, p2.z); }
+        var sg = new THREE.BufferGeometry(); sg.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
+        g.add(new THREE.Mesh(sg, new THREE.MeshBasicMaterial({ color: 0xffb547, transparent: true, opacity: 0.75, side: THREE.DoubleSide, depthWrite: false })));
+        g.add(new THREE.LineLoop(new THREE.BufferGeometry().setFromPoints(sec.pts), new THREE.LineBasicMaterial({ color: 0xff6b8b })));
+      }
+      // tekislikning o'zi (shaffof kvadrat)
+      var pl = new THREE.Mesh(new THREE.PlaneGeometry(H * 1.6 + 4, H * 1.6 + 4), new THREE.MeshBasicMaterial({ color: 0xffd166, transparent: true, opacity: 0.08, side: THREE.DoubleSide, depthWrite: false }));
+      pl.lookAt(nrm); pl.position.copy(nrm.clone().multiplyScalar(-cst)); g.add(pl);
+    }
     if (st.wire) g.add(new THREE.LineSegments(new THREE.WireframeGeometry(geo), new THREE.LineBasicMaterial({ color: 0x5b9dff, transparent: true, opacity: 0.35 })));
     // balandlik chizig'i
     var hgt = { cube: v.a, box: v.c, sphere: 0 }[st.kind]; if (hgt === undefined) hgt = v.h;
@@ -110,6 +136,33 @@
       var rg = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, v.r, 0), new THREE.Vector3(v.r, v.r, 0)]);
       var rl = new THREE.Line(rg, new THREE.LineDashedMaterial({ color: 0xffb547, dashSize: 0.2, gapSize: 0.15 })); rl.computeLineDistances(); g.add(rl);
     }
+  }
+  // Tekislik va jism sirti kesishmasi: qavariq ko'pburchak (uchlari tartiblangan) va uning yuzi
+  function section(THREE, geo, n, c) {
+    var g2 = geo.index ? geo.toNonIndexed() : geo, P = g2.attributes.position, raw = [];
+    function d(p) { return n.dot(p) + c; }
+    for (var i = 0; i < P.count; i += 3) {
+      var tri = [0, 1, 2].map(function (k) { return new THREE.Vector3(P.getX(i + k), P.getY(i + k), P.getZ(i + k)); });
+      for (var e = 0; e < 3; e++) {
+        var a = tri[e], b = tri[(e + 1) % 3], da = d(a), db = d(b);
+        if (Math.abs(da) < 1e-9) raw.push(a.clone());
+        if (da * db < 0) raw.push(a.clone().add(b.clone().sub(a).multiplyScalar(da / (da - db))));
+      }
+    }
+    if (raw.length < 3) return null;
+    var u = new THREE.Vector3(1, 0, 0); if (Math.abs(n.dot(u)) > 0.9) u.set(0, 0, 1);
+    u.sub(n.clone().multiplyScalar(n.dot(u))).normalize(); var w = n.clone().cross(u).normalize();
+    var pts2 = [], seen = {};
+    raw.forEach(function (p) { var x = p.dot(u), y = p.dot(w), k = Math.round(x * 1e4) + ',' + Math.round(y * 1e4); if (!seen[k]) { seen[k] = 1; pts2.push({ x: x, y: y, p: p }); } });
+    if (pts2.length < 3) return null;
+    pts2.sort(function (A, B) { return A.x - B.x || A.y - B.y; });
+    function cr(o, a, b) { return (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x); }
+    var lo = [], up = [];
+    pts2.forEach(function (p) { while (lo.length >= 2 && cr(lo[lo.length - 2], lo[lo.length - 1], p) <= 0) lo.pop(); lo.push(p); });
+    for (var j = pts2.length - 1; j >= 0; j--) { var p = pts2[j]; while (up.length >= 2 && cr(up[up.length - 2], up[up.length - 1], p) <= 0) up.pop(); up.push(p); }
+    var hull = lo.slice(0, -1).concat(up.slice(0, -1)); if (hull.length < 3) return null;
+    var A = 0; for (var q = 0; q < hull.length; q++) { var h1 = hull[q], h2 = hull[(q + 1) % hull.length]; A += h1.x * h2.y - h2.x * h1.y; }
+    return { pts: hull.map(function (h) { return h.p; }), area: Math.abs(A) / 2, sides: hull.length };
   }
   // Muntazam n-burchakning tashqi aylana radiusi
   function rc(v) { return v.a / (2 * Math.sin(Math.PI / v.n)); }
@@ -205,9 +258,10 @@
     els.calc.innerHTML = '<h4>' + T('sol.' + st.kind) + '</h4>' + calc(st.kind, v).map(function (r) {
       return '<div class="kv col"><span>' + T(r[0]) + '</span><div class="f">' + r[1] + '</div><b>= ' + n2(r[2]) + '</b></div>';
     }).join('');
+    if (st.cut) { build(); els.calc.innerHTML += '<div class="kv col sol-sec"><span>✂️ ' + T('sol.secArea') + '</span><b>' + (st.secArea !== null ? '≈ ' + n2(st.secArea) : '—') + '</b></div>'; }
     var svg = st.net ? net(st.kind, v) : null;
     els.net.hidden = !st.net; els.net.innerHTML = svg || (st.net ? '<p class="muted pad">' + T('sol.noNet') + '</p>' : '');
-    build();
+    if (!st.cut) build();
   }
   function mount(el) {
     el.innerHTML = '<div class="tabs" id="s-tabs">' + KINDS.map(function (k) { return '<button class="tab" data-k="' + k + '">' + T('sol.' + k) + '</button>'; }).join('') + '</div>' +
@@ -215,6 +269,9 @@
       '<label class="chk"><input type="checkbox" id="s-rot"> <span data-t="sol.rotate"></span></label>' +
       '<label class="chk"><input type="checkbox" id="s-wire"> <span data-t="sol.wire"></span></label>' +
       '<label class="chk"><input type="checkbox" id="s-net"> <span data-t="sol.unfold"></span></label>' +
+      '<label class="chk"><input type="checkbox" id="s-cut"> <span data-t="sol.cut"></span></label>' +
+      '<div id="s-cutbox" hidden><label class="lbl"><span data-t="sol.cutH"></span> = <b id="s-cutHv"></b></label><input type="range" id="s-cutH" min="0.02" max="0.98" step="0.01">' +
+      '<label class="lbl"><span data-t="sol.cutA"></span> = <b id="s-cutAv"></b>°</label><input type="range" id="s-cutA" min="0" max="75" step="1"></div>' +
       '<div id="s-calc" class="an"></div></aside>' +
       '<div class="card sol-main"><div class="sol-view"><div id="s-3d" class="sol-3d"></div><div id="s-net-box" class="sol-net" hidden></div></div><p class="hint" data-t="sol.hint"></p></div></div>';
     I18n.apply(el);
@@ -225,6 +282,13 @@
     rot.onchange = function () { st.rotate = rot.checked; };
     wire.onchange = function () { st.wire = wire.checked; build(); };
     nt.onchange = function () { st.net = nt.checked; update(); };
+    var ct = el.querySelector('#s-cut'), cb = el.querySelector('#s-cutbox'), chv = el.querySelector('#s-cutH'), cav = el.querySelector('#s-cutA');
+    ct.checked = st.cut; cb.hidden = !st.cut; chv.value = st.cutH; cav.value = st.cutA;
+    function cutLbl() { el.querySelector('#s-cutHv').textContent = Math.round(st.cutH * 100) + '%'; el.querySelector('#s-cutAv').textContent = st.cutA; }
+    cutLbl();
+    ct.onchange = function () { st.cut = ct.checked; cb.hidden = !st.cut; update(); };
+    chv.oninput = function () { st.cutH = +chv.value; cutLbl(); update(); };
+    cav.oninput = function () { st.cutA = +cav.value; cutLbl(); update(); };
     function setKind(k) {
       st.kind = k;
       el.querySelectorAll('#s-tabs .tab').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-k') === k); });
