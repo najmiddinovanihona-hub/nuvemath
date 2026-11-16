@@ -1,6 +1,6 @@
 // Nuvemath — service worker: ochilgan sahifalar va fayllarni saqlab qo‘yadi, internet bo‘lmaganda ham ishlaydi.
 // HTML — avval tarmoqdan (yangi versiya darhol ko‘rinishi uchun), qolgan fayllar — keshdan, fonda yangilanadi.
-var CACHE = 'nuvemath-v27';
+var CACHE = 'nuvemath-v28';
 var CORE = ['./', 'index.html', 'assets/favicon.png', 'assets/emblem.png', 'assets/emblem-dark.png', 'manifest.webmanifest'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(CORE); }).then(function () { return self.skipWaiting(); }));

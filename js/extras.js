@@ -63,7 +63,7 @@
   var IDX = null;
   function buildIndex() {
     var out = [], C = root.NMCurriculum;
-    [['darslik', 'nav.lessons', '📖'], ['imtihon', 'nav.exam', '🎓'], ['grafik', 'nav.plot', '📈'], ['yechuvchi', 'nav.solve', '🧮'], ['chizma', 'nav.geo', '📐'], ['jismlar', 'nav.solids', '🧊'], ['mashq', 'nav.practice', '🎯'], ['natija', 'nav.results', '📊'], ['takror', null, '🔁']].forEach(function (r) {
+    [['darslik', 'nav.lessons', '📖'], ['formulalar', 'nav.formulas', '∑'], ['imtihon', 'nav.exam', '🎓'], ['grafik', 'nav.plot', '📈'], ['yechuvchi', 'nav.solve', '🧮'], ['chizma', 'nav.geo', '📐'], ['jismlar', 'nav.solids', '🧊'], ['mashq', 'nav.practice', '🎯'], ['natija', 'nav.results', '📊'], ['takror', null, '🔁']].forEach(function (r) {
       out.push({ kind: 'tool', ic: r[2], href: '#' + r[0], name: function () { return r[1] ? T(r[1]) : tx(L('Xatolar ustida ishlash', 'Работа над ошибками', 'Learning from mistakes')); }, hay: function () { return norm((r[1] ? T(r[1]) : 'takror xato ошибки mistakes') + ' ' + r[0]); } });
     });
     if (C) C.grades.forEach(function (g) { g.parts.forEach(function (p) { C.topics(p).forEach(function (t) {
@@ -71,6 +71,9 @@
         name: function () { return tx(t.title); }, sub: function () { return p.grade + '-' + tx(S.grade) + ' · ' + tx(t.section ? t.section.title : p.title); },
         hay: function () { return norm(tx(t.title) + ' ' + (t.keys || []).map(tx).join(' ') + ' ' + tx(t.rule) + ' ' + p.grade); } });
     }); }); });
+    if (root.NMFormulas) root.NMFormulas.cats.forEach(function (c) { c.items.forEach(function (it) {
+      out.push({ kind: 'formula', ic: '∑', href: '#formulalar/' + c.id, name: function () { return tx(it.n); }, sub: function () { return T('nav.formulas') + ' · ' + tx(c.t); }, hay: function () { return norm(it.n.uz + ' ' + it.n.ru + ' ' + it.n.en + ' ' + (typeof it.f === 'string' ? it.f : it.f.uz)); } });
+    }); });
     if (root.NMExam) root.NMExam.chapters.forEach(function (c) { out.push({ kind: 'exam', ic: c.ic, href: '#imtihon/bob/' + c.id, name: function () { return tx(c.t); }, sub: function () { return tx(S.exam); }, hay: function () { return norm(tx(c.t) + ' imtihon экзамен exam'); } }); });
     return out;
   }

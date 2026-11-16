@@ -23,6 +23,7 @@ O‘zbek tilidagi (rus va ingliz tillari bilan) interaktiv matematika platformas
 
 
 ### Qo‘shimcha bo‘limlar (2026-11)
+- **Formulalar** (`#formulalar`, `js/formulas-data.js`, `js/formulas.js`) — 5–11-sinfning 190 ta asosiy formulasi 18 bo‘limda (uch tilda): qidiruv, sinf bo‘yicha saralash, ⭐ sevimlilar, 74 ta formulada kalkulyator, darslik mavzusiga havola, chop etish.
 - **Imtihonga tayyorlov** (`#imtihon`, `js/exam.js`) — F.R. Usmonov va boshq. «Matematikadan qo‘llanma» mundarijasi bo‘yicha 26 bob (16 algebra, 10 geometriya); har bir bob testi va vaqtli sinov imtihonlari (30 savol/60 daq, 15/25, faqat algebra yoki geometriya). Savollar darslikdagi 5–11-sinf mavzu testlari va generatorlaridan har safar yangidan tuziladi; natija boblar bo‘yicha tahlil qilinadi va zaif mavzularga havola beriladi.
 - **Grafiklar**: urinma (sichqoncha nuqtasida, tenglamasi bilan) va aniq integral — grafik ostidagi yuz.
 - **3D jismlar**: tekislik bilan kesish (balandlik va og‘ish), kesim ko‘pburchagi va uning yuzi.

@@ -5,7 +5,7 @@
     uz: {
       'brand.tag': 'See Math. Explore Dimensions.',
       'nav.home': 'Bosh sahifa', 'nav.lessons': 'Darslik', 'nav.plot': 'Grafiklar', 'nav.solve': 'Yechuvchi',
-      'nav.geo': 'Chizma', 'nav.solids': '3D jismlar', 'nav.practice': 'Mashq', 'nav.exam': 'Imtihon', 'nav.results': 'Natijalar', 'home.review': 'Xatolar ustida ishlash', 'home.reviewSub': 'Bugun takrorlash: {d} ta savol · jami saqlangan: {t}', 'dl.sheet': 'Chop etiladigan ish varag‘i (javoblari bilan)',
+      'nav.geo': 'Chizma', 'nav.solids': '3D jismlar', 'nav.practice': 'Mashq', 'nav.exam': 'Imtihon', 'nav.formulas': 'Formulalar', 'home.c.formulas': '5–11-sinfning 190 ta asosiy formulasi: qidiruv, kalkulyator, sevimlilar va chop etish.', 'nav.results': 'Natijalar', 'home.review': 'Xatolar ustida ishlash', 'home.reviewSub': 'Bugun takrorlash: {d} ta savol · jami saqlangan: {t}', 'dl.sheet': 'Chop etiladigan ish varag‘i (javoblari bilan)',
       'home.c.exam': 'Milliy sertifikat va DTMga tayyorlov: 26 bob bo‘yicha testlar va vaqtli sinov imtihoni.',
       'home.title': 'Matematikani ko‘rib, ushlab, o‘ynab o‘rganing',
       'home.sub': 'Interaktiv darslar, funksiya grafiklari, qadam-baqadam tenglama yechish, jonli geometrik chizmalar va 3D jismlar — barchasi bir joyda.',
@@ -67,7 +67,7 @@
     ru: {
       'brand.tag': 'See Math. Explore Dimensions.',
       'nav.home': 'Главная', 'nav.lessons': 'Учебник', 'nav.plot': 'Графики', 'nav.solve': 'Решатель',
-      'nav.geo': 'Чертёж', 'nav.solids': '3D тела', 'nav.practice': 'Практика', 'nav.exam': 'Экзамен', 'nav.results': 'Результаты', 'home.review': 'Работа над ошибками', 'home.reviewSub': 'Повторить сегодня: {d} · всего сохранено: {t}', 'dl.sheet': 'Рабочий лист для печати (с ответами)',
+      'nav.geo': 'Чертёж', 'nav.solids': '3D тела', 'nav.practice': 'Практика', 'nav.exam': 'Экзамен', 'nav.formulas': 'Формулы', 'home.c.formulas': '190 основных формул 5–11 классов: поиск, калькулятор, избранное и печать.', 'nav.results': 'Результаты', 'home.review': 'Работа над ошибками', 'home.reviewSub': 'Повторить сегодня: {d} · всего сохранено: {t}', 'dl.sheet': 'Рабочий лист для печати (с ответами)',
       'home.c.exam': 'Подготовка к сертификату и вступительным: тесты по 26 главам и пробный экзамен на время.',
       'home.title': 'Изучайте математику — видя, трогая и играя',
       'home.sub': 'Интерактивные уроки, графики функций, пошаговое решение уравнений, живые геометрические чертежи и 3D тела — всё в одном месте.',
@@ -129,7 +129,7 @@
     en: {
       'brand.tag': 'See Math. Explore Dimensions.',
       'nav.home': 'Home', 'nav.lessons': 'Lessons', 'nav.plot': 'Graphs', 'nav.solve': 'Solver',
-      'nav.geo': 'Sketch', 'nav.solids': '3D solids', 'nav.practice': 'Practice', 'nav.exam': 'Exam', 'nav.results': 'Results', 'home.review': 'Learning from mistakes', 'home.reviewSub': 'Due today: {d} · saved in total: {t}', 'dl.sheet': 'Printable worksheet (with answer key)',
+      'nav.geo': 'Sketch', 'nav.solids': '3D solids', 'nav.practice': 'Practice', 'nav.exam': 'Exam', 'nav.formulas': 'Formulas', 'home.c.formulas': '190 key formulas for grades 5–11: search, calculator, favourites and print.', 'nav.results': 'Results', 'home.review': 'Learning from mistakes', 'home.reviewSub': 'Due today: {d} · saved in total: {t}', 'dl.sheet': 'Printable worksheet (with answer key)',
       'home.c.exam': 'Certificate and entrance exam prep: tests for 26 chapters and a timed mock exam.',
       'home.title': 'Learn maths by seeing, touching and playing',
       'home.sub': 'Interactive lessons, function graphs, step-by-step equation solving, live geometric constructions and 3D solids — all in one place.',

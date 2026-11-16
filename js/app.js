@@ -2,9 +2,9 @@
 (function () {
   'use strict';
   var view = document.getElementById('view');
-  var ROUTES = ['home', 'darslik', 'imtihon', 'grafik', 'yechuvchi', 'chizma', 'jismlar', 'mashq', 'natija', 'takror', 'varaq'];
-  var NAV = { home: 'nav.home', darslik: 'nav.lessons', imtihon: 'nav.exam', grafik: 'nav.plot', yechuvchi: 'nav.solve', chizma: 'nav.geo', jismlar: 'nav.solids', mashq: 'nav.practice', natija: 'nav.results' };
-  var ICONS = { home: '⌂', darslik: '📖', imtihon: '🎓', grafik: '📈', yechuvchi: '🧮', chizma: '📐', jismlar: '🧊', mashq: '🎯', natija: '📊' };
+  var ROUTES = ['home', 'darslik', 'formulalar', 'imtihon', 'grafik', 'yechuvchi', 'chizma', 'jismlar', 'mashq', 'natija', 'takror', 'varaq'];
+  var NAV = { home: 'nav.home', darslik: 'nav.lessons', formulalar: 'nav.formulas', imtihon: 'nav.exam', grafik: 'nav.plot', yechuvchi: 'nav.solve', chizma: 'nav.geo', jismlar: 'nav.solids', mashq: 'nav.practice', natija: 'nav.results' };
+  var ICONS = { home: '⌂', darslik: '📖', formulalar: '∑', imtihon: '🎓', grafik: '📈', yechuvchi: '🧮', chizma: '📐', jismlar: '🧊', mashq: '🎯', natija: '📊' };
 
   // ---------- Progress (localStorage) ----------
   var P = load();
@@ -32,7 +32,7 @@
     if (window.NMKids) NMKids.disposeAll();
     if (window.NMExam) NMExam.stop();
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
-    ({ home: home, darslik: lessons, imtihon: function (a) { NMExam.mount(view, a); }, natija: function (a) { NMResults.mount(view, a); }, takror: function (a) { NMReview.mount(view, a); }, varaq: function (a) { NMResults.sheet(view, a); }, grafik: function () { Plotter.mount(view); }, yechuvchi: solver, chizma: function () { Geometry.mount(view); }, jismlar: function () { Solids.mount(view); }, mashq: practice })[r](parts.slice(1));
+    ({ home: home, darslik: lessons, imtihon: function (a) { NMExam.mount(view, a); }, formulalar: function (a) { NMFormulaPage.mount(view, a); }, natija: function (a) { NMResults.mount(view, a); }, takror: function (a) { NMReview.mount(view, a); }, varaq: function (a) { NMResults.sheet(view, a); }, grafik: function () { Plotter.mount(view); }, yechuvchi: solver, chizma: function () { Geometry.mount(view); }, jismlar: function () { Solids.mount(view); }, mashq: practice })[r](parts.slice(1));
     window.scrollTo(0, 0);
     document.getElementById('nav').classList.remove('open');
   }
@@ -41,7 +41,7 @@
   // ---------- Bosh sahifa ----------
   function home() {
     var allT = window.NMCurriculum.allTopics().length, nRead = Object.keys(P.read).filter(function (k) { return /^g\d+p\d+-/.test(k); }).length;
-    var cards = [['darslik', 'home.c.lessons'], ['imtihon', 'home.c.exam'], ['grafik', 'home.c.plot'], ['yechuvchi', 'home.c.solve'], ['chizma', 'home.c.geo'], ['jismlar', 'home.c.solids'], ['mashq', 'home.c.practice']];
+    var cards = [['darslik', 'home.c.lessons'], ['formulalar', 'home.c.formulas'], ['imtihon', 'home.c.exam'], ['grafik', 'home.c.plot'], ['yechuvchi', 'home.c.solve'], ['chizma', 'home.c.geo'], ['jismlar', 'home.c.solids'], ['mashq', 'home.c.practice']];
     view.innerHTML =
       '<section class="hero">' +
       '<div class="hero-logo"><img class="on-dark" src="assets/emblem-dark.png" alt="Nuvemath"><img class="on-light" src="assets/emblem.png" alt="Nuvemath"></div>' +
